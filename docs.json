@@ -1,179 +1,121 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "sequoia",
-  "name": "Knowledge base",
-  "description": "Onboarding, employee handbook, HR guides, IT help, company policies, and department runbooks.",
-  "colors": {
-    "primary": "#166E3F",
-    "light": "#26BD6C",
-    "dark": "#166E3F"
-  },
-  "favicon": "/favicon.ico",
+  "theme": "mint",
+  "name": "Analog Brain",
+  "description": "Internal operator docs for using Analog to fund, run, test, and measure real-world activations.",
+  "favicon": "/images/analog-fav-yellow.png",
   "icons": {
     "library": "lucide"
   },
-  "metadata": {
-    "timestamp": true
+  "colors": {
+    "primary": "#F2C94C",
+    "light": "#FF4438",
+    "dark": "#F2C94C"
+  },
+  "background": {
+    "color": {
+      "light": "#FFFFFF",
+      "dark": "#22201F"
+    }
+  },
+  "mcp": {
+    "enabled": true
   },
   "contextual": {
-    "options": ["copy", "view", "assistant", "mcp", "add-mcp"]
+    "options": [
+      "copy",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "cursor",
+      "vscode",
+      "mcp"
+    ]
+  },
+  "logo": {
+    "light": "https://assets.creatorcommerce.shop/8f4a9919e0d8c718140b7732d3d136b0e10048b4f9f6a0245c67d8dea2a431c0.png",
+    "dark": "https://assets.creatorcommerce.shop/8f4a9919e0d8c718140b7732d3d136b0e10048b4f9f6a0245c67d8dea2a431c0.png"
   },
   "navigation": {
     "tabs": [
       {
-        "tab": "Onboarding",
+        "tab": "Brain",
         "groups": [
           {
-            "group": "Welcome",
-            "pages": ["index"]
-          },
-          {
-            "group": "Your first days",
+            "group": "START HERE",
             "pages": [
-              "onboarding/first-day",
-              "onboarding/first-week",
-              "onboarding/meet-the-team"
-            ]
-          },
-          {
-            "group": "Tools & access",
-            "pages": [
-              "onboarding/tools/laptop-setup",
-              "onboarding/tools/account-access",
-              "onboarding/tools/vpn-setup"
+              "index",
+              "guides/how-to-use-these-docs",
+              "guides/documentation-contract",
+              "guides/glossary",
+              "release-notes"
             ]
           }
         ]
       },
       {
-        "tab": "HR & People",
+        "tab": "Strategy",
         "groups": [
           {
-            "group": "Overview",
-            "pages": ["hr-people/index"]
-          },
-          {
-            "group": "Benefits & time off",
+            "group": "MARKET DOCTRINE",
             "pages": [
-              "hr-people/benefits",
-              "hr-people/time-off"
-            ]
-          },
-          {
-            "group": "Growth & pay",
-            "pages": [
-              "hr-people/performance-reviews",
-              "hr-people/compensation/index",
-              "hr-people/compensation/salary-bands",
-              "hr-people/compensation/equity-overview"
+              "strategy/current-thesis",
+              "strategy/mvp-use-cases",
+              "strategy/sponsor-personas",
+              "strategy/host-models-personas",
+              "strategy/market-formation"
             ]
           }
         ]
       },
       {
-        "tab": "IT & Security",
+        "tab": "Market Dynamics",
         "groups": [
           {
-            "group": "Overview",
-            "pages": ["it-security/index"]
-          },
-          {
-            "group": "Access & devices",
+            "group": "FIELD TESTS",
             "pages": [
-              "it-security/access-requests",
-              "it-security/device-policy"
-            ]
-          },
-          {
-            "group": "Security training",
-            "pages": [
-              "it-security/security-training/index",
-              "it-security/security-training/phishing",
-              "it-security/security-training/data-handling"
+              "market/supply-motion",
+              "market/city-leads-host-unlocks",
+              "market/testing-grid"
             ]
           }
         ]
       },
       {
-        "tab": "Policies",
+        "tab": "Platform",
         "groups": [
           {
-            "group": "Overview",
-            "pages": ["policies/index"]
-          },
-          {
-            "group": "Conduct & spend",
+            "group": "PRODUCT TRUTH",
             "pages": [
-              "policies/code-of-conduct",
-              "policies/expense-reimbursement",
-              "policies/travel-policy"
+              "references/product-primitives",
+              "references/platform-logic"
             ]
           },
           {
-            "group": "Remote work",
+            "group": "CORE WORKFLOWS",
             "pages": [
-              "policies/remote-work/index",
-              "policies/remote-work/home-office-setup",
-              "policies/remote-work/time-zones"
+              "platform/sponsor-workflow",
+              "platform/host-workflow",
+              "platform/proof-and-spend"
             ]
           }
         ]
       },
       {
-        "tab": "Engineering",
+        "tab": "How-To",
         "groups": [
           {
-            "group": "Overview",
-            "pages": ["engineering/index"]
-          },
-          {
-            "group": "Setup & deployment",
+            "group": "RUN THE MOTION",
             "pages": [
-              "engineering/dev-setup",
-              "engineering/deployment"
-            ]
-          },
-          {
-            "group": "Incident response",
-            "pages": [
-              "engineering/incident-response/index",
-              "engineering/incident-response/on-call",
-              "engineering/incident-response/postmortem"
-            ]
-          },
-          {
-            "group": "Architecture",
-            "pages": [
-              "engineering/architecture/index",
-              "engineering/architecture/services-overview",
-              "engineering/architecture/data-models"
+              "how-to/run-creator-led-activation",
+              "how-to/setup-sponsor-campaign",
+              "how-to/setup-host-event",
+              "how-to/location-activation",
+              "how-to/update-this-brain"
             ]
           }
         ]
       }
     ]
-  },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Submit IT ticket",
-        "href": "/it-security/access-requests"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Employee portal",
-      "href": "https://dashboard.mintlify.com"
-    }
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/yourcompany",
-      "linkedin": "https://linkedin.com/company/yourcompany"
-    }
   }
 }

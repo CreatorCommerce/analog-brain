@@ -1,0 +1,55 @@
+---
+title: "Proof And Spend"
+description: "How Analog treats proof, spend integrity, UGC, and unlock decisions in the MVP."
+pageType: "Reference"
+---
+
+Proof and spend are the trust layer. They let sponsors increase allocations without treating every activation as a vague recap.
+
+## Proof Lanes
+
+| Lane | What it proves | Current state |
+|---|---|---|
+| Spend transactions | Money was used through approved operational rails | MVP card and transaction model |
+| Attendance or RSVP | People showed up or claimed interest | Future/adjacent hosted page and import logic |
+| Sponsor-visible UGC | The activation produced media proof | Post media and story mentions; no comments |
+| Social growth | The host can grow category conversation | Strategy layer, not fully automated in MVP |
+| Benefit claim | Sponsor created useful attendee value | Location and event claim flows are future-facing |
+| Conversion match | Sponsor-side outcome happened later | MCP attribution rail direction |
+
+## Spend Integrity
+
+Spend integrity asks:
+
+- Did the host spend within the approved limit?
+- Were categories and merchants reasonable?
+- Did timing line up with the event?
+- Were receipts or vendor notes available?
+- Were there anomalies?
+- Did underspend create an opportunity to reward efficiency or reallocate budget?
+
+## Sponsor-Visible UGC Rules
+
+Show:
+
+- image/video post mentions
+- story mentions with media or source URLs
+- manually uploaded proof where appropriate
+
+Do not show:
+
+- comments as sponsor UGC
+- host-side analytics-heavy UGC grids
+- raw private attendee data as a catalog or proof surface
+
+## Unlock Logic
+
+A host should earn a bigger or next allocation when:
+
+- market-growth proof is stronger than expected
+- spend stewardship is clean
+- the sponsor can explain the value internally
+- the activation can repeat
+- product setup will get easier next time
+
+Direct attribution can help, but it is not the only reason to unlock more budget.

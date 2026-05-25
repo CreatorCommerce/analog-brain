@@ -1,0 +1,54 @@
+---
+title: "Platform Logic"
+description: "Current Analog MVP frontend routes, user surfaces, and UX rules."
+pageType: "Reference"
+---
+
+Use this page when writing how-to docs that tell operators where work happens in the current platform.
+
+## Route Map
+
+| Route | Purpose |
+|---|---|
+| `/sponsor` | Sponsor campaign list and campaign creation |
+| `/sponsor/applications` | Sponsor application portal builder and pitch inbox |
+| `/sponsor/campaigns/:campaignId` | Campaign summary, funds wizard, sponsored hosts, and UGC |
+| `/sponsor/campaigns/:campaignId/hosts/:collabId` | Sponsor view of one sponsored host and their events/content |
+| `/host` | Host events-first dashboard |
+| `/host/sponsors` | Host sponsor budget view |
+| `/host/settings` | Instagram connection and profile sync |
+| `/host/events/:eventId` | Host event detail, cards, transactions, and sponsor tagging |
+| `/host/collabs/:collabId` | Older collab detail flow |
+| `/apply/:pageId` | Public sponsor application wizard |
+
+## Sponsor UX Rules
+
+Sponsor screens should stay sponsor-centric:
+
+- Campaigns are the main object.
+- Application portal collects standardized host pitches.
+- Campaign detail shows campaign metrics, sponsor-visible proof, and sponsored hosts.
+- Clicking a host opens that host's campaign activity.
+- UGC belongs on the sponsor side.
+
+## Host UX Rules
+
+Host screens should stay simple:
+
+- Events are the home/default view.
+- Hosts create events and attach one sponsor.
+- Spend cards and transactions live on event detail pages.
+- Hosts should see enough budget and spend detail to execute.
+- Hosts should not see sponsor analytics-heavy UGC grids.
+
+## Application Portal Rules
+
+The public application portal should:
+
+- show running campaigns
+- use structured pitch fields
+- collect community/host identity
+- collect pitch title, description, requested amount, socials, expected attendees, and attachment metadata
+- support future ranking by keeping fields structured
+
+File attachments are metadata only today.

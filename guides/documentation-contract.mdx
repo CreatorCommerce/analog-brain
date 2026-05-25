@@ -1,0 +1,60 @@
+---
+title: "Documentation Contract"
+description: "How Analog Brain pages are organized, which page wins when facts conflict, and how to update the corpus without drift."
+pageType: "Reference"
+---
+
+<Info>
+If two pages conflict, trust the canonical reference first, then the newest user correction. User-supplied use cases and feedback are law of the land.
+</Info>
+
+## Page Types
+
+| Page type | Job | What belongs there |
+|---|---|---|
+| Overview | Orient the reader | Concepts, maps, decision framing, and links |
+| Strategy | Explain doctrine | Market thesis, persona logic, sponsor fit, and operating posture |
+| Reference | Own stable facts | Product objects, terminology, current MVP behavior, and invariants |
+| How-to | Explain execution | Step-by-step workflows, operator checklists, and setup sequences |
+| Use-case page | Route a test | What the use case tests and which canonical pages to use |
+| AI playbook | Guide assistants | Update rules, prompt patterns, and conflict handling |
+
+Every live page must include:
+
+```md
+---
+title: "Page title"
+description: "One sentence on what this page covers."
+pageType: "Reference"
+---
+```
+
+## Source Order
+
+Resolve conflicts in this order:
+
+1. The user in this repo.
+2. Current product behavior from the Analog MVP.
+3. Analog strategy and market doctrine.
+4. Existing summaries in this docs repo.
+
+## Canonical Homes
+
+| Domain | Canonical page |
+|---|---|
+| Product objects and MVP boundaries | [Product Primitives](/references/product-primitives) |
+| Frontend routes and UX behavior | [Platform Logic](/references/platform-logic) |
+| Core thesis | [Current Thesis](/strategy/current-thesis) |
+| Sponsor categories | [Sponsor Personas](/strategy/sponsor-personas) |
+| Host and supply models | [Host Models And Personas](/strategy/host-models-personas) |
+| Supply access versus creation | [Supply Motion](/market/supply-motion) |
+| Market scoring | [Testing Grid](/market/testing-grid) |
+| Updating the brain | [Update This Brain](/how-to/update-this-brain) |
+
+## Update Rules
+
+- Update canonical references before summaries.
+- Keep practical details in how-to pages.
+- Link instead of copying long factual blocks across pages.
+- When a new user use case conflicts with existing language, revise the old language in the same pass.
+- Add a release note when a new use case, workflow, rubric, or product rule is added.

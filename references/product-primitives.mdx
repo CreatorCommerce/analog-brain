@@ -1,0 +1,67 @@
+---
+title: "Product Primitives"
+description: "Canonical MVP product objects, rules, terminology, and boundaries for Analog."
+pageType: "Reference"
+---
+
+This page reflects the current MVP product logic. Use it as the source of truth when writing strategy or how-to pages that mention current product behavior.
+
+## MVP Boundary
+
+Analog is currently an MVP for sponsors and hosts to fund small real-world community activations through temporary operational spend cards.
+
+The wedge is programmable operational budgets for IRL activations. The MVP focuses on controlled sponsor-funded card spend, not payouts, reimbursements, event discovery, ticketing, or a full marketplace.
+
+## Core Objects
+
+| Object | Meaning | Key rules |
+|---|---|---|
+| Sponsor | Owns campaigns and funds | Creates campaigns, manages application portal, reviews host pitches, views proof |
+| Host | Creates events and uses sponsor budgets | Sees sponsor budgets, creates host events, connects Instagram, views event spend |
+| Campaign | Sponsor-owned budget container | Has budget, optional end date, allocated amount, and available amount |
+| Collab | Sponsor-host relationship inside a campaign | Grants host access to sponsor budget; created by accepted applications or direct sponsor action |
+| Host event | Host-created event | Uses exactly one sponsor budget for now |
+| Spend card | Temporary operational card | Attached to the sponsor-host collab, reused across host events, limited by allocation and categories |
+| Spend transaction | Spend activity from card or webhook | Shows amount, status, merchant, category, and sponsor/campaign/collab/event metadata |
+| Application portal | Sponsor-owned pitch intake | Shows running campaigns and collects structured host pitch data |
+| Campaign application | Host sponsorship pitch | Accepting an application creates a host if needed and creates a collab |
+| Campaign content | Sponsor-visible proof item | Image/video post mentions and story mentions; comments are not shown as sponsor UGC |
+| Story mention | Instagram story attribution record | Confidence-scored against event windows |
+
+## Product-Facing Terms
+
+Use:
+
+- Sponsor, not only brand
+- Host, not only creator
+- Collab for sponsor-host relationship
+- Host event for host-created event
+- Campaign event for collab-attached tracking event
+- Spend card for temporary operational card
+
+## Current Product Boundaries
+
+The MVP intentionally does not include:
+
+- payouts or creator withdrawals
+- reimbursements
+- unrestricted wallet balances
+- Stripe Connect payouts
+- 1099 workflows
+- ticketing
+- native mobile apps
+- wallet passes
+- deep attribution
+- complex deliverable workflows
+
+Money remains platform-controlled. Hosts receive event-scoped operational spend access, not withdrawable balances.
+
+## UGC And Social Proof
+
+Sponsor-visible proof can include:
+
+- image or video post mentions
+- story mentions with usable media or source URLs
+- uploaded or seeded proof items
+
+Do not show comments as sponsor UGC. Do not put sponsor analytics-heavy UGC grids on host screens.

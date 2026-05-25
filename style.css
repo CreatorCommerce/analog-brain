@@ -1,46 +1,94 @@
-/* table of contents: chevron next to the active (deepest) section */
-toc-item > a {
-  position: relative;
-  padding-left: 1rem !important;
-}
-toc-item[data-active-deepest] > a::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 0.75rem;
-  height: 0.75rem;
-  transform: translateY(-50%);
-  background-color: currentColor;
-  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='9 18 15 12 9 6'/></svg>") no-repeat center / contain;
-          mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='9 18 15 12 9 6'/></svg>") no-repeat center / contain;
-  pointer-events: none;
+/* Analog Brain custom styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Lora:ital,wght@1,400;1,500&display=swap');
+
+:root {
+  --analog-ink: #22201f;
+  --analog-paper: #f6f2e8;
+  --analog-yellow: #f2c94c;
+  --analog-red: #ff4438;
+  --analog-green: #2e7d6f;
+  --analog-blue: #3563a9;
+  --mint-color-background: #22201f !important;
 }
 
-/* topbar logo: render smaller than its natural width */
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  background-color: #22201f !important;
+}
+
+h1,
+h2,
+h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300 !important;
+}
+
+h3,
+h4,
+h5 {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.eyebrow {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
 #navbar a[href="/"] img,
 #navbar a[href="/"] svg,
 #sidebar a[href="/"] img,
 #sidebar a[href="/"] svg {
-  max-width: 14rem;
+  max-width: 12rem;
   height: auto;
 }
 
-a[nav-tabs-item] {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+#topbar-cta-button span,
+#search-input {
+  border-radius: 9999px !important;
 }
 
-.kb-feature-card {
-  background-color: rgb(var(--foreground-light, 17 24 39));
+#footer {
+  display: none;
 }
 
-.kb-feature-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url('/images/texture.png');
-  background-position: center;
-  background-size: cover;
-  opacity: 0.875;
+ul li {
+  border-radius: 9999px;
+}
+
+.analog-hero {
+  border: 1px solid rgba(242, 201, 76, 0.24);
+  border-radius: 8px;
+  padding: 1.25rem;
+  background:
+    linear-gradient(135deg, rgba(242, 201, 76, 0.14), rgba(255, 68, 56, 0.08)),
+    rgba(255, 255, 255, 0.03);
+}
+
+.analog-kicker {
+  color: var(--analog-yellow);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.analog-hero-copy {
+  max-width: 48rem;
+  color: rgba(246, 246, 246, 0.78);
+}
+
+.analog-chip {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(242, 201, 76, 0.34);
+  border-radius: 9999px;
+  padding: 0.2rem 0.55rem;
+  color: var(--analog-yellow);
+  background: rgba(242, 201, 76, 0.08);
+  font-size: 0.78rem;
 }

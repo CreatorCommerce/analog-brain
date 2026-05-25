@@ -1,0 +1,42 @@
+---
+title: "Update This Brain"
+description: "How to add new use cases, feedback, and product knowledge while keeping Analog Brain coherent."
+pageType: "How-to"
+---
+
+The core rule: user-provided use cases, feedback, and corrections are law of the land.
+
+## Update Order
+
+1. Identify the canonical page that owns the fact.
+2. Update that page first.
+3. Search for conflicting language.
+4. Update summaries, how-tos, rubrics, and glossary entries that now conflict.
+5. Add a release note when the change creates a new use case, workflow, rubric, product rule, or strategic posture.
+
+## Where Changes Belong
+
+| Change type | First page to update |
+|---|---|
+| Product object or MVP behavior | [Product Primitives](/references/product-primitives) |
+| Frontend route or UX rule | [Platform Logic](/references/platform-logic) |
+| Sponsor category | [Sponsor Personas](/strategy/sponsor-personas) |
+| Host persona or supply model | [Host Models And Personas](/strategy/host-models-personas) |
+| New use case | [MVP Use Cases](/strategy/mvp-use-cases) |
+| City or field motion | [City Leads And Host Unlocks](/market/city-leads-host-unlocks) |
+| Test criteria | [Testing Grid](/market/testing-grid) |
+| Execution sequence | The relevant how-to page |
+
+## Conflict Pattern
+
+If a new use case changes the strategy, do not add a note that says "this is an exception." Rewrite the older framing so the docs now treat the new use case as first-class.
+
+## Validation
+
+Before finishing:
+
+- make sure every live page has `title`, `description`, and `pageType`
+- validate `docs.json`
+- verify every nav path has a matching `.mdx` file
+- check internal links on edited pages
+- avoid placeholder or draft language in live docs
