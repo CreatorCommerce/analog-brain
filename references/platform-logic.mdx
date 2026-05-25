@@ -1,44 +1,87 @@
 ---
 title: "Platform Logic"
-description: "Current Analog MVP frontend routes, user surfaces, and UX rules."
+description: "Current Analog MVP frontend routes, product surfaces, and UX rules."
 pageType: "Reference"
 ---
 
 Use this page when writing how-to docs that tell operators where work happens in the current platform.
 
+## Product Surface Map
+
+| Surface | What it is for |
+|---|---|
+| Onboarding | Account/contact verification stub, operating locations, sponsor/host role intent, and feature preferences. |
+| Sponsor Campaigns | Campaign creation, funding, campaign settings, event sets, sponsor hosts, proof, files, and UGC. |
+| Sponsor Applications | Application portal builder and pitch inbox for inbound host supply. |
+| Sponsor Data | Sponsor-side underwriting/reporting cockpit for spend, proof, applications, events, and AI-style summaries. |
+| Sponsor Outreach | Managed email/direct mail outbound and future self-serve prospecting controls. |
+| Host Events | Host event creation, sponsor budget attachment, cards, spend, and event proof. |
+| Host Sponsors | Sponsor budgets, sponsor cards, event set assets, and mailed asset requests. |
+| Host Opportunities | Campaign discovery, opportunity review, and pitch sharing. |
+| Hosted Event Pages | Public event pages and invite builder with RSVP/ticket fields, theme, custom CSS, and custom HTML. |
+| Files | Sponsor/host docs, uploads, shared files, template docs, and deep research docs. |
+| Notifications | Analog messages, social DMs, and email notification shells. |
+| Settings | General settings, social/platform connections, feature setup, organization roles, brand kit, and design kit. |
+
 ## Route Map
 
 | Route | Purpose |
 |---|---|
-| `/sponsor` | Sponsor campaign list and campaign creation |
-| `/sponsor/applications` | Sponsor application portal builder and pitch inbox |
-| `/sponsor/campaigns/:campaignId` | Campaign summary, funds wizard, sponsored hosts, and UGC |
-| `/sponsor/campaigns/:campaignId/hosts/:collabId` | Sponsor view of one sponsored host and their events/content |
-| `/host` | Host events-first dashboard |
-| `/host/sponsors` | Host sponsor budget view |
-| `/host/settings` | Instagram connection and profile sync |
-| `/host/events/:eventId` | Host event detail, cards, transactions, and sponsor tagging |
+| `/` | Redirects to `/sponsor` |
+| `/onboarding?role=sponsor` | Sponsor setup and feature preferences |
+| `/onboarding?role=host` | Host setup and feature preferences |
+| `/files/:fileTab?` | Shared files workspace; mode comes from query string |
+| `/notifications/:notificationTab?` | Shared notifications workspace; mode comes from query string |
+| `/sponsor` | Sponsor campaign dashboard and campaign creation |
+| `/sponsor/applications` | Application portal builder and pitch inbox |
+| `/sponsor/data` | Sponsor data and underwriting summaries |
+| `/sponsor/outreach` | Managed outreach MVP view |
+| `/sponsor/outreach?view=future` | Future self-serve outreach controls |
+| `/sponsor/settings` | Sponsor general settings and organization roles |
+| `/sponsor/settings/connections` | Sponsor connections |
+| `/sponsor/settings/features` | Sponsor feature setup |
+| `/sponsor/settings/brand-kit` | Sponsor brand kit |
+| `/sponsor/campaigns/:campaignId` | Campaign detail, settings, event sets, files, sponsored hosts, UGC, and prospecting |
+| `/sponsor/campaigns/:campaignId/hosts/:collabId` | Sponsor view of one sponsored host, events, asset requests, files, and shipments |
+| `/host` | Host events dashboard |
+| `/host/sponsors` | Host sponsor budgets and sponsor cards |
+| `/host/opportunities` | Host opportunity review and pitch sharing |
+| `/host/tasks` | Host task board |
+| `/host/settings` | Host profile, story, Instagram connection, and organization roles |
+| `/host/settings/connections` | Host connections |
+| `/host/settings/features` | Host feature setup |
+| `/host/settings/design-kit` | Host design kit |
+| `/host/events/:eventId` | Host event detail, cards, transactions, sponsor tagging, and proof |
+| `/host/events/:eventId/invite-builder` | Hosted event page/invite builder |
 | `/host/collabs/:collabId` | Older collab detail flow |
 | `/apply/:pageId` | Public sponsor application wizard |
+| `/e/:eventId` | Public hosted event page |
+| `/pitch/:hostId` | Public host pitch book |
 
 ## Sponsor UX Rules
 
 Sponsor screens should stay sponsor-centric:
 
-- Campaigns are the main object.
-- Application portal collects standardized host pitches.
-- Campaign detail shows campaign metrics, sponsor-visible proof, and sponsored hosts.
-- Clicking a host opens that host's campaign activity.
-- UGC belongs on the sponsor side.
+- Campaigns are the main paid/funded object.
+- Campaign settings should capture mission, market persona, main value-add, special requests, host visibility, mailing-address requirement, and auto-renew preference.
+- Event sets split a campaign by market/persona, special requests, files/assets, and prospecting lane.
+- Application portal collects standardized host pitches and keeps attachments/answers structured.
+- Sponsor outreach routes external leads back to the same application workflow.
+- Campaign detail shows campaign metrics, event sets, files, sponsor-visible proof, sponsored hosts, and UGC.
+- Sponsor-host detail owns host-level campaign activity, shared files, asset requests, and shipment logs.
+- UGC and AI-style outcome summaries belong on sponsor/data surfaces.
 
 ## Host UX Rules
 
 Host screens should stay simple:
 
 - Events are the home/default view.
-- Hosts create events and attach one sponsor.
-- Spend cards and transactions live on event detail pages.
-- Hosts should see enough budget and spend detail to execute.
+- Hosts can create events before sponsorship lands.
+- Host event creation can attach one sponsor budget at creation, or no sponsor yet.
+- Sponsor budgets and sponsor cards live in the host Sponsors view.
+- Spend cards and transactions live on event and sponsor budget detail surfaces.
+- Hosts can request mailed assets from event set assets.
+- Hosts should see enough budget, task, file, and spend detail to execute.
 - Hosts should not see sponsor analytics-heavy UGC grids.
 
 ## Application Portal Rules
@@ -52,3 +95,22 @@ The public application portal should:
 - support future ranking by keeping fields structured
 
 File attachments are metadata only today.
+
+## Files, Docs, And Messages
+
+Files are now part of the operating product, not just storage:
+
+- Sponsor and host workspaces split files into Analog Docs, uploaded files, and shared files.
+- Analog Docs can be manual, template-generated, or deep-research generated.
+- Files can be assigned to sponsors, hosts, campaigns, event sets, host events, collabs, applications, or external recipients.
+- DM threads are available for active partnerships and pitch contexts.
+- Pitch sharing can create a host-owned Analog Doc and make it visible to a sponsor or external recipient.
+
+## Outreach And Prospecting Rules
+
+Keep two related concepts distinct:
+
+- Sponsor Outreach is the sponsor workspace page for managed email/direct mail outbound and future self-serve controls.
+- Event Set Prospecting is a campaign detail action that starts external prospecting for one event set.
+
+Both should route interested hosts back to the campaign application link so leads enter the same approval workflow.

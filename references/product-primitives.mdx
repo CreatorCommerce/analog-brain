@@ -1,32 +1,85 @@
 ---
 title: "Product Primitives"
-description: "Canonical MVP product objects, rules, terminology, and boundaries for Analog."
+description: "Canonical MVP product objects, rules, terminology, and boundaries for the working Analog product."
 pageType: "Reference"
 ---
 
-This page reflects the current MVP product logic. Use it as the source of truth when writing strategy or how-to pages that mention current product behavior.
+This page reflects the current MVP product logic in `analog-discovery`. Use it as the source of truth when strategy or how-to pages mention current product behavior.
 
 ## MVP Boundary
 
-Analog is currently an MVP for sponsors and hosts to fund small real-world community activations through temporary operational spend cards.
+Analog is currently an MVP for sponsors and hosts to fund, operate, and prove real-world activations through structured campaigns, host events, application portals, files/docs, managed outreach, hosted event pages, and temporary operational spend cards.
 
-The wedge is programmable operational budgets for IRL activations. The MVP focuses on controlled sponsor-funded card spend, not payouts, reimbursements, event discovery, ticketing, or a full marketplace.
+The wedge is governed IRL spend: sponsor budget becomes campaign structure, host-side execution, watched spend, proof, and renewal logic. The current code is still a local MVP with a JSON store and no real production auth, billing, or payout rail.
 
-## Core Objects
+## Operating Layer Shape
+
+The product direction is an operating layer, not a directory or one-off agency service.
+
+| Layer | Product job |
+|---|---|
+| Discover | Proven hosts, clubs, gatherings, venues, and operators are vetted, ranked, matched, and routed into campaigns or event sets. |
+| Collaborate | Sponsor budget becomes programmable spend, controls, guardrails, tasks, assets, docs, and execution support. |
+| Measure | Receipts, content, attendance, sentiment, category lift, and outcomes become proof for renewal or unlock decisions. |
+
+The current MVP implements pieces of this loop. Strategy pages should describe the full loop, while how-to and reference pages should stay honest about current product boundaries.
+
+## Account And Org Posture
+
+The strategy target is one organization model with roles and permissions. The current MVP still exposes `Sponsor` and `Host` as product actors, but both can carry `organizationId` and `organizationRoles`.
+
+| Object | Current meaning | Practical rule |
+|---|---|---|
+| Organization role | Host, sponsor, or both on one org | Treat dual-role orgs as the direction of travel; do not create strategy that assumes rigid account types forever. |
+| Sponsor | Product actor that funds campaigns; in the market this means any capital deployer that wants structure, oversight, and proof | Owns campaign budget, application pages, event sets, outreach, data, files, proof, and host allocations. |
+| Host | Product actor that creates events and operates against sponsor budgets | Owns host story, events, tasks, files, sponsor budgets, social connections, and pitch surfaces. |
+| Brand kit or design kit | Reusable identity assets | Stores logo/mark, colors, accent media, and other media for sponsor pages, host pages, and event surfaces. |
+| Host story | Sponsor-facing host narrative | Stores short/long description, organization name, and website for pitch and trust surfaces. |
+
+## Funding And Campaign Objects
 
 | Object | Meaning | Key rules |
 |---|---|---|
-| Sponsor | Owns campaigns and funds | Creates campaigns, manages application portal, reviews host pitches, views proof |
-| Host | Creates events and uses sponsor budgets | Sees sponsor budgets, creates host events, connects Instagram, views event spend |
-| Campaign | Sponsor-owned budget container | Has budget, optional end date, allocated amount, and available amount |
-| Collab | Sponsor-host relationship inside a campaign | Grants host access to sponsor budget; created by accepted applications or direct sponsor action |
-| Host event | Host-created event | Uses exactly one sponsor budget for now |
-| Spend card | Temporary operational card | Attached to the sponsor-host collab, reused across host events, limited by allocation and categories |
-| Spend transaction | Spend activity from card or webhook | Shows amount, status, merchant, category, and sponsor/campaign/collab/event metadata |
-| Application portal | Sponsor-owned pitch intake | Shows running campaigns and collects structured host pitch data |
-| Campaign application | Host sponsorship pitch | Accepting an application creates a host if needed and creates a collab |
-| Campaign content | Sponsor-visible proof item | Image/video post mentions and story mentions; comments are not shown as sponsor UGC |
-| Story mention | Instagram story attribution record | Confidence-scored against event windows |
+| Campaign | Sponsor-owned funding and strategy container | Stores mission, market persona, main value-add, budget, funding state, required todos, host visibility, gift/address requirement, auto-renew preference, and outreach settings. |
+| Event set | Campaign subgroup for a market/persona or activation lane | Stores market persona, special requests, assets, file attachments, status, host count, tracked event count, and prospecting settings. |
+| Campaign outreach | Campaign-level managed email/direct mail settings | Current MVP exposes managed outreach first and a future self-serve view; outreach requires campaign market persona. |
+| Event set prospecting | External prospecting run tied to one event set | Uses standard or heavy plan, dedicated inboxes, warm-up period, daily send limits, application-link CTA, and a three-month auto-disable concept. |
+| Application portal | Sponsor-owned pitch intake page | Can be sponsor-wide or campaign-scoped, themed, translated, customized with questions/CSS, and tied to GA4 measurement. |
+| Campaign application | Host sponsorship pitch | Structured pitch fields plus custom answers and attachments; accepting can create/link a host and create a collab. |
+| Collab | Sponsor-host relationship inside a campaign | Grants allocation, allowed categories, status, optional event set, and the host's access to sponsor budget. |
+| Campaign event | Sponsor/campaign-side tracking event | Tied to a collab and optionally an event set; used for sponsor-side event analytics. |
+
+## Host Execution Objects
+
+| Object | Meaning | Key rules |
+|---|---|---|
+| Host event | Host-created event or activation | Can exist without sponsor backing, and can attach sponsor support. The creation wizard currently selects at most one sponsor budget, while the data model has sponsor summary arrays for future multi-sponsor shape. |
+| Hosted event page | Public `/e/:eventId` page configuration | Stores draft/published state, theme, background, RSVP fields, ticket types, custom CSS, and custom HTML. |
+| Host task | Event prep or sponsor-required task | Can be custom or sourced from event set required todos; supports priority, due date, and completion. |
+| Spend card | Temporary operational card | Tied to host/collab/event context and limited by amount, status, categories, and expiration. |
+| Spend transaction | Card or ledger transaction | Shows amount, merchant, category, status, timestamp, and sponsor/campaign/collab/event metadata. |
+| Asset request | Host request for a sponsor asset to be mailed | Tied to an event set asset and collab; status moves from `requested` to `sent`. |
+| Shipment log | Sponsor-side shipment proof | Tracks product samples, event supplies, printed promo materials, merch, signage, order/tracking references, and linked asset requests. |
+
+## Knowledge And Communication Objects
+
+| Object | Meaning | Key rules |
+|---|---|---|
+| Workspace file | File, link, upload, or Analog Doc | Owned by sponsor, host, or Analog; can be assigned across parties and attached to campaigns, event sets, host events, collabs, or applications. |
+| Analog Doc | Markdown workspace document | Can be manually written, generated from templates, or generated as deep research. |
+| Template doc | Generated document from a known template | Current templates include campaign brief, brand pitch brief, host agreement notes, and campaign plan. |
+| Deep research doc | Operator/AI-generated research document | Created from prompts and assignment context; useful for sponsor strategy, host packaging, and external recipients. |
+| DM thread | Sponsor-host message thread | Eligible for active partnerships or pitch contexts; source files can create pitch-access threads. |
+| DM message | Thread message with optional attachments | Attachments can link to files/docs and preserve cross-party context. |
+
+## Proof Objects
+
+| Object | Meaning | Key rules |
+|---|---|---|
+| Campaign content | Sponsor-visible proof item | Image/video post mentions, uploaded proof, seeded content, and social listening records. Comments are not sponsor UGC. |
+| Story mention | Instagram story attribution record | Confidence-scored against event windows and candidate events; can be verified, probable, weak, unattributed, or discarded. |
+| Campaign event analytics | Event-level proof summary | Combines spend, transaction count, content count, social proof, uploaded proof, approval state, and story mention analytics. |
+| Sponsor data snapshot | Sponsor-side reporting surface | Combines campaigns, applications, collabs, events, files, content, spend, social proof, and AI-style outcome summaries. |
 
 ## Product-Facing Terms
 
@@ -37,6 +90,8 @@ Use:
 - Collab for sponsor-host relationship
 - Host event for host-created event
 - Campaign event for collab-attached tracking event
+- Event set for a campaign's market/persona or activation lane
+- Workspace file or Analog Doc for files and docs inside the product
 - Spend card for temporary operational card
 
 ## Current Product Boundaries
@@ -48,11 +103,11 @@ The MVP intentionally does not include:
 - unrestricted wallet balances
 - Stripe Connect payouts
 - 1099 workflows
-- ticketing
+- production ticketing or payment collection
 - native mobile apps
 - wallet passes
-- deep attribution
-- complex deliverable workflows
+- full automated no-touch attribution
+- fully automated legal contracting, insurance, or payout gates
 
 Money remains platform-controlled. Hosts receive event-scoped operational spend access, not withdrawable balances.
 
@@ -65,3 +120,15 @@ Sponsor-visible proof can include:
 - uploaded or seeded proof items
 
 Do not show comments as sponsor UGC. Do not put sponsor analytics-heavy UGC grids on host screens.
+
+## Implementation Reality
+
+Current product facts to preserve in docs:
+
+- Web app: Vite React routes under `apps/web/src/routes`.
+- API: Fastify routes under `apps/api/src/routes`.
+- Store: JSON-backed model in `packages/database/src/jsonStore.ts`.
+- Services and handlers enforce most product rules.
+- Money is integer minor units.
+- Local dashboard points to `http://127.0.0.1:8080`.
+- The MVP is intentionally scaffolded for future database, auth, billing, payments, partner API, and production attribution rails.

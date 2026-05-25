@@ -48,6 +48,7 @@
               "guides/how-to-use-these-docs",
               "guides/documentation-contract",
               "guides/glossary",
+              "references/source-context-map",
               "release-notes"
             ]
           }
@@ -63,6 +64,8 @@
               "strategy/mvp-use-cases",
               "strategy/sponsor-personas",
               "strategy/host-models-personas",
+              "strategy/audience-graph-and-proof",
+              "strategy/creatorcommerce-demand-bridge",
               "strategy/market-formation"
             ]
           }
@@ -75,7 +78,9 @@
             "group": "FIELD TESTS",
             "pages": [
               "market/supply-motion",
+              "market/event-prospecting-catalog",
               "market/city-leads-host-unlocks",
+              "market/asset-need-intelligence",
               "market/testing-grid"
             ]
           }
@@ -109,7 +114,9 @@
             "pages": [
               "how-to/run-creator-led-activation",
               "how-to/setup-sponsor-campaign",
+              "how-to/build-event-prospecting-list",
               "how-to/setup-host-event",
+              "how-to/capture-field-context",
               "how-to/location-activation",
               "how-to/update-this-brain"
             ]

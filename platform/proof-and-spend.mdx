@@ -6,16 +6,31 @@ pageType: "Reference"
 
 Proof and spend are the trust layer. They let sponsors increase allocations without treating every activation as a vague recap.
 
+The seed-deck framing is stronger than reporting: Analog turns sponsorship proof and community growth into corporate underwriting. The question is not only "what happened?" It is "should this sponsor deploy more capital through this host, city, category, or playbook?"
+
 ## Proof Lanes
 
 | Lane | What it proves | Current state |
 |---|---|---|
 | Spend transactions | Money was used through approved operational rails | MVP card and transaction model |
-| Attendance or RSVP | People showed up or claimed interest | Future/adjacent hosted page and import logic |
+| Attendance or RSVP | People showed up or claimed interest | Hosted event page config exists; production capture/import is still early |
 | Sponsor-visible UGC | The activation produced media proof | Post media and story mentions; no comments |
 | Social growth | The host can grow category conversation | Strategy layer, not fully automated in MVP |
-| Benefit claim | Sponsor created useful attendee value | Location and event claim flows are future-facing |
+| Benefit claim | Sponsor created useful attendee value | Location and event claim flows are future-facing, but page/QR/print strategy is defined |
 | Conversion match | Sponsor-side outcome happened later | MCP attribution rail direction |
+| Files and docs | The operator captured context, brief, proof, or research | Workspace files, Analog Docs, template docs, and deep research docs |
+| Tasks and shipments | The host and sponsor completed required logistics | Host tasks, event set todos, asset requests, and shipment logs |
+
+## Underwriting Lanes
+
+| Lane | What it answers |
+|---|---|
+| Spend stewardship | Was capital used responsibly across budgets, receipts, vendors, payouts, unused funds, and anomalies? |
+| Social growth | Did content, posts, UGC, creator posts, community posts, and recap momentum reach the intended audience? |
+| Community operator upside | Is the partner happy with the partnership, dependable, and earning enough for the work to continue? |
+| Category growth | Did repeat participation, category mentions, new members, habit formation, or market activation improve? |
+| Brand growth | Did awareness, benefit claims, signups, sales lift, attributed outcomes, or downstream conversion improve? |
+| Community sentiment | Was the sponsor presence additive, brand-safe, and welcomed by comments, replies, trust signals, or qualitative feedback? |
 
 ## Spend Integrity
 
@@ -27,6 +42,8 @@ Spend integrity asks:
 - Were receipts or vendor notes available?
 - Were there anomalies?
 - Did underspend create an opportunity to reward efficiency or reallocate budget?
+- Did logistics and shipped/mailed assets arrive in time?
+- Did sponsor-required tasks get completed before proof review?
 
 ## Sponsor-Visible UGC Rules
 
@@ -48,8 +65,24 @@ A host should earn a bigger or next allocation when:
 
 - market-growth proof is stronger than expected
 - spend stewardship is clean
+- the community welcomed the sponsor presence
+- the host earned enough operator upside to keep caring
 - the sponsor can explain the value internally
 - the activation can repeat
 - product setup will get easier next time
 
-Direct attribution can help, but it is not the only reason to unlock more budget.
+Direct attribution can help, but it is not the only reason to unlock more budget. A credible underwriting signal can be enough when spend, sentiment, category growth, and repeatability are strong.
+
+## Audience Graph Rule
+
+When a pilot captures attendees, imports attendance, or runs a claim flow, write the proof summary in a privacy-safe way:
+
+- audience count
+- check-in or claim count
+- data source
+- consent source
+- overlap or outcome match only where allowed
+- confidence tier
+- recommended renewal or next proof action
+
+See [Audience Graph And Proof](/strategy/audience-graph-and-proof) for the strategy layer.

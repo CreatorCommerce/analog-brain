@@ -34,6 +34,10 @@ When the user gives a new use case or correction, update the page it belongs to 
 - Use `spend card` for a temporary operational Stripe Issuing card.
 - Use `Agent MCP` for Model Context Protocol tools.
 - Use `MCP attribution rail` for Measurement, Commerce, and Proof.
+- Use `Event set` for a campaign subgroup that owns market persona, special requests, files/assets, and prospecting.
+- Use `Event Prospecting Catalog` for the enriched, claimable IRL supply map.
+- Use `Asset Need Intelligence` for missing communities, spaces, insurance, operators, vendors, proof, sponsors, or capital.
+- Use `CreatorCommerce Demand Bridge` for CC- or partner-sourced brand demand feeding Analog pilots.
 
 ## Mintlify Notes
 

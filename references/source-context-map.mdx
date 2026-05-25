@@ -1,0 +1,92 @@
+---
+title: "Source Context Map"
+description: "Which upstream repos and documents own Analog product, strategy, market, and docs-style context."
+pageType: "Reference"
+---
+
+Use this page when you need to decide where a fact came from before updating the Analog Brain.
+
+## Source Order
+
+| Priority | Source | What it owns |
+|---|---|---|
+| 1 | User feedback in this repo | Binding use cases, corrections, and product/market decisions. |
+| 2 | User-supplied artifacts, including `Analog-Seed.pdf` | Binding pitch narrative, market doctrine, first vertical emphasis, and investor/operator framing unless later user feedback changes it. |
+| 3 | `analog-discovery` | Current working product behavior, frontend routes, API routes, data models, and MVP implementation limits. |
+| 4 | `playground-agentic-mvp` | Analog market doctrine, investor thesis, personas, GTM, supply strategy, market formation, and future product direction. |
+| 5 | `cc-implementation-resources/cc-dev-docs` | Mintlify documentation structure, styling conventions, page contract, and release note discipline. |
+| 6 | This repo's existing summaries | Helpful downstream summaries only after the higher sources are reconciled. |
+
+## Analog Seed Deck Context Captured
+
+The seed deck sharpens the operating story:
+
+- Analog is the operating layer for powering sponsor participation in the IRL economy.
+- The macro shift is digital fatigue, loneliness, and a move from buying things to buying experiences.
+- IRL communities and local events are becoming a more important trust surface, but the economics are fragile.
+- The missing layer is partnership formation, programmable budget allocation, and attributable earned media that is safe, measurable, and renewable.
+- Sponsors need brand safety, spend controls and receipts, sentiment and social proof, category-growth evidence, and operational support.
+- Hosts carry a hidden balance sheet: space, setup, supplies, catering, vendors, speakers, insurance, promotion, content, and unpaid coordination time.
+- The host promise is to move from side hustle to funded vocation: apply once, avoid fronting money, build a track record, work only with brand-fit sponsors, and earn operator upside.
+- The product motion is `Discover -> Collaborate -> Measure`: match trusted communities, execute programmable spend, then renew based on spend, sentiment, category lift, and outcomes.
+- AI is used to underwrite sponsorship proof and community growth across spend stewardship, social growth, operator upside, category growth, brand growth, and community sentiment.
+- The strongest first vertical is running because it has dense supply, clear brand demand, recurring weekly rituals, obvious spend categories, and a category every wellness, apparel, and beverage sponsor is courting.
+- The broader market map includes 12 community families, 90+ club types, and an estimated 3M+ global clubs, scored by how cleanly Analog's proof loop applies.
+- The business model can include campaign fees, sourcing services, payout administration, percent of ad spend on marketed partnerships, and future interchange or treasury revenue on funds.
+- The strategic race is to make a new behavior feel safe and normal: funding individuals and small businesses to steward a sponsor's IRL mission.
+
+## Analog Discovery Context Captured
+
+The current product is broader than the first simple sponsor-host-card summary. The living product includes:
+
+- sponsor and host workspaces with role-linked organizations
+- onboarding and feature preferences
+- campaigns with mission, market persona, value-add, special requests, host visibility, address requirements, and auto-renew settings
+- event sets with market persona, files/assets, special requests, host counts, event counts, and prospecting
+- application portals with theme, custom questions, translations, custom CSS, and GA4
+- managed outreach and future self-serve email/direct mail controls
+- host events that can start before sponsorship and later attach sponsor support
+- hosted event pages with RSVP fields, ticket types, theme, custom CSS, and custom HTML
+- files, uploads, Analog Docs, template docs, and deep research docs
+- DM threads for partnerships and pitch contexts
+- host tasks and sponsor-required todos
+- asset requests and shipment logs
+- sponsor data cockpit for spend, proof, events, applications, content, and AI-style summaries
+- Instagram connection, profile sync, post/story proof, and confidence-scored story mentions
+- temporary spend cards and transaction records
+
+## Playground Agentic MVP Context Captured
+
+The strategy brain centers on:
+
+- sponsors-first, not ecommerce-only
+- fintech and market-growth underwriting for IRL category-building spend
+- "Invest in the positive upside to AI: more IRL"
+- "Communities make markets. Brands monetize those markets."
+- predictive bet recommendations, connected social accounts, market-growth forecasts, spend watch, proof ledger, and sponsorship unlocks
+- creator/community-led IRL as the safest first wedge
+- dual market formation: selective brand-funded pilots plus grants/RFEs/RFCs/owned activations
+- Event Prospecting Catalog as Apollo-like enriched IRL supply data
+- audience graph and no-touch attribution as proof rails, with raw PII protected
+- physical location activation through QR/print/claim/benefit flows
+- asset need intelligence for missing communities, spaces, insurance, operators, vendors, proof, sponsors, and capital
+- multi-actor marketplace logic where creators, talent managers, spaces, operators, vendors, and sponsors can originate opportunities
+- CreatorCommerce as a partner-deployed demand bridge into qualified brand pipeline
+
+## Documentation Style Context Captured
+
+This repo follows the `cc-dev-docs` discipline:
+
+- every live page has `title`, `description`, and `pageType`
+- canonical facts live in reference pages
+- strategy pages explain doctrine
+- how-to pages explain operator execution
+- glossary changes follow terminology changes
+- release notes are added for new use cases, workflows, or product rules
+- custom CSS uses the same Poppins/Lora direction and compact Mintlify styling posture
+
+## Conflict Rule
+
+When sources conflict, update the canonical page first and then update summaries, how-to pages, navigation, glossary, and release notes as needed.
+
+If the user later supplies a use case, correction, or preference, it supersedes conflicting material here and in the upstream summaries.
