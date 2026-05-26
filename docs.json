@@ -1,15 +1,15 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Analog Brain",
-  "description": "Internal operator docs for using Analog to fund, run, test, and measure real-world activations.",
+  "name": "Analog Operating Docs",
+  "description": "Founding operating docs for the team building the future of the IRL economy.",
   "favicon": "/images/analog-fav-yellow.png",
   "icons": {
     "library": "lucide"
   },
   "colors": {
-    "primary": "#B9362E",
-    "light": "#F2C94C",
+    "primary": "#FF4438",
+    "light": "#FF4438",
     "dark": "#8F6E00"
   },
   "background": {
@@ -39,12 +39,13 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Brain",
+        "tab": "Founding Docs",
         "groups": [
           {
             "group": "START HERE",
             "pages": [
               "index",
+              "guides/stakeholder-brief",
               "guides/how-to-use-these-docs",
               "guides/documentation-contract",
               "guides/glossary",
@@ -61,15 +62,29 @@
             "group": "MARKET DOCTRINE",
             "pages": [
               "strategy/current-thesis",
+              "strategy/dogfooding-analog",
+              "strategy/social-proof-ai-to-irl",
+              "references/macro-trends-irl-economy",
               "strategy/twelve-month-market-focus",
+              "strategy/market-formation"
+            ]
+          },
+          {
+            "group": "OPERATING MODEL",
+            "pages": [
               "strategy/lean-gtm-operating-model",
-              "strategy/mvp-use-cases",
               "strategy/sponsor-personas",
               "strategy/host-models-personas",
-              "strategy/media-owned-irl-engine",
-              "strategy/audience-graph-and-proof",
-              "strategy/creatorcommerce-demand-bridge",
-              "strategy/market-formation"
+              "strategy/pricing-models",
+              "strategy/media-owned-irl-engine"
+            ]
+          },
+          {
+            "group": "USE CASES",
+            "pages": [
+              "strategy/mvp-use-cases",
+              "use-cases/dog-treats-and-toys-fund",
+              "use-cases/dinner-funds-and-connector-dinners"
             ]
           }
         ]
