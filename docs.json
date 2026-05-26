@@ -8,9 +8,9 @@
     "library": "lucide"
   },
   "colors": {
-    "primary": "#F2C94C",
-    "light": "#FF4438",
-    "dark": "#F2C94C"
+    "primary": "#B9362E",
+    "light": "#F2C94C",
+    "dark": "#8F6E00"
   },
   "background": {
     "color": {
