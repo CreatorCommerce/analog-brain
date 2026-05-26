@@ -83,6 +83,7 @@
             "group": "USE CASES",
             "pages": [
               "strategy/mvp-use-cases",
+              "use-cases/ecomm-movement-and-wellness-funds",
               "use-cases/dog-treats-and-toys-fund",
               "use-cases/dinner-funds-and-connector-dinners"
             ]
