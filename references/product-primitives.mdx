@@ -1,6 +1,6 @@
 ---
 title: "Product Primitives"
-description: "Canonical MVP product objects, rules, terminology, and boundaries for the working Analog product."
+description: "Canonical MVP product objects, rules, terminology, and boundaries for Analog's community-led IRL funding infrastructure."
 pageType: "Reference"
 ---
 
@@ -8,19 +8,76 @@ This page reflects the current MVP product logic in `analog-discovery`. Use it a
 
 ## MVP Boundary
 
-Analog is currently an MVP for sponsors and hosts to fund, operate, and prove real-world activations through structured campaigns, host events, application portals, files/docs, managed outreach, hosted event pages, and temporary operational spend cards.
+Analog is currently an MVP for Sponsors and Hosts to fund, operate, and prove community-led IRL activations through structured campaigns, host events, application portals, files/docs, managed outreach, hosted event pages, and temporary operational spend cards.
 
-The wedge is governed IRL spend: sponsor budget becomes campaign structure, host-side execution, watched spend, proof, and renewal logic. The current code is still a local MVP with a JSON store and no real production auth, billing, or payout rail.
+The wedge is governed IRL spend: Sponsor budget becomes campaign structure, Host-side execution, shared spend, proof, reporting, sentiment, and renewal logic. The current product is still an MVP and is not yet running production-grade auth, billing, payout, or payment infrastructure.
+
+The platform focus is fintech enablement plus marketplace enablement. Analog is not trying to become a bank in the MVP. It is shoring up the spend infrastructure, campaign conventions, Host approval flow, proof loop, and supply-creation motion needed to earn the right to deploy community activation investments on behalf of brands and businesses.
+
+## MVP Focus
+
+| Focus | Current product surface | What it helps Analog learn |
+|---|---|---|
+| Spend infrastructure <Tooltip headline="Spend infrastructure" tip="Budgets, allocations, funding state, spend cards, merchant/category controls, transactions, receipts, and proof that let Analog deploy approved capital responsibly."><span className="analog-help">?</span></Tooltip> | Campaign budgets, collab allocations, spend cards, card limits, allowed categories, transactions, available budget, funding state | Which budget, approval, control, receipt, and reporting conventions Sponsors trust enough to repeat. |
+| Marketplace enablement <Tooltip headline="Marketplace enablement" tip="The objects that make Sponsor demand and Host supply legible before a fully liquid marketplace exists."><span className="analog-help">?</span></Tooltip> | Event sets, application portals, campaign applications, Host opportunities, hosted event pages, Sponsor data, proof surfaces | Which Sponsor briefs, Host profiles, pricing models, proof standards, and renewal signals should become durable marketplace conventions. |
+| Supply creation <Tooltip headline="Supply creation" tip="Using managed outreach, city leads, media, partner lists, and brand funds to create enough qualified Host-side options for the platform to observe."><span className="analog-help">?</span></Tooltip> | Managed outreach, event-set prospecting, files/docs, city lead workflows, applications, activation packages | How brand funds and programs pull new Hosts, spaces, connectors, and communities into a market the product can measure. |
+| Agency services as scaffolding <Tooltip headline="Services as scaffolding" tip="Manual GTM, marketing, sourcing, and program design used to create supply and learn product conventions, not the terminal business model."><span className="analog-help">?</span></Tooltip> | Sponsor briefs, prospecting, Host packaging, launch checklists, proof QA, renewal packets, media/GTM support | Which manual steps should become product, templates, contractor playbooks, partner workflows, or no-go rules. |
+
+Use services to create the market, then turn the repeated parts into product. The test is not whether Analog can manually run one good program. The test is whether brand funds, spend controls, Host supply, proof, and renewal can repeat with less custom work each time.
+
+## IRL Culture Graph Primitive
+
+Analog's product memory should be more than event records. The larger primitive is an IRL culture graph: a privacy-safe, provenance-aware map of events, recurring rituals, cultural operators, audience hypotheses, sponsor fit, spend behavior, proof quality, and renewal logic.
+
+The strategic analogy is simple:
+
+| Data category | What it makes actionable |
+|---|---|
+| B2B account data | Companies, contacts, roles, and prospecting paths. |
+| Digital creator data | Creator reach, digital audiences, content performance, and social distribution. |
+| Analog IRL culture data | Which real-world communities gather, who can move them, what sponsors they fit, and which funded moments create audience or category potential. |
+
+In the MVP, this graph is assembled from product objects rather than a standalone data product: campaigns, event sets, applications, host profiles, hosted pages, spend cards, transactions, files/docs, proof packets, city lead notes, media capture, and renewal decisions.
+
+## Brand Fund Market Loop
+
+The MVP should create small, observable markets around brand funds and programs.
+
+```text
+Brand fund -> supply response -> governed spend -> proof -> selection rule
+```
+
+| Step | Product primitive | What Analog learns |
+|---|---|---|
+| Brand fund declares demand <Tooltip headline="Brand fund" tip="A sponsor-backed budget lane with a mission, eligibility, geography, spend rules, proof standard, and renewal condition."><span className="analog-help">?</span></Tooltip> | Campaign, event set, application portal, outreach, files/assets | Which sponsor asks are clear enough for hosts to understand and act on. |
+| Supply responds <Tooltip headline="Supply response" tip="Hosts, spaces, connectors, and operators apply, are invited, or are created through GTM and city work against a clear fund/program."><span className="analog-help">?</span></Tooltip> | Campaign applications, host opportunities, prospecting, pitch docs, city lead packets | Which host profiles, pitch formats, incentives, and channels create quality options. |
+| Spend is governed | Collab, allocation, spend card, allowed categories, expiration, transactions | Which spend controls are strict enough for sponsors and usable enough for hosts. |
+| Proof is captured | Sponsor data, campaign content, event analytics, files, tasks, shipments | Which evidence sponsors actually use to renew, expand, or reallocate. |
+| Selection rule improves <Tooltip headline="Selection rule" tip="The practical logic for deciding who receives the next dollar, who needs more support, and which motions should stop."><span className="analog-help">?</span></Tooltip> | Unlock decision, renewal packet, no-go note, product blocker, playbook | Which conventions should become defaults in the platform. |
+
+This is what "free market" should mean in the MVP: not an ungoverned open marketplace, but a constrained learning market where sponsors declare demand, supply has room to emerge or compete, and the product watches what deserves the next allocation.
+
+## Sponsor-Shared Campaign Primitive
+
+A sponsor-shared campaign is the bridge between spend infrastructure and marketplace formation.
+
+| Primitive | Current approximation | Rule |
+|---|---|---|
+| Campaign share surface <Tooltip headline="Campaign share surface" tip="The page, link, document, partner surface, or media call-to-action that lets a sponsor-backed opportunity travel through the market."><span className="analog-help">?</span></Tooltip> | Application portal, event set prospecting CTA, sponsor outreach, hosted form, shared file/doc | Make the ask specific: who qualifies, what money is available, what spend is allowed, and what proof earns renewal. |
+| Money-on-the-table signal <Tooltip headline="Money-on-the-table signal" tip="A visible sponsor-backed opportunity that communicates there is real budget available for the right host or operator, without implying unrestricted access."><span className="analog-help">?</span></Tooltip> | Campaign budget, event set, application copy, fund/program description | Use it to attract supply and reveal market interest; do not present it as a guarantee. |
+| Supply response | Campaign applications, invited hosts, pitch docs, city lead referrals, prospecting replies | Track where each response came from so the platform learns which channels create quality supply. |
+| Owned IRL conversion | Analog happy hour, dinner, walk, salon, live recording, field meetup | Route real-world attendees into applications, profiles, sponsor leads, catalog records, or fund ideas. |
 
 ## Operating Layer Shape
 
-The product direction is an operating layer, not a directory or one-off agency service.
+The product direction is an operating layer, not a directory, generic fintech app, or one-off agency service.
 
 | Layer | Product job |
 |---|---|
 | Discover | Proven hosts, clubs, gatherings, venues, and operators are vetted, ranked, matched, and routed into campaigns or event sets. |
-| Collaborate | Sponsor budget becomes programmable spend, controls, guardrails, tasks, assets, docs, and execution support. |
+| Collaborate | Sponsor budget becomes governed spend, controls, guardrails, tasks, assets, docs, and execution support. |
 | Measure | Receipts, content, attendance, sentiment, category lift, and outcomes become proof for renewal or unlock decisions. |
+| Learn | Repeated budget, supply, proof, and services patterns become marketplace and fintech conventions that the platform can standardize. |
 
 The current MVP implements pieces of this loop. Strategy pages should describe the full loop, while how-to and reference pages should stay honest about current product boundaries.
 
@@ -40,6 +97,8 @@ Do not describe these as current MVP objects unless they map back to existing su
 | Editorial fund drop | Campaign or event set launched alongside media, owned IRL, or `The Connector` |
 
 Until production money movement exists, fund access means governed sponsor allocations, grants, event-scoped budgets, spend cards, or approved program budgets. It does not mean unrestricted wallet balances.
+
+Brand funds and programs are the cleanest market-making primitive: they give sponsors a reason to declare demand, hosts a reason to apply or create supply, and Analog a controlled environment to observe pricing, proof, spend behavior, and renewal.
 
 ## Account And Org Posture
 
@@ -96,7 +155,7 @@ The strategy target is one organization model with roles and permissions. The cu
 | Campaign content | Sponsor-visible proof item | Image/video post mentions, uploaded proof, seeded content, and social listening records. Comments are not sponsor UGC. |
 | Story mention | Instagram story attribution record | Confidence-scored against event windows and candidate events; can be verified, probable, weak, unattributed, or discarded. |
 | Campaign event analytics | Event-level proof summary | Combines spend, transaction count, content count, social proof, uploaded proof, approval state, and story mention analytics. |
-| Sponsor data snapshot | Sponsor-side reporting surface | Combines campaigns, applications, collabs, events, files, content, spend, social proof, and AI-style outcome summaries. |
+| Sponsor data snapshot | Sponsor-side reporting surface | Combines campaigns, applications, collabs, events, files, content, spend, social proof, and assisted outcome summaries. |
 
 ## Product-Facing Terms
 
@@ -123,7 +182,7 @@ The MVP intentionally does not include:
 - production ticketing or payment collection
 - native mobile apps
 - wallet passes
-- full automated no-touch attribution
+- fully automated attribution
 - fully automated legal contracting, insurance, or payout gates
 
 Money remains platform-controlled. Hosts receive event-scoped operational spend access, not withdrawable balances.
@@ -148,4 +207,4 @@ Current product facts to preserve in docs:
 - Services and handlers enforce most product rules.
 - Money is integer minor units.
 - Local dashboard points to `http://127.0.0.1:8080`.
-- The MVP is intentionally scaffolded for future database, auth, billing, payments, partner API, and production attribution rails.
+- The MVP is intentionally scaffolded for future database, auth, billing, payments, partner API, and production attribution workflows.
