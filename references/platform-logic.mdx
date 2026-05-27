@@ -6,22 +6,137 @@ pageType: "Reference"
 
 Use this page when writing how-to docs that tell operators where work happens in the current platform.
 
+## MVP Platform Thesis
+
+The MVP should make Analog easy to understand at a glance:
+
+```text
+Sponsor budget -> controlled spend -> host supply -> proof -> next allocation
+```
+
+The platform is testing which product conventions make brands, public funders, and businesses comfortable giving Analog budget to deploy on their behalf. The work starts with spend infrastructure, but the goal is marketplace enablement: enough structured Sponsor demand and Host-side supply for Analog to observe what repeats.
+
+The platform should prioritize cash-based Host enablement over product-only gifting. Product can be a campaign asset, but the core learning surface is how cash, services, tools, proof, and renewal help Hosts create better gatherings.
+
+For high-ticket sponsorships, the platform direction expands from card spend to sponsorship governance. Analog should still use spend cards for distributed Host and vendor budgets, while using files/docs, contracts, invoices, milestones, risk registers, proof gates, and AI-assisted recommendations to keep large IRL investments safe.
+
+| Platform focus | What to look for in the UI | Product learning |
+|---|---|---|
+| Spend infra <Tooltip headline="Spend infra" tip="The campaign, allocation, card, category, transaction, and funding-state layer that makes sponsor capital controllable and auditable."><span className="analog-help">?</span></Tooltip> | Campaign budgets, collabs, host cards, spend limits, transactions, funding state | What controls sponsors need before they trust field spend. |
+| Demand lanes <Tooltip headline="Demand lanes" tip="Sponsor briefs expressed as event sets, market personas, funds, programs, or prospecting lanes."><span className="analog-help">?</span></Tooltip> | Campaign mission, market persona, event sets, required todos, assets, application links | Which asks are specific enough to pull quality supply. |
+| Supply markets <Tooltip headline="Supply markets" tip="Host-side options created by applications, prospecting, city leads, media, partner lists, and managed GTM."><span className="analog-help">?</span></Tooltip> | Application inbox, host opportunities, hosted event pages, prospecting, pitch pages | Which hosts, spaces, and connectors become sponsor-ready fastest. |
+| Services/tools <Tooltip headline="Services/tools" tip="Insurance, documents, print, vendors, local designers, rentals, and proof kits that make cash funding easier to use."><span className="analog-help">?</span></Tooltip> | Files, docs, required todos, asset requests, shipment logs, vendor notes, proof templates | Which blockers should become product workflows, partner workflows, or managed support. |
+| Sponsorship governance <Tooltip headline="Sponsorship governance" tip="High-ticket sponsorship controls beyond cards: investment memos, allocation plans, contracts, invoices, risk registers, proof gates, and renewal recommendations."><span className="analog-help">?</span></Tooltip> | Files/docs, Sponsor data, campaigns, event sets, tasks, proof, approval notes, assisted summaries | Which controls make six- or seven-figure sponsorships safe enough to deploy, renew, or reallocate. |
+| Proof loop <Tooltip headline="Proof loop" tip="The evidence package that tells a sponsor whether to renew, expand, reallocate, or stop."><span className="analog-help">?</span></Tooltip> | Sponsor data, campaign proof, files, UGC, spend, tasks, shipments | Which evidence earns the next budget allocation. |
+
+## IRL Culture Data Opportunity
+
+Analog should compound a data set that existing digital and B2B systems do not own well.
+
+<Info>
+Use ZoomInfo and Meta as strategic analogies, not literal product comparisons. ZoomInfo-style data makes companies, contacts, and accounts actionable. Meta-style social data makes digital creators and audiences actionable. Analog's opportunity is to make the fluid motion of IRL events, culture, and community actionable for marketing, audience allocation, and sponsor-funded market growth.
+</Info>
+
+The platform should treat every campaign, application, event set, hosted page, proof packet, city lead note, owned IRL room, and sponsor renewal decision as product memory.
+
+| Data layer | What Analog can learn | Product expression |
+|---|---|---|
+| Event and ritual motion | Which gatherings recur, grow, fade, travel across cities, or create category momentum. | Host events, hosted pages, catalog records, proof summaries. |
+| Cultural operator graph | Which hosts, spaces, creators, restaurants, dot connectors, and city leads can move a room. | Host profiles, connector profiles, applications, city lead referrals. |
+| Audience potential | Which communities resemble a sponsor's best customers, strategic accounts, civic audience, or category-growth opportunity. | Audience graph, event-set fit, lookalike event recommendations, sponsor data summaries. |
+| Sponsor fit and renewal | Which sponsor perspectives, budget shapes, spend rules, and proof standards earn the next allocation. | Campaigns, event sets, collabs, spend cards, proof, unlock decisions. |
+
+This is not a plan to sell raw attendee data. The defensible asset is privacy-safe, provenance-aware IRL market intelligence: who gathers, why they gather, who can host, what sponsors should fund, what proof is credible, and where the next dollar should go.
+
+## Free-Market Learning Surfaces
+
+Analog should use brand funds and programs to create constrained markets the product can observe.
+
+| Surface | How it works | What to keep visible |
+|---|---|---|
+| Open fund/program <Tooltip headline="Open fund/program" tip="A sponsor-backed ask that lets hosts or operators self-select into a clear budget, mission, geography, and proof standard."><span className="analog-help">?</span></Tooltip> | Sponsor publishes or prospects against a campaign/event set and sends supply to the application portal. | Mission, eligibility, budget range, allowed spend, proof requirements, renewal rule. |
+| Micro/macro grant lane <Tooltip headline="Micro/macro grant lane" tip="Cash-based funding ladder for small recurring needs, larger recurring programs, strategic rooms, or operator retainers."><span className="analog-help">?</span></Tooltip> | Campaign/event-set copy, application request, collab allocation, card, proof packet. | Host goal, funding tier, service/tool needs, spend category, unlock rule. |
+| Managed supply creation <Tooltip headline="Managed supply creation" tip="Agency-style GTM, media, city leads, and partner sourcing used to create enough qualified supply before the marketplace is liquid."><span className="analog-help">?</span></Tooltip> | Analog markets the fund, recruits hosts, packages opportunities, and routes candidates into product objects. | Source channel, host type, pitch quality, blocker, cost to source, conversion to collab. |
+| Controlled field spend <Tooltip headline="Controlled field spend" tip="Sponsor capital deployed through allocations and spend cards so Analog can learn usable budget conventions without exposing hosts to reimbursement chaos."><span className="analog-help">?</span></Tooltip> | Accepted hosts operate against collabs, cards, categories, limits, and event context. | Allocation, merchant/category behavior, timing, unused funds, anomalies, host usability. |
+| Public-money program <Tooltip headline="Public-money program" tip="Municipal, foundation, or NGO funding with eligibility, fraud/waste/abuse controls, public reporting, and participation proof."><span className="analog-help">?</span></Tooltip> | Campaign, application portal, collab, spend controls, receipt proof, public summaries. | Eligibility, approved uses, anomaly review, access created, local legitimacy. |
+| Market selection | Sponsor reviews proof and decides who earns the next dollar. | Renewal, unlock, reallocation, no-go, product blocker, repeat playbook. |
+
+The UI should make these markets easy to scan. A sponsor should see the ask, the supply response, the spend behavior, and the proof result without needing a custom report.
+
+## Sponsor-Shared Campaign Dynamics
+
+The most important marketplace behavior is a sponsor sharing a campaign, fund, or program as a visible demand signal.
+
+```text
+Sponsor shares campaign -> market sees money on the table -> hosts respond -> Analog governs spend -> proof selects winners
+```
+
+This does not mean making every sponsor budget public or promising funding to anyone who sees the link. It means turning hidden sponsor interest into a clear, shareable ask with eligibility, spend rules, proof standards, and a path to apply or be invited.
+
+<Steps>
+  <Step title="Declare demand">
+    The sponsor frames the campaign as a concrete market ask: fund this kind of moment, for this audience, in this place, under these rules.
+  </Step>
+
+  <Step title="Let the ask travel">
+    The campaign link, brief, or fund page moves through sponsor channels, city leads, partners, `The Connector`, social, and owned Analog gatherings.
+  </Step>
+
+  <Step title="Create supply response">
+    Hosts, spaces, connectors, restaurants, operators, and community builders apply, refer, or package activation ideas because the opportunity is specific enough to act on.
+  </Step>
+
+  <Step title="Govern the money">
+    Analog approves the right operators, sets allocations and spend limits, captures proof, and protects sponsor trust.
+  </Step>
+
+  <Step title="Select the next dollar">
+    Proof decides which hosts earn renewal, which cities deserve expansion, which spend rules should change, and which campaign shapes should stop.
+  </Step>
+</Steps>
+
+| Dynamic | Product surface | Marketplace effect |
+|---|---|---|
+| Visible budget signal <Tooltip headline="Visible budget signal" tip="A sponsor-backed campaign, fund, or program that makes the available opportunity legible without exposing unrestricted money or private budget details."><span className="analog-help">?</span></Tooltip> | Campaign, event set, application portal, hosted form, campaign copy | Hosts understand that real sponsor capital exists for a specific mission, city, audience, or format. |
+| Shareable demand beacon <Tooltip headline="Demand beacon" tip="A campaign or fund page that can be shared by sponsors, city leads, partners, media, and owned IRL attendees to invite qualified supply."><span className="analog-help">?</span></Tooltip> | Application link, sponsor outreach, files/docs, hosted page, partner surface | The market can route the right hosts, spaces, connectors, and communities toward the opportunity. |
+| Supply response | Applications, invited hosts, prospecting replies, city lead referrals, pitch docs | Analog sees what the market produces when money and rules are visible. |
+| Spend-backed selection | Collabs, allocations, spend cards, categories, transactions, proof | The best operators are selected by execution, spend stewardship, and sponsor-believable proof, not only relationship access. |
+| Repeat campaign sharing | Renewal packet, unlock recommendation, sponsor data, proof recap | The sponsor can share a sharper next campaign because the platform learned who responded and what worked. |
+
+The "windfall" is the sponsor budget that is already looking for trusted IRL channels but cannot move because the supply, governance, and proof layer is missing. Analog's job is to make that capital actionable without making it careless.
+
+## Owned IRL As Market Seeding
+
+Analog-owned gatherings should sit beside sponsor-shared campaigns as the company's own supply-creation engine.
+
+The operating rule is simple: run owned IRL in the same city, category, or sponsor-perspective lane as the campaign. The room gives city leads a trusted way to explain the ask, hear blockers, collect referrals, and route interested people into product objects.
+
+| Owned IRL motion | How it talks to shared campaigns |
+|---|---|
+| Community-builder happy hours | Recruit hosts, connectors, and spaces into live campaign/fund opportunities. |
+| Sponsor-listening salons | Turn sponsor demand into clearer campaign briefs, proof rules, and budget conventions. |
+| City lead dinners or walks | Surface trusted operators and let them hear the money-on-the-table ask directly. |
+| Connector interviews and live recordings | Convert cultural visibility into sponsor-safe profiles, applications, and Activation Opportunities. |
+| Fund launch gatherings | Make a sponsor-backed program feel real in-market, then route attendees and referrals into the application flow. |
+
+Owned IRL should never be separate from the product. Every gathering should point to a campaign, fund, host profile, application portal, catalog record, proof asset, sponsor lead, or asset-need note.
+
 ## Product Surface Map
 
 | Surface | What it is for |
 |---|---|
-| Onboarding | Account/contact verification stub, operating locations, sponsor/host role intent, and feature preferences. |
-| Sponsor Campaigns | Campaign creation, funding, campaign settings, event sets, sponsor hosts, proof, files, and UGC. |
-| Sponsor Applications | Application portal builder and pitch inbox for inbound host supply. |
-| Sponsor Data | Sponsor-side underwriting/reporting cockpit for spend, proof, applications, events, and AI-style summaries. |
-| Sponsor Outreach | Managed email/direct mail outbound and future self-serve prospecting controls. |
-| Host Events | Host event creation, sponsor budget attachment, cards, spend, and event proof. |
-| Host Sponsors | Sponsor budgets, sponsor cards, event set assets, and mailed asset requests. |
+| Onboarding | Role intent, operating locations, and feature preferences. |
+| Sponsor Campaigns | Budget, event sets, host allocations, proof, files, UGC, and renewal setup. |
+| Sponsor Applications | Application portal and pitch inbox for inbound host supply. |
+| Sponsor Data | Reporting cockpit for spend, proof, supply, and assisted summaries. |
+| Sponsor Outreach | Managed outbound that creates supply against a demand lane. |
+| Host Events | Event creation, sponsor budget attachment, cards, spend, and proof. |
+| Host Sponsors | Active budgets, sponsor cards, assets, and mailed asset requests. |
 | Host Opportunities | Campaign discovery, opportunity review, and pitch sharing. |
-| Hosted Event Pages | Public event pages and invite builder with RSVP/ticket fields, theme, custom CSS, and custom HTML. |
-| Files | Sponsor/host docs, uploads, shared files, template docs, and deep research docs. |
+| Hosted Event Pages | Public capture surface for RSVP, ticket modeling, theme, and custom HTML/CSS. |
+| Files | Docs, uploads, templates, deep research, and cross-party operating context. |
 | Notifications | Analog messages, social DMs, and email notification shells. |
-| Settings | General settings, social/platform connections, feature setup, organization roles, brand kit, and design kit. |
+| Settings | Connections, feature setup, organization roles, brand kit, and design kit. |
 
 ## Route Map
 
@@ -62,14 +177,14 @@ Use this page when writing how-to docs that tell operators where work happens in
 
 Sponsor screens should stay sponsor-centric:
 
-- Campaigns are the main paid/funded object.
+- Campaigns are the main paid/funded object and the first spend-infra learning container.
 - Campaign settings should capture mission, market persona, main value-add, special requests, host visibility, mailing-address requirement, and auto-renew preference.
-- Event sets split a campaign by market/persona, special requests, files/assets, and prospecting lane.
+- Event sets split a campaign by market/persona, special requests, files/assets, and prospecting lane. Treat them as demand lanes that can pull supply into the market.
 - Application portal collects standardized host pitches and keeps attachments/answers structured.
-- Sponsor outreach routes external leads back to the same application workflow.
+- Sponsor outreach routes external leads back to the same application workflow, so managed GTM creates product-readable supply.
 - Campaign detail shows campaign metrics, event sets, files, sponsor-visible proof, sponsored hosts, and UGC.
 - Sponsor-host detail owns host-level campaign activity, shared files, asset requests, and shipment logs.
-- UGC and AI-style outcome summaries belong on sponsor/data surfaces.
+- UGC and assisted outcome summaries belong on sponsor/data surfaces.
 
 ## Host UX Rules
 
@@ -114,3 +229,5 @@ Keep two related concepts distinct:
 - Event Set Prospecting is a campaign detail action that starts external prospecting for one event set.
 
 Both should route interested hosts back to the campaign application link so leads enter the same approval workflow.
+
+Managed outreach, city lead sourcing, media, and brand-fund GTM are allowed in the MVP because they create supply the marketplace can observe. They should always produce product objects: applications, event sets, host profiles, pitch docs, proof, asset requests, or no-go learning.
