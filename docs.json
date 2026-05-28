@@ -56,20 +56,49 @@
         ]
       },
       {
+        "tab": "Market Dynamics",
+        "groups": [
+          {
+            "group": "MARKET CONTEXT",
+            "pages": [
+              "references/macro-trends-irl-economy",
+              "strategy/social-proof-ai-to-irl",
+              "strategy/twelve-month-market-focus"
+            ]
+          },
+          {
+            "group": "FORMATION & SUPPLY",
+            "pages": [
+              "strategy/market-formation",
+              "market/supply-motion",
+              "market/event-prospecting-catalog",
+              "market/city-leads-host-unlocks",
+              "market/asset-need-intelligence"
+            ]
+          },
+          {
+            "group": "TESTS & USE CASES",
+            "pages": [
+              "market/testing-grid",
+              "strategy/mvp-use-cases",
+              "use-cases/ecomm-movement-and-wellness-funds",
+              "use-cases/dog-treats-and-toys-fund",
+              "use-cases/dinner-funds-and-connector-dinners"
+            ]
+          }
+        ]
+      },
+      {
         "tab": "Strategy",
         "groups": [
           {
-            "group": "MARKET DOCTRINE",
+            "group": "COMPANY DOCTRINE",
             "pages": [
               "strategy/current-thesis",
               "strategy/cash-funding-playbooks",
               "strategy/public-nonprofit-funding-infrastructure",
               "strategy/high-ticket-sponsorship-underwriting",
-              "strategy/dogfooding-analog",
-              "strategy/social-proof-ai-to-irl",
-              "references/macro-trends-irl-economy",
-              "strategy/twelve-month-market-focus",
-              "strategy/market-formation"
+              "strategy/dogfooding-analog"
             ]
           },
           {
@@ -80,30 +109,6 @@
               "strategy/host-models-personas",
               "strategy/pricing-models",
               "strategy/media-owned-irl-engine"
-            ]
-          },
-          {
-            "group": "USE CASES",
-            "pages": [
-              "strategy/mvp-use-cases",
-              "use-cases/ecomm-movement-and-wellness-funds",
-              "use-cases/dog-treats-and-toys-fund",
-              "use-cases/dinner-funds-and-connector-dinners"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Market Dynamics",
-        "groups": [
-          {
-            "group": "FIELD TESTS",
-            "pages": [
-              "market/supply-motion",
-              "market/event-prospecting-catalog",
-              "market/city-leads-host-unlocks",
-              "market/asset-need-intelligence",
-              "market/testing-grid"
             ]
           }
         ]
