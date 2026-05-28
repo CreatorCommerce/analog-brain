@@ -1,11 +1,11 @@
 ---
 title: "Documentation Contract"
-description: "How Analog Brain pages are organized, which page wins when facts conflict, and how to update the corpus without drift."
+description: "How the Analog operating docs are organized, which page wins when facts conflict, and how to update the corpus without drift."
 pageType: "Reference"
 ---
 
 <Info>
-If two pages conflict, trust the canonical reference first, then the newest user correction. User-supplied use cases and feedback are law of the land.
+If two pages conflict, trust the canonical reference first, then the newest founder correction. Founder-supplied use cases and feedback are law of the land.
 </Info>
 
 ## Page Types
@@ -18,6 +18,18 @@ If two pages conflict, trust the canonical reference first, then the newest user
 | How-to | Explain execution | Step-by-step workflows, operator checklists, and setup sequences |
 | Use-case page | Route a test | What the use case tests and which canonical pages to use |
 | AI playbook | Guide assistants | Update rules, prompt patterns, and conflict handling |
+
+## Navigation Model
+
+Use the tabs as a decision system:
+
+| Tab | Job | What belongs there |
+|---|---|---|
+| Founding Docs | Orient the team and preserve source order. | Overview, stakeholder narrative, glossary, source map, release notes, and update rules. |
+| Market Dynamics | Explain why the market exists and where to test. | Macro/social proof, 12-month focus, market formation, supply motion, cataloging, asset gaps, scoring, and use cases. |
+| Strategy | Explain the company doctrine and operating choices. | Core thesis, funding strategy, sponsor/host strategy, public/nonprofit and high-ticket lanes, dogfood, GTM model, pricing, and media engine. |
+| Platform | Explain product truth and proof systems. | Current MVP objects, routes, Sponsor/Host workflows, spend, proof, audience graph, and product boundaries. |
+| How-To | Explain execution. | Step-by-step operator workflows and setup sequences. |
 
 Every live page must include:
 
@@ -33,7 +45,7 @@ pageType: "Reference"
 
 Resolve conflicts in this order:
 
-1. The user in this repo.
+1. Founder direction captured in this repo.
 2. Current product behavior from the Analog MVP.
 3. Analog strategy and market doctrine.
 4. Existing summaries in this docs repo.
@@ -45,20 +57,29 @@ Resolve conflicts in this order:
 | Product objects and MVP boundaries | [Product Primitives](/references/product-primitives) |
 | Frontend routes and UX behavior | [Platform Logic](/references/platform-logic) |
 | Source repo ownership | [Source Context Map](/references/source-context-map) |
+| Company stakeholder narrative | [Company Stakeholder Brief](/guides/stakeholder-brief) |
 | Core thesis | [Current Thesis](/strategy/current-thesis) |
+| Cash funding, micro grants, macro grants, services/tools, and print/publication | [Cash Funding Playbooks](/strategy/cash-funding-playbooks) |
+| Public/nonprofit/government funding | [Public And Nonprofit Funding Infrastructure](/strategy/public-nonprofit-funding-infrastructure) |
+| High-ticket sponsorship underwriting | [High-Ticket Sponsorship Underwriting](/strategy/high-ticket-sponsorship-underwriting) |
 | 12-month market focus, streams, causeways, moats, and dogfood | [12-Month Market Focus](/strategy/twelve-month-market-focus) |
+| Market formation | [Market Formation](/strategy/market-formation) |
 | Lean GTM team design, operating cadence, and national coverage | [Lean GTM Operating Model](/strategy/lean-gtm-operating-model) |
-| Sponsor categories | [Sponsor Personas](/strategy/sponsor-personas) |
+| Sponsor pipeline, entity intake, and persona-to-brief mapping | [Sponsor Personas And Pipeline](/strategy/sponsor-personas) |
+| Pricing models, sponsor fees, fund administration, prospecting, and pricing tests | [Pricing Models And Experiments](/strategy/pricing-models) |
+| Sponsor categories | [Sponsor Personas And Pipeline](/strategy/sponsor-personas) |
 | Host and supply models | [Host Models And Personas](/strategy/host-models-personas) |
 | Media, connector talent, owned IRL, and governed funding | [Media, Connectors, And Funding Engine](/strategy/media-owned-irl-engine) |
 | Early city staffing and launch model | [Lean GTM Operating Model](/strategy/lean-gtm-operating-model) |
-| Audience graph, capture, and no-touch proof | [Audience Graph And Proof](/strategy/audience-graph-and-proof) |
+| Audience graph, capture, and low-touch proof | [Audience Graph And Proof](/strategy/audience-graph-and-proof) |
+| Spend, proof, unlocks, and public/nonprofit proof rules | [Proof And Spend](/platform/proof-and-spend) |
 | CreatorCommerce demand bridge | [CreatorCommerce Demand Bridge](/strategy/creatorcommerce-demand-bridge) |
+| MVP use-case router | [MVP Use Cases](/strategy/mvp-use-cases) |
 | Supply access versus creation | [Supply Motion](/market/supply-motion) |
 | Prospecting catalog | [Event Prospecting Catalog](/market/event-prospecting-catalog) |
 | Missing market assets | [Asset Need Intelligence](/market/asset-need-intelligence) |
 | Market scoring | [Testing Grid](/market/testing-grid) |
-| Updating the brain | [Update This Brain](/how-to/update-this-brain) |
+| Updating these docs | [Update These Docs](/how-to/update-this-brain) |
 
 ## Update Rules
 
@@ -66,6 +87,9 @@ Resolve conflicts in this order:
 - Keep practical details in how-to pages.
 - Link instead of copying long factual blocks across pages.
 - Avoid bloat. Use visual components only when they reduce reading effort, and cut any card, tab, callout, table, or paragraph that repeats a decision already made clearer elsewhere.
-- Check light and dark mode when changing colors. Do not use yellow as body text or primary navigation text on white backgrounds; reserve it for dark mode, fills, borders, or subtle accents.
-- When a new user use case conflicts with existing language, revise the old language in the same pass.
+- Keep stakeholder copy concrete. Employees, investors, early customers, hosts, city leads, and partners should see what Analog does, what proof matters, and what decision the page helps them make.
+- Check light and dark mode when changing colors. Use true Analog red (`#FF4438`) as the light-mode accent. Do not use yellow as body text or primary navigation text on white backgrounds; reserve it for dark mode, fills, borders, or subtle accents. If red appears as small text on white, prefer the deeper readable red (`#B9362E`) or add enough surface contrast.
+- Keep investor-facing language disciplined. Avoid guarantees, unsupported forecasts, raw PII exposure, unrestricted money language, near-term treasury/interchange claims, or wording that makes Analog sound like a custom events agency instead of a productized market-growth operating layer.
+- Keep pricing language experimental until the founder makes a price official. Separate controlled activation budget from Analog revenue, and do not imply pass-through funds, unused balances, or future card economics are core revenue.
+- When a new founder use case conflicts with existing language, revise the old language in the same pass.
 - Add a release note when a new use case, workflow, rubric, or product rule is added.

@@ -108,7 +108,8 @@
               "strategy/sponsor-personas",
               "strategy/host-models-personas",
               "strategy/pricing-models",
-              "strategy/media-owned-irl-engine"
+              "strategy/media-owned-irl-engine",
+              "strategy/creatorcommerce-demand-bridge"
             ]
           }
         ]
@@ -127,7 +128,13 @@
             "group": "CORE WORKFLOWS",
             "pages": [
               "platform/sponsor-workflow",
-              "platform/host-workflow",
+              "platform/host-workflow"
+            ]
+          },
+          {
+            "group": "PROOF & DATA",
+            "pages": [
+              "strategy/audience-graph-and-proof",
               "platform/proof-and-spend"
             ]
           }
