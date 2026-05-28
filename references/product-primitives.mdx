@@ -113,6 +113,7 @@ Do not describe these as current MVP objects unless they map back to existing su
 | Editorial feature | Workspace file, Analog Doc, campaign content, or external media artifact |
 | Fund page | Campaign, event set, application portal, RFE, RFC, or grant-like intake |
 | Funding tab | Host sponsor budgets, collabs, spend cards, and available campaign allocations |
+| Analog checking or Host treasury | Future partner-bank account or account-like operating rail for trusted Hosts, with balances, envelopes, vendor payments, receipt capture, anomaly review, recipient-authorized summary grades, and sponsor-safe reporting |
 | Proof ledger | Sponsor data snapshot, campaign event analytics, content proof, spend transactions, and files/docs |
 | Editorial fund drop | Campaign or event set launched alongside media, owned IRL, or `The Connector` |
 | Sponsorship investment memo | Deep research doc, Sponsor brief, Analog Doc, proof packet, catalog context, and assisted outcome summary |
@@ -122,6 +123,20 @@ Do not describe these as current MVP objects unless they map back to existing su
 | Public/nonprofit fund administration cockpit | Sponsor data snapshot, files/docs, applications, collabs, spend cards, proof packets, report drafts, anomaly notes, and tranche decisions |
 
 Until production money movement exists, fund access means governed sponsor allocations, grants, event-scoped budgets, spend cards, or approved program budgets. It does not mean unrestricted wallet balances.
+
+Future embedded Host treasury should be treated as a new rail, not a renamed spend card. The direction is an Analog checking-style operating account for trusted Hosts and community businesses through compliant banking partners. A Sponsor could transfer a larger funded balance into that Host treasury, while Analog continues to provide rules, receipt capture, anomaly review, recipient-authorized summary grades, and renewal recommendations.
+
+The strategic distinction:
+
+| Rail | Best for | Sponsor visibility |
+|---|---|---|
+| Spend card | event-scoped budget, micro grant, local vendor purchase, early trust test | transaction, receipt, category, event proof |
+| Contracts/invoices | large scope, venue, production, media, rights, legal, public program | scope, milestone, invoice, deliverable, approval |
+| Host treasury | trusted recurring Host, arts org, venue, nonprofit partner, city operator, community business | recipient-authorized summary grade, anomalies, proof completeness, budget pacing, restricted-use risk, renewal recommendation |
+
+Host treasury is not current MVP behavior. Do not imply Analog currently provides bank accounts, stored balances, insured deposits, payouts, ACH, bill pay, or tax tooling unless those capabilities exist through approved partners and production rails.
+
+A grade derived from bank or treasury activity is sensitive derived financial data if tied to a recipient. Future product specs must require explicit recipient authorization to analyze account activity, explicit authorization to share a summary grade with the Sponsor, disclosed Sponsor use, objective methodology, recipient visibility into grade reasons, dispute rights, safer labels, and contract limits. Use [Proof And Spend](/platform/proof-and-spend) for the detailed rule.
 
 Brand funds and programs are the cleanest market-making primitive: they give sponsors a reason to declare demand, hosts a reason to apply or create supply, and Analog a controlled environment to observe pricing, proof, spend behavior, and renewal.
 
@@ -206,6 +221,8 @@ The MVP intentionally does not include:
 - payouts or creator withdrawals
 - reimbursements
 - unrestricted wallet balances
+- Host treasury or Analog checking accounts
+- ACH, bill pay, or banking-quality cash management
 - Stripe Connect payouts
 - 1099 workflows
 - production ticketing or payment collection

@@ -1,243 +1,98 @@
 ---
 title: "Pricing Models And Experiments"
-description: "How Analog should test sponsor-paid pricing models across campaigns, prospecting, managed support, media, and funded IRL budgets."
+description: "How Analog should test sponsor-paid pricing across governed campaigns, sourcing, managed support, media, and funded IRL budgets."
 pageType: "Strategy"
 ---
 
-Pricing should reinforce the product thesis: Analog helps sponsor capital find trusted IRL supply, move through governed budgets, produce proof, and earn the next allocation.
-
-The near-term business model should not depend on host subscriptions, unrestricted balances, payout fees, interchange, treasury revenue, or generic event production margin. The current product truth is sharper than that: sponsors fund campaigns, hosts operate against scoped budgets, spend is governed by cards and limits, proof is collected, and renewal decisions become more legible.
-
-Use [Cash Funding Playbooks](/strategy/cash-funding-playbooks) as the strategic frame for budget design. Analog should price the infrastructure around cash-based funding, not product-only gifting.
-
-Use [Public And Nonprofit Funding Infrastructure](/strategy/public-nonprofit-funding-infrastructure) when the buyer is a government agency, foundation, nonprofit, NGO, public/private coalition, or civic institution. That lane needs especially clear pass-through accounting, admin/support fees, reporting deliverables, and public-trust controls.
+Pricing should reinforce the product thesis: Analog helps Sponsor capital find trusted IRL supply, move through governed budgets, produce proof, and earn the next allocation.
 
 <Info>
-Treat every number on this page as a testing band, not an official price card. The first job is to learn which price structure sponsors understand, accept, renew, and can explain internally.
+Treat every number on this page as a testing band, not an official price card. The first job is to learn which structure Sponsors understand, accept, renew, and can explain internally.
 </Info>
 
-## Source Anchors
-
-| Source signal | Pricing implication |
-|---|---|
-| `analog-discovery` product docs define the wedge as controlled sponsor-funded card spend, not payouts, reimbursements, ticketing, or event discovery. | Price the governed sponsorship workflow before pricing broad marketplace or finance features. |
-| Campaigns include budget, funding, event sets, collabs, host events, allocations, card controls, transactions, proof, and sponsor data summaries. | Pricing should attach to campaigns, event sets, collabs, proof packets, and renewal decisions. |
-| Event-set prospecting requires accepted pricing before activation. Current implementation has standard and heavy recurring prospecting plans, with pricing stored on the prospecting config. | There is already a product primitive for sponsor acceptance before managed market-making work starts. |
-| Current outreach UI models recurring email prospecting, direct mail pricing, one-time CSV sends, warm-up, send limits, and auto-disable timing. | Prospecting can be priced as a bounded lane, not hidden inside amorphous services. |
-| `playground-agentic-mvp` pricing logic models expected attendance, value per qualified attendee, brand-fit multiplier, attribution readiness, demand/supply multiplier, a 25% platform-fee modeling assumption, reserve, and fulfillment costs. | Starter pricing should be tied to audience quality, proof readiness, fulfillment load, and sponsor value, not just headcount. Do not treat the 25% assumption as official until validated. |
-| `playground-agentic-mvp` brand intake separates cash sponsorship, platform fee, fulfillment, performance reserve, in-kind value, and content rights. | Keep pass-through funds, Analog revenue, host/operator upside, fulfillment, and content rights visible as separate line items. |
-
-## Current Product Pricing Primitive
-
-The clearest implemented pricing primitive is event-set prospecting: the sponsor must accept pricing before prospecting turns on. Do not treat these as final company prices. Treat them as proof that pricing acceptance, plan choice, volume, warm-up, and auto-disable can already live inside the workflow.
-
-| Current prospecting reference | Implemented detail | Pricing lesson |
-|---|---|---|
-| Regular email prospecting | 1 dedicated inbox, 40 emails per day after a 7-day warm-up, 3-month auto-disable, $90/month reference price | Test whether sponsors understand recurring pricing per event set before Analog does market-making work. |
-| Heavy email prospecting | 3 dedicated inboxes, 120 emails per day after a 7-day warm-up, 3-month auto-disable, $270/month reference price | Test whether larger sponsor asks can pay for more market-making capacity without custom quoting every send. |
-| Direct mail reference | $1/card reference logic, with 1,200 or 3,600 monthly volume options in the outreach UI | Test whether physical outreach should be priced as pass-through fulfillment plus Analog coordination, not bundled into platform fees. |
-
-## Pricing Principle
-
-Charge the party with the budget and the renewal decision.
-
-For the first phase, that means sponsor-paid pricing. Hosts should experience Analog as more funding, clearer scope, simpler spend, and better proof. Charging hosts too early risks taxing the scarce side of the market before Analog has earned enough supply affection.
-
-<Columns cols={3}>
-  <Card title="Charge sponsors" icon="credit-card" type="check">
-    Sponsors pay for structured access, governed budgets, proof, and renewal confidence.
-  </Card>
-
-  <Card title="Protect hosts" icon="heart-handshake" type="tip">
-    Hosts should see clear budgets, operator upside, and less reimbursement chaos.
-  </Card>
-
-  <Card title="Separate funds" icon="list-checks" type="note">
-    Activation budget, platform fee, fulfillment, support, content rights, and reserves should not blur together.
-  </Card>
-</Columns>
-
-## Pricing Stack
-
-For a pilot or repeat program, the cleanest pricing stack is:
+The near-term model should not depend on Host subscriptions, unrestricted balances, payout fees, interchange, treasury revenue, or generic event-production margin. Analog should charge the party with the budget and renewal decision: the Sponsor.
 
 ```text
 Sponsor commitment =
   controlled activation budget
-  + platform / campaign fee
-  + optional fund administration fee
-  + optional sourcing or prospecting fee
-  + optional managed activation support
-  + optional services/tools package
-  + optional agency engagement fee
-  + optional fulfillment or product logistics
-  + optional media / content rights package
-  + optional performance reserve
+  + Analog revenue
+  + optional pass-through or reserve costs
 ```
 
-The controlled activation budget is not the same thing as Analog revenue. It is sponsor capital routed through the product for approved host/vendor spend. Analog revenue should be explicit: platform fees, campaign fees, sourcing/prospecting fees, managed support, media/content packages, partner fees, and later any compliant payment economics that the product is actually ready to support.
+Controlled activation budget is Sponsor capital routed through the product for approved Host/vendor spend. It is not the same thing as Analog revenue.
 
-## Models To Test
+## Pricing Principles
 
-| Model | What sponsor pays for | First testing band | Use when |
+| Principle | Meaning |
+|---|---|
+| Charge Sponsors first | Sponsors pay for structured access, governed budgets, proof, and renewal confidence. |
+| Protect Hosts | Hosts should see more funding, clearer scopes, less reimbursement chaos, and real operator upside. |
+| Separate line items | Activation budget, platform fee, sourcing, managed support, fulfillment, content rights, reserves, and public admin fees should not blur together. |
+| Price market-making explicitly | If Analog is sourcing supply, prospecting, packaging Hosts, or coordinating operators, that work needs its own fee. |
+| Keep public money defensible | Public/nonprofit programs need transparent admin, implementation, monitoring, and reporting fees. |
+
+## What To Test
+
+| Model | What Sponsor pays for | Test band | Use when |
 |---|---|---:|---|
-| Campaign platform fee | Campaign setup, brief structure, budget guardrails, collab setup, card controls, proof packet, and renewal recommendation | $2.5k to $7.5k per pilot, or 10% to 20% of controlled budget with a floor | The sponsor has a real activation budget and wants a controlled pilot. |
-| Fund administration fee | A governed balance, eligibility, host approval, spend rules, proof, and simple reporting | 10% to 20% of fund size for private sponsors; 5% to 15% transparent admin for public/non-profit programs | The sponsor funds many small local actions, such as dinner balances, movement funds, access funds, or community starter kits. |
-| Micro grant program | Many small controlled budgets with simple eligibility, spend rules, receipt proof, and renewal logic | $100 to $500/month per Host; Analog fee as fund admin, campaign fee, or managed program fee | The goal is to remove small blockers like coffee, libations, supplies, rentals, print, accessibility, or light venue support. |
-| Macro grant program | Larger recurring budgets for the best Hosts, strategic rooms, and operationally excellent organizers | $1k to $5k/month per Host, plus campaign/admin/support pricing | The Sponsor wants recurring activations, strategic access, or durable community infrastructure. |
-| Services/tools package | Insurance navigation, document/contract setup, print-on-demand, local designers, vendors, rentals, proof kits, or space support | Quote as fixed package, pass-through plus coordination, or managed support add-on | Cash alone will not unlock the activation without operational infrastructure. |
-| Public/nonprofit fund administration | Transparent eligibility, controlled spend, public reporting, fraud/waste/abuse controls, downstream Host support, and outcome summaries | Transparent admin or implementation fee; avoid opaque percentages when funders object | A municipality, agency, foundation, nonprofit, or NGO wants community money deployed quickly and defensibly. |
-| Event-set sourcing fee | Building a city/category/audience lane, sourcing hosts, packaging candidates, and routing to application or approval | $1k to $5k per event set or supply lane; optionally credited into launch | Sponsor knows the market persona but does not have the supply. |
-| Recurring prospecting subscription | Managed outbound for one event set, with accepted pricing, plan volume, warm-up, send limits, and auto-disable | Current product reference: $90/$270 monthly email plans and $1/card direct mail logic; revisit before public pricing | The event set is clear enough that outreach can be productized and measured. |
-| Agency engagement bridge | Access to Analog's human network, city taste, event-set prospecting, supply packaging, campaign strategy, governed execution, and proof before the marketplace is liquid | Quote as a scoped pilot, monthly retainer, or bundle; keep activation budget, Analog revenue, and pass-through costs separate | A brand wants Analog's network and prospecting practices now, but the matching marketplace is not yet materially liquid. |
-| Managed activation support | Bounded CS/operator work for kickoff, launch readiness, host support, proof QA, and renewal handoff | $2k to $10k per pilot, or 15% to 25% of activation budget when work is heavy | The pilot is valuable but still needs operational support. This fee should shrink as playbooks and product improve. |
-| Connector dinner bundle | Per-dinner budget plus packaging, host/connector coordination, proof, and sponsor follow-up | $5k to $25k per city bundle, plus controlled dinner budgets | Tech or ecosystem sponsors want trusted rooms across multiple markets without sending their own team everywhere. |
-| Media and content rights package | Approved recap assets, interview rights, sponsor-safe content usage, co-branded presence, or Connector coverage when appropriate | $2.5k to $25k depending on rights, production, and distribution | The sponsor values cultural proof, but the editorial product must remain trusted and not become advertorial by default. |
-| Print subscription and retail product | Analog city magazine, event calendar, Host profiles, fund drops, scene data, Sponsor-safe placements, and QR response loops | Price as consumer subscription, retail wholesale, local ad/sponsor placement, or bundle with media package | Analog wants to own supply through media and make the cost of churn the cost of FOMO. |
-| High-ticket sponsorship underwriting | Investment memo, allocation model, operator underwriting, risk register, tranche gates, AI monitoring, contract/invoice QA, and renewal memo | Quote as strategy/underwriting fee, program management fee, AI monitoring/reporting fee, and/or percentage of governed program budget with clear pass-through accounting | A Sponsor is considering six- or seven-figure IRL/community investment and needs confidence before deploying or renewing. |
-| Repeat sponsor retainer | Ongoing pipeline, city/causeway planning, supply bench, proof review, and renewal operating cadence | $5k to $25k per month after repeat intent is proven | A sponsor is running multiple campaigns, cities, or causeways and wants Analog as a recurring operating layer. |
-| Partner platform fee | Analog-powered sponsorship, proof, or funding workflow inside a partner surface | Share of Analog fee or funded opportunity economics, not a tax on pass-through host funds | A partner owns supply, workflow, or demand and wants Analog inside the motion. |
+| Campaign platform fee | campaign setup, brief, budget guardrails, collab setup, card controls, proof packet, renewal recommendation | $2.5k to $7.5k per pilot or 10% to 20% of controlled budget with a floor | Sponsor has a real activation budget and wants a controlled pilot. |
+| Fund administration fee | eligibility, Host approval, spend rules, proof, simple reporting, next-dollar recommendations | 10% to 20% private; 5% to 15% transparent admin for public/nonprofit | Sponsor funds many small local actions. |
+| Micro grant program | many small controlled Host budgets with simple spend/proof rules | $100 to $500/month per Host plus Analog admin/campaign/support fee | Goal is to remove small blockers like coffee, supplies, rentals, print, or accessibility. |
+| Macro grant program | recurring budgets for proven Hosts, strategic rooms, and operators | $1k to $5k/month per Host plus admin/support pricing | Sponsor wants durable community infrastructure or strategic access. |
+| Event-set sourcing fee | city/category/audience lane, Host sourcing, candidate packaging, application routing | $1k to $5k per event set or supply lane | Sponsor knows who it wants but lacks supply. |
+| Prospecting subscription | productized outbound with accepted pricing, plan volume, warm-up, and auto-disable | current product reference: $90/$270 monthly email plans and $1/card direct mail logic | Event set is clear enough for measured outreach. |
+| Managed activation support | kickoff, launch readiness, Host support, proof QA, renewal handoff | $2k to $10k per pilot or 15% to 25% of activation budget when heavy | Pilot is valuable but needs human support before the product fully absorbs the work. |
+| Services/tools package | insurance, docs, print, local designers, vendors, rentals, proof kits, space support | fixed package, pass-through plus coordination, or support add-on | Cash alone will not unlock execution. |
+| Media/content package | recap assets, interview rights, approved usage, sponsor-safe content, Connector coverage when appropriate | $2.5k to $25k depending on rights, production, distribution | Sponsor values cultural proof; editorial trust must stay protected. |
+| Print business unit | city magazine subscriptions, retail, wholesale, placements, event bundles, QR flows | test subscription, retail, local sponsor, and bundle pricing | Analog uses print to own supply and distribution. |
+| High-ticket underwriting | memo, allocation model, operator diligence, risk register, tranche gates, AI monitoring, contract/invoice QA, renewal memo | strategy/underwriting, program management, monitoring/reporting, and clear admin fees | Sponsor considers six- or seven-figure IRL/community investment. |
+| Repeat retainer | ongoing city planning, supply bench, proof review, renewal cadence | $5k to $25k/month after repeat intent | Sponsor is running multiple campaigns, cities, or funds. |
 
-## Sponsor Perspective Packaging
+## Sponsor Packaging
 
-<Tabs sync={false}>
-  <Tab title="eComm Brands" icon="shopping-bag">
-    eComm pricing should make the activation feel like a disciplined growth test, not a one-off field marketing expense.
+| Sponsor perspective | Package shape | Renewal proof |
+|---|---|---|
+| eComm Brands | Product trial funds, creator/community IRL, location benefits, dinner or ritual funds. | attendance, trial, content where appropriate, sentiment, repeat participation, category learning |
+| Tech Companies | founder rooms, operator dinners, developer salons, partner/customer councils, multi-city connector rooms. | attendee fit, relationship density, strategic conversations, follow-up quality, account or ecosystem learning |
+| Public/Non-profit Funds | access funds, starter kits, nonprofit downstream funding, civic/corridor/social connection programs. | access created, participation, local legitimacy, spend stewardship, public-safe reporting |
 
-    | Package | Include | Renewal proof |
-    |---|---|---|
-    | Product trial fund | Controlled activation budget, product or sample logistics, host approval, content proof, claim or RSVP capture | Attendance, product trial, content, sentiment, repeat participation, sales-adjacent learning |
-    | Creator or community IRL | Campaign fee, host budget, brief, spend controls, proof packet, optional content rights | Which hosts created useful proof, which cities/categories should repeat, and what benefit drove participation |
-    | Location or dinner fund | Governed balance for restaurant, venue, or local operator plus proof requirements | Revenue to host, community goodwill, receipts, host note, optional photo/social proof, repeat sponsor appetite |
-
-    eComm brands can tolerate a platform fee when it clearly buys trial, cultural proof, trusted distribution, and learning outside crowded digital channels.
-  </Tab>
-
-  <Tab title="Tech Companies" icon="cpu">
-    Tech pricing should be less about attendance volume and more about qualified access, relationship density, and follow-up quality.
-
-    | Package | Include | Renewal proof |
-    |---|---|---|
-    | SaaS dinner strategy | Connector sourcing, dinner budget, qualified attendee brief, proof packet, follow-up notes | Account fit, attendee quality, strategic conversations, partner/customer learning, adoption or pipeline-adjacent signal |
-    | Founder/operator room | Event-set sourcing, host/connector package, controlled hospitality budget, recap | Whether the room created trust the sponsor could not buy through generic demand generation |
-    | Multi-city connector network | Monthly bundle across cities, local hosts, controlled budgets, standard proof | Lower sponsor labor, better local authenticity, repeatable cost per qualified room |
-
-    Tech sponsors should be priced on the value of the room and the strategic clarity of the audience, not just cost per attendee.
-  </Tab>
-
-  <Tab title="Public/Non-profit Funds" icon="landmark">
-    Public and non-profit pricing should be transparent, defensible, and easy to report.
-
-    | Package | Include | Renewal proof |
-    |---|---|---|
-    | Public access fund | Controlled balances, eligibility, host approval, access rules, participation reporting | Access created, participation, local legitimacy, repeat attendance, spend stewardship |
-    | Community starter kit | Small budgets, materials or venue support, simple proof templates, city lead support | Which communities activated, which blockers were removed, which local operators can repeat |
-    | Nonprofit downstream funding program | Mission lane, downstream Host sourcing, eligibility, controlled budgets, support needs, and board/donor reporting | Whether the nonprofit extended reach through trusted local communities while preserving accountability |
-    | Outcome program support | Transparent admin fee, reporting cadence, proof QA, partner coordination | Program participation, outcome evidence, public-good narrative, compliance with funder constraints |
-
-    Avoid language that sounds like taking a hidden cut from public money. Use clear admin/support fees and separate pass-through funds from Analog revenue.
-  </Tab>
-</Tabs>
-
-## Use-Case Pricing Examples
+## Example Pilots
 
 | Use case | Test structure | What to learn |
 |---|---|---|
-| John Deere style Iowa dinner fund | $5k controlled restaurant balance plus a separate platform/admin/proof fee. Restaurant owner uses the governed card to host farmer dinners through trusted relationships. | Whether a local operator can turn sponsor funds into emotional brand goodwill, restaurant revenue, new relationships, and lightweight proof. |
-| Community micro grant pool | Sponsor or public funder allocates $5k to $25k across small monthly Host budgets, with spend rules for coffee, libations, supplies, space, print, or accessibility. | Whether small cash unlocks more repeat gatherings, stronger sentiment, and a cleaner supply map than product-only support. |
-| Strategic macro grant cohort | Sponsor backs 3 to 10 proven Hosts at $1k to $5k/month with a standard proof and services package. | Whether the best organizers create outsized rooms, local rituals, category growth, account access, or public value. |
-| Tapcart style eCommerce dinner network | Sponsor buys a connector dinner bundle across target markets, with per-dinner budgets, local hosts, sourcing/prospecting, and proof packets. | Whether trusted local eCommerce connectors can run many better rooms at lower sponsor labor than sponsor-operated events. |
-| Dog treats and toys fund | Sponsor funds a controlled pet-parent ritual budget plus product kits, dog park stewardship, dog show sponsorships, Host stipends, sourcing/prospecting, proof, and optional content rights. | Whether trusted dog walkers, trainers, groomers, rescues, dog parks, dog shows, dog-friendly venues, pet creators, or apartment communities can create safe product trial, owner permission, content, sentiment, and repeatable renewal proof. |
-| eComm movement and wellness fund | Sponsor funds recurring run club, Pilates, recovery, or wellness education Host budgets, with a campaign fee and proof standard around attendance, product trial, content where appropriate, and repeat participation. | Whether product-adjacent rituals can become repeatable causeways before Analog generalizes across every IRL category. |
-| Founder or SaaS dinner | Sponsor pays for qualified room access, host/connector sourcing, hospitality budget, proof, and follow-up learning. | Whether tech sponsors will pay for trust-dense rooms that improve adoption, partnerships, customer learning, or strategic account motion. |
-| Public access program | Funder pays transparent admin/support plus controlled local balances and reporting. | Whether Analog can route public-good capital to trusted hosts while keeping proof simple, credible, and defensible. |
-| Nonprofit downstream funding program | Nonprofit or foundation pays an implementation/admin/reporting fee plus pass-through budgets for aligned Hosts, local groups, spaces, or service providers. | Whether Analog can help a mission-driven organization accomplish goals through trusted downstream communities without creating reimbursement chaos or reporting sprawl. |
-| AnalogNYC print launch | Consumer subscription and retail distribution, plus tasteful eComm/local retail placements and fund-drop integrations. | Whether print creates inbound Hosts, subscriber FOMO, sponsor demand, and QR response into events, applications, and claims. |
-| $2M city/category sponsorship | Sponsor pays for a sponsorship investment memo, budget allocation model, Host/operator underwriting, staged tranches, risk monitoring, media/print plan, and executive reporting. Only distributed Host/vendor spend needs cards. | Whether Analog can become the investment safety layer for serious IRL market-formation budgets, not only a small-activation spend tool. |
+| Community micro grant pool | $5k to $25k across small Host budgets with spend rules for coffee, libations, supplies, space, print, or accessibility. | Whether small cash unlocks repeat gatherings, stronger sentiment, and a cleaner supply map. |
+| Strategic macro grant cohort | 3 to 10 proven Hosts at $1k to $5k/month with standard proof and services support. | Whether the best operators create outsized category, account, civic, or community value. |
+| Connector dinner network | Per-dinner budgets plus Host/connector sourcing, coordination, proof, and Sponsor follow-up. | Whether trusted local connectors can run better rooms with lower Sponsor labor. |
+| AnalogNYC print launch | Consumer subscription and retail distribution plus tasteful eComm/local placements and fund-drop integrations. | Whether print creates inbound Hosts, subscriber FOMO, sponsor demand, and QR response. |
+| Public access program | Transparent admin/support plus controlled local budgets and reporting. | Whether Analog can route public-good capital to trusted Hosts with credible proof. |
+| $2M city/category sponsorship | Investment memo, budget allocation model, Host/operator underwriting, staged tranches, risk monitoring, media/print plan, and executive reporting. | Whether Analog can be the investment safety layer for serious IRL market-formation budgets. |
 
-## Testing Plan
+## Pricing Test Plan
 
-<Steps>
-  <Step title="Separate the line items">
-    Quote every pilot with activation budget, platform fee, sourcing/prospecting, managed support, fulfillment, content rights, and any reserve separated. Record which line item creates confusion or objection.
-  </Step>
-
-  <Step title="Test fixed fee versus percentage">
-    For similar pilots, compare a fixed campaign fee against a percentage of controlled budget. Measure sponsor comprehension, sales cycle, margin, and renewal language.
-  </Step>
-
-  <Step title="Use accepted pricing before market-making">
-    Preserve the current product rule that prospecting cannot turn on until pricing is accepted. Test whether sponsors accept per-event-set pricing, monthly prospecting, or launch-credit pricing more easily.
-  </Step>
-
-  <Step title="Price support as a temporary bridge">
-    Charge for managed support when needed, but tag every support task that should become product, template, contractor bench, or no-go learning.
-  </Step>
-
-  <Step title="Compare proof value by sponsor perspective">
-    Track which proof each sponsor uses to renew: trial/content for eComm, qualified room/follow-up for Tech, access/outcome reporting for Public/Non-profit Funds.
-  </Step>
-
-  <Step title="Turn repeat intent into retainers">
-    Only test monthly or quarterly retainers after a sponsor has repeated, expanded, or clearly asked Analog to operate a continuing causeway.
-  </Step>
-</Steps>
-
-## Metrics That Decide Pricing
-
-| Metric | Why it matters |
-|---|---|
-| Gross sponsor commitment | Shows willingness to move capital through Analog, but should be separated from revenue. |
-| Analog revenue per pilot | Platform, campaign, sourcing, support, media, and partner fees actually earned. |
-| Controlled activation budget | Sponsor capital routed to hosts, vendors, venues, meals, benefits, or supplies. |
-| Host/operator upside | Whether hosts make real economic progress instead of receiving symbolic exposure. |
-| Cost to source qualified supply | City lead, prospecting, catalog, media, and GTM time needed to produce sponsor-ready options. |
-| CS hours per pilot | Whether the model can scale with one CS owner or needs productization. |
-| Proof packet completion | Whether the activation creates enough evidence to support renewal or no-go. |
-| Sponsor renewal or expansion | The clearest signal that the price matches the value created. |
-| Contribution margin after support and media costs | Whether the model is a productized operating layer, not a custom agency. |
-| Time from brief to launch | Whether pricing and packaging reduce friction enough for the motion to repeat. |
+1. Quote every pilot with activation budget, Analog revenue, sourcing/prospecting, support, fulfillment, content rights, and reserve separated.
+2. Test fixed campaign fee versus percentage of controlled budget.
+3. Preserve the product rule that prospecting cannot turn on until pricing is accepted.
+4. Price managed support as a bridge, and tag each support task as product, template, contractor bench, or no-go learning.
+5. Track proof value by Sponsor perspective: trial/content for eComm, qualified room/follow-up for Tech, access/reporting for Public/Non-profit Funds.
+6. Test retainers only after a Sponsor repeats, expands, or asks Analog to operate a continuing city/category motion.
 
 ## Decision Rules
 
 | Signal | Decision |
 |---|---|
-| Sponsors accept activation budgets but resist the platform fee | Reframe around governed spend, proof, and renewal decisions; test a fixed fee with a clear deliverable. |
+| Sponsors accept activation budgets but resist platform fees | Reframe around governed spend, proof, and renewal decisions; test a fixed deliverable fee. |
 | Sponsors accept sourcing but do not launch pilots | Treat sourcing as paid market research, but tighten qualification so Analog does not become a list vendor. |
-| Managed support produces negative margin | Narrow the use case, improve templates/product, add contractor support, or price support explicitly. |
-| Hosts feel taxed or underpaid | Move more monetization to sponsor-side fees and protect host/operator upside. |
-| Public/non-profit buyers object to percentages | Use transparent admin or implementation fees with clear pass-through budget accounting. |
+| Managed support hurts margin | Narrow the use case, improve templates/product, add contractor support, or price support explicitly. |
+| Hosts feel taxed or underpaid | Move monetization to Sponsor-side fees and protect Host/operator upside. |
+| Public/nonprofit buyers object to percentages | Use transparent admin or implementation fees with clear pass-through accounting. |
 | Media drives demand but creates trust risk | Separate editorial coverage from paid content rights and keep sponsor approval boundaries explicit. |
-| A sponsor asks for ongoing city/causeway support | Test a retainer only after there is proof of repeatable value. |
+| Sponsor asks for ongoing city/category support | Test a retainer only after proof of repeatable value. |
 
 ## Do Not Monetize Yet
 
-- Do not charge hosts a subscription before the supply side has durable demand and clear host ROI.
-- Do not frame controlled balances as unrestricted money, wallets, or withdrawals.
+- Do not charge Hosts a subscription before supply-side ROI is obvious.
+- Do not frame controlled budgets as unrestricted wallets, payouts, or withdrawals.
 - Do not rely on near-term interchange, treasury, payout, or wallet economics in stakeholder copy.
-- Do not sell raw attendee data or raw PII as a pricing product.
+- Do not sell raw attendee data or raw PII.
 - Do not promise public-sector outcomes that the product cannot measure.
 - Do not bury agency-style labor inside platform pricing.
-- Do not count unused sponsor-controlled activation budget as core Analog revenue.
-
-## Near-Term Recommendation
-
-Start with one default offer:
-
-```text
-Sponsor-funded pilot =
-  controlled activation budget
-  + campaign platform fee
-  + optional sourcing/prospecting fee
-  + optional managed support
-  + optional content rights
-```
-
-Then test two repeat paths:
-
-| Repeat path | When it earns focus |
-|---|---|
-| Fund model | A sponsor wants to deploy many small governed balances to trusted hosts, spaces, restaurants, or communities. |
-| Causeway retainer | A sponsor wants Analog to keep operating a city, category, connector, or community lane after early proof. |
-
-The pricing model is working when a sponsor can say: "Analog helped us decide where to put the next IRL dollar, controlled how it was used, showed us what happened, and made the next test easier."

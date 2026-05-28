@@ -1,152 +1,169 @@
 ---
 title: "Proof And Spend"
-description: "How Analog turns shared spend, reporting, UGC, sentiment, and unlock decisions into repeatable community-led IRL funding."
+description: "How Analog turns governed spend, reporting, sentiment, and unlock decisions into repeatable community-led IRL funding."
 pageType: "Reference"
 ---
 
 Proof and spend are the trust layer. They let Sponsors increase allocations without treating every activation as a vague recap.
 
-The seed-deck framing is stronger than reporting: Analog turns sponsorship proof, shared spend, community growth, sentiment, and Host upside into market-growth underwriting. The question is not only "what happened?" It is "should this Sponsor deploy more capital through this Host, city, category, or playbook?"
+The question is not only "what happened?" It is:
 
-Cash funding raises the standard for proof. If Analog funds coffee, libations, space, supplies, print, operator time, or public-good access, the proof should show both spend stewardship and whether the Host's community goal became easier to accomplish.
+```text
+Should this Sponsor deploy more capital through this Host, city, category, or playbook?
+```
 
-High-ticket sponsorship raises the standard again. For six- or seven-figure programs, Analog should not rely on spend cards as the only control surface. Cards govern distributed Host and vendor spend; the broader proof system should also ingest contracts, invoices, milestones, deliverables, insurance docs, public reporting, risk reviews, and AI-assisted tranche recommendations.
+Cash funding raises the standard for proof. If Analog funds coffee, libations, space, supplies, print, operator time, or public-good access, proof should show both spend stewardship and whether the Host's community goal became easier to accomplish.
 
-Public and nonprofit funding raises a related standard: mission capital needs eligibility, restricted uses, privacy-safe participation proof, fraud/waste/abuse review, public-safe summaries, and clear evidence that downstream Hosts advanced the funder's goal. Use [Public And Nonprofit Funding Infrastructure](/strategy/public-nonprofit-funding-infrastructure) for the full doctrine.
+High-ticket and public/nonprofit funding raise the standard again. Cards govern distributed Host and vendor spend; larger programs also need contracts, invoices, milestones, risk reviews, eligibility, restricted-use checks, public-safe summaries, and AI-assisted tranche recommendations.
 
 ## Spend Infrastructure Focus
 
-Spend infrastructure is the MVP's fintech enablement wedge. The point is not to expose financial complexity to hosts or sponsors. The point is to make budget deployment controllable enough that Analog can learn which spend conventions earn trust.
+Spend infrastructure is the MVP's fintech enablement wedge. The point is to make budget deployment controllable enough that Analog can learn which conventions earn trust.
 
 | Convention to learn | Product signal |
 |---|---|
-| Budget shape <Tooltip headline="Budget shape" tip="How sponsors want to structure a budget: campaign-level, event-set level, host allocation, dinner balance, fund, program, or city/category lane."><span className="analog-help">?</span></Tooltip> | Campaign budget, collab allocation, event set, available amount, auto-renew settings |
-| Spend permission <Tooltip headline="Spend permission" tip="The practical rules that decide where a host can spend: amount, merchant category, expiration, event context, proof expectation, and sponsor boundaries."><span className="analog-help">?</span></Tooltip> | Spend card limit, allowed categories, expiration, event attachment, sponsor-required todos |
-| Proof standard <Tooltip headline="Proof standard" tip="The minimum evidence a sponsor needs before renewing or deploying more budget."><span className="analog-help">?</span></Tooltip> | Transactions, receipts, content, files, attendance, tasks, shipments, sponsor data |
-| Reallocation rule <Tooltip headline="Reallocation rule" tip="The decision for what happens after proof: renew the same host, increase budget, move budget, create more supply, or stop."><span className="analog-help">?</span></Tooltip> | Proof packet, sponsor summary, unused funds, anomalies, unlock decision |
-| Public trust rule <Tooltip headline="Public trust rule" tip="The additional controls public or NGO funds need: eligibility, transparent use of funds, anomaly review, participation proof, and defensible reporting."><span className="analog-help">?</span></Tooltip> | Eligibility notes, spend categories, receipts, anomalies, public summaries, access or participation report |
-| Investment safety rule <Tooltip headline="Investment safety rule" tip="The controls a large sponsorship needs before releasing the next tranche: allocation plan, risk register, proof gate, contract or invoice QA, sentiment review, and renewal memo."><span className="analog-help">?</span></Tooltip> | Sponsorship investment memo, allocation model, contracts, invoices, risk register, proof gates, tranche recommendation |
+| Budget shape | campaign budget, collab allocation, event set, Host allocation, dinner balance, fund, program lane |
+| Spend permission | amount, category, merchant, expiration, event context, proof expectation |
+| Proof standard | transactions, receipts, content, files, attendance, tasks, shipments, Sponsor data |
+| Reallocation rule | proof packet, Sponsor summary, unused funds, anomalies, unlock decision |
+| Public trust rule | eligibility notes, receipts, anomalies, public summaries, access or participation report |
+| Investment safety rule | investment memo, allocation model, contracts, invoices, risk register, proof gates, tranche recommendation |
 
-This is how spend infra becomes marketplace learning: every controlled dollar teaches which hosts are dependable, which sponsor asks pull supply, which proof is persuasive, and which product conventions should become defaults.
+Every controlled dollar should teach which Hosts are dependable, which Sponsor asks pull supply, which proof is persuasive, and which product conventions should become defaults.
+
+## Future Host Treasury Rail
+
+One-off spend cards are right for event-scoped budgets, micro grants, and early trust building. Deeper financial partnerships need a different rail.
+
+For trusted Hosts, Analog should eventually support an Analog checking-style Host treasury account through compliant banking partners. Instead of issuing only temporary cards, a Sponsor could fund a larger approved balance into the Host's central Analog operating account.
+
+```text
+Sponsor allocation
+-> funding agreement and proof standard
+-> Host treasury balance
+-> Host pays vendors, venues, staff, artists, supplies, rent, and recurring costs
+-> Analog monitors spend patterns, receipts, budget pacing, and proof
+-> Sponsor receives recipient-authorized summary grades and renewal recommendations
+```
+
+This is not an MVP promise and should not be described as current banking. It is the long-term financial infrastructure path for community and IRL businesses.
+
+| Layer | What changes |
+|---|---|
+| Host autonomy | The Host gets a real operating balance for recurring work instead of a card for one event. |
+| Sponsor control | The Sponsor moves from transaction-by-transaction control to rules, authorized summary grades, anomaly review, proof gates, and renewal logic. |
+| Analog oversight | Analog reviews fraud/waste/abuse signals, budget pacing, restricted-use risk, missing receipts, vendor concentration, proof completeness, and mission drift. |
+| Privacy boundary | Sponsors receive abstracted reporting by default, not a raw private bank feed, unless contract terms and permissions justify deeper review. |
+| Product depth | Hosts need banking-quality tools: balance, envelopes, sub-ledgers by fund, cards, ACH/bill pay, invoices, vendor records, receipt capture, proof prompts, and renewal history. |
+
+Use this rail when the Host is a recurring operator, arts organization, venue, nonprofit partner, city lead, community business, or strategic connector that deserves a deeper balance and better financial tools.
+
+Do not use it for untrusted Hosts, one-off activations, weak proof programs, or Sponsors that require direct control of every transaction. Human approval, KYC/KYB, tax, contract, privacy, and banking-partner requirements are part of the product, not afterthoughts.
+
+## Derived Financial Grade Rule
+
+A grade derived from bank or treasury activity is sensitive derived financial data if it is tied to a recipient. It should be treated that way even when Analog does not share raw transactions, balances, vendors, or account details with the Sponsor.
+
+The cleaner operating posture:
+
+| Requirement | Rule |
+|---|---|
+| Recipient authorization | The recipient explicitly authorizes Analog or the fintech partner to analyze account activity. |
+| Sponsor sharing | The recipient explicitly authorizes sharing a summary grade or status with the Sponsor. |
+| Purpose disclosure | The Sponsor use is disclosed, such as: "used to determine whether additional grant funds are released." |
+| Objective methodology | The grade methodology is documented, objective, and not misleading. |
+| Explainability and dispute | The recipient can see the grade or at least the key reasons, and can dispute errors. |
+| Safer labels | Avoid vague labels like "irresponsible." Prefer "within expected grant-use range," "review recommended," or "outside program norms." |
+| Contract limits | The Sponsor may use the grade only for the disclosed program purpose and may not treat it as general financial reputation data. |
+
+Eligibility decisioning raises the sensitivity. "Unlock more funds" means the grade can become a gatekeeping factor.
+
+| Scenario | Risk note |
+|---|---|
+| Business entity recipient | Lower risk than consumer use, but still sensitive and contract-bound. |
+| Individual or consumer recipient | Higher risk; consumer reporting, privacy, fair-lending, or similar rules may become relevant. |
+| Government Sponsor | RFPA, privacy, procurement, grant, public-record, or program-specific rules may matter. |
+| Repayable, advanced, or credit-like funds | Credit, fair-lending, FCRA, ECOA, or similar concerns can come back in. |
+| Routine third-party scoring of financial behavior | Counsel should check whether the product is drifting toward consumer reporting agency territory. |
+
+Frame this as potentially acceptable only when it is consented, purpose-limited, non-credit, grant-specific, accurate, explainable, and contractually controlled, with counsel review for sensitive scenarios. Treat the grade as sensitive derived financial data, not as harmless because it lacks raw account details.
 
 ## Dogfood Spend Rule
 
-Analog should use the same spend and proof standards on itself that it asks sponsors and Hosts to trust.
+Analog should use the same spend and proof standards on itself that it asks Sponsors and Hosts to trust.
 
-For the first six months, AnalogNYC spend should be categorized through Analog. Internal spend is not separate from product learning. It should teach the team which budget categories, merchant categories, receipts, proof requirements, and anomaly checks are clear enough to sell to customers.
+For the first six months, AnalogNYC spend should be categorized through Analog. Internal spend should teach which budget categories, merchant categories, receipts, proof requirements, and anomaly checks are clear enough to sell to customers.
 
 | Internal KPI | Spend/proof requirement |
 |---|---|
-| Social growth | Attach spend to the owned IRL, media, or field moment that produced content and audience growth. |
+| Social growth | Attach spend to the owned IRL, media, or field moment that produced audience growth. |
 | Category growth | Connect spend to the category, Host, ritual, or city supply it strengthened. |
 | Community perspective | Capture Host notes, field notes, sentiment, referrals, and trust risks. |
 | Direct response | Tie invitations to RSVPs, claims, replies, check-ins, attendance, or applications. |
 | Spend transparency | Categorize NYC spend by campaign, event set, Host event, merchant, use case, and proof expectation. |
 
-If Analog cannot explain its own NYC spend, it should not ask sponsors to believe the platform will explain theirs.
-
-## Optimal Conventions To Discover
-
-The MVP should treat spend infrastructure as instrumentation. The goal is to discover the smallest conventions that make sponsor budget deployment feel safe enough to repeat.
-
-| Convention | Good default looks like | Bad default looks like |
-|---|---|---|
-| Budget unit | Campaign, event set, host allocation, dinner balance, city/category fund, or program lane is explicit. | Everyone describes the budget differently and proof cannot roll up. |
-| Permission rule | Amount, category, event context, expiration, and proof expectation are clear before spend starts. | Host has money but unclear boundaries, creating sponsor anxiety. |
-| Supply entry | Hosts apply, are invited, or are sourced against a visible fund/program ask. | Analog manually picks hosts without learning which market signal created quality supply. |
-| Proof minimum | Receipt/spend, attendance or participation, host note, content, and sponsor-specific outcome are agreed up front. | Proof is invented after the activation and becomes a recap project. |
-| Next-dollar logic | Sponsor knows what would trigger renewal, larger allocation, reallocation, or no-go. | Every renewal requires a new custom narrative. |
+If Analog cannot explain its own NYC spend, it should not ask Sponsors to believe the platform will explain theirs.
 
 ## Proof Lanes
 
-| Lane | What it proves | Current state |
+| Lane | What it proves |
+|---|---|
+| Spend transactions | Money was used through approved workflows. |
+| Contracts and invoices | Large or non-card spend has scope, milestone, approval, and deliverable evidence. |
+| Attendance or RSVP | People showed up or claimed interest. |
+| Sponsor-visible UGC | The activation produced media proof where appropriate. |
+| Benefit claim | Sponsor created useful attendee value through a claim, discount, sample, access benefit, or QR flow. |
+| Files and docs | The operator captured context, brief, proof, or research. |
+| Tasks and shipments | Required logistics, product, print, or asset flows were completed. |
+| Audience graph | Hosted pages, imports, check-ins, or claims support privacy-safe audience learning. |
+
+Do not show comments as Sponsor UGC, raw private attendee data, or analytics-heavy Host surfaces that expose too much context.
+
+## Audience Capture
+
+Audience proof should help Sponsors decide what to fund next without turning communities into raw ad inventory.
+
+| Capture path | Use it for | Rule |
 |---|---|---|
-| Spend transactions | Money was used through approved operational workflows | MVP card and transaction model |
-| Contracts and invoices | Large or non-card spend has scope, milestone, approval, and deliverable evidence | Future high-ticket sponsorship governance direction |
-| Attendance or RSVP | People showed up or claimed interest | Hosted event page config exists; production capture/import is still early |
-| Sponsor-visible UGC | The activation produced media proof | Post media and story mentions; no comments |
-| Social growth | The host can grow category conversation | Strategy layer, not fully automated in MVP |
-| Benefit claim | Sponsor created useful attendee value | Location and event claim flows are future-facing, but page/QR/print strategy is defined |
-| Conversion match | Sponsor-side outcome happened later | Attribution workflow direction |
-| Files and docs | The operator captured context, brief, proof, or research | Workspace files, Analog Docs, template docs, and deep research docs |
-| Tasks and shipments | The host and sponsor completed required logistics | Host tasks, event set todos, asset requests, and shipment logs |
+| Hosted page | RSVP, ticketing, check-in, benefit claim, consent. | Prefer when Analog controls or co-hosts the invite. |
+| Attendance import | Luma, Eventbrite, Partiful, CSV, member list, venue guest list. | Import only with scoped permission and consent source. |
+| QR or claim flow | Discounts, samples, class credits, venue benefits, retail or hospitality offers. | Capture claim and redemption state, not unnecessary PII. |
+| Sponsor outcome match | Shopify, CRM, POS, booking, loyalty, lead, app install, reservation, or CSV/webhook. | Match privately and report tiers, counts, or confidence before row-level detail. |
 
 ## Underwriting Lanes
 
 | Lane | What it answers |
 |---|---|
 | Spend stewardship | Was capital used responsibly across budgets, receipts, vendors, approved uses, unused funds, and anomalies? |
-| Host goal progress | Did the funded cash actually remove the blocker the Host named, such as coffee, space, supplies, print, insurance, proof, or operator time? |
+| Host goal progress | Did funded cash remove the blocker the Host named? |
 | Investment safety | Is the sponsorship still safe to fund based on allocation, contracts, invoices, proof gates, brand safety, public risk, and tranche performance? |
 | Public/nonprofit grant safety | Did the program preserve eligibility, restricted uses, public trust, privacy, mission fit, fraud/waste/abuse controls, and defensible reporting? |
-| Social growth | Did content, posts, UGC, creator posts, community posts, and recap momentum reach the intended audience? |
-| Community operator upside | Is the partner happy with the partnership, dependable, and earning enough for the work to continue? |
-| Category growth | Did repeat participation, category mentions, new members, habit formation, or market activation improve? |
-| Brand growth | Did awareness, benefit claims, signups, sales lift, attributed outcomes, or downstream conversion improve? |
-| Community sentiment | Was the sponsor presence additive, brand-safe, and welcomed by comments, replies, trust signals, or qualitative feedback? |
-
-## Spend Integrity
-
-Spend integrity asks:
-
-- Did the host spend within the approved limit?
-- Were categories and merchants reasonable?
-- Did timing line up with the event?
-- Were receipts or vendor notes available?
-- Were there anomalies?
-- Did underspend create an opportunity to reward efficiency or reallocate budget?
-- Did logistics and shipped/mailed assets arrive in time?
-- Did sponsor-required tasks get completed before proof review?
-
-## Sponsor-Visible UGC Rules
-
-Show:
-
-- image/video post mentions
-- story mentions with media or source URLs
-- manually uploaded proof where appropriate
-
-Do not show:
-
-- comments as sponsor UGC
-- host-side analytics-heavy UGC grids
-- raw private attendee data as a catalog or proof surface
+| Social/category growth | Did content, repeat participation, category mentions, habit formation, or market activation improve? |
+| Operator upside | Is the Host dependable, happy with the partnership, and earning enough for the work to continue? |
+| Community sentiment | Was the Sponsor presence additive, brand-safe, and welcomed? |
 
 ## Unlock Logic
 
-A host should earn a bigger or next allocation when:
+A Host should earn a bigger or next allocation when:
 
 - market-growth proof is stronger than expected
 - spend stewardship is clean
-- the community welcomed the sponsor presence
-- the host earned enough operator upside to keep caring
-- the sponsor can explain the value internally
-- the activation can repeat
-- product setup will get easier next time
+- the community welcomed the Sponsor presence
+- the Host earned enough operator upside to keep caring
+- the Sponsor can explain the value internally
+- the activation can repeat with less custom work
 
 Direct attribution can help, but it is not the only reason to unlock more budget. A credible underwriting signal can be enough when spend, sentiment, category growth, and repeatability are strong.
 
 ## Public And Nonprofit Proof Rule
 
-For public, foundation, NGO, or nonprofit funds, proof should answer four questions before renewal:
+For public, foundation, NGO, or nonprofit funds, proof should answer:
 
-- Did the money reach eligible downstream Hosts or partners under clear rules?
-- Did the spend match approved uses, receipts, timing, and program scope?
-- Did the activation create privacy-safe evidence of access, participation, local legitimacy, recurrence, or mission fit?
-- Can the funder explain the result to a board, donor, agency, public partner, or community stakeholder without exposing sensitive data or overclaiming outcomes?
+1. Did money reach eligible downstream Hosts or partners under clear rules?
+2. Did spend match approved uses, receipts, timing, and program scope?
+3. Did the activation create privacy-safe evidence of access, participation, local legitimacy, recurrence, or mission fit?
+4. Can the funder explain the result without exposing sensitive data or overclaiming outcomes?
 
 Keep public-safe summaries separate from internal risk notes. Public reports should tell the truth clearly; internal notes can carry anomalies, conflicts, exceptions, missing documentation, or sensitive community context.
 
-## Audience Graph Rule
-
-When a pilot captures attendees, imports attendance, or runs a claim flow, write the proof summary in a privacy-safe way:
-
-- audience count
-- check-in or claim count
-- data source
-- consent source
-- overlap or outcome match only where allowed
-- confidence tier
-- recommended renewal or next proof action
-
-See [Audience Graph And Proof](/strategy/audience-graph-and-proof) for the strategy layer.
+Use raw PII only inside scoped matching workflows where legally and commercially allowed.

@@ -1,5 +1,5 @@
 ---
-title: "Documentation Contract"
+title: "Documentation Contract (For AI Agents)"
 description: "How the Analog operating docs are organized, which page wins when facts conflict, and how to update the corpus without drift."
 pageType: "Reference"
 ---
@@ -25,11 +25,39 @@ Use the tabs as a decision system:
 
 | Tab | Job | What belongs there |
 |---|---|---|
-| Founding Docs | Orient the team and preserve source order. | Overview, stakeholder narrative, glossary, source map, release notes, and update rules. |
-| Market Dynamics | Explain why the market exists and where to test. | Macro/social proof, 12-month focus, market formation, supply motion, cataloging, asset gaps, scoring, and use cases. |
-| Strategy | Explain the company doctrine and operating choices. | Core thesis, funding strategy, sponsor/host strategy, public/nonprofit and high-ticket lanes, dogfood, GTM model, pricing, and media engine. |
-| Platform | Explain product truth and proof systems. | Current MVP objects, routes, Sponsor/Host workflows, spend, proof, audience graph, and product boundaries. |
-| How-To | Explain execution. | Step-by-step operator workflows and setup sequences. |
+| Founding Docs | Orient the team and preserve source order. | Overview, stakeholder narrative, glossary, and AI maintenance docs. Source maps and release notes can stay linked but do not need top-level nav. |
+| Market Education | Explain why the market exists. | Macro trends, tech-company landscape, social proof, external signals, and demand education. Do not put Analog's entry plan here. |
+| Strategy | Explain how Analog enters the market. | Core thesis, 12-month focus, market formation, use cases, funding strategy, Sponsor/Host strategy, public/nonprofit and high-ticket lanes, dogfood, GTM model, pricing, and media engine. Narrow support pages should be linked from context. |
+| Platform | Explain product truth and proof systems. | Current MVP objects, routes, Event Prospecting Catalog, Sponsor/Host workflows, spend, proof, and product boundaries. |
+| How-To | Explain execution. | Core step-by-step operator workflows. Specialty plays can stay linked from use cases instead of cluttering nav. |
+
+Live navigation is curated. A page can remain published as a support page without appearing in top-level nav when it is narrow, referenced from a canonical page, or mainly useful to AI agents and operators.
+
+## Reading Order
+
+Start with the page that matches the job.
+
+| Reader/job | Start here | Then read |
+|---|---|---|
+| Company overview | [Company Stakeholder Brief](/guides/stakeholder-brief) | [Current Thesis](/strategy/current-thesis), [12-Month Market Focus](/strategy/twelve-month-market-focus) |
+| Market context | [Macro Trends Behind The IRL Economy](/references/macro-trends-irl-economy) | [Tech Company Landscape](/references/tech-company-landscape), [Social Proof: AI To IRL](/strategy/social-proof-ai-to-irl) |
+| Pilot planning | [MVP Use Cases](/strategy/mvp-use-cases) | [Cash Funding Playbooks](/strategy/cash-funding-playbooks), [Proof And Spend](/platform/proof-and-spend), [Pricing Models And Experiments](/strategy/pricing-models) |
+| Sponsor execution | [Sponsor Workflow](/platform/sponsor-workflow) | [Build Event Prospecting List](/how-to/build-event-prospecting-list) when supply is missing |
+| Host execution | [Host Workflow](/platform/host-workflow) | [Capture Field Context](/how-to/capture-field-context) when the operator learns something new |
+| Product truth | [Product Primitives](/references/product-primitives) | [Platform Logic](/references/platform-logic), [Event Prospecting Catalog](/market/event-prospecting-catalog) |
+| Updating docs | This page | [Source Context Map](/references/source-context-map) and [Release Notes](/release-notes) |
+
+## Length And Focus
+
+Most live pages should be quick decision pages, not notebooks.
+
+| Page kind | Target posture |
+|---|---|
+| Overview, Strategy, Use-case, How-to | Usually 60-125 lines. Lead with the decision, keep tables compact, and link to canonical pages instead of duplicating detail. |
+| Reference and research pages | May be longer when they own stable product truth, source context, or evidence. Use headings and tables so readers can skim. |
+| Image and evidence pages | May be longer when screenshots or source material are the point. Put interpretation after evidence when possible. |
+
+If a page grows because it is trying to be strategy, reference, and how-to at once, split it or cut it.
 
 Every live page must include:
 
@@ -62,26 +90,28 @@ Resolve conflicts in this order:
 | Cash funding, micro grants, macro grants, services/tools, and print/publication | [Cash Funding Playbooks](/strategy/cash-funding-playbooks) |
 | Public/nonprofit/government funding | [Public And Nonprofit Funding Infrastructure](/strategy/public-nonprofit-funding-infrastructure) |
 | High-ticket sponsorship underwriting | [High-Ticket Sponsorship Underwriting](/strategy/high-ticket-sponsorship-underwriting) |
-| 12-month market focus, streams, causeways, moats, and dogfood | [12-Month Market Focus](/strategy/twelve-month-market-focus) |
+| 12-month market entry focus, city sequence, print/media loop, and dogfood | [12-Month Market Focus](/strategy/twelve-month-market-focus) |
 | Market formation | [Market Formation](/strategy/market-formation) |
-| Lean GTM team design, operating cadence, and national coverage | [Lean GTM Operating Model](/strategy/lean-gtm-operating-model) |
+| City lead GTM model, central processing stack, operating cadence, and city coverage | [City Lead GTM Operating Model](/strategy/lean-gtm-operating-model) |
 | Sponsor pipeline, entity intake, and persona-to-brief mapping | [Sponsor Personas And Pipeline](/strategy/sponsor-personas) |
 | Pricing models, sponsor fees, fund administration, prospecting, and pricing tests | [Pricing Models And Experiments](/strategy/pricing-models) |
 | Sponsor categories | [Sponsor Personas And Pipeline](/strategy/sponsor-personas) |
 | Host and supply models | [Host Models And Personas](/strategy/host-models-personas) |
 | Media, connector talent, owned IRL, and governed funding | [Media, Connectors, And Funding Engine](/strategy/media-owned-irl-engine) |
-| Early city staffing and launch model | [Lean GTM Operating Model](/strategy/lean-gtm-operating-model) |
-| Audience graph, capture, and low-touch proof | [Audience Graph And Proof](/strategy/audience-graph-and-proof) |
+| Early city lead operating model and launch cadence | [City Lead GTM Operating Model](/strategy/lean-gtm-operating-model) |
+| Audience graph, capture, and low-touch proof | [Proof And Spend](/platform/proof-and-spend) |
 | Spend, proof, unlocks, and public/nonprofit proof rules | [Proof And Spend](/platform/proof-and-spend) |
-| CreatorCommerce demand bridge | [CreatorCommerce Demand Bridge](/strategy/creatorcommerce-demand-bridge) |
+| CreatorCommerce demand bridge | [Sponsor Personas And Pipeline](/strategy/sponsor-personas) |
 | MVP use-case router | [MVP Use Cases](/strategy/mvp-use-cases) |
-| Supply access versus creation | [Supply Motion](/market/supply-motion) |
+| Supply access versus creation | [Market Formation](/strategy/market-formation) |
 | Prospecting catalog | [Event Prospecting Catalog](/market/event-prospecting-catalog) |
-| Missing market assets | [Asset Need Intelligence](/market/asset-need-intelligence) |
-| Market scoring | [Testing Grid](/market/testing-grid) |
-| Updating these docs | [Update These Docs](/how-to/update-this-brain) |
+| Missing market assets | [Event Prospecting Catalog](/market/event-prospecting-catalog) |
+| Market scoring | [MVP Use Cases](/strategy/mvp-use-cases) |
+| Updating these docs | [Documentation Contract (For AI Agents)](/guides/documentation-contract) |
 
 ## Update Rules
+
+The core rule: founder-provided use cases, feedback, and corrections are law of the land.
 
 - Update canonical references before summaries.
 - Keep practical details in how-to pages.
@@ -93,3 +123,19 @@ Resolve conflicts in this order:
 - Keep pricing language experimental until the founder makes a price official. Separate controlled activation budget from Analog revenue, and do not imply pass-through funds, unused balances, or future card economics are core revenue.
 - When a new founder use case conflicts with existing language, revise the old language in the same pass.
 - Add a release note when a new use case, workflow, rubric, or product rule is added.
+
+## Update Workflow
+
+1. Identify the canonical page that owns the fact.
+2. Update that page first.
+3. Search for conflicting language.
+4. Update summaries, how-tos, scorecards, and glossary entries that now conflict.
+5. Add a release note when the change creates a new use case, workflow, rubric, product rule, or strategic posture.
+
+Before adding a page, ask how it strengthens the operating spine:
+
+```text
+market demand -> Sponsor capital -> Host supply -> governed spend -> proof -> next allocation -> product memory
+```
+
+If the page does not strengthen one of those links and is not needed for AI editing operations, merge it into a canonical page or keep it out of live docs.

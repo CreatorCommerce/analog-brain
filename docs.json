@@ -46,44 +46,26 @@
             "pages": [
               "index",
               "guides/stakeholder-brief",
-              "guides/how-to-use-these-docs",
-              "guides/documentation-contract",
-              "guides/glossary",
-              "references/source-context-map",
-              "release-notes"
+              "guides/glossary"
+            ]
+          },
+          {
+            "group": "AI MAINTENANCE",
+            "pages": [
+              "guides/documentation-contract"
             ]
           }
         ]
       },
       {
-        "tab": "Market Dynamics",
+        "tab": "Market Education",
         "groups": [
           {
-            "group": "MARKET CONTEXT",
+            "group": "WHY THIS MARKET EXISTS",
             "pages": [
               "references/macro-trends-irl-economy",
-              "strategy/social-proof-ai-to-irl",
-              "strategy/twelve-month-market-focus"
-            ]
-          },
-          {
-            "group": "FORMATION & SUPPLY",
-            "pages": [
-              "strategy/market-formation",
-              "market/supply-motion",
-              "market/event-prospecting-catalog",
-              "market/city-leads-host-unlocks",
-              "market/asset-need-intelligence"
-            ]
-          },
-          {
-            "group": "TESTS & USE CASES",
-            "pages": [
-              "market/testing-grid",
-              "strategy/mvp-use-cases",
-              "use-cases/ecomm-movement-and-wellness-funds",
-              "use-cases/dog-treats-and-toys-fund",
-              "use-cases/dinner-funds-and-connector-dinners"
+              "references/tech-company-landscape",
+              "strategy/social-proof-ai-to-irl"
             ]
           }
         ]
@@ -92,13 +74,20 @@
         "tab": "Strategy",
         "groups": [
           {
-            "group": "COMPANY DOCTRINE",
+            "group": "COMPANY DOCTRINE & FOCUS",
             "pages": [
               "strategy/current-thesis",
+              "strategy/twelve-month-market-focus",
+              "strategy/market-formation"
+            ]
+          },
+          {
+            "group": "FUNDING & SPONSORSHIP",
+            "pages": [
               "strategy/cash-funding-playbooks",
               "strategy/public-nonprofit-funding-infrastructure",
               "strategy/high-ticket-sponsorship-underwriting",
-              "strategy/dogfooding-analog"
+              "strategy/pricing-models"
             ]
           },
           {
@@ -107,9 +96,17 @@
               "strategy/lean-gtm-operating-model",
               "strategy/sponsor-personas",
               "strategy/host-models-personas",
-              "strategy/pricing-models",
-              "strategy/media-owned-irl-engine",
-              "strategy/creatorcommerce-demand-bridge"
+              "strategy/media-owned-irl-engine"
+            ]
+          },
+          {
+            "group": "USE CASES",
+            "pages": [
+              "strategy/mvp-use-cases",
+              "use-cases/ecomm-movement-and-wellness-funds",
+              "use-cases/arts-and-culture-funds",
+              "use-cases/authentic-brand-community-funds",
+              "use-cases/dinner-funds-and-connector-dinners"
             ]
           }
         ]
@@ -121,20 +118,15 @@
             "group": "PRODUCT TRUTH",
             "pages": [
               "references/product-primitives",
-              "references/platform-logic"
+              "references/platform-logic",
+              "market/event-prospecting-catalog"
             ]
           },
           {
             "group": "CORE WORKFLOWS",
             "pages": [
               "platform/sponsor-workflow",
-              "platform/host-workflow"
-            ]
-          },
-          {
-            "group": "PROOF & DATA",
-            "pages": [
-              "strategy/audience-graph-and-proof",
+              "platform/host-workflow",
               "platform/proof-and-spend"
             ]
           }
@@ -146,13 +138,8 @@
           {
             "group": "RUN THE MOTION",
             "pages": [
-              "how-to/run-creator-led-activation",
-              "how-to/setup-sponsor-campaign",
               "how-to/build-event-prospecting-list",
-              "how-to/setup-host-event",
-              "how-to/capture-field-context",
-              "how-to/location-activation",
-              "how-to/update-this-brain"
+              "how-to/capture-field-context"
             ]
           }
         ]
