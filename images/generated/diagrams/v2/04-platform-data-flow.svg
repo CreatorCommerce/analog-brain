@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Analog Platform Data Flow</title>
+  <desc id="desc">A polished data flow diagram showing how Analog captures sponsor intent, host supply, spend, proof, and learning into durable product objects.</desc>
+  <defs>
+    <style>
+      text { font-family: Poppins, Arial, sans-serif; letter-spacing: 0; }
+      .bg { fill: #f8f5ed; }
+      .ink { fill: #22201f; }
+      .muted { fill: #625b54; }
+      .paper { fill: #fffdfa; stroke: #ded5c7; stroke-width: 2; }
+      .dark { fill: #22201f; }
+      .softRed { fill: #fff0ee; stroke: #e8b8b2; stroke-width: 2; }
+      .softGold { fill: #fff6d8; stroke: #e7d16f; stroke-width: 2; }
+      .softGreen { fill: #ecf6f2; stroke: #a8d2c7; stroke-width: 2; }
+      .softBlue { fill: #eef3fb; stroke: #b7c9e6; stroke-width: 2; }
+      .arrow { fill: none; stroke: #5f574f; stroke-width: 4; stroke-linecap: round; marker-end: url(#arrow); }
+      .rule { stroke: #d8cebe; stroke-width: 2; }
+      .title { font-size: 56px; font-weight: 500; }
+      .subtitle { font-size: 25px; font-weight: 400; }
+      .label { font-size: 24px; font-weight: 500; }
+      .body { font-size: 17px; font-weight: 400; }
+      .small { font-size: 15px; font-weight: 400; }
+      .kicker { font-size: 15px; font-weight: 500; text-transform: uppercase; }
+    </style>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="7" orient="auto">
+      <path d="M2,2 L12,7 L2,12 Z" fill="#5f574f"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="1000" class="bg"/>
+  <text x="80" y="96" class="title ink">Platform Data Flow</text>
+  <text x="80" y="138" class="subtitle muted">How messy real-world work becomes durable product memory.</text>
+
+  <text x="80" y="222" class="kicker" fill="#b9362e">Inputs from the market</text>
+  <rect x="80" y="255" width="300" height="135" rx="18" class="softRed"/>
+  <text x="120" y="303" class="label ink">Sponsor intent</text>
+  <text x="120" y="340" class="body muted">objective, audience, city,</text>
+  <text x="120" y="367" class="body muted">budget, proof standard</text>
+
+  <rect x="455" y="255" width="300" height="135" rx="18" class="softGold"/>
+  <text x="495" y="303" class="label ink">Host supply</text>
+  <text x="495" y="340" class="body muted">community, connector,</text>
+  <text x="495" y="367" class="body muted">space, ritual, event</text>
+
+  <rect x="830" y="255" width="300" height="135" rx="18" class="softGreen"/>
+  <text x="870" y="303" class="label ink">Execution</text>
+  <text x="870" y="340" class="body muted">spend, tasks, files,</text>
+  <text x="870" y="367" class="body muted">RSVPs, claims, receipts</text>
+
+  <rect x="1205" y="255" width="315" height="135" rx="18" class="softBlue"/>
+  <text x="1245" y="303" class="label ink">Proof</text>
+  <text x="1245" y="340" class="body muted">attendance, content,</text>
+  <text x="1245" y="367" class="body muted">sentiment, outcomes</text>
+
+  <path d="M230 390 V465" class="arrow"/>
+  <path d="M605 390 V465" class="arrow"/>
+  <path d="M980 390 V465" class="arrow"/>
+  <path d="M1362 390 V465" class="arrow"/>
+
+  <rect x="140" y="465" width="1320" height="220" rx="24" class="dark"/>
+  <text x="190" y="525" class="kicker" fill="#f2c94c">Analog product memory</text>
+  <text x="190" y="585" class="label" fill="#fffdfa">Campaign</text>
+  <text x="355" y="585" class="label" fill="#fffdfa">Event set</text>
+  <text x="540" y="585" class="label" fill="#fffdfa">Host event</text>
+  <text x="755" y="585" class="label" fill="#fffdfa">Spend card</text>
+  <text x="970" y="585" class="label" fill="#fffdfa">Proof packet</text>
+  <text x="1215" y="585" class="label" fill="#fffdfa">Profile / catalog</text>
+
+  <text x="190" y="628" class="small" fill="#cfc7bb">who funds</text>
+  <text x="355" y="628" class="small" fill="#cfc7bb">what lane</text>
+  <text x="540" y="628" class="small" fill="#cfc7bb">what happens</text>
+  <text x="755" y="628" class="small" fill="#cfc7bb">how money moves</text>
+  <text x="970" y="628" class="small" fill="#cfc7bb">what evidence says</text>
+  <text x="1215" y="628" class="small" fill="#cfc7bb">what repeats</text>
+
+  <line x1="190" y1="655" x2="1410" y2="655" stroke="#5a524b" stroke-width="2"/>
+
+  <path d="M400 685 V755" class="arrow"/>
+  <path d="M800 685 V755" class="arrow"/>
+  <path d="M1200 685 V755" class="arrow"/>
+
+  <text x="80" y="780" class="kicker" fill="#8f6e00">Decisions created</text>
+  <rect x="80" y="815" width="435" height="105" rx="18" class="paper"/>
+  <text x="120" y="858" class="label ink">Renew or unlock</text>
+  <text x="120" y="890" class="body muted">Does this sponsor deploy more capital?</text>
+
+  <rect x="582" y="815" width="435" height="105" rx="18" class="paper"/>
+  <text x="622" y="858" class="label ink">Improve product</text>
+  <text x="622" y="890" class="body muted">Which workflow became repeat friction?</text>
+
+  <rect x="1085" y="815" width="435" height="105" rx="18" class="paper"/>
+  <text x="1125" y="858" class="label ink">Build supply</text>
+  <text x="1125" y="890" class="body muted">Which host, city, or causeway gets stronger?</text>
+</svg>

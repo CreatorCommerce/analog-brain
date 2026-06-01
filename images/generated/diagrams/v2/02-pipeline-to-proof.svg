@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Analog Pipeline To Proof</title>
+  <desc id="desc">A refined pipeline diagram showing how sponsor entities become persona-qualified briefs, supply asks, pilots, proof, and repeatable causeways.</desc>
+  <defs>
+    <style>
+      text { font-family: Poppins, Arial, sans-serif; letter-spacing: 0; }
+      .bg { fill: #f8f5ed; }
+      .ink { fill: #22201f; }
+      .muted { fill: #625b54; }
+      .paper { fill: #fffdfa; stroke: #ded5c7; stroke-width: 2; }
+      .dark { fill: #22201f; }
+      .softRed { fill: #fff0ee; stroke: #e8b8b2; stroke-width: 2; }
+      .softGold { fill: #fff6d8; stroke: #e7d16f; stroke-width: 2; }
+      .softGreen { fill: #ecf6f2; stroke: #a8d2c7; stroke-width: 2; }
+      .softBlue { fill: #eef3fb; stroke: #b7c9e6; stroke-width: 2; }
+      .line { stroke: #d8cebe; stroke-width: 2; }
+      .arrow { fill: none; stroke: #5f574f; stroke-width: 4; stroke-linecap: round; marker-end: url(#arrow); }
+      .title { font-size: 56px; font-weight: 500; }
+      .subtitle { font-size: 25px; font-weight: 400; }
+      .label { font-size: 24px; font-weight: 500; }
+      .body { font-size: 17px; font-weight: 400; }
+      .small { font-size: 15px; font-weight: 400; }
+      .kicker { font-size: 15px; font-weight: 500; text-transform: uppercase; }
+    </style>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="7" orient="auto">
+      <path d="M2,2 L12,7 L2,12 Z" fill="#5f574f"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="1000" class="bg"/>
+  <text x="80" y="96" class="title ink">Pipeline To Proof</text>
+  <text x="80" y="138" class="subtitle muted">How sponsor entities become actual learning instead of a static target list.</text>
+
+  <rect x="80" y="210" width="1440" height="390" rx="24" class="paper"/>
+  <text x="120" y="264" class="kicker" fill="#b9362e">Pipeline stages</text>
+
+  <rect x="120" y="315" width="190" height="120" rx="16" class="softRed"/>
+  <text x="145" y="355" class="label ink">Entity slot</text>
+  <text x="145" y="388" class="body muted">owner-supplied</text>
+  <text x="145" y="414" class="body muted">names only</text>
+
+  <rect x="375" y="315" width="190" height="120" rx="16" class="softGold"/>
+  <text x="400" y="355" class="label ink">Persona fit</text>
+  <text x="400" y="388" class="body muted">eComm, Tech,</text>
+  <text x="400" y="414" class="body muted">Public, Partner</text>
+
+  <rect x="630" y="315" width="190" height="120" rx="16" class="softBlue"/>
+  <text x="655" y="355" class="label ink">Brief</text>
+  <text x="655" y="388" class="body muted">trigger, city,</text>
+  <text x="655" y="414" class="body muted">audience, proof</text>
+
+  <rect x="885" y="315" width="190" height="120" rx="16" class="softGreen"/>
+  <text x="910" y="355" class="label ink">Supply ask</text>
+  <text x="910" y="388" class="body muted">host, connector,</text>
+  <text x="910" y="414" class="body muted">space, event set</text>
+
+  <rect x="1140" y="315" width="190" height="120" rx="16" class="softGold"/>
+  <text x="1165" y="355" class="label ink">Pilot</text>
+  <text x="1165" y="388" class="body muted">campaign, spend,</text>
+  <text x="1165" y="414" class="body muted">event, support</text>
+
+  <rect x="1395" y="315" width="85" height="120" rx="16" class="dark"/>
+  <text x="1415" y="360" class="label" fill="#fffdfa">Proof</text>
+  <text x="1415" y="394" class="small" fill="#f2c94c">renew</text>
+  <text x="1415" y="419" class="small" fill="#f2c94c">or no-go</text>
+
+  <path d="M310 375 H362" class="arrow"/>
+  <path d="M565 375 H617" class="arrow"/>
+  <path d="M820 375 H872" class="arrow"/>
+  <path d="M1075 375 H1127" class="arrow"/>
+  <path d="M1330 375 H1382" class="arrow"/>
+
+  <line x1="120" y1="505" x2="1480" y2="505" class="line"/>
+  <text x="120" y="546" class="body muted">Rule: a name is not pipeline until it has a sponsor perspective, a reason to spend, a supply ask, and a proof standard.</text>
+
+  <text x="80" y="685" class="kicker" fill="#8f6e00">Starting sponsor lanes</text>
+
+  <rect x="80" y="725" width="440" height="130" rx="18" class="paper"/>
+  <rect x="110" y="760" width="118" height="42" rx="21" fill="#b9362e"/>
+  <text x="138" y="788" class="label" fill="#fffdfa">eComm</text>
+  <text x="250" y="768" class="body muted">Trial, ritual, content, community</text>
+  <text x="250" y="795" class="body muted">sentiment, loyalty, sales-adjacent proof</text>
+  <text x="250" y="830" class="small muted">Example motion: run club strategy</text>
+
+  <rect x="580" y="725" width="440" height="130" rx="18" class="paper"/>
+  <rect x="610" y="760" width="118" height="42" rx="21" fill="#3563a9"/>
+  <text x="651" y="788" class="label" fill="#fffdfa">Tech</text>
+  <text x="750" y="768" class="body muted">Trusted rooms with founders, builders,</text>
+  <text x="750" y="795" class="body muted">developers, customers, or partners</text>
+  <text x="750" y="830" class="small muted">Example motion: SaaS dinner strategy</text>
+
+  <rect x="1080" y="725" width="440" height="130" rx="18" class="paper"/>
+  <rect x="1110" y="760" width="118" height="42" rx="21" fill="#2e7d6f"/>
+  <text x="1140" y="788" class="label" fill="#fffdfa">Public</text>
+  <text x="1250" y="768" class="body muted">Outcome capital for access, participation,</text>
+  <text x="1250" y="795" class="body muted">wellness, civic value, arts, climate</text>
+  <text x="1250" y="830" class="small muted">Example motion: public access fund</text>
+
+  <rect x="80" y="900" width="1440" height="52" rx="12" class="dark"/>
+  <text x="120" y="933" class="body" fill="#fffdfa">Entities get filled in later. The structure exists now so every name becomes a hypothesis, not decoration.</text>
+</svg>

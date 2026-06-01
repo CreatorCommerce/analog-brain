@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Analog Sponsor Lanes</title>
+  <desc id="desc">Three clean sponsor lanes showing how eComm brands, tech companies, and public or non-profit funds relate to Analog's starting market.</desc>
+  <defs>
+    <style>
+      text { font-family: Poppins, Arial, sans-serif; letter-spacing: 0; }
+      .bg { fill: #f8f5ed; }
+      .ink { fill: #22201f; }
+      .muted { fill: #625b54; }
+      .paper { fill: #fffdfa; stroke: #ded5c7; stroke-width: 2; }
+      .red { fill: #b9362e; }
+      .blue { fill: #3563a9; }
+      .green { fill: #2e7d6f; }
+      .softRed { fill: #fff0ee; stroke: #e8b8b2; stroke-width: 2; }
+      .softBlue { fill: #eef3fb; stroke: #b7c9e6; stroke-width: 2; }
+      .softGreen { fill: #ecf6f2; stroke: #a8d2c7; stroke-width: 2; }
+      .dark { fill: #22201f; }
+      .title { font-size: 56px; font-weight: 500; }
+      .subtitle { font-size: 25px; font-weight: 400; }
+      .laneTitle { font-size: 31px; font-weight: 500; }
+      .label { font-size: 19px; font-weight: 500; text-transform: uppercase; }
+      .body { font-size: 18px; font-weight: 400; }
+      .small { font-size: 15px; font-weight: 400; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="1000" class="bg"/>
+  <text x="80" y="96" class="title ink">Starting Sponsor Lanes</text>
+  <text x="80" y="138" class="subtitle muted">The pipeline should learn how each sponsor perspective spends, what supply it needs, and what proof it believes.</text>
+
+  <rect x="80" y="215" width="455" height="595" rx="24" class="softRed"/>
+  <rect x="120" y="260" width="170" height="58" rx="29" class="red"/>
+  <text x="156" y="299" class="laneTitle" fill="#fffdfa">eComm</text>
+  <text x="120" y="370" class="label" fill="#b9362e">What they sell</text>
+  <text x="120" y="405" class="body ink">Physical things to many people.</text>
+  <text x="120" y="455" class="label" fill="#b9362e">Why IRL matters</text>
+  <text x="120" y="490" class="body muted">Trial, ritual, product love, content,</text>
+  <text x="120" y="518" class="body muted">category growth, loyalty, and</text>
+  <text x="120" y="546" class="body muted">sales-adjacent learning.</text>
+  <text x="120" y="596" class="label" fill="#b9362e">First motions</text>
+  <text x="120" y="631" class="body muted">Run club funds, creator-led IRL,</text>
+  <text x="120" y="659" class="body muted">sampling, recovery mornings,</text>
+  <text x="120" y="687" class="body muted">customer nights, venue benefits.</text>
+  <text x="120" y="735" class="label" fill="#b9362e">Proof</text>
+  <text x="120" y="768" class="body ink">Trial, claims, content,</text>
+  <text x="120" y="796" class="body ink">sentiment, repeat behavior.</text>
+
+  <rect x="572" y="215" width="455" height="595" rx="24" class="softBlue"/>
+  <rect x="612" y="260" width="150" height="58" rx="29" class="blue"/>
+  <text x="654" y="299" class="laneTitle" fill="#fffdfa">Tech</text>
+  <text x="612" y="370" class="label" fill="#3563a9">What they sell</text>
+  <text x="612" y="405" class="body ink">Digital things to fewer, higher-value</text>
+  <text x="612" y="433" class="body ink">users, buyers, accounts, ecosystems.</text>
+  <text x="612" y="483" class="label" fill="#3563a9">Why IRL matters</text>
+  <text x="612" y="518" class="body muted">Trusted rooms can create adoption,</text>
+  <text x="612" y="546" class="body muted">relationships, account learning, and</text>
+  <text x="612" y="574" class="body muted">community credibility.</text>
+  <text x="612" y="624" class="label" fill="#3563a9">First motions</text>
+  <text x="612" y="659" class="body muted">SaaS dinners, founder breakfasts,</text>
+  <text x="612" y="687" class="body muted">AI rooms, dev meetups, councils.</text>
+  <text x="612" y="735" class="label" fill="#3563a9">Proof</text>
+  <text x="612" y="768" class="body ink">Qualified attendance,</text>
+  <text x="612" y="796" class="body ink">account fit, meetings.</text>
+
+  <rect x="1065" y="215" width="455" height="595" rx="24" class="softGreen"/>
+  <rect x="1105" y="260" width="170" height="58" rx="29" class="green"/>
+  <text x="1137" y="299" class="laneTitle" fill="#fffdfa">Public</text>
+  <text x="1105" y="370" class="label" fill="#2e7d6f">What they sell</text>
+  <text x="1105" y="405" class="body ink">Altruistic experiences and outcomes</text>
+  <text x="1105" y="433" class="body ink">to the public.</text>
+  <text x="1105" y="483" class="label" fill="#2e7d6f">Why IRL matters</text>
+  <text x="1105" y="518" class="body muted">Funding can create access, legitimacy,</text>
+  <text x="1105" y="546" class="body muted">participation, wellness, civic value,</text>
+  <text x="1105" y="574" class="body muted">and community formation.</text>
+  <text x="1105" y="624" class="label" fill="#2e7d6f">First motions</text>
+  <text x="1105" y="659" class="body muted">Public access funds, microgrants,</text>
+  <text x="1105" y="687" class="body muted">free spots, venue access, programs.</text>
+  <text x="1105" y="735" class="label" fill="#2e7d6f">Proof</text>
+  <text x="1105" y="768" class="body ink">Access, participation,</text>
+  <text x="1105" y="796" class="body ink">local trust, outcomes.</text>
+
+  <rect x="80" y="865" width="1440" height="70" rx="16" class="dark"/>
+  <text x="120" y="909" class="body" fill="#fffdfa">The same product spine serves all three lanes. The proof language changes by sponsor perspective.</text>
+</svg>

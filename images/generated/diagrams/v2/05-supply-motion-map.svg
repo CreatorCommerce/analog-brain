@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Analog Supply Motion Map</title>
+  <desc id="desc">A clean map showing the four supply motions Analog uses: access, create, publish, and prospect.</desc>
+  <defs>
+    <style>
+      text { font-family: Poppins, Arial, sans-serif; letter-spacing: 0; }
+      .bg { fill: #f8f5ed; }
+      .ink { fill: #22201f; }
+      .muted { fill: #625b54; }
+      .paper { fill: #fffdfa; stroke: #ded5c7; stroke-width: 2; }
+      .dark { fill: #22201f; }
+      .softRed { fill: #fff0ee; stroke: #e8b8b2; stroke-width: 2; }
+      .softGold { fill: #fff6d8; stroke: #e7d16f; stroke-width: 2; }
+      .softGreen { fill: #ecf6f2; stroke: #a8d2c7; stroke-width: 2; }
+      .softBlue { fill: #eef3fb; stroke: #b7c9e6; stroke-width: 2; }
+      .arrow { fill: none; stroke: #5f574f; stroke-width: 4; stroke-linecap: round; marker-end: url(#arrow); }
+      .title { font-size: 56px; font-weight: 500; }
+      .subtitle { font-size: 25px; font-weight: 400; }
+      .label { font-size: 26px; font-weight: 500; }
+      .body { font-size: 17px; font-weight: 400; }
+      .small { font-size: 15px; font-weight: 400; }
+      .kicker { font-size: 15px; font-weight: 500; text-transform: uppercase; }
+    </style>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="7" orient="auto">
+      <path d="M2,2 L12,7 L2,12 Z" fill="#5f574f"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="1000" class="bg"/>
+  <text x="80" y="96" class="title ink">Supply Motion Map</text>
+  <text x="80" y="138" class="subtitle muted">Pick the fastest path from sponsor demand to sponsor-ready host-side options.</text>
+
+  <rect x="580" y="255" width="440" height="210" rx="24" class="dark"/>
+  <text x="650" y="320" class="label" fill="#fffdfa">What does the market</text>
+  <text x="688" y="358" class="label" fill="#fffdfa">need right now?</text>
+  <text x="650" y="410" class="body" fill="#f2c94c">Choose the motion that creates</text>
+  <text x="682" y="438" class="body" fill="#f2c94c">a usable product object fastest.</text>
+
+  <rect x="80" y="230" width="400" height="205" rx="20" class="softRed"/>
+  <text x="125" y="285" class="label ink">Access</text>
+  <text x="125" y="325" class="body muted">Trusted supply already exists.</text>
+  <text x="125" y="365" class="small muted">Use when a host, venue, club,</text>
+  <text x="125" y="390" class="small muted">ritual, or community needs packaging.</text>
+  <text x="125" y="425" class="small ink">Output: profile, package, catalog record</text>
+
+  <rect x="1120" y="230" width="400" height="205" rx="20" class="softGold"/>
+  <text x="1165" y="285" class="label ink">Create</text>
+  <text x="1165" y="325" class="body muted">Demand exists; supply is missing.</text>
+  <text x="1165" y="365" class="small muted">Use city leads, grants, owned IRL,</text>
+  <text x="1165" y="390" class="small muted">or connectors to assemble the option.</text>
+  <text x="1165" y="425" class="small ink">Output: activation opportunity, fund idea</text>
+
+  <rect x="80" y="565" width="400" height="205" rx="20" class="softGreen"/>
+  <text x="125" y="620" class="label ink">Publish</text>
+  <text x="125" y="660" class="body muted">Supply exists, but the market cannot see it.</text>
+  <text x="125" y="700" class="small muted">Use field notes, interviews, social,</text>
+  <text x="125" y="725" class="small muted">The Connector, video, and owned IRL.</text>
+  <text x="125" y="760" class="small ink">Output: media, profile, inbound, sponsor lead</text>
+
+  <rect x="1120" y="565" width="400" height="205" rx="20" class="softBlue"/>
+  <text x="1165" y="620" class="label ink">Prospect</text>
+  <text x="1165" y="660" class="body muted">The brief is clear; supply is off-platform.</text>
+  <text x="1165" y="700" class="small muted">Use catalog, public discovery, partner</text>
+  <text x="1165" y="725" class="small muted">lists, and city lead knowledge.</text>
+  <text x="1165" y="760" class="small ink">Output: applications, invites, collabs</text>
+
+  <path d="M480 332 H567" class="arrow"/>
+  <path d="M1120 332 H1033" class="arrow"/>
+  <path d="M480 668 H567" class="arrow"/>
+  <path d="M1120 668 H1033" class="arrow"/>
+  <path d="M800 465 V530" class="arrow"/>
+
+  <rect x="580" y="535" width="440" height="205" rx="20" class="paper"/>
+  <text x="625" y="590" class="label ink">Decision standard</text>
+  <text x="625" y="633" class="body muted">The work should end in a product object:</text>
+  <text x="625" y="671" class="small muted">catalog record, host profile, event set,</text>
+  <text x="625" y="696" class="small muted">sponsor package, proof asset, fund, or</text>
+  <text x="625" y="721" class="small muted">asset-need note.</text>
+
+  <rect x="80" y="855" width="1440" height="70" rx="16" class="dark"/>
+  <text x="120" y="899" class="body" fill="#fffdfa">A long list of events is not progress. Progress is more sponsor-ready options and clearer evidence for what to fund next.</text>
+</svg>

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1050" viewBox="0 0 1800 1050" role="img" aria-labelledby="title desc">
+  <title id="title">Supply Motion Build Only What Demand Can Pull</title>
+  <desc id="desc">A conviction-oriented supply motion diagram showing when Analog should access, create, publish, or prospect supply based on sponsor demand and market visibility.</desc>
+  <defs>
+    <style>
+      text { font-family: Inter, Arial, sans-serif; letter-spacing: 0; }
+      .bg { fill: #fbf7ef; }
+      .ink { fill: #171514; }
+      .muted { fill: #5f5952; }
+      .paper { fill: #fffefa; stroke: #d7cbbc; stroke-width: 2.5; }
+      .dark { fill: #171514; }
+      .red { fill: #b9362e; }
+      .gold { fill: #9b7500; }
+      .green { fill: #26796b; }
+      .blue { fill: #2f5ea8; }
+      .softRed { fill: #fff0ee; stroke: #e6aaa3; stroke-width: 2.5; }
+      .softGold { fill: #fff5d6; stroke: #dfc75b; stroke-width: 2.5; }
+      .softGreen { fill: #eaf7f2; stroke: #9bcfc3; stroke-width: 2.5; }
+      .softBlue { fill: #edf3ff; stroke: #aac1e6; stroke-width: 2.5; }
+      .title { font-size: 72px; font-weight: 850; }
+      .sub { font-size: 31px; font-weight: 500; }
+      .kicker { font-size: 19px; font-weight: 850; text-transform: uppercase; }
+      .h { font-size: 38px; font-weight: 820; }
+      .m { font-size: 27px; font-weight: 650; }
+      .body { font-size: 22px; font-weight: 520; }
+      .line { stroke: #171514; stroke-width: 7; stroke-linecap: round; fill: none; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" markerWidth="18" markerHeight="18" refX="15" refY="9" orient="auto">
+      <path d="M2,2 L16,9 L2,16 Z" fill="#171514"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1800" height="1050"/>
+  <text class="title ink" x="90" y="105">Supply Motion: Build Only What Demand Can Pull</text>
+  <text class="sub muted" x="92" y="153">A long list of events is not supply. A fundable option with proof is supply.</text>
+
+  <rect class="dark" x="615" y="250" width="570" height="290" rx="34"/>
+  <text class="kicker" fill="#f2c94c" x="670" y="315">Starting question</text>
+  <text class="h" fill="#fffefa" x="670" y="378">What sponsor demand</text>
+  <text class="h" fill="#fffefa" x="670" y="425">can this option satisfy?</text>
+  <text class="body" fill="#fffefa" x="670" y="472">If nobody can fund it, it is discovery,</text>
+  <text class="body" fill="#fffefa" x="670" y="506">not supply yet.</text>
+
+  <rect class="softRed" x="105" y="250" width="395" height="225" rx="28"/>
+  <text class="kicker red" x="145" y="310">Access</text>
+  <text class="h ink" x="145" y="362">Supply exists.</text>
+  <text class="body muted" x="145" y="415">Package the host, space,</text>
+  <text class="body muted" x="145" y="448">ritual, and proof plan.</text>
+
+  <rect class="softGold" x="1300" y="250" width="395" height="225" rx="28"/>
+  <text class="kicker gold" x="1340" y="310">Create</text>
+  <text class="h ink" x="1340" y="362">Demand exists.</text>
+  <text class="body muted" x="1340" y="415">Assemble the missing host,</text>
+  <text class="body muted" x="1340" y="448">space, operator, or fund.</text>
+
+  <rect class="softGreen" x="105" y="575" width="395" height="225" rx="28"/>
+  <text class="kicker green" x="145" y="635">Publish</text>
+  <text class="h ink" x="145" y="687">Market invisible.</text>
+  <text class="body muted" x="145" y="740">Use city leads, media,</text>
+  <text class="body muted" x="145" y="773">and owned IRL to make it legible.</text>
+
+  <rect class="softBlue" x="1300" y="575" width="395" height="225" rx="28"/>
+  <text class="kicker blue" x="1340" y="635">Prospect</text>
+  <text class="h ink" x="1340" y="687">Brief is clear.</text>
+  <text class="body muted" x="1340" y="740">Find off-platform hosts</text>
+  <text class="body muted" x="1340" y="773">that match the sponsor ask.</text>
+
+  <path class="line" d="M500 360 H590"/>
+  <path class="line" d="M1300 360 H1210"/>
+  <path class="line" d="M500 690 C590 690 605 560 665 520"/>
+  <path class="line" d="M1300 690 C1210 690 1195 560 1135 520"/>
+
+  <rect class="paper" x="600" y="635" width="600" height="215" rx="28"/>
+  <text class="kicker green" x="650" y="695">Output standard</text>
+  <text class="h ink" x="650" y="748">Sponsor-ready option</text>
+  <text class="body muted" x="650" y="794">with host fit, spend use, proof plan,</text>
+  <text class="body muted" x="650" y="826">blockers, and next action.</text>
+
+  <path class="line" d="M900 540 V610"/>
+
+  <rect class="dark" x="90" y="925" width="1620" height="76" rx="20"/>
+  <text class="m" fill="#fffefa" x="130" y="974">Conviction:</text>
+  <text class="body" fill="#fffefa" x="285" y="974">city leads are not generic scouts. They are demand-guided market makers for sponsor-ready supply.</text>
+</svg>

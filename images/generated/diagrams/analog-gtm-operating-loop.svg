@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Analog GTM Operating Loop</title>
+  <desc id="desc">A non-technical flowchart showing how Analog turns sponsor signal into briefs, supply, pilots, proof, renewals, media, and product learning.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8f5ed; }
+      .ink { fill: #22201f; }
+      .muted { fill: #5e5750; }
+      .card { fill: #fffdfa; stroke: #ded5c7; stroke-width: 2; }
+      .red { fill: #b9362e; }
+      .gold { fill: #8f6e00; }
+      .green { fill: #2e7d6f; }
+      .blue { fill: #3563a9; }
+      .soft-red { fill: #fff0ee; stroke: #e8b8b2; stroke-width: 2; }
+      .soft-gold { fill: #fff6d8; stroke: #e8d17b; stroke-width: 2; }
+      .soft-green { fill: #ecf6f2; stroke: #a9d2c8; stroke-width: 2; }
+      .soft-blue { fill: #eef3fb; stroke: #bac9e2; stroke-width: 2; }
+      .arrow { fill: none; stroke: #6d6259; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrowhead); }
+      .loop { fill: none; stroke: #b9362e; stroke-width: 5; stroke-linecap: round; stroke-dasharray: 10 12; marker-end: url(#redArrow); }
+      text { font-family: Poppins, Arial, sans-serif; letter-spacing: 0; }
+      .title { font-size: 52px; font-weight: 500; }
+      .subtitle { font-size: 24px; font-weight: 400; }
+      .label { font-size: 26px; font-weight: 500; }
+      .body { font-size: 19px; font-weight: 400; }
+      .tiny { font-size: 16px; font-weight: 400; }
+    </style>
+    <marker id="arrowhead" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto">
+      <path d="M2,2 L12,7 L2,12 Z" fill="#6d6259" />
+    </marker>
+    <marker id="redArrow" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto">
+      <path d="M2,2 L12,7 L2,12 Z" fill="#b9362e" />
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1600" height="1000" rx="0" />
+  <text x="80" y="100" class="title ink">Analog GTM Operating Loop</text>
+  <text x="80" y="140" class="subtitle muted">How a sponsor signal becomes funded IRL supply, proof, renewal, media, and product learning.</text>
+
+  <rect x="80" y="215" width="240" height="145" rx="12" class="soft-red" />
+  <text x="112" y="262" class="label ink">1. Sponsor signal</text>
+  <text x="112" y="302" class="body muted">Budget, category, city,</text>
+  <text x="112" y="330" class="body muted">audience, or outcome</text>
+
+  <rect x="405" y="215" width="240" height="145" rx="12" class="soft-gold" />
+  <text x="437" y="262" class="label ink">2. Brief</text>
+  <text x="437" y="302" class="body muted">Objective, guardrails,</text>
+  <text x="437" y="330" class="body muted">proof, budget range</text>
+
+  <rect x="730" y="215" width="240" height="145" rx="12" class="soft-blue" />
+  <text x="762" y="262" class="label ink">3. Supply ask</text>
+  <text x="762" y="302" class="body muted">What host, space,</text>
+  <text x="762" y="330" class="body muted">scene, or connector?</text>
+
+  <rect x="1055" y="215" width="240" height="145" rx="12" class="soft-green" />
+  <text x="1087" y="262" class="label ink">4. City sourcing</text>
+  <text x="1087" y="302" class="body muted">City leads find, vet,</text>
+  <text x="1087" y="330" class="body muted">interview, package</text>
+
+  <path d="M320 288 H392" class="arrow" />
+  <path d="M645 288 H717" class="arrow" />
+  <path d="M970 288 H1042" class="arrow" />
+
+  <rect x="1055" y="530" width="240" height="145" rx="12" class="soft-blue" />
+  <text x="1087" y="577" class="label ink">5. Package</text>
+  <text x="1087" y="617" class="body muted">3 to 5 sponsor-ready</text>
+  <text x="1087" y="645" class="body muted">options or opportunities</text>
+
+  <rect x="730" y="530" width="240" height="145" rx="12" class="soft-gold" />
+  <text x="762" y="577" class="label ink">6. Pilot launch</text>
+  <text x="762" y="617" class="body muted">Campaign, host event,</text>
+  <text x="762" y="645" class="body muted">spend card, support</text>
+
+  <rect x="405" y="530" width="240" height="145" rx="12" class="soft-green" />
+  <text x="437" y="577" class="label ink">7. Proof packet</text>
+  <text x="437" y="617" class="body muted">Spend, attendance,</text>
+  <text x="437" y="645" class="body muted">content, sentiment</text>
+
+  <rect x="80" y="530" width="240" height="145" rx="12" class="soft-red" />
+  <text x="112" y="577" class="label ink">8. Unlock</text>
+  <text x="112" y="617" class="body muted">Renew, expand, pause,</text>
+  <text x="112" y="645" class="body muted">or redesign the motion</text>
+
+  <path d="M1175 360 V505" class="arrow" />
+  <path d="M1055 602 H983" class="arrow" />
+  <path d="M730 602 H658" class="arrow" />
+  <path d="M405 602 H333" class="arrow" />
+  <path d="M200 530 V400 C200 385 210 382 225 382 H1380 C1410 382 1420 365 1420 337 V286 H1308" class="loop" />
+
+  <rect x="1350" y="215" width="170" height="460" rx="12" class="card" />
+  <text x="1380" y="262" class="label ink">Side loops</text>
+  <circle cx="1384" cy="313" r="8" class="red" />
+  <text x="1404" y="320" class="body muted">Media</text>
+  <text x="1404" y="348" class="tiny muted">story, recap,</text>
+  <text x="1404" y="371" class="tiny muted">Connector item</text>
+  <circle cx="1384" cy="425" r="8" class="blue" />
+  <text x="1404" y="432" class="body muted">Product</text>
+  <text x="1404" y="460" class="tiny muted">workflow friction,</text>
+  <text x="1404" y="483" class="tiny muted">new object need</text>
+  <circle cx="1384" cy="537" r="8" class="green" />
+  <text x="1404" y="544" class="body muted">Supply</text>
+  <text x="1404" y="572" class="tiny muted">catalog record,</text>
+  <text x="1404" y="595" class="tiny muted">profile, asset need</text>
+
+  <rect x="80" y="775" width="1440" height="115" rx="12" fill="#22201f" />
+  <text x="116" y="822" class="label" fill="#f8f5ed">Stakeholder readout</text>
+  <text x="116" y="858" class="body" fill="#f8f5ed">Progress means a clearer sponsor motion, qualified host-side supply, governed spend, believable proof, and a decision on the next dollar.</text>
+</svg>

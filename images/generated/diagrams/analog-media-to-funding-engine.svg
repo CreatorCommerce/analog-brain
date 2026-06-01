@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Analog Media To Funding Engine</title>
+  <desc id="desc">A flow diagram showing how city lead field capture becomes media, product routing, sponsor demand, governed funds, and the next IRL unlock.</desc>
+  <defs>
+    <style>
+      .bg { fill: #fbf8f1; }
+      .ink { fill: #22201f; }
+      .muted { fill: #5e5750; }
+      .card { fill: #fffdfa; stroke: #ded5c7; stroke-width: 2; }
+      .dark { fill: #22201f; }
+      .redSoft { fill: #fff0ee; stroke: #e8b8b2; stroke-width: 2; }
+      .goldSoft { fill: #fff6d8; stroke: #e8d17b; stroke-width: 2; }
+      .greenSoft { fill: #ecf6f2; stroke: #a9d2c8; stroke-width: 2; }
+      .blueSoft { fill: #eef3fb; stroke: #bac9e2; stroke-width: 2; }
+      .arrow { fill: none; stroke: #6d6259; stroke-width: 4; stroke-linecap: round; marker-end: url(#arrowhead); }
+      .loop { fill: none; stroke: #b9362e; stroke-width: 5; stroke-linecap: round; stroke-dasharray: 11 13; marker-end: url(#redArrow); }
+      text { font-family: Poppins, Arial, sans-serif; letter-spacing: 0; }
+      .title { font-size: 52px; font-weight: 500; }
+      .subtitle { font-size: 24px; font-weight: 400; }
+      .label { font-size: 25px; font-weight: 500; }
+      .body { font-size: 18px; font-weight: 400; }
+      .small { font-size: 15px; font-weight: 400; }
+    </style>
+    <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#6d6259" />
+    </marker>
+    <marker id="redArrow" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto">
+      <path d="M2,2 L12,7 L2,12 Z" fill="#b9362e" />
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1600" height="1000" />
+  <text x="80" y="96" class="title ink">Media To Funding Engine</text>
+  <text x="80" y="136" class="subtitle muted">How Analog uses field media to discover supply, build affection, and route attention into governed funds.</text>
+
+  <rect x="80" y="235" width="245" height="150" rx="12" class="redSoft" />
+  <text x="112" y="282" class="label ink">City lead</text>
+  <text x="112" y="320" class="body muted">Meets people,</text>
+  <text x="112" y="348" class="body muted">records interviews,</text>
+  <text x="112" y="376" class="body muted">captures field notes</text>
+
+  <rect x="405" y="235" width="245" height="150" rx="12" class="goldSoft" />
+  <text x="437" y="282" class="label ink">Slack intake</text>
+  <text x="437" y="320" class="body muted">City, people, media,</text>
+  <text x="437" y="348" class="body muted">permissions, sponsor fit,</text>
+  <text x="437" y="376" class="body muted">product follow-up</text>
+
+  <rect x="730" y="235" width="245" height="150" rx="12" class="blueSoft" />
+  <text x="762" y="282" class="label ink">Content team</text>
+  <text x="762" y="320" class="body muted">Writes, edits, designs,</text>
+  <text x="762" y="348" class="body muted">clips, lays out,</text>
+  <text x="762" y="376" class="body muted">publishes</text>
+
+  <rect x="1055" y="235" width="365" height="150" rx="12" class="greenSoft" />
+  <text x="1087" y="282" class="label ink">Distribution</text>
+  <text x="1087" y="320" class="body muted">Social, The Connector, print, YouTube,</text>
+  <text x="1087" y="348" class="body muted">owned IRL, sponsor-facing recaps</text>
+
+  <path d="M325 310 H392" class="arrow" />
+  <path d="M650 310 H717" class="arrow" />
+  <path d="M975 310 H1042" class="arrow" />
+
+  <rect x="165" y="535" width="250" height="150" rx="12" class="card" />
+  <text x="198" y="582" class="label ink">Product routing</text>
+  <text x="198" y="620" class="body muted">Catalog record,</text>
+  <text x="198" y="648" class="body muted">profile, asset need,</text>
+  <text x="198" y="676" class="body muted">proof attachment</text>
+
+  <rect x="505" y="535" width="250" height="150" rx="12" class="card" />
+  <text x="538" y="582" class="label ink">Sponsor pull</text>
+  <text x="538" y="620" class="body muted">Brief, fund idea,</text>
+  <text x="538" y="648" class="body muted">Activation Opportunity,</text>
+  <text x="538" y="676" class="body muted">pilot prospect</text>
+
+  <rect x="845" y="535" width="250" height="150" rx="12" class="card" />
+  <text x="878" y="582" class="label ink">Governed fund</text>
+  <text x="878" y="620" class="body muted">Approved budget,</text>
+  <text x="878" y="648" class="body muted">spend rules, proof,</text>
+  <text x="878" y="676" class="body muted">unlock conditions</text>
+
+  <rect x="1185" y="535" width="250" height="150" rx="12" class="card" />
+  <text x="1218" y="582" class="label ink">Next IRL</text>
+  <text x="1218" y="620" class="body muted">Happy hour, salon,</text>
+  <text x="1218" y="648" class="body muted">run, dinner, workshop,</text>
+  <text x="1218" y="676" class="body muted">or funded pilot</text>
+
+  <path d="M1238 385 C1190 455 1060 505 970 535" class="arrow" />
+  <path d="M1120 385 C980 470 760 515 630 535" class="arrow" />
+  <path d="M1060 385 C850 490 500 520 290 535" class="arrow" />
+  <path d="M415 610 H492" class="arrow" />
+  <path d="M755 610 H832" class="arrow" />
+  <path d="M1095 610 H1172" class="arrow" />
+
+  <path d="M1310 535 C1345 455 1375 190 1235 190 H205 C125 190 105 218 105 276" class="loop" />
+
+  <rect x="80" y="790" width="1440" height="110" rx="12" class="dark" />
+  <text x="120" y="835" class="label" fill="#fbf8f1">Non-technical read</text>
+  <text x="120" y="872" class="body" fill="#fbf8f1">Media is not a side quest. It makes hidden communities visible, earns trust, gives builders status, and tells Analog where sponsor money should go next.</text>
+</svg>

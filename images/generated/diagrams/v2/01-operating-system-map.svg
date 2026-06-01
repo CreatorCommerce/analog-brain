@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Analog Operating System Map</title>
+  <desc id="desc">A clean visual map of how Analog turns sponsor capital into trusted supply, governed spend, proof, and the next dollar.</desc>
+  <defs>
+    <style>
+      text { font-family: Poppins, Arial, sans-serif; letter-spacing: 0; }
+      .bg { fill: #f8f5ed; }
+      .ink { fill: #22201f; }
+      .muted { fill: #625b54; }
+      .paper { fill: #fffdfa; stroke: #ded5c7; stroke-width: 2; }
+      .dark { fill: #22201f; }
+      .red { fill: #b9362e; }
+      .gold { fill: #8f6e00; }
+      .green { fill: #2e7d6f; }
+      .blue { fill: #3563a9; }
+      .softRed { fill: #fff0ee; stroke: #e8b8b2; stroke-width: 2; }
+      .softGold { fill: #fff6d8; stroke: #e7d16f; stroke-width: 2; }
+      .softGreen { fill: #ecf6f2; stroke: #a8d2c7; stroke-width: 2; }
+      .softBlue { fill: #eef3fb; stroke: #b7c9e6; stroke-width: 2; }
+      .rule { stroke: #d9cfbf; stroke-width: 2; }
+      .arrow { fill: none; stroke: #5f574f; stroke-width: 4; stroke-linecap: round; marker-end: url(#arrow); }
+      .title { font-size: 56px; font-weight: 500; }
+      .subtitle { font-size: 25px; font-weight: 400; }
+      .step { font-size: 24px; font-weight: 500; }
+      .body { font-size: 17px; font-weight: 400; }
+      .small { font-size: 15px; font-weight: 400; }
+      .kicker { font-size: 15px; font-weight: 500; text-transform: uppercase; }
+    </style>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="11" refY="7" orient="auto">
+      <path d="M2,2 L12,7 L2,12 Z" fill="#5f574f"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="1000" class="bg"/>
+  <text x="80" y="96" class="title ink">Analog Operating System Map</text>
+  <text x="80" y="138" class="subtitle muted">The company motion: turn sponsor capital into trusted IRL supply, governed execution, proof, and the next dollar.</text>
+
+  <rect x="80" y="215" width="1440" height="250" rx="24" class="paper"/>
+  <text x="120" y="268" class="kicker red">Core value chain</text>
+
+  <rect x="120" y="310" width="180" height="105" rx="16" class="softRed"/>
+  <text x="145" y="348" class="step ink">Sponsor</text>
+  <text x="145" y="378" class="body muted">capital + reason</text>
+  <text x="145" y="401" class="body muted">to enter IRL</text>
+
+  <rect x="365" y="310" width="180" height="105" rx="16" class="softGold"/>
+  <text x="390" y="348" class="step ink">Brief</text>
+  <text x="390" y="378" class="body muted">audience, city,</text>
+  <text x="390" y="401" class="body muted">guardrails, proof</text>
+
+  <rect x="610" y="310" width="180" height="105" rx="16" class="softBlue"/>
+  <text x="635" y="348" class="step ink">Supply</text>
+  <text x="635" y="378" class="body muted">host, connector,</text>
+  <text x="635" y="401" class="body muted">space, community</text>
+
+  <rect x="855" y="310" width="180" height="105" rx="16" class="softGreen"/>
+  <text x="880" y="348" class="step ink">Spend</text>
+  <text x="880" y="378" class="body muted">scoped budget,</text>
+  <text x="880" y="401" class="body muted">receipts, rules</text>
+
+  <rect x="1100" y="310" width="180" height="105" rx="16" class="softBlue"/>
+  <text x="1125" y="348" class="step ink">Proof</text>
+  <text x="1125" y="378" class="body muted">attendance, story,</text>
+  <text x="1125" y="401" class="body muted">outcome signal</text>
+
+  <rect x="1345" y="310" width="135" height="105" rx="16" fill="#22201f"/>
+  <text x="1372" y="348" class="step" fill="#fffdfa">Unlock</text>
+  <text x="1372" y="378" class="body" fill="#f2c94c">renew or</text>
+  <text x="1372" y="401" class="body" fill="#f2c94c">redesign</text>
+
+  <path d="M300 358 H352" class="arrow"/>
+  <path d="M545 358 H597" class="arrow"/>
+  <path d="M790 358 H842" class="arrow"/>
+  <path d="M1035 358 H1087" class="arrow"/>
+  <path d="M1280 358 H1332" class="arrow"/>
+
+  <text x="80" y="555" class="kicker gold">Operating layers that make the chain repeat</text>
+
+  <rect x="80" y="595" width="330" height="190" rx="18" class="paper"/>
+  <circle cx="120" cy="643" r="12" class="red"/>
+  <text x="145" y="651" class="step ink">Pipeline</text>
+  <text x="120" y="695" class="body muted">Maps entities to sponsor personas,</text>
+  <text x="120" y="722" class="body muted">market triggers, briefs, supply asks,</text>
+  <text x="120" y="749" class="body muted">proof needs, and next actions.</text>
+
+  <rect x="445" y="595" width="330" height="190" rx="18" class="paper"/>
+  <circle cx="485" cy="643" r="12" class="blue"/>
+  <text x="510" y="651" class="step ink">Platform</text>
+  <text x="485" y="695" class="body muted">Turns work into objects: campaign,</text>
+  <text x="485" y="722" class="body muted">event set, host event, spend card,</text>
+  <text x="485" y="749" class="body muted">proof packet, profile, catalog.</text>
+
+  <rect x="810" y="595" width="330" height="190" rx="18" class="paper"/>
+  <circle cx="850" cy="643" r="12" class="green"/>
+  <text x="875" y="651" class="step ink">Field supply</text>
+  <text x="850" y="695" class="body muted">City leads find, package, create,</text>
+  <text x="850" y="722" class="body muted">or publish supply into view so</text>
+  <text x="850" y="749" class="body muted">sponsor demand becomes real.</text>
+
+  <rect x="1175" y="595" width="345" height="190" rx="18" class="paper"/>
+  <circle cx="1215" cy="643" r="12" class="gold"/>
+  <text x="1240" y="651" class="step ink">Media + affection</text>
+  <text x="1215" y="695" class="body muted">Makes the market legible, gives</text>
+  <text x="1215" y="722" class="body muted">connectors status, and pulls more</text>
+  <text x="1215" y="749" class="body muted">hosts and sponsors into the tent.</text>
+
+  <rect x="80" y="850" width="1440" height="80" rx="16" class="dark"/>
+  <text x="120" y="900" class="step" fill="#fffdfa">Plain read:</text>
+  <text x="270" y="900" class="body" fill="#fffdfa">Analog is not just matching brands to events. It is building the operating memory for how sponsor capital moves through the IRL economy.</text>
+</svg>

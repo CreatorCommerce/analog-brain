@@ -14,13 +14,15 @@ The MVP should make Analog easy to understand at a glance:
 Sponsor budget -> controlled spend -> host supply -> proof -> next allocation
 ```
 
-The platform is testing which product conventions make brands, public funders, and businesses comfortable giving Analog budget to deploy on their behalf. The work starts with spend infrastructure, but the goal is marketplace enablement: enough structured Sponsor demand and Host-side supply for Analog to observe what repeats.
+The platform is testing which product conventions make eComm brands, SaaS/tech companies, civic/public/nonprofit funders, political action Sponsors, and partner businesses comfortable giving Analog budget to deploy on their behalf. The work starts with spend infrastructure, but the goal is marketplace enablement: enough structured Sponsor demand and Host-side supply for Analog to observe what repeats.
 
 The platform should prioritize cash-based Host enablement over product-only gifting. Product can be a campaign asset, but the core learning surface is how cash, services, tools, proof, and renewal help Hosts create better gatherings.
 
 For high-ticket sponsorships, the platform direction expands from card spend to sponsorship governance. Analog should still use spend cards for distributed Host and vendor budgets, while using files/docs, contracts, invoices, milestones, risk registers, proof gates, and AI-assisted recommendations to keep large IRL investments safe.
 
 For public and nonprofit funding, the platform direction is downstream fund administration: eligibility, restricted uses, conflict checks, public-safe proof, fraud/waste/abuse review, support needs, and funder-ready reports around the same campaign, event-set, collab, spend, files, and proof objects.
+
+For political action funding, the platform direction is compliance-safe field fund administration: authorized entities, state/county/city/event sets, approved uses, privacy boundaries, field proof, sensitive-affiliation controls, and allocation rollups around the same core objects. Treat this as a high-control use case, not generic event marketing.
 
 | Platform focus | What to look for in the UI | Product learning |
 |---|---|---|
@@ -29,6 +31,7 @@ For public and nonprofit funding, the platform direction is downstream fund admi
 | Supply markets <Tooltip headline="Supply markets" tip="Host-side options created by applications, prospecting, city leads, media, partner lists, and managed GTM."><span className="analog-help">?</span></Tooltip> | Application inbox, host opportunities, hosted event pages, prospecting, pitch pages | Which hosts, spaces, and connectors become sponsor-ready fastest. |
 | Services/tools <Tooltip headline="Services/tools" tip="Insurance, documents, print, vendors, local designers, rentals, and proof kits that make cash funding easier to use."><span className="analog-help">?</span></Tooltip> | Files, docs, required todos, asset requests, shipment logs, vendor notes, proof templates | Which blockers should become product workflows, partner workflows, or managed support. |
 | Sponsorship governance <Tooltip headline="Sponsorship governance" tip="High-ticket sponsorship controls beyond cards: investment memos, allocation plans, contracts, invoices, risk registers, proof gates, and renewal recommendations."><span className="analog-help">?</span></Tooltip> | Files/docs, Sponsor data, campaigns, event sets, tasks, proof, approval notes, assisted summaries | Which controls make six- or seven-figure sponsorships safe enough to deploy, renew, or reallocate. |
+| City operating layer <Tooltip headline="City operating layer" tip="Regional supply, advisory context, media, grant pools, and city lead work that make local markets legible."><span className="analog-help">?</span></Tooltip> | Campaigns, event sets, applications, catalog records, files/docs, proof, city lead notes | Which markets are becoming ownable supply layers across multiple Sponsor lanes. |
 | Proof loop <Tooltip headline="Proof loop" tip="The evidence package that tells a sponsor whether to renew, expand, reallocate, or stop."><span className="analog-help">?</span></Tooltip> | Sponsor data, campaign proof, files, UGC, spend, tasks, shipments | Which evidence earns the next budget allocation. |
 
 ## IRL Culture Data Opportunity
@@ -62,6 +65,7 @@ Analog should use brand funds and programs to create constrained markets the pro
 | Controlled field spend <Tooltip headline="Controlled field spend" tip="Sponsor capital deployed through allocations and spend cards so Analog can learn usable budget conventions without exposing hosts to reimbursement chaos."><span className="analog-help">?</span></Tooltip> | Accepted hosts operate against collabs, cards, categories, limits, and event context. | Allocation, merchant/category behavior, timing, unused funds, anomalies, host usability. |
 | Public-money program <Tooltip headline="Public-money program" tip="Municipal, foundation, or NGO funding with eligibility, fraud/waste/abuse controls, public reporting, and participation proof."><span className="analog-help">?</span></Tooltip> | Campaign, application portal, collab, spend controls, receipt proof, public summaries. | Eligibility, approved uses, anomaly review, access created, local legitimacy. |
 | Nonprofit downstream funding <Tooltip headline="Nonprofit downstream funding" tip="A nonprofit or foundation funds aligned Hosts, groups, chapters, spaces, and operators while preserving mission governance and reporting upstream."><span className="analog-help">?</span></Tooltip> | Campaign, event sets, application portal, collabs, files/docs, spend controls, proof templates, report drafts. | Whether mission capital can create participation through trusted local supply without reimbursement chaos. |
+| Political action field fund <Tooltip headline="Political action field fund" tip="Campaign or advocacy budget routed into compliant local activations with state/county/city/event rollups."><span className="analog-help">?</span></Tooltip> | Campaign, event sets, application portal, collabs, spend controls, files/docs, proof templates, compliance notes. | Whether grassroots capital can reach trusted Hosts while preserving privacy, compliance, and allocation learning. |
 | Market selection | Sponsor reviews proof and decides who earns the next dollar. | Renewal, unlock, reallocation, no-go, product blocker, repeat playbook. |
 
 The UI should make these markets easy to scan. A sponsor should see the ask, the supply response, the spend behavior, and the proof result without needing a custom report.
@@ -234,3 +238,5 @@ Keep two related concepts distinct:
 Both should route interested hosts back to the campaign application link so leads enter the same approval workflow.
 
 Managed outreach, city lead sourcing, media, and brand-fund GTM are allowed in the MVP because they create supply the marketplace can observe. They should always produce product objects: applications, event sets, host profiles, pitch docs, proof, asset requests, or no-go learning.
+
+City-level supply work should be tagged by market whenever possible. The goal is not only to close one campaign; it is to learn whether AnalogNYC, AnalogSF, or a future city layer is becoming a repeatable operating department.

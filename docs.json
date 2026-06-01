@@ -103,6 +103,7 @@
             "group": "USE CASES",
             "pages": [
               "strategy/mvp-use-cases",
+              "use-cases/campaign-grassroots-activation-funds",
               "use-cases/ecomm-movement-and-wellness-funds",
               "use-cases/arts-and-culture-funds",
               "use-cases/authentic-brand-community-funds",

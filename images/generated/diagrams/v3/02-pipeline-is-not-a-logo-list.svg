@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1050" viewBox="0 0 1800 1050" role="img" aria-labelledby="title desc">
+  <title id="title">Pipeline Is Not A Logo List</title>
+  <desc id="desc">A conviction-oriented pipeline diagram showing that sponsor names only matter when they pass through perspective, reason to spend, supply ask, proof standard, and decision gates.</desc>
+  <defs>
+    <style>
+      text { font-family: Inter, Arial, sans-serif; letter-spacing: 0; }
+      .bg { fill: #fbf7ef; }
+      .ink { fill: #171514; }
+      .muted { fill: #5f5952; }
+      .paper { fill: #fffefa; stroke: #d7cbbc; stroke-width: 2.5; }
+      .dark { fill: #171514; }
+      .red { fill: #b9362e; }
+      .gold { fill: #9b7500; }
+      .green { fill: #26796b; }
+      .blue { fill: #2f5ea8; }
+      .softRed { fill: #fff0ee; stroke: #e6aaa3; stroke-width: 2.5; }
+      .softGold { fill: #fff5d6; stroke: #dfc75b; stroke-width: 2.5; }
+      .softGreen { fill: #eaf7f2; stroke: #9bcfc3; stroke-width: 2.5; }
+      .softBlue { fill: #edf3ff; stroke: #aac1e6; stroke-width: 2.5; }
+      .title { font-size: 74px; font-weight: 850; }
+      .sub { font-size: 31px; font-weight: 500; }
+      .kicker { font-size: 20px; font-weight: 850; text-transform: uppercase; }
+      .h { font-size: 38px; font-weight: 820; }
+      .m { font-size: 27px; font-weight: 650; }
+      .body { font-size: 23px; font-weight: 500; }
+      .small { font-size: 19px; font-weight: 650; }
+      .line { stroke: #171514; stroke-width: 7; stroke-linecap: round; fill: none; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" markerWidth="18" markerHeight="18" refX="15" refY="9" orient="auto">
+      <path d="M2,2 L16,9 L2,16 Z" fill="#171514"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1800" height="1050"/>
+  <text class="title ink" x="90" y="105">Pipeline Is Not A Logo List</text>
+  <text class="sub muted" x="92" y="153">A sponsor name becomes useful only when it creates a testable motion.</text>
+
+  <rect class="dark" x="90" y="225" width="1620" height="118" rx="24"/>
+  <text class="h" fill="#fffefa" x="135" y="295">Hard rule:</text>
+  <text class="m" fill="#fffefa" x="345" y="295">no sponsor perspective, no reason to spend, no supply ask, no proof standard equals not pipeline.</text>
+
+  <rect class="softRed" x="95" y="455" width="270" height="210" rx="26"/>
+  <text class="kicker red" x="130" y="510">Gate 01</text>
+  <text class="h ink" x="130" y="565">Perspective</text>
+  <text class="body muted" x="130" y="615">eComm, Tech,</text>
+  <text class="body muted" x="130" y="650">Public/Gov, or Partner.</text>
+
+  <rect class="softGold" x="440" y="455" width="270" height="210" rx="26"/>
+  <text class="kicker gold" x="475" y="510">Gate 02</text>
+  <text class="h ink" x="475" y="565">Spend reason</text>
+  <text class="body muted" x="475" y="615">Trial, trusted room,</text>
+  <text class="body muted" x="475" y="650">access, or outcome.</text>
+
+  <rect class="softBlue" x="785" y="455" width="270" height="210" rx="26"/>
+  <text class="kicker blue" x="820" y="510">Gate 03</text>
+  <text class="h ink" x="820" y="565">Supply ask</text>
+  <text class="body muted" x="820" y="615">Host, connector,</text>
+  <text class="body muted" x="820" y="650">space, or event set.</text>
+
+  <rect class="softGreen" x="1130" y="455" width="270" height="210" rx="26"/>
+  <text class="kicker green" x="1165" y="510">Gate 04</text>
+  <text class="h ink" x="1165" y="565">Proof</text>
+  <text class="body muted" x="1165" y="615">Evidence the sponsor</text>
+  <text class="body muted" x="1165" y="650">will renew against.</text>
+
+  <rect class="dark" x="1475" y="455" width="230" height="210" rx="26"/>
+  <text class="kicker" fill="#f2c94c" x="1510" y="510">Decision</text>
+  <text class="h" fill="#fffefa" x="1510" y="565">Run it</text>
+  <text class="body" fill="#fffefa" x="1510" y="615">Renew, expand,</text>
+  <text class="body" fill="#fffefa" x="1510" y="650">redesign, or kill.</text>
+
+  <path class="line" d="M365 560 H415"/>
+  <path class="line" d="M710 560 H760"/>
+  <path class="line" d="M1055 560 H1105"/>
+  <path class="line" d="M1400 560 H1450"/>
+
+  <rect class="paper" x="130" y="770" width="495" height="175" rx="22"/>
+  <text class="kicker red" x="165" y="825">Strong pipeline creates work</text>
+  <text class="m ink" x="165" y="873">City lead task, host package,</text>
+  <text class="m ink" x="165" y="908">media angle, pilot, or no-go.</text>
+
+  <rect class="paper" x="655" y="770" width="495" height="175" rx="22"/>
+  <text class="kicker blue" x="690" y="825">Weak pipeline creates theater</text>
+  <text class="m ink" x="690" y="873">Names, vibes, meetings, and</text>
+  <text class="m ink" x="690" y="908">no decision about capital.</text>
+
+  <rect class="paper" x="1180" y="770" width="495" height="175" rx="22"/>
+  <text class="kicker green" x="1215" y="825">The score is movement</text>
+  <text class="m ink" x="1215" y="873">Did the name become a funded</text>
+  <text class="m ink" x="1215" y="908">test or a sharper no-go?</text>
+</svg>

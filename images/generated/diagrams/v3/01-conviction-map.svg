@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1050" viewBox="0 0 1800 1050" role="img" aria-labelledby="title desc">
+  <title id="title">Analog Conviction Map</title>
+  <desc id="desc">A high-conviction map showing Analog as the underwriting layer that turns sponsor capital and existing IRL supply into governed activation, proof, and the next unlock.</desc>
+  <defs>
+    <style>
+      text { font-family: Inter, Arial, sans-serif; letter-spacing: 0; }
+      .bg { fill: #fbf7ef; }
+      .ink { fill: #171514; }
+      .muted { fill: #5f5952; }
+      .red { fill: #b9362e; }
+      .gold { fill: #9b7500; }
+      .green { fill: #26796b; }
+      .blue { fill: #2f5ea8; }
+      .paper { fill: #fffefa; stroke: #d7cbbc; stroke-width: 2.5; }
+      .dark { fill: #171514; }
+      .softRed { fill: #fff0ee; stroke: #e6aaa3; stroke-width: 2.5; }
+      .softBlue { fill: #edf3ff; stroke: #aac1e6; stroke-width: 2.5; }
+      .softGreen { fill: #eaf7f2; stroke: #9bcfc3; stroke-width: 2.5; }
+      .softGold { fill: #fff5d6; stroke: #dfc75b; stroke-width: 2.5; }
+      .title { font-size: 76px; font-weight: 850; }
+      .sub { font-size: 32px; font-weight: 500; }
+      .kicker { font-size: 20px; font-weight: 800; text-transform: uppercase; }
+      .h { font-size: 40px; font-weight: 820; }
+      .m { font-size: 28px; font-weight: 650; }
+      .body { font-size: 24px; font-weight: 500; }
+      .small { font-size: 19px; font-weight: 600; }
+      .line { stroke: #171514; stroke-width: 8; stroke-linecap: round; fill: none; marker-end: url(#arrow); }
+      .thin { stroke: #d7cbbc; stroke-width: 2; }
+    </style>
+    <marker id="arrow" markerWidth="18" markerHeight="18" refX="15" refY="9" orient="auto">
+      <path d="M2,2 L16,9 L2,16 Z" fill="#171514"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1800" height="1050"/>
+  <text class="title ink" x="90" y="105">Analog Is Not An Event Tool</text>
+  <text class="sub muted" x="92" y="153">It is the underwriting layer for how sponsor capital moves through the real-world economy.</text>
+
+  <rect class="softBlue" x="90" y="245" width="430" height="275" rx="28"/>
+  <text class="kicker blue" x="125" y="300">Existing market energy</text>
+  <text class="h ink" x="125" y="358">Supply already exists.</text>
+  <text class="body muted" x="125" y="410">Communities, creators, spaces,</text>
+  <text class="body muted" x="125" y="445">operators, and rituals are already</text>
+  <text class="body muted" x="125" y="480">forming markets in the wild.</text>
+
+  <rect class="softRed" x="1280" y="245" width="430" height="275" rx="28"/>
+  <text class="kicker red" x="1315" y="300">Locked sponsor capital</text>
+  <text class="h ink" x="1315" y="358">Budget wants proof.</text>
+  <text class="body muted" x="1315" y="410">Sponsors will spend when the</text>
+  <text class="body muted" x="1315" y="445">activation feels trusted, governed,</text>
+  <text class="body muted" x="1315" y="480">measurable, and renewable.</text>
+
+  <path class="line" d="M520 382 H690"/>
+  <path class="line" d="M1280 382 H1110"/>
+
+  <rect class="dark" x="640" y="225" width="520" height="320" rx="36"/>
+  <text class="kicker" fill="#f2c94c" x="700" y="293">Analog's job</text>
+  <text class="h" fill="#fffefa" x="700" y="360">Convert trust into</text>
+  <text class="h" fill="#fffefa" x="700" y="410">fundable supply.</text>
+  <line class="thin" x1="700" y1="445" x2="1100" y2="445"/>
+  <text class="body" fill="#fffefa" x="700" y="492">Campaign structure, spend controls,</text>
+  <text class="body" fill="#fffefa" x="700" y="527">host fit, proof, and unlock logic.</text>
+
+  <path class="line" d="M900 545 V650"/>
+
+  <rect class="paper" x="130" y="670" width="450" height="185" rx="24"/>
+  <text class="kicker red" x="165" y="725">1. Fund</text>
+  <text class="m ink" x="165" y="775">Deploy capital into a specific</text>
+  <text class="m ink" x="165" y="812">host, city, use case, and brief.</text>
+
+  <rect class="paper" x="675" y="670" width="450" height="185" rx="24"/>
+  <text class="kicker gold" x="710" y="725">2. Prove</text>
+  <text class="m ink" x="710" y="775">Measure attendance, spend,</text>
+  <text class="m ink" x="710" y="812">content, sentiment, and outcome.</text>
+
+  <rect class="paper" x="1220" y="670" width="450" height="185" rx="24"/>
+  <text class="kicker green" x="1255" y="725">3. Unlock</text>
+  <text class="m ink" x="1255" y="775">Renew, expand, redesign,</text>
+  <text class="m ink" x="1255" y="812">or kill the motion with evidence.</text>
+
+  <path class="line" d="M580 762 H650"/>
+  <path class="line" d="M1125 762 H1195"/>
+
+  <rect class="dark" x="90" y="925" width="1620" height="76" rx="20"/>
+  <text class="m" fill="#fffefa" x="130" y="974">Conviction:</text>
+  <text class="body" fill="#fffefa" x="285" y="974">the winner is not the biggest event marketplace. It is the system sponsors trust to decide who gets the next dollar.</text>
+</svg>

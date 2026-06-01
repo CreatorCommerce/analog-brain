@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Analog Platform Object Flow</title>
+  <desc id="desc">A non-technical data flow diagram showing how sponsors, campaigns, event sets, collabs, host events, spend cards, proof, and unlocks connect in Analog.</desc>
+  <defs>
+    <style>
+      .bg { fill: #fbf8f1; }
+      .ink { fill: #22201f; }
+      .muted { fill: #5f5851; }
+      .card { fill: #fffdfa; stroke: #ddd3c4; stroke-width: 2; }
+      .sponsor { fill: #fff0ee; stroke: #e8b8b2; stroke-width: 2; }
+      .market { fill: #fff6d8; stroke: #e6d07b; stroke-width: 2; }
+      .host { fill: #ecf6f2; stroke: #a9d2c8; stroke-width: 2; }
+      .proof { fill: #eef3fb; stroke: #bac9e2; stroke-width: 2; }
+      .arrow { fill: none; stroke: #6b6259; stroke-width: 4; stroke-linecap: round; marker-end: url(#arrowhead); }
+      text { font-family: Poppins, Arial, sans-serif; letter-spacing: 0; }
+      .title { font-size: 52px; font-weight: 500; }
+      .subtitle { font-size: 24px; font-weight: 400; }
+      .label { font-size: 23px; font-weight: 500; }
+      .body { font-size: 18px; font-weight: 400; }
+      .small { font-size: 15px; font-weight: 400; }
+      .tiny { font-size: 13px; font-weight: 400; }
+    </style>
+    <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#6b6259" />
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1600" height="1000" />
+  <text x="80" y="96" class="title ink">Platform Object Flow</text>
+  <text x="80" y="136" class="subtitle muted">How one sponsor-funded activation moves through Analog without becoming custom chaos.</text>
+
+  <rect x="70" y="220" width="145" height="118" rx="12" class="sponsor" />
+  <text x="96" y="262" class="label ink">Sponsor</text>
+  <text x="96" y="294" class="small muted">Who has</text>
+  <text x="96" y="316" class="small muted">budget + goal</text>
+
+  <rect x="250" y="220" width="145" height="118" rx="12" class="sponsor" />
+  <text x="276" y="262" class="label ink">Campaign</text>
+  <text x="276" y="294" class="small muted">Objective,</text>
+  <text x="276" y="316" class="small muted">budget, rules</text>
+
+  <rect x="430" y="220" width="145" height="118" rx="12" class="market" />
+  <text x="456" y="252" class="label ink">Event set</text>
+  <text x="456" y="284" class="small muted">Target city,</text>
+  <text x="456" y="306" class="small muted">category,</text>
+  <text x="456" y="328" class="small muted">application lane</text>
+
+  <rect x="610" y="220" width="145" height="118" rx="12" class="market" />
+  <text x="636" y="252" class="label ink">Host pitch</text>
+  <text x="636" y="284" class="small muted">Who can</text>
+  <text x="636" y="306" class="small muted">make it</text>
+  <text x="636" y="328" class="small muted">happen?</text>
+
+  <rect x="790" y="220" width="145" height="118" rx="12" class="host" />
+  <text x="816" y="262" class="label ink">Collab</text>
+  <text x="816" y="294" class="small muted">Approved</text>
+  <text x="816" y="316" class="small muted">partnership</text>
+
+  <rect x="970" y="220" width="145" height="118" rx="12" class="host" />
+  <text x="996" y="252" class="label ink">Host event</text>
+  <text x="996" y="284" class="small muted">Date, page,</text>
+  <text x="996" y="306" class="small muted">RSVP, tasks,</text>
+  <text x="996" y="328" class="small muted">proof plan</text>
+
+  <rect x="1150" y="220" width="145" height="118" rx="12" class="proof" />
+  <text x="1176" y="252" class="label ink">Spend card</text>
+  <text x="1176" y="284" class="small muted">Approved</text>
+  <text x="1176" y="306" class="small muted">budget,</text>
+  <text x="1176" y="328" class="small muted">receipts</text>
+
+  <rect x="1330" y="220" width="145" height="118" rx="12" class="proof" />
+  <text x="1356" y="262" class="label ink">Proof</text>
+  <text x="1356" y="294" class="small muted">Evidence +</text>
+  <text x="1356" y="316" class="small muted">recommendation</text>
+
+  <path d="M215 279 H238" class="arrow" />
+  <path d="M395 279 H418" class="arrow" />
+  <path d="M575 279 H598" class="arrow" />
+  <path d="M755 279 H778" class="arrow" />
+  <path d="M935 279 H958" class="arrow" />
+  <path d="M1115 279 H1138" class="arrow" />
+  <path d="M1295 279 H1318" class="arrow" />
+
+  <rect x="80" y="455" width="650" height="190" rx="12" class="card" />
+  <text x="120" y="505" class="label ink">Sponsor sees</text>
+  <circle cx="126" cy="548" r="7" fill="#b9362e" />
+  <text x="148" y="554" class="body muted">Which hosts are approved and why</text>
+  <circle cx="126" cy="586" r="7" fill="#b9362e" />
+  <text x="148" y="592" class="body muted">How much money is committed, used, or left</text>
+  <circle cx="126" cy="624" r="7" fill="#b9362e" />
+  <text x="148" y="630" class="body muted">What proof exists and what to fund next</text>
+
+  <rect x="870" y="455" width="650" height="190" rx="12" class="card" />
+  <text x="910" y="505" class="label ink">Host sees</text>
+  <circle cx="916" cy="548" r="7" fill="#2e7d6f" />
+  <text x="938" y="554" class="body muted">What is being funded and what is allowed</text>
+  <circle cx="916" cy="586" r="7" fill="#2e7d6f" />
+  <text x="938" y="592" class="body muted">What tasks, assets, and proof are required</text>
+  <circle cx="916" cy="624" r="7" fill="#2e7d6f" />
+  <text x="938" y="630" class="body muted">What unlocks if the activation works</text>
+
+  <rect x="80" y="725" width="1440" height="140" rx="12" fill="#22201f" />
+  <text x="120" y="775" class="label" fill="#fbf8f1">Data captured along the way</text>
+  <text x="120" y="815" class="body" fill="#fbf8f1">Budget rules, eligibility, applications, approvals, hosted page activity, attendance, claims, receipts, files, photos, recaps, sentiment, and renewal recommendation.</text>
+  <text x="120" y="850" class="small" fill="#f2c94c">Non-technical translation: Analog connects who should be funded, what they can spend, what happened, and whether the sponsor should do more.</text>
+</svg>

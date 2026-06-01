@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Analog Sponsor Perspective Lanes</title>
+  <desc id="desc">A lane diagram showing how eCommerce brands, tech companies, and public or non-profit funds translate budget into activation surfaces, proof, and renewal signals.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8f5ed; }
+      .ink { fill: #22201f; }
+      .muted { fill: #5e5750; }
+      .lane { fill: #fffdfa; stroke: #ded5c7; stroke-width: 2; }
+      .ecomm { fill: #fff0ee; }
+      .tech { fill: #eef3fb; }
+      .public { fill: #ecf6f2; }
+      .pillRed { fill: #b9362e; }
+      .pillBlue { fill: #3563a9; }
+      .pillGreen { fill: #2e7d6f; }
+      .arrow { fill: none; stroke: #6d6259; stroke-width: 4; stroke-linecap: round; marker-end: url(#arrowhead); }
+      text { font-family: Poppins, Arial, sans-serif; letter-spacing: 0; }
+      .title { font-size: 52px; font-weight: 500; }
+      .subtitle { font-size: 24px; font-weight: 400; }
+      .laneTitle { font-size: 29px; font-weight: 500; }
+      .label { font-size: 21px; font-weight: 500; }
+      .body { font-size: 17px; font-weight: 400; }
+      .small { font-size: 14px; font-weight: 400; }
+    </style>
+    <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#6d6259" />
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1600" height="1000" />
+  <text x="80" y="96" class="title ink">Sponsor Perspective Lanes</text>
+  <text x="80" y="136" class="subtitle muted">The same platform flow, translated for the three sponsor perspectives Analog is built around.</text>
+
+  <text x="330" y="205" class="label muted">Budget logic</text>
+  <text x="625" y="205" class="label muted">Activation surface</text>
+  <text x="940" y="205" class="label muted">Proof that matters</text>
+  <text x="1260" y="205" class="label muted">Renewal signal</text>
+
+  <rect x="80" y="235" width="1440" height="170" rx="16" class="lane ecomm" />
+  <rect x="110" y="275" width="190" height="72" rx="36" class="pillRed" />
+  <text x="145" y="320" class="laneTitle" fill="#fffdfa">eComm</text>
+  <text x="335" y="285" class="body ink">Physical products</text>
+  <text x="335" y="313" class="body ink">need trial, ritual,</text>
+  <text x="335" y="341" class="body ink">content, loyalty</text>
+  <path d="M525 310 H590" class="arrow" />
+  <text x="630" y="285" class="body ink">Runs, recovery,</text>
+  <text x="630" y="313" class="body ink">classes, pop-ups,</text>
+  <text x="630" y="341" class="body ink">creator-led IRL</text>
+  <path d="M825 310 H900" class="arrow" />
+  <text x="940" y="285" class="body ink">Attendance, samples,</text>
+  <text x="940" y="313" class="body ink">content, sentiment,</text>
+  <text x="940" y="341" class="body ink">sales-adjacent signal</text>
+  <path d="M1165 310 H1235" class="arrow" />
+  <text x="1270" y="285" class="body ink">Repeat fund,</text>
+  <text x="1270" y="313" class="body ink">more hosts, market</text>
+  <text x="1270" y="341" class="body ink">or category expansion</text>
+
+  <rect x="80" y="455" width="1440" height="170" rx="16" class="lane tech" />
+  <rect x="110" y="495" width="190" height="72" rx="36" class="pillBlue" />
+  <text x="154" y="540" class="laneTitle" fill="#fffdfa">Tech</text>
+  <text x="335" y="505" class="body ink">Digital products</text>
+  <text x="335" y="533" class="body ink">need trusted rooms,</text>
+  <text x="335" y="561" class="body ink">adoption, accounts</text>
+  <path d="M525 530 H590" class="arrow" />
+  <text x="630" y="505" class="body ink">Founder breakfasts,</text>
+  <text x="630" y="533" class="body ink">AI dinners, dev</text>
+  <text x="630" y="561" class="body ink">meetups, salons</text>
+  <path d="M825 530 H900" class="arrow" />
+  <text x="940" y="505" class="body ink">Qualified attendees,</text>
+  <text x="940" y="533" class="body ink">account fit, partner</text>
+  <text x="940" y="561" class="body ink">and pipeline learning</text>
+  <path d="M1165 530 H1235" class="arrow" />
+  <text x="1270" y="505" class="body ink">Customer council,</text>
+  <text x="1270" y="533" class="body ink">city series, partner</text>
+  <text x="1270" y="561" class="body ink">or ecosystem fund</text>
+
+  <rect x="80" y="675" width="1440" height="170" rx="16" class="lane public" />
+  <rect x="110" y="715" width="190" height="72" rx="36" class="pillGreen" />
+  <text x="145" y="760" class="laneTitle" fill="#fffdfa">Public</text>
+  <text x="335" y="725" class="body ink">Outcome capital</text>
+  <text x="335" y="753" class="body ink">needs access, civic</text>
+  <text x="335" y="781" class="body ink">value, participation</text>
+  <path d="M525 750 H590" class="arrow" />
+  <text x="630" y="725" class="body ink">Microgrants, free</text>
+  <text x="630" y="753" class="body ink">spots, local programs,</text>
+  <text x="630" y="781" class="body ink">community kits</text>
+  <path d="M825 750 H900" class="arrow" />
+  <text x="940" y="725" class="body ink">Participation, access,</text>
+  <text x="940" y="753" class="body ink">local legitimacy,</text>
+  <text x="940" y="781" class="body ink">public outcome proof</text>
+  <path d="M1165 750 H1235" class="arrow" />
+  <text x="1270" y="725" class="body ink">Bigger fund,</text>
+  <text x="1270" y="753" class="body ink">repeat program,</text>
+  <text x="1270" y="781" class="body ink">public report</text>
+
+  <rect x="80" y="885" width="1440" height="55" rx="12" fill="#22201f" />
+  <text x="120" y="920" class="body" fill="#fbf8f1">Plain English: every sponsor enters with a different reason to spend, but Analog should always translate it into funded supply, governed execution, proof, and a next-dollar decision.</text>
+</svg>
