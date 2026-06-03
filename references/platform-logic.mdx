@@ -212,8 +212,8 @@ Owned IRL should never be separate from the product. Every gathering should poin
 | Surface | What it is for |
 |---|---|
 | Onboarding | Role intent, operating locations, and feature preferences. |
-| Sponsor Campaigns | Budget, event sets, host allocations, Venue reward notes, proof, files, UGC, and renewal setup. |
-| Sponsor Applications | Application portal and pitch inbox for inbound host supply. |
+| Sponsor Campaigns | Budget, start date, event sets, host allocations, Venue reward notes, proof, files, UGC, and renewal setup. |
+| Sponsor Applications | Application portal, pitch inbox, free applicant preview, and first-accepted-applicant gate for inbound host supply. |
 | Sponsor Data | Reporting cockpit for spend, proof, supply, and assisted summaries. |
 | Sponsor Outreach | Managed outbound that creates supply against a demand lane. |
 | Host Events | Event creation, sponsor budget attachment, cards, spend, and proof. |
@@ -285,10 +285,13 @@ This is future product direction. Current MVP approximations are operating locat
 Sponsor screens should stay sponsor-centric:
 
 - Campaigns are the main paid/funded object and the first spend-infra learning container.
-- Campaign settings should capture mission, market persona, main value-add, special requests, host visibility, mailing-address requirement, and auto-renew preference.
+- Campaign settings should capture mission, market persona, main value-add, start date, special requests, host visibility, mailing-address requirement, and auto-renew preference.
+- Campaign start dates should be visible to applicants so future campaigns set clear expectations about when review, funding, or activation starts.
+- Sponsors should be able to post future-dated campaigns and use the first 48 hours of application response as a demand signal before scaling operator work.
 - Campaign save should prompt for a Venue reward when Venue mention coverage would improve attribution.
 - Event sets split a campaign by market/persona, special requests, files/assets, and prospecting lane. Treat them as demand lanes that can pull supply into the market.
 - Application portal collects standardized host pitches and keeps attachments/answers structured.
+- Sponsor applications should avoid paywalling before value is visible: show the first five applicants clearly on free, blur or limit the rest, and use first accepted applicant as the paid/committed conversion moment.
 - Sponsor outreach routes external leads back to the same application workflow, so managed GTM creates product-readable supply.
 - Campaign detail shows campaign metrics, event sets, files, sponsor-visible proof, sponsored hosts, and UGC.
 - Sponsor-host detail owns host-level campaign activity, shared files, asset requests, and shipment logs.
@@ -316,6 +319,7 @@ Host screens should stay simple:
 The public application portal should:
 
 - show running campaigns
+- show campaign start date and expected review or funding window
 - use structured pitch fields
 - collect community/host identity
 - collect pitch title, description, requested amount, socials, expected attendees, and attachment metadata

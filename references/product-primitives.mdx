@@ -156,6 +156,33 @@ A sponsor-shared campaign is the bridge between spend infrastructure and marketp
 | Raffle or grant hook | Campaign copy, application portal, event set, hosted form, or media CTA | Use simple money-on-the-table language to recruit qualified supply while keeping eligibility, spend rules, and proof clear. |
 | Owned IRL conversion | Analog happy hour, dinner, walk, salon, live recording, field meetup | Route real-world attendees into applications, profiles, sponsor leads, catalog records, or fund ideas. |
 
+## Campaign Timing And Sponsor PLG Primitive
+
+Campaigns should help Sponsors sense demand before they are forced into payment or heavy operations.
+
+The product direction:
+
+```text
+future-dated campaign
+-> public or targeted application response
+-> first 48-hour supply signal
+-> first five applicants visible on free
+-> remaining applicants blurred or limited
+-> first accepted applicant triggers paid/committed flow
+```
+
+The start date is not only logistics. It is expectation-setting for Hosts and a demand-sensing tool for Sponsors. A Host should know whether the campaign is taking applications now for a future review or funding window. A Sponsor should be able to post a future-dated campaign, see whether the market responds within 48 hours, then decide whether to accept, narrow, broaden, or hold.
+
+| Primitive | Current approximation | Rule |
+|---|---|---|
+| Campaign start date | Campaign copy, optional end date, application portal text, files/docs note, future campaign setting | Show applicants when review, funding, outreach, or activation is expected to begin. Do not let future campaigns feel like ignored applications. |
+| 48-hour demand signal | Application count, source, fit notes, city/channel response, media or dashboard traffic | Use the first 48 hours after posting to judge whether the fund or campaign has pull before scaling operator work. |
+| Free applicant preview | Sponsor application inbox, first five application cards, limited/blurred cards after five | Let Sponsors see enough supply to understand value without giving away the full market graph on free. |
+| First accepted applicant gate | Campaign application acceptance, collab creation, budget setup, proof workflow | Do not paywall before value is visible. The conversion moment is first accepted applicant, before full collab operations and full applicant unlock. |
+| Blurred applicant state | Limited card, aggregate count, high-level fit tags, source/channel summary | Do not expose sensitive Host details, full pitch language, contact info, attachments, or private social data before the Sponsor has committed. |
+
+This is product direction until explicit start-date fields, free-tier applicant limits, blurred-card states, billing, and entitlement controls exist in production. Current MVP docs can approximate the behavior through campaign copy, application portal language, application inbox handling, and operator rules.
+
 ## Universal Funding Application Primitive
 
 The foundational free Host tool should be one reusable funding application.
@@ -206,8 +233,10 @@ Do not describe these as current MVP objects unless they map back to existing su
 | QR asset pack | Hosted event page, invite builder, files/docs, custom HTML/CSS, printed event assets, and claim/application links |
 | Event history log | Host events, hosted pages, files/docs, campaign content, applications, and proof packets |
 | High-production event page | Hosted event page, design kit, theme, background, custom HTML/CSS, media, QR assets, RSVP/claim flow, proof prompts, and later recap context |
+| Campaign start date | Campaign setting when available, campaign copy, application portal text, files/docs note, and review/funding window messaging |
 | Editorial feature | Workspace file, Analog Doc, campaign content, or external media artifact |
 | Fund page | Campaign, event set, application portal, RFE, RFC, or grant-like intake |
+| Free applicant preview | Sponsor application inbox, first five full applicant cards, blurred/limited cards after five, count and fit summary |
 | Free money pitch tool | Host story, pitch page, event history, files/docs, grant match notes, Sponsor application portal |
 | Grant opportunity catalog | Deep research doc, Event Prospecting Catalog, files/docs, source links, city lead notes, public/nonprofit fund records |
 | Auto-apply grant workflow | Host-authorized Analog Doc, files/docs, application checklist, tasks, submitted materials, proof/report drafts |
