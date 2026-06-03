@@ -1,0 +1,149 @@
+---
+title: "Turn Mentions Into Assets"
+description: "How Analog converts Host and Venue mentions into attribution coverage, benchmarks, underwriting, and renewal value."
+pageType: "Reference"
+---
+
+Mentions are the simplest public signal that an IRL moment happened.
+
+Read this after [Proof And Spend](/platform/proof-and-spend). Proof And Spend defines the broader trust layer. This page goes deeper on Host and Venue mentions.
+
+For events, they matter more than generic social proof. A mention is someone raising their hand and saying: I was here, this was real, and this place or Host mattered enough to tag.
+
+Analog's job is to stop those moments from disappearing into the feed. Authorized mentions should become durable assets: proof, benchmarks, rate signals, Sponsor reporting, and future funding leverage.
+
+## Product Thesis
+
+IRL has two primary mention beneficiaries:
+
+| Beneficiary | What the mention proves |
+|---|---|
+| Host | The Host can gather people, create energy, and make the Sponsor presence visible without breaking trust. |
+| Venue | The space has cultural pull, foot traffic, and social resonance that can make a campaign more measurable. |
+
+Most sponsorships only chase Host proof. Analog should also capture Venue proof when the Venue is part of the value chain.
+
+This matters most for space-intensive campaigns: dinners, salons, fitness studios, recovery spaces, retail activations, galleries, coworking rooms, bars, restaurants, hotels, and public-space programs.
+
+## Venue Reward Flow
+
+When a Sponsor saves a campaign that depends on a Venue, Analog should prompt a mention-coverage upsell:
+
+```text
+Increase attribution coverage by adding a Venue reward.
+```
+
+The intended reward is a flat campaign-funded amount, such as a planning default of $200, released only when the Venue authorizes social listening or connects eligible social accounts for the campaign window.
+
+| Step | Product action | Value created |
+|---|---|---|
+| Sponsor designs campaign | Campaign identifies whether Venue proof matters. | Sponsor sees attribution coverage as a budget choice. |
+| Sponsor saves campaign | Analog prompts an optional Venue reward. | Sponsor can increase proof coverage before launch. |
+| Host coordinates Venue | Host tells the Venue a Sponsor reward is available for authorization. | Host gives the Venue a positive reason to participate. |
+| Venue authorizes listening | Venue connects socials or approves campaign-window mention capture. | Venue monetizes mentions that usually create no value. |
+| Campaign runs | Analog records Host mentions, Venue mentions, attendance, spend, and proof. | Sponsor sees a fuller picture of IRL performance. |
+| Sponsor reviews proof | Analog compares ratios and benchmarks. | Better underwriting, renewal, and rate setting. |
+
+The reward is not payment for fake content or required posting. It is compensation for permissioned proof coverage.
+
+## Actor Value
+
+| Actor | Why this is rational |
+|---|---|
+| Sponsor | More social listening coverage, better attribution, stronger benchmarks, and less off-platform risk. |
+| Host | A useful benefit to offer the Venue, less awkward proof coordination, and more complete credit for the room they created. |
+| Venue | Extra money for authorizing signals around mentions the Venue already receives. |
+| Analog | Better IRL culture data, cleaner rate intelligence, stronger renewal proof, and more reason for campaigns to stay on-platform. |
+
+The clean Host line:
+
+```text
+The tool funding this event can also pay you a flat Venue reward if you authorize social listening for the campaign window.
+```
+
+## Metrics To Capture
+
+| Metric | Why it matters |
+|---|---|
+| Attendance | Baseline for how many people likely experienced the activation. |
+| Host mentions | Public proof that the Host moved the room. |
+| Venue mentions | Public proof that the space amplified the room. |
+| Sponsor mentions | Public proof that the Sponsor presence traveled. |
+| Host mentions per attendee | How much social energy the Host creates relative to turnout. |
+| Venue mentions per attendee | How much social energy the space creates relative to turnout. |
+| Venue mentions per Host mention | Whether the space or the Host drove the visible signal. |
+| Sponsor mentions per Host or Venue mention | Whether Sponsor presence was naturally included or ignored. |
+| Historical Venue percentile | Whether this event was unusually strong for that Venue. |
+| Historical Host percentile | Whether this event was unusually strong for that Host. |
+
+These ratios are private market intelligence unless the Host, Venue, Sponsor, and Analog have agreed on what can be shared.
+
+## Graph The Value Chain
+
+Analog should graph mention ratios over time, not only store them.
+
+| Graph | What it shows |
+|---|---|
+| Host mentions vs attendance | Whether the Host creates more visible signal as turnout grows. |
+| Venue mentions vs attendance | Whether the space itself increases the event's social surface area. |
+| Venue mentions vs Host mentions | Whether the campaign's visible value came from the organizer, the room, or the combination. |
+| Sponsor mentions vs total event mentions | Whether Sponsor presence traveled naturally or stayed outside the community signal. |
+| Host percentile over time | Whether the Host is getting more fundable through better proof, better rooms, or better fit. |
+| Venue percentile over time | Whether a Venue is becoming a reliable campaign asset for a category or market. |
+
+This graph is private IRL value-chain data. It should help Analog explain the rhythm and reason behind success: why a room worked, who deserved credit, what rate was fair, and which Sponsor should fund the next activation.
+
+## Benchmarks
+
+The useful Sponsor sentence is not:
+
+```text
+We got some posts.
+```
+
+It is:
+
+```text
+This event scored in the top 5% of social performance for this Venue and in the top 10% for this Host's Analog history.
+```
+
+That is the move from recap to underwriting.
+
+Benchmarks should help answer:
+
+| Question | Benchmark use |
+|---|---|
+| Was the room alive? | Compare mentions per attendee against similar events. |
+| Did the Venue amplify the moment? | Compare Venue mentions against the Venue's normal event pattern. |
+| Did the Host deserve more credit? | Compare Host mentions and attendance against prior Host activations. |
+| Did the Sponsor travel naturally? | Compare Sponsor mentions against Host and Venue mentions. |
+| Should rates change? | Use proof history, supply rarity, and repeatability to recommend better rates. |
+| Should the Sponsor renew? | Use ratios, spend stewardship, sentiment, and outcome signals together. |
+
+## Product Surfaces
+
+| Surface | Rule |
+|---|---|
+| Sponsor campaign save flow | Prompt for Venue reward when the campaign has a Venue, space, or location-dependent activation. |
+| Campaign budget | Keep Host allocation, Venue reward, services/tools, media, and Analog revenue separated. |
+| Host event setup | Ask whether the Venue should be invited into mention coverage. |
+| Venue authorization link | Future surface for Venue permission, social connection, payout details, and campaign-window scope. |
+| Proof And Spend | Store Host mentions, Venue mentions, ratios, and benchmarks as proof lanes. |
+| Sponsor Data | Show aggregate ratios, confidence, percentile language, and renewal recommendation. |
+
+Current MVP surfaces can approximate the flow with campaign settings, collab notes, Host event location, files/docs, campaign content, story mentions, tasks, and Sponsor data summaries.
+
+Do not describe automated Venue payouts, tax handling, or production-grade social authorization as current behavior unless those rails exist.
+
+## Guardrails
+
+| Risk | Rule |
+|---|---|
+| Consent | Capture only authorized accounts, public signals, or scoped imports with permission. |
+| Fake proof | Reward authorization, not posting, tagging, or positive sentiment. |
+| Privacy | Do not sell raw attendee identity or private social data as market intelligence. |
+| Host trust | The Host should not pressure a Venue into unwanted monitoring. |
+| Sponsor clarity | The Venue reward is controlled activation budget, not Analog revenue. |
+| Legal/payment | Payout, tax, social platform, and account-connection flows need partner and counsel review before production. |
+
+The product posture is simple: every authorized mention should either help the Host, help the Venue, help the Sponsor decide the next dollar, or stay out of the system.

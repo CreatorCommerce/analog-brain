@@ -46,6 +46,7 @@
             "pages": [
               "index",
               "guides/stakeholder-brief",
+              "guides/reading-path",
               "guides/glossary"
             ]
           },
@@ -77,15 +78,20 @@
             "group": "COMPANY DOCTRINE & FOCUS",
             "pages": [
               "strategy/current-thesis",
+              "strategy/why-analog-wins",
               "strategy/twelve-month-market-focus",
               "strategy/market-formation"
             ]
           },
           {
-            "group": "FUNDING & SPONSORSHIP",
+            "group": "SUPPLY, SPONSORS & FUNDING",
             "pages": [
+              "strategy/supply-side-mac-community-champion",
               "strategy/cash-funding-playbooks",
+              "strategy/sponsor-personas",
+              "strategy/host-models-personas",
               "strategy/public-nonprofit-funding-infrastructure",
+              "strategy/nyc-sf-grant-money-map",
               "strategy/high-ticket-sponsorship-underwriting",
               "strategy/pricing-models"
             ]
@@ -94,8 +100,7 @@
             "group": "OPERATING MODEL",
             "pages": [
               "strategy/lean-gtm-operating-model",
-              "strategy/sponsor-personas",
-              "strategy/host-models-personas",
+              "strategy/burn-bets-operating-models",
               "strategy/media-owned-irl-engine"
             ]
           },
@@ -103,11 +108,11 @@
             "group": "USE CASES",
             "pages": [
               "strategy/mvp-use-cases",
-              "use-cases/campaign-grassroots-activation-funds",
               "use-cases/ecomm-movement-and-wellness-funds",
-              "use-cases/arts-and-culture-funds",
               "use-cases/authentic-brand-community-funds",
-              "use-cases/dinner-funds-and-connector-dinners"
+              "use-cases/dinner-funds-and-connector-dinners",
+              "use-cases/arts-and-culture-funds",
+              "use-cases/campaign-grassroots-activation-funds"
             ]
           }
         ]
@@ -120,6 +125,8 @@
             "pages": [
               "references/product-primitives",
               "references/platform-logic",
+              "platform/proof-and-spend",
+              "platform/mentions-to-assets",
               "market/event-prospecting-catalog"
             ]
           },
@@ -127,8 +134,7 @@
             "group": "CORE WORKFLOWS",
             "pages": [
               "platform/sponsor-workflow",
-              "platform/host-workflow",
-              "platform/proof-and-spend"
+              "platform/host-workflow"
             ]
           }
         ]
@@ -139,8 +145,8 @@
           {
             "group": "RUN THE MOTION",
             "pages": [
-              "how-to/build-event-prospecting-list",
-              "how-to/capture-field-context"
+              "how-to/capture-field-context",
+              "how-to/build-event-prospecting-list"
             ]
           }
         ]
