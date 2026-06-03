@@ -14,7 +14,7 @@ Read this after [Platform Logic](/references/platform-logic). Platform Logic exp
 Sponsor goal + category + budget
 -> campaign visibility mode
 -> AI-assisted match to receptive Hosts, communities, Venues, and event types
--> governed spend
+-> governed spend and vendor record handling
 -> benchmarked proof
 -> next-dollar recommendation
 ```
@@ -40,6 +40,7 @@ based on comparable proof for organizations like this one?
 | Benchmark fit | How similar activations performed for Sponsors in the same lane, category, market, or proof need. |
 | Choose visibility | Whether the campaign should stay private, be broadly marketed, or be targeted to ideal ICP supply. |
 | Govern spend | Whether the selected Hosts can use money cleanly inside approved rules. |
+| Simplify vendor records | Whether Analog can absorb the recurring payee, vendor, W-9, and 1099 support burden that makes distributed IRL spend painful. |
 | Recommend next dollar | Which Host, Venue, city, event type, or campaign shape deserves renewal, expansion, or stop. |
 
 This is AI-assisted and human-reviewed. AI can rank, compare, explain, and flag. Operators and Sponsors still decide sensitive fit, budget, compliance, and community-trust calls.
@@ -54,6 +55,7 @@ This is AI-assisted and human-reviewed. AI can rank, compare, explain, and flag.
 | Market and ICP | city, neighborhood, audience, account type, shopper type, community family, buyer persona | Narrows the supply layer to the Sponsor's best-fit surface. |
 | Host and community history | cadence, attendance, proof, prior Sponsors, social response, field notes, community norms | Shows whether the Host has trust and repeatability. |
 | Venue and location context | Venue mentions, space type, neighborhood, audience, accessibility, operational constraints | Shows whether the space is part of the value chain. |
+| Vendor and payee context | Host, Venue, contractor, vendor, operator, payment rail, tax-document status, duplicate record risk | Shows whether Analog needs to simplify vendor records or support 1099 workflows for the campaign. |
 | Event type | dinner, run, workshop, farmers market, salon, class, cultural event, public-space activation | Helps benchmark against comparable moments. |
 | Receptiveness signals | sentiment, prior Sponsor fit, Host note, category adjacency, opt-ins, claims, organic mentions, exclusions | Predicts whether Sponsor participation will feel additive. |
 | Proof requirement | attendance, mentions, claims, sales-adjacent signal, qualified accounts, public-safe outcomes, compliance-safe field proof | Determines what must be captured before renewal. |
@@ -158,6 +160,25 @@ broad fund drop
 | Regional Host dashboard | Shows local Hosts the funds, grants, opportunities, and proof prompts relevant to their market. |
 | Proof And Spend | Measures whether the match worked and what deserves the next dollar. |
 | Mention assets | Turn Host and Venue social signal into benchmarkable marketplace proof. |
+| Vendor and payee records | Keep Hosts, Venues, contractors, service providers, and repeat vendors from becoming a new administrative burden for Sponsors. |
+
+## Vendor Records And 1099 Burden
+
+A real IRL marketplace is not only a matching layer. It is also an administrative cleanup layer for the people and businesses behind the activation.
+
+Sponsors should not have to chase scattered W-9s, duplicate vendor records, Venue payment details, contractor notes, tax-document status, or year-end reporting support every time they fund a dinner, market, run club, artist, photographer, Venue, or local operator.
+
+Analog's direction is to become the system of record for the campaign's payee and vendor context, then take on the 1099 support burden as needed through approved payment, tax, and compliance workflows.
+
+| Burden | Off Analog | On Analog |
+|---|---|---|
+| Vendor records | Each Sponsor, Host, agency, or operator keeps its own messy list. | Analog keeps one reusable vendor/payee record with source, campaign context, role, files, payment rail, and proof links. |
+| W-9 and tax-document collection | Sponsors chase sensitive tax details in emails and spreadsheets. | Analog collects or routes tax-document requests through secure workflows when the campaign requires it. |
+| 1099 support | Year-end reporting becomes a surprise operational tax project. | Analog tracks reportable-payment context and supports exports, partner filing, or filing workflows where required. |
+| Duplicate payees | The same Venue, photographer, operator, or Host appears under many names. | Analog dedupes records and preserves which campaign, entity, and payment context created the relationship. |
+| Sponsor confidence | The Sponsor sees a pile of vendors but no clean operating memory. | The Sponsor sees that Analog can govern the money and reduce the back-office burden of running IRL programs. |
+
+This is a product direction, not a claim that the current MVP automatically files tax forms. Production workflows need secure tax-document collection, permissioning, audit logs, payment-rail awareness, counsel review, and approved tax/payment partners.
 
 ## Matching Loop
 
@@ -167,7 +188,7 @@ broad fund drop
 | 2. Build demand lanes | Event sets translate the thesis into markets, ICPs, event types, or Host categories. | Searchable/prospectable lanes. |
 | 3. Score receptiveness | AI and operators compare Host, community, Venue, event type, and category signals. | Ranked candidates with reasons and risks. |
 | 4. Route the ask | Campaign is private link-only, broadly marketed, or ICP-targeted based on strategy. | Applications, invites, prospecting replies, referrals. |
-| 5. Fund and govern | Approved Hosts receive controlled allocations, spend rules, tasks, and proof requirements. | Collabs, spend cards, files, tasks. |
+| 5. Fund and govern | Approved Hosts receive controlled allocations, spend rules, tasks, proof requirements, and vendor/payee record requirements where needed. | Collabs, spend cards, files, tasks, vendor/payee records. |
 | 6. Benchmark proof | Spend, attendance, mentions, claims, Host/Venue ratios, sentiment, and outcomes are compared to category expectations. | Sponsor-ready proof summary. |
 | 7. Recommend next dollar | Analog recommends renew, increase, reallocate, target more supply, broaden visibility, or stop. | Renewal or unlock decision. |
 
@@ -190,6 +211,7 @@ Future product work should add:
 - category-specific benchmark libraries
 - social receptiveness labels
 - audience-fit and lookalike event recommendations
+- vendor/payee records with W-9 status, duplicate detection, payment context, and 1099 support workflow flags
 - clearer Sponsor controls for private, broadly marketed, and ICP-targeted campaigns
 - renewal recommendations that compare each activation to the Sponsor's category and market
 

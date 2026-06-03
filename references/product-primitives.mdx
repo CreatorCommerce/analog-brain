@@ -36,6 +36,7 @@ Political action programs are another high-stakes version: campaign or advocacy 
 | Regional intelligence <Tooltip headline="Regional intelligence" tip="City-specific supply, media, advisory context, grant learning, and proof history that make a market ownable."><span className="analog-help">?</span></Tooltip> | Campaigns, event sets, applications, files/docs, city lead notes, catalog records, proof packets | Whether Host proof, Venue proof, AnalogNYC, AnalogSF, or a future city layer is becoming a repeatable supply market across Sponsor lanes. |
 | Regional Host dashboard <Tooltip headline="Regional Host dashboard" tip="Local Host experience for market-specific funds, perks, media asks, and proof tasks."><span className="analog-help">?</span></Tooltip> | Host dashboard, operating locations, Host opportunities, application portals, files/docs, tasks, notifications | Which city-specific MAC levers create Host response and reduce custom operator work. |
 | Services/tools enablement <Tooltip headline="Services/tools enablement" tip="Operational support such as insurance, print, documents, vendors, local designers, rentals, and proof kits that makes funded IRL easier to execute."><span className="analog-help">?</span></Tooltip> | Files/docs, task templates, asset requests, shipment logs, vendor notes, campaign required todos, proof templates | Which repeated blockers should become product workflows, partner workflows, or priced managed-support packages. |
+| Vendor and tax record simplification <Tooltip headline="Vendor and tax records" tip="Reusable payee, vendor, tax-document, and 1099 support workflows that keep distributed IRL spend from becoming back-office chaos."><span className="analog-help">?</span></Tooltip> | Vendor notes, files/docs, tasks, proof packets, future vendor/payee records, future W-9 status, future 1099 support workflows | Which Hosts, Venues, contractors, vendors, and operators create recurring records that Analog should simplify for Sponsors. |
 | Agency services as scaffolding <Tooltip headline="Services as scaffolding" tip="Manual GTM, marketing, sourcing, and program design used to create supply and learn product conventions, not the terminal business model."><span className="analog-help">?</span></Tooltip> | Sponsor briefs, prospecting, Host packaging, launch checklists, proof QA, renewal packets, media/GTM support | Which manual steps should become product, templates, contractor playbooks, partner workflows, or no-go rules. |
 
 Use services to create the market, then turn the repeated parts into product. The test is not whether Analog can manually run one good program. The test is whether brand funds, spend controls, Host supply, proof, and renewal can repeat with less custom work each time.
@@ -160,6 +161,8 @@ Do not describe these as current MVP objects unless they map back to existing su
 | Venue reward | Campaign budget note, controlled vendor/venue spend, task, file/doc, or future authorized Venue payout rail |
 | Venue mention authorization | Host event location, Venue note, file/doc, social connection workflow, and campaign-window proof scope |
 | Mention coverage upsell | Sponsor campaign setting, budget line, proof requirement, and Host coordination task |
+| Vendor/payee record | Vendor note, Host or Venue profile, file/doc, task, proof packet, payment context, and future payee profile |
+| 1099 support workflow | Files/docs, tax-document request task, vendor/payee record, payment context, approved tax/payment partner workflow, and reporting export |
 | Funding tab | Host sponsor budgets, collabs, spend cards, and available campaign allocations |
 | Analog checking or Host treasury | Future partner-bank account or account-like operating rail for trusted Hosts, with balances, envelopes, vendor payments, receipt capture, anomaly review, recipient-authorized summary grades, and sponsor-safe reporting |
 | Proof ledger | Sponsor data snapshot, campaign event analytics, content proof, spend transactions, and files/docs |
@@ -184,6 +187,10 @@ The strategic distinction:
 | Host treasury | trusted recurring Host, arts org, venue, nonprofit partner, city operator, community business | recipient-authorized summary grade, anomalies, proof completeness, budget pacing, restricted-use risk, renewal recommendation |
 
 Host treasury is not current MVP behavior. Do not imply Analog currently provides bank accounts, stored balances, insured deposits, payouts, ACH, bill pay, or tax tooling unless those capabilities exist through approved partners and production rails.
+
+Vendor/payee records and 1099 support are part of the future operating layer because Sponsors should not have to rebuild tax and vendor files for every Host, Venue, photographer, contractor, operator, or service provider. The product direction is reusable records, secure tax-document status, payment context, duplicate detection, and filing/export support through approved partners where required.
+
+Do not imply the MVP automatically files, furnishes, withholds, or advises on tax forms. Current docs can describe vendor notes, files/docs, tasks, proof, and product direction. Production 1099 support needs secure tax-document handling, payment-rail awareness, audit logs, permissions, counsel review, and approved tax/payment partners.
 
 A grade derived from bank or treasury activity is sensitive derived financial data if tied to a recipient. Future product specs must require explicit recipient authorization to analyze account activity, explicit authorization to share a summary grade with the Sponsor, disclosed Sponsor use, objective methodology, recipient visibility into grade reasons, dispute rights, safer labels, and contract limits. Use [Proof And Spend](/platform/proof-and-spend) for the detailed rule.
 
@@ -278,7 +285,8 @@ The MVP intentionally does not include:
 - Host treasury or Analog checking accounts
 - ACH, bill pay, or banking-quality cash management
 - Stripe Connect payouts
-- 1099 workflows
+- production automated 1099 filing, furnishing, withholding, or tax-advice workflows
+- automated vendor/payee tax classification
 - production ticketing or payment collection
 - native mobile apps
 - wallet passes
