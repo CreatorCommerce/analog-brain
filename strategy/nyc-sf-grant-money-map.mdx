@@ -14,6 +14,7 @@ Analog should treat this as supply capture and government conversion.
 Host completes one Analog application
 -> Analog finds relevant free money
 -> Host one-clicks apply intent from the geo-dashboard
+-> Analog asks grant-specific follow-up questions in a guided flow
 -> Analog agents and operators package the application
 -> Host wins or learns
 -> Analog proves application quality, spend stewardship, and outcomes
@@ -75,17 +76,21 @@ The Host-facing free product should make the grant desk feel simple:
 Fill out one Analog application.
 See the grants and funds that fit your geography.
 Click apply.
+Answer the extra questions only that grant needs.
 Analog prepares the packet in the background.
 Approve before anything is submitted.
 ```
 
 The same application should route to public grants, private foundation grants, BID or neighborhood funds, community collective funds, Sponsor-backed public funds, selective brand funds, and the Host's own pitch packet.
 
+The right analogy is a guided tax-filing product. Analog should not ask a Host to become a grant administrator. It should show a plain-language checklist, ask only for the missing grant-specific deltas, generate a budget or narrative draft where possible, and make the official submission path visible before final approval.
+
 | Product layer | Host experience | Analog work in the background | Boundary |
 |---|---|---|---|
 | Universal Analog application | Host answers once and keeps the record current. | Normalize organization, community, geography, event history, budget, proof, entity status, fiscal sponsor, insurance, and files. | Do not ask the Host to rewrite the same story for every fund. |
 | Geo-dashboard grant shelf | Host sees available grants and funds for `AnalogNYC`, `AnalogSF`, or another active market. | Match opportunities by location, Host type, category, amount, allowed use, deadline, and missing fields. | Show fit and gaps; do not imply guaranteed eligibility. |
 | One-click apply intent | Host clicks to apply or request help for a specific opportunity. | Create application intent, missing-field prompts, owner, deadline, and status. | One-click apply is authorization to prepare or route, not an award promise. |
+| Guided grant application UX | Host answers a short follow-up flow only when the chosen grant needs more than the universal application already contains. | Collect required deltas, attach files, map answers to the grant form, and preserve reusable answers for future matches. | Keep official requirements visible; do not bury eligibility risk behind a friendly interface. |
 | Background Agent MCP preparation | Host does not start from a blank page. | Draft answers, build budgets, assemble files, reuse proof, track source links, and prepare submission materials. | Human/Host review is required before submission. Sensitive programs may need specialist review. |
 | Application status log | Host can see where each opportunity stands. | Track draft, needs Host info, ready for approval, submitted, follow-up, rejected, awarded, report due. | Keep the status honest and source-backed. |
 

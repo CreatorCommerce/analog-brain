@@ -139,17 +139,19 @@ The foundational free Host tool should be one reusable funding application.
 one Analog application
 -> grants and funds matched by geography and Host profile
 -> one-click apply intent
+-> grant-specific guided follow-up fields
 -> Agent MCP preparation and operator review
 -> Host-approved submission or routed application packet
 ```
 
-The product direction is not another static profile. It is a reusable funding record that can power public grants, private grants, foundation opportunities, community collective funds, Sponsor-backed funds, selective brand funds, and direct Sponsor pitches.
+The product direction is not another static profile. It is a reusable funding record plus a guided application layer. The Host should answer once for the core record, then answer short grant-specific follow-ups only when a matched opportunity needs more information.
 
 | Primitive | Current approximation | Rule |
 |---|---|---|
 | Universal Analog application <Tooltip headline="Universal Analog application" tip="A reusable Host funding record that can populate grant, fund, Sponsor, and pitch applications without asking the Host to start over each time."><span className="analog-help">?</span></Tooltip> | Host story, pitch page, application answers, files/docs, Analog Doc, event history, proof packet, grant readiness notes | Capture the Host's organization, geography, events, proof, budget needs, eligibility facts, files, and consent preferences once. |
 | Geo-dashboard grant shelf <Tooltip headline="Geo-dashboard grant shelf" tip="A market-specific list of grants and funds that may fit the Host based on location, category, eligibility, deadline, and allowed uses."><span className="analog-help">?</span></Tooltip> | Regional Host dashboard, Host opportunities, files/docs, campaign application links, grant opportunity catalog | Show fit, gaps, deadline, and source. Do not imply guaranteed eligibility or award. |
 | One-click apply intent <Tooltip headline="One-click apply intent" tip="The Host's instruction for Analog to prepare or route an application using the reusable Analog record."><span className="analog-help">?</span></Tooltip> | Application status note, task, file/doc assignment, opportunity record, operator queue | Treat the click as authorization to prepare or route, not as final submission, legal representation, or award approval. |
+| Guided grant application UX <Tooltip headline="Guided grant application UX" tip="A TurboTax-style follow-up flow that collects only the grant-specific fields, documents, and confirmations missing from the reusable Analog record."><span className="analog-help">?</span></Tooltip> | Conditional application questions, missing-field prompts, files/docs requests, task checklist, generated Analog Doc, operator queue | Ask only for the deltas a specific grant requires. Preserve answers, keep official requirements visible, and require Host approval before submission. |
 | Agent MCP application support <Tooltip headline="Agent MCP application support" tip="Agent-assisted preparation of answers, budgets, files, proof summaries, and status tracking for Host-approved applications."><span className="analog-help">?</span></Tooltip> | Deep research doc, generated Analog Doc, task checklist, files/docs packet, operator review | Agents can draft and assemble. Hosts and operators approve facts, sensitive claims, and submissions. |
 
 This is current strategy and product direction. Current MVP docs should describe approximations through existing objects unless production one-click grant filing, automated submission, payment collection, or agency integrations actually exist.
@@ -187,6 +189,7 @@ Do not describe these as current MVP objects unless they map back to existing su
 | Universal Analog application | Host story, pitch page, application answers, files/docs, Analog Doc, event history, proof packet, grant readiness notes, and consent preferences |
 | Geo-dashboard grant shelf | Regional Host dashboard, Host opportunities, grant opportunity catalog, campaign/application links, files/docs, and market flags |
 | One-click grant apply | Application intent, missing-field prompts, Agent MCP task, operator review queue, status log, and Host approval |
+| Guided grant application UX | Conditional grant questions, files/docs prompts, budget worksheet, portal field mapping, operator queue, and Host approval |
 | In-kind grant | Asset request, files/docs, service/tool request, managed support, shipment log, or controlled vendor spend |
 | Selective brand fund | Campaign, event set, application portal, regional dashboard placement, media launch, and proof packet |
 | Community collective fund | Sponsor account, campaign, contributor records, files/docs, application portal, collabs, spend rules, proof packet, and future payment-link contribution rail |
