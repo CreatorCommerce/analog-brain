@@ -1,0 +1,124 @@
+<svg width="1600" height="960" viewBox="0 0 1600 960" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">MAC strategy paired with brand monetization plays</title>
+  <desc id="desc">A two-sided diagram showing bottom-up market acquisition by node count on the left and matching Sponsor, public fund, media, and market-access monetization plays on the right. The diagram explains that every MAC support layer needs a revenue retreat path.</desc>
+  <rect width="1600" height="960" fill="#FFFDF8"/>
+  <rect x="40" y="38" width="1520" height="884" rx="32" fill="#FFFFFF" stroke="#E6DDD0" stroke-width="2"/>
+
+  <text x="80" y="102" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="800">MAC strategy: every supply bet needs a revenue retreat</text>
+  <text x="80" y="142" fill="#6F665C" font-family="Inter, Arial, sans-serif" font-size="20">Company-funded support builds density. Each support band should have a matching Sponsor, public, media, partner, or market-access package that can replace or recover the spend.</text>
+
+  <rect x="80" y="184" width="365" height="158" rx="24" fill="#FFF7EA" stroke="#E2B35C" stroke-width="2"/>
+  <text x="112" y="224" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="800">Escape question</text>
+  <text x="112" y="258" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="18">When does node growth accelerate</text>
+  <text x="112" y="284" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="18">faster than company spend?</text>
+  <text x="112" y="318" fill="#6F665C" font-family="Inter, Arial, sans-serif" font-size="16">Watch referrals, applications, claims, QR scans,</text>
+  <text x="112" y="338" fill="#6F665C" font-family="Inter, Arial, sans-serif" font-size="16">Sponsor inbound, and proof reuse.</text>
+
+  <rect x="80" y="372" width="365" height="180" rx="24" fill="#F8F7F4" stroke="#D8CFC1" stroke-width="2"/>
+  <text x="112" y="412" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="23" font-weight="800">Revenue discipline</text>
+  <text x="112" y="446" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="18">Each MAC layer must name</text>
+  <text x="112" y="472" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="18">the buyer or funding source</text>
+  <text x="112" y="498" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="18">that can carry it later.</text>
+  <text x="112" y="532" fill="#6F665C" font-family="Inter, Arial, sans-serif" font-size="16">If replacement stalls, downshift to free tools.</text>
+
+  <text x="520" y="214" text-anchor="middle" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800">Bottom-up market acquisition</text>
+  <text x="520" y="246" text-anchor="middle" fill="#6F665C" font-family="Inter, Arial, sans-serif" font-size="17">Spend by node-count milestone</text>
+
+  <text x="1154" y="214" text-anchor="middle" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800">Matching monetization play</text>
+  <text x="1154" y="246" text-anchor="middle" fill="#6F665C" font-family="Inter, Arial, sans-serif" font-size="17">Contracts and packages that cover market investment</text>
+
+  <polygon points="490,284 814,284 760,750 544,750" fill="#FFFCF5" stroke="#AFA79B" stroke-width="2"/>
+  <polygon points="912,284 1450,284 1340,750 1022,750" fill="#FFFCF5" stroke="#AFA79B" stroke-width="2"/>
+
+  <g>
+    <rect x="555" y="315" width="210" height="76" rx="14" fill="#EAF8F7" stroke="#008A83" stroke-width="2"/>
+    <text x="576" y="344" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800">5k+ acquired graph</text>
+    <text x="576" y="370" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="15">city intel, rate benchmarks,</text>
+    <text x="576" y="389" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="15">trusted market access</text>
+  </g>
+  <g>
+    <rect x="582" y="418" width="214" height="90" rx="14" fill="#F3F0FF" stroke="#7B61FF" stroke-width="2"/>
+    <text x="604" y="448" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800">1k to 5k nodes</text>
+    <text x="604" y="474" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="15">print, fund drops, raffles,</text>
+    <text x="604" y="493" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="15">city guide inclusion</text>
+  </g>
+  <g>
+    <rect x="563" y="536" width="204" height="92" rx="14" fill="#FFF7EA" stroke="#E2B35C" stroke-width="2"/>
+    <text x="584" y="566" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800">100 to 1k nodes</text>
+    <text x="584" y="592" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="15">grant pools, office hours,</text>
+    <text x="584" y="611" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="15">templates, newsletters</text>
+  </g>
+  <g>
+    <rect x="588" y="654" width="186" height="80" rx="14" fill="#FFECEA" stroke="#FF4438" stroke-width="2"/>
+    <text x="609" y="684" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800">First 30 to 100</text>
+    <text x="609" y="710" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="15">photo/video, packaging,</text>
+    <text x="609" y="729" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="15">social proof</text>
+  </g>
+
+  <g>
+    <rect x="1018" y="312" width="300" height="84" rx="15" fill="#EAF8F7" stroke="#008A83" stroke-width="2"/>
+    <text x="1042" y="342" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800">City/category access contract</text>
+    <text x="1042" y="369" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="15">market retainer, marketplace fees,</text>
+    <text x="1042" y="388" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="15">benchmark reports, renewal engine</text>
+  </g>
+  <g>
+    <rect x="1088" y="432" width="304" height="88" rx="15" fill="#F3F0FF" stroke="#7B61FF" stroke-width="2"/>
+    <text x="1112" y="462" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800">Priced market packages</text>
+    <text x="1112" y="489" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="15">seasonal print, fund-drop placement,</text>
+    <text x="1112" y="508" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="15">event-set sourcing, media rights</text>
+  </g>
+  <g>
+    <rect x="1008" y="555" width="322" height="92" rx="15" fill="#FFF7EA" stroke="#E2B35C" stroke-width="2"/>
+    <text x="1032" y="585" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800">Selective brand or public funds</text>
+    <text x="1032" y="612" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="15">Crocs-style recovery fund, Tapcart-style</text>
+    <text x="1032" y="631" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="15">superconnector fund, civic grant pool</text>
+  </g>
+  <g>
+    <rect x="1110" y="680" width="280" height="74" rx="15" fill="#FFECEA" stroke="#FF4438" stroke-width="2"/>
+    <text x="1134" y="710" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800">Launch partner proof package</text>
+    <text x="1134" y="737" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="15">first funded Hosts, recap, usage rights</text>
+  </g>
+
+  <g stroke="#22201F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M775 352 C858 350 930 350 1018 352"/>
+    <path d="M1003 343 L1018 352 L1003 361"/>
+    <path d="M796 463 C892 467 982 471 1088 474"/>
+    <path d="M1073 465 L1088 474 L1072 483"/>
+    <path d="M767 584 C842 588 920 592 1008 599"/>
+    <path d="M994 589 L1008 599 L992 607"/>
+    <path d="M774 696 C872 700 984 706 1110 716"/>
+    <path d="M1096 706 L1110 716 L1094 724"/>
+  </g>
+
+  <rect x="470" y="800" width="1018" height="82" rx="24" fill="#22201F"/>
+  <text x="508" y="834" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800">Revenue retreat rule</text>
+  <text x="508" y="864" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="18">If company MAC outruns organic node growth or replacement capital, retreat to the lower-cost free product layer until Sponsor, public, media, or network demand catches up.</text>
+
+  <text x="80" y="644" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">Foundational free products</text>
+  <text x="80" y="674" fill="#6F665C" font-family="Inter, Arial, sans-serif" font-size="16">Always-on tools that keep supply entering even when heavy MAC pauses.</text>
+
+  <g>
+    <rect x="80" y="704" width="152" height="108" rx="15" fill="#FFF7EA" stroke="#E2B35C" stroke-width="2"/>
+    <text x="100" y="733" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800">Guided grant flow</text>
+    <text x="100" y="759" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="14">one application,</text>
+    <text x="100" y="778" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="14">missing fields,</text>
+    <text x="100" y="797" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="14">background forms</text>
+  </g>
+  <g>
+    <rect x="252" y="704" width="152" height="108" rx="15" fill="#EAF8F7" stroke="#008A83" stroke-width="2"/>
+    <text x="272" y="733" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800">Collab tools</text>
+    <text x="272" y="759" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="14">cross-community</text>
+    <text x="272" y="778" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="14">growth and shared</text>
+    <text x="272" y="797" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="14">audience maps</text>
+  </g>
+  <g>
+    <rect x="80" y="832" width="152" height="72" rx="15" fill="#F3F0FF" stroke="#7B61FF" stroke-width="2"/>
+    <text x="100" y="861" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800">Pitch tools</text>
+    <text x="100" y="887" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="14">proof, rates, asks</text>
+  </g>
+  <g>
+    <rect x="252" y="832" width="152" height="72" rx="15" fill="#FFECEA" stroke="#FF4438" stroke-width="2"/>
+    <text x="272" y="861" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800">Claim listings</text>
+    <text x="272" y="887" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="14">name, socials, location</text>
+  </g>
+</svg>
