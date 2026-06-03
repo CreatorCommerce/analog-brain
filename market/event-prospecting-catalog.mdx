@@ -4,7 +4,9 @@ description: "How Analog should capture, enrich, search, claim, and route events
 pageType: "Reference"
 ---
 
-The Event Prospecting Catalog is Analog's Apollo-like market map for IRL supply. It is not a public calendar and not a static sponsor directory. It is the claimable, provenance-aware data layer that helps sponsors find where their market already gathers and helps hosts become sponsor-ready.
+The Event Prospecting Catalog is Analog's Apollo-like market map for IRL supply. It is not a public calendar and not a static sponsor directory. It is the claimable, provenance-aware data layer that helps Sponsors find where their market already gathers and helps Hosts become sponsor-ready.
+
+The catalog should also carry Analog's default network bargain: public-safe opportunity data exists to be discovered. Hosts, Venues, operators, connectors, and organizers should understand that joining or claiming on Analog can make their fundability, proof, preferences, and availability visible to relevant Sponsors, partners, APIs, Agent MCP workflows, media, and funding paths unless they opt out or the record requires private/compliance-sensitive visibility.
 
 Read this after the product and marketplace pages. The earlier pages define the platform objects, campaign visibility modes, matching logic, and proof system. This page explains how off-platform supply becomes structured enough to fund.
 
@@ -71,6 +73,7 @@ Every useful catalog record should eventually capture:
 | Social receptiveness | Host notes, prior Sponsor fit, category adjacency, likely community response, risk flags, and reason codes |
 | Commercial lanes | eComm, SaaS/tech, civic/nonprofit, political action, and any lane-specific risk wrapper |
 | Readiness | data readiness, attribution readiness, proof history, latest dialog |
+| Visibility | public-safe opportunity, private/link-only, partner-scoped, compliance-sensitive, opted out |
 | Funding path | micro grant, starter series, macro grant, operator retainer, public fund, services/tools support |
 | Pitch package | event history, photos, social proof, reach, prior Sponsor context, funding ask, and proof links |
 | Support needs | insurance, print, contracts, designer support, vendors, rentals, proof kit, space access |
@@ -118,6 +121,7 @@ Use these provenance labels:
 | Provenance | Meaning |
 |---|---|
 | Publicly discovered | Found from web, social, directories, calendars, or manual research. |
+| Market Agent surfaced | Found or refreshed by a future Market Agent from public, sourceable market signals with source links and confidence labels. |
 | Brand added | Added by a sponsor during prospecting. |
 | Organizer claimed | Corrected or confirmed by the host/operator. |
 | Grant application | Supplied through grant, RFE, RFC, or hosted-form intake. |
@@ -135,16 +139,23 @@ Use these provenance labels:
 | Sponsor/operator | Save prospects into an event set, Request for Events, Request for Communities, media story, or sponsorship brief. |
 | Host/organizer | Claim the profile, correct facts, add preferences, upload proof, and opt into proposals or funds. |
 | Host/connector | Create or update a pitch package that makes history, reach, proof, and funding asks Sponsor-ready. |
+| Host/organizer | Set visibility preferences, opt out of public opportunity discovery, or restrict sensitive fields. |
+| Market Agent | Surface public-safe candidates, stale records, local signals, grants, or scene changes for human or product review. |
+| Partner/API/Agent MCP | Query public-safe records, submit applications, enrich catalog records, or route a custom workflow with approval and scope controls. |
 | Analog | Enrich the record, start dialog, create hosted intake, convert to application/collab, or mark no-go. |
 
 ## Privacy And Trust
 
-Catalog profiles can be data-rich without exposing private data.
+Catalog profiles can be data-rich and intentionally discoverable without exposing private data.
 
-- Keep raw attendee emails and phone numbers out of sponsor search.
+- Make public-safe opportunity fields discoverable by default when the Host, Venue, operator, or record is on the Analog network.
+- Show a clear disclaimer in claim, application, onboarding, and settings flows: Analog uses public-safe profile and activity data to route funding, partnership, sponsorship, grant, media, and custom workflow opportunities.
+- Let users opt out, correct facts, restrict fields, and choose private/link-only/compliance-sensitive visibility where needed.
+- Keep raw attendee emails and phone numbers out of sponsor search and public APIs.
 - Show sponsor-safe summaries, readiness states, audience hypotheses, and proof tiers.
 - Store consent source for imported or hosted audience data.
 - Let organizers control sponsor preferences and acceptable brand presence.
+- Keep partner-private notes, private messages, sensitive financial/tax data, political affiliation, voter/donor/volunteer lists, and compliance-sensitive context out of public opportunity discovery.
 - Use the catalog to route opportunity, not to scrape and expose communities.
 
 Use the catalog when a Sponsor asks where their market gathers, which Hosts deserve funding, which off-platform communities are worth prospecting, or where Analog has demand but not enough trusted supply.

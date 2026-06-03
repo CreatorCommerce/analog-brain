@@ -33,6 +33,7 @@ Political action programs are another high-stakes version: campaign or advocacy 
 | Focus | Current product surface | What it helps Analog learn |
 |---|---|---|
 | Spend infrastructure <Tooltip headline="Spend infrastructure" tip="Budgets, allocations, funding state, spend cards, merchant/category controls, transactions, receipts, and proof that let Analog deploy approved capital responsibly."><span className="analog-help">?</span></Tooltip> | Campaign budgets, collab allocations, spend cards, card limits, allowed categories, transactions, available budget, funding state | Which budget, approval, control, receipt, and reporting conventions Sponsors trust enough to repeat. |
+| Agentic Sponsor experience <Tooltip headline="Agentic Sponsor experience" tip="Sponsor-side sessions where chat, forms, dashboards, and dynamic UI all work like an assistant trying to complete the Sponsor's current job."><span className="analog-help">?</span></Tooltip> | Sponsor AI assistant, onboarding preferences, campaign forms, event sets, application inbox, Sponsor data, files/docs, settings/features | Which intents, next actions, hidden settings, drill-down paths, and approval gates make Sponsor work faster without making the product feel shallow. |
 | Marketplace enablement <Tooltip headline="Marketplace enablement" tip="The objects that make Sponsor demand, Host supply, campaign visibility, AI-assisted matching, and proof benchmarks legible before a fully liquid marketplace exists."><span className="analog-help">?</span></Tooltip> | Event sets, application portals, campaign applications, Host opportunities, hosted event pages, Sponsor data, proof surfaces, prospecting, catalog records | Which Sponsor briefs, Host profiles, campaign visibility modes, match reasons, pricing models, proof standards, and renewal signals should become durable marketplace conventions. |
 | Supply creation <Tooltip headline="Supply creation" tip="Using managed outreach, city leads, media, partner lists, brand funds, public funds, RFEs, and Asset Need Intelligence to create enough qualified Host-side options for the platform to observe."><span className="analog-help">?</span></Tooltip> | Managed outreach, event-set prospecting, files/docs, city lead workflows, applications, activation packages, Asset Need Intelligence | How brand funds and programs pull existing, latent, missing, and newly generated Hosts, spaces, connectors, and communities into a market the product can measure. |
 | Pitch tooling <Tooltip headline="Pitch tooling" tip="A free or low-friction Host and connector packaging surface that turns history, proof, reach, asks, and grant readiness into fundable supply."><span className="analog-help">?</span></Tooltip> | Host story, pitch page, Analog Doc, files, application portal, deep research doc, grant match notes | Which single-player tools help supply package itself before the marketplace is liquid. |
@@ -58,6 +59,71 @@ The strategic analogy is simple:
 | Analog IRL culture data | Which real-world communities gather, who can move them, what sponsors they fit, and which funded moments create audience or category potential. |
 
 In the MVP, this graph is assembled from product objects rather than a standalone data product: campaigns, event sets, applications, host profiles, hosted pages, spend cards, transactions, files/docs, proof packets, city lead notes, media capture, and renewal decisions.
+
+## AI Memory And Context Primitive
+
+AI memory should help Analog learn without replacing product records.
+
+Use [AI Memory And Context](/platform/ai-memory-and-context) as the plain-English Platform page. The product rule is:
+
+```text
+Product data is the source of truth.
+AI memory is a small, sourced note about what helps the assistant work.
+Context is the compact packet an agent gets for one task.
+```
+
+The current MVP can approximate this through Sponsor AI context packets, files/docs, Analog Docs, deep research docs, city tactics guide categories, campaign summaries, and sponsor-visible workspace data. Future product work should add scoped AI memory, recursive knowledge metadata, Market Agent snapshots, source ids, confidence labels, review flows, and version history before treating market or culture learning as durable assistant context.
+
+Growth AI may use internal Analog doctrine, public sources, Market Agent research, public-safe opportunity data, and approved aggregate product trends. It should not use raw private product data by default.
+
+## Agentic Sponsor Experience Primitive
+
+The Sponsor-side product should feel like an agentic workflow even when the interface is mostly buttons, forms, cards, and tables.
+
+The primitive is the session job:
+
+```text
+understand why the Sponsor is here
+-> show the smallest useful next step
+-> reveal deeper controls only when context asks for them
+-> keep drilling into data, settings, or recommendations when needed
+-> route sensitive actions to human approval
+```
+
+This is not only a chat assistant. Chat, dynamic UI, forms, dashboards, settings, application inboxes, and proof views should all act like one guided workflow.
+
+| Session job | Current approximation | Rule |
+|---|---|---|
+| Understand intent | Onboarding role/preferences, Sponsor AI assistant prompt, campaign dashboard state, selected campaign, application inbox, Sponsor data view | Ask or infer whether the Sponsor is here to create a campaign, find supply, review applicants, inspect proof, adjust budget, fix admin work, or decide renewal. |
+| Render the next useful step | Campaign creation fields, event set setup, application cards, proof summaries, files/docs, settings/features | Keep first actions simple. Then show the next field, recommendation, setting, or workflow based on context. |
+| Reveal advanced controls progressively | Feature setup, campaign settings, Venue reward notes, visibility mode, vendor/payee context, public/nonprofit controls, political controls, high-ticket files/docs | Hide features until they matter. Do not make every Sponsor configure every possible rail up front. |
+| Support deep drill-down | Sponsor data summaries, proof packets, application detail, Event Prospecting Catalog, files/docs, deep research docs, future Market Agent snapshots | If the Sponsor keeps asking why, who else, what if, or show more, keep routing them to deeper evidence, options, or settings. |
+| Preserve approval gates | Tasks, files/docs, campaign save, applicant acceptance, collab creation, outreach drafts, spend controls | AI can recommend, draft, rank, summarize, and prepare. Humans approve publishing, outreach, private data sharing, spend, contracts, sensitive claims, and funding decisions. |
+
+The Host-side product should not mirror this depth by default. Hosts need a fast surface for money, tasks, events, proof, opportunities, and profile upkeep. Advanced settings should appear only when they help the Host get funded, execute, or protect sensitive visibility.
+
+## Public Opportunity Graph Primitive
+
+The IRL culture graph should have a public-safe opportunity layer. Analog is intentionally not a closed event silo: the product should help Hosts, Venues, operators, connectors, and recurring rituals get discovered for funding, partnerships, sponsorships, grants, media, and custom workflows.
+
+The default network posture should be:
+
+```text
+Being on Analog makes public-safe opportunity data discoverable,
+unless the user, record, campaign, or compliance context opts out.
+```
+
+| Data class | Default posture | Guardrail |
+|---|---|---|
+| Public opportunity data | Discoverable through Analog search, Sponsor workflows, partner APIs, and Agent MCP. | Keep fields sponsor-safe: name, category, geography, cadence, audience hypothesis, funding needs, proof/readiness, offer preferences, and claim status. |
+| Private operating data | Scoped to the relevant workspace, collab, partner, or campaign. | Do not expose partner-private notes, private messages, attachments, or sensitive strategy by default. |
+| Attendee identity | Permissioned and purpose-limited. | Do not expose raw attendee emails, phone numbers, political affiliation, volunteer lists, donor data, or customer files as public opportunity data. |
+| Sensitive funding, tax, or financial data | Restricted and approval-gated. | Use explicit authorization, purpose disclosure, and approved payment/tax/compliance workflows. |
+| Public/nonprofit or political records | Visibility depends on program rules and legal/compliance posture. | Keep public reporting, political privacy, sensitive affiliation, and safety controls explicit. |
+
+API and Agent MCP access should make the opportunity graph usable from custom workflows: a Sponsor plan inside Analog, a partner platform dashboard, an external agent asked to source Sponsors for a Host, or a city/operator workflow that routes a fund to matching supply. Agents can read/query and prepare recommendations; they cannot publish, share private data, move money, send external outreach, or make final approval claims without human approval.
+
+The user-facing bargain should be visible during onboarding, claiming, application, and profile settings: Analog is trying to expose qualified supply to relevant opportunities. Users should have opt-out, field-level visibility, private campaign modes, and correction paths where needed.
 
 ## Brand Fund Market Loop
 
@@ -230,6 +296,10 @@ Do not describe these as current MVP objects unless they map back to existing su
 | Future direction | Current MVP approximation |
 |---|---|
 | Builder or connector profile | Host story, pitch page, files, docs, and catalog context |
+| Agentic Sponsor session layer | Sponsor AI assistant, onboarding preferences, campaign forms, event sets, application inbox, Sponsor data summaries, files/docs, settings/features, and guided next actions |
+| Public opportunity profile | Host story, pitch page, public-safe catalog record, claim status, opportunity preferences, and visibility settings |
+| AI memory and context packet | Sponsor AI assistant context, files/docs, Analog Docs, deep research docs, city tactics guide categories, bounded chat context, and future scoped memory |
+| Agent MCP/API opportunity search | Event set prospecting, managed outreach, Event Prospecting Catalog, deep research docs, Sponsor AI assistant context, and future partner API endpoints |
 | QR asset pack | Hosted event page, invite builder, files/docs, custom HTML/CSS, printed event assets, and claim/application links |
 | Event history log | Host events, hosted pages, files/docs, campaign content, applications, and proof packets |
 | High-production event page | Hosted event page, design kit, theme, background, custom HTML/CSS, media, QR assets, RSVP/claim flow, proof prompts, and later recap context |
@@ -263,7 +333,7 @@ Do not describe these as current MVP objects unless they map back to existing su
 | Risk register | Files/docs, tasks, proof QA notes, public reporting constraints, insurance docs, and anomaly notes |
 | Tranche gate | Unlock decision, renewal packet, proof standard, budget state, and Sponsor summary |
 | Public/nonprofit fund administration cockpit | Sponsor data snapshot, files/docs, applications, collabs, spend cards, proof packets, report drafts, anomaly notes, and tranche decisions |
-| Marketplace visibility and matching | Campaign visibility mode, event sets, application portal, Event Prospecting Catalog, prospecting, proof packet, and Sponsor data summary |
+| Marketplace visibility and matching | Campaign visibility mode, event sets, application portal, Event Prospecting Catalog, public opportunity data, prospecting, proof packet, and Sponsor data summary |
 
 Until production money movement exists, fund access means governed sponsor allocations, grants, event-scoped budgets, spend cards, or approved program budgets. It does not mean unrestricted wallet balances.
 
@@ -389,6 +459,9 @@ The MVP intentionally does not include:
 - fully automated legal contracting, insurance, or payout gates
 - fully automated high-ticket sponsorship underwriting
 - native invoice, purchase order, escrow, or procurement rails
+- production public opportunity API or Agent MCP catalog access
+- production central Market Agent or autonomous recursive knowledge refreshes
+- production dynamic Sponsor agentic UI that reliably infers intent, renders every progressive setting, and supports deep drill-down without human/operator scaffolding
 
 Money remains platform-controlled. Hosts receive event-scoped operational spend access, not withdrawable balances.
 

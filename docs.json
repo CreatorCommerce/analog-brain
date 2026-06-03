@@ -131,6 +131,7 @@
             "pages": [
               "references/product-primitives",
               "references/platform-logic",
+              "platform/ai-memory-and-context",
               "platform/marketplace",
               "platform/proof-and-spend",
               "platform/mentions-to-assets",

@@ -24,6 +24,9 @@ When the user gives a new use case or correction, update the page it belongs to 
 - Use-case pages route operators to the right pages without duplicating full reference blocks.
 - Do not publish placeholders, draft stubs, or "coming soon" pages in live navigation.
 - Keep docs practical and operator-grade. Avoid investor-only abstraction unless it changes how a pilot is run.
+- Keep the reading experience snappy and direct. Default to high-school reading level, short sentences, clear headings, and concrete nouns.
+- Do not flatten or discard strategic marketing copy, narrative explainer text, or founder-written positioning. Preserve the intent, then simplify surrounding explanation where needed.
+- Do not lose content when tightening prose. Compress, split, route, or table it; do not silently delete important strategy, product boundaries, or source context.
 
 ## Terminology
 

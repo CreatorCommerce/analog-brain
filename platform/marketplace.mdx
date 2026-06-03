@@ -6,9 +6,17 @@ pageType: "Reference"
 
 Marketplace does not mean a generic event directory.
 
-Analog's marketplace is the product layer that helps a Sponsor decide where its dollars should go, how visible the campaign should be, and what proof will show whether that spend worked for an organization of its category.
+Analog's marketplace helps a Sponsor decide three things:
 
-Read this after [Platform Logic](/references/platform-logic). Platform Logic explains the current surfaces. This page explains the marketplace intelligence those surfaces should build toward.
+- where its dollars should go
+- how visible the campaign should be
+- what proof will show whether the spend worked for that Sponsor category
+
+Read this after [Platform Logic](/references/platform-logic) and [AI Memory And Context](/platform/ai-memory-and-context).
+
+Platform Logic explains the current surfaces. AI Memory And Context explains how product usage, recursive docs, and public market signals become bounded agent context.
+
+This page explains the marketplace intelligence those surfaces should build toward.
 
 ```text
 Sponsor goal + category + budget
@@ -46,6 +54,33 @@ based on comparable proof for organizations like this one?
 
 This is AI-assisted and human-reviewed. AI can rank, compare, explain, and flag. Operators and Sponsors still decide sensitive fit, budget, compliance, and community-trust calls.
 
+## Agentic Marketplace Experience
+
+The Sponsor-side marketplace should feel like a guided agentic session, not a static list.
+
+A Sponsor should be able to arrive with a rough goal:
+
+```text
+I want to fund founder dinners in SF.
+I need more wellness Hosts in NYC.
+Show me which applicants are worth accepting.
+Tell me why this campaign should renew.
+```
+
+The product can respond through chat, simple buttons, filtered cards, generated forms, or dynamic settings. The mode matters less than the job: understand intent, reduce steps, and keep moving.
+
+The interaction rule:
+
+| Sponsor asks | The product should render |
+|---|---|
+| What should I do? | Next best action, short reason, and one clear control. |
+| Who fits? | Ranked Hosts, Venues, communities, or event types with match reasons. |
+| Why this match? | Receptiveness signals, proof history, market context, and risk flags. |
+| What if I go deeper? | More filters, Event set options, budget shapes, proof benchmarks, files/docs, or Market Agent context. |
+| What is sensitive? | Approval gates before outreach, private data sharing, spend, contracts, public claims, or final funding decisions. |
+
+Advanced controls should appear when the workflow needs them. A basic campaign should not start with every setting visible. A complex public fund, political action program, high-ticket allocation, or vendor-heavy campaign should reveal the extra controls as soon as the Sponsor's intent makes them relevant.
+
 ## Matching Inputs
 
 | Input | Examples | Why it matters |
@@ -55,6 +90,7 @@ This is AI-assisted and human-reviewed. AI can rank, compare, explain, and flag.
 | Budget shape | micro grant, macro grant, services/tools, Venue reward, market fund, community collective fund, public program, high-ticket allocation | Determines which Hosts can use the dollar well. |
 | Contributor context | fund leader, co-Sponsors, local business contributors, payment-link or invoice source, restrictions, in-kind value | Shows who backed a collective fund and what proof or restrictions must be honored. |
 | Market and ICP | city, neighborhood, audience, account type, shopper type, community family, buyer persona | Narrows the supply layer to the Sponsor's best-fit surface. |
+| Recursive memory and market context | city tactics guides, market culture notes, domain playbooks, Market Agent snapshots, public news, public grants, public-safe opportunity data | Keeps matching from feeling generic and helps AI explain local timing, category fit, and confidence. |
 | Host and community history | cadence, attendance, proof, prior Sponsors, social response, field notes, community norms | Shows whether the Host has trust and repeatability. |
 | Venue and location context | Venue mentions, space type, neighborhood, audience, accessibility, operational constraints | Shows whether the space is part of the value chain. |
 | Vendor and payee context | Host, Venue, contractor, vendor, operator, payment rail, tax-document status, duplicate record risk | Shows whether Analog needs to simplify vendor records or support 1099 workflows for the campaign. |
@@ -175,12 +211,35 @@ The campaign should never look abandoned. If review starts later, say that plain
 | Application portal | Lets invited or public supply apply with structured fields, start-date expectations, and future review windows. |
 | Sponsor application inbox | Shows first applicants, early demand signal, free applicant preview, blurred or limited additional applicants, and accepted-applicant conversion. |
 | Event Prospecting Catalog | Feeds candidate Hosts, communities, Venues, and event types into marketplace matching. |
+| Public opportunity graph | Makes public-safe supply data discoverable for Sponsors, partners, city workflows, APIs, and Agent MCP unless opted out or restricted. |
+| Agent MCP and partner API | Let approved external agents or partner platforms query, package, and route opportunities without bypassing privacy, approval, spend, or publishing controls. |
 | Sponsor Outreach | Runs targeted prospecting when the right supply exists off-platform. |
 | Regional Host dashboard | Shows local Hosts the funds, grants, opportunities, and proof prompts relevant to their market. |
 | Hosted event pages | Turn selected events into branded, proof-capturing attendance surfaces instead of commodity invite pages. |
 | Proof And Spend | Measures whether the match worked and what deserves the next dollar. |
 | Mention assets | Turn Host and Venue social signal into benchmarkable marketplace proof. |
 | Vendor and payee records | Keep Hosts, Venues, contractors, service providers, and repeat vendors from becoming a new administrative burden for Sponsors. |
+
+## Public Discovery And Custom Workflows
+
+The marketplace should be discoverable without becoming a careless directory. Analog's default should be that public-safe opportunity records can be found and used in custom workflows to create funding, partnership, sponsorship, grant, media, or Sponsor-sourcing opportunities.
+
+Examples:
+
+- A Sponsor asks the in-platform Analog agent to find Hosts that fit a new fund.
+- A Host on an eligible plan asks Analog to source potential Sponsors using its public-safe record.
+- A partner platform queries Analog APIs for sponsorship opportunities that fit its communities.
+- A city operator uses Agent MCP to build a prospecting packet for a fund or Request for Events.
+
+The rule is:
+
+```text
+Expose opportunity data by default.
+Protect private, sensitive, attendee, financial, partner-private,
+public-program, and political data by design.
+```
+
+Users should see this expectation before relying on Analog as their funding record. They should also be able to opt out, correct facts, restrict fields, or move a campaign into private/link-only/compliance-sensitive visibility.
 
 ## Vendor Records And 1099 Burden
 
@@ -222,11 +281,14 @@ Current MVP approximations:
 - managed outreach and event set prospecting
 - Event Prospecting Catalog records
 - Host opportunities, branded hosted event pages, files/docs, and proof packets
-- Sponsor data summaries, campaign content, story mentions, and spend transactions
+- Sponsor AI assistant, Sponsor data summaries, campaign content, story mentions, and spend transactions
 
 Future product work should add:
 
+- dynamic Sponsor session UI that infers or asks intent and reveals next actions, controls, and drill-down views progressively
 - explicit campaign visibility mode
+- public-safe opportunity visibility settings and opt-out controls
+- production public opportunity API and Agent MCP access with scopes, audit logs, and approval gates
 - AI-assisted Host, Venue, community, and event-type recommendations with reason codes
 - category-specific benchmark libraries
 - social receptiveness labels

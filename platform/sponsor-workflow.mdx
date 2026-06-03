@@ -12,12 +12,42 @@ The MVP workflow should answer one commercial question: can Analog earn the righ
 
 The Sponsor posture should be simple: sponsoring a community off Analog should feel like losing future opportunity. Off-platform spend may create one moment, but it does not reliably capture impact, build comparable market intelligence, or tell the Sponsor which Host, city, audience, or format deserves the next dollar.
 
+The Sponsor experience should also feel like an agentic workflow. The Sponsor may be talking to an agent, clicking through dynamic UI, filling a form, or reviewing a dashboard; the product should still feel like it is asking why they are here and helping them finish the job quickly.
+
 Before setup, write the campaign thesis in one sentence:
 
 ```text
 This campaign tests whether [Sponsor perspective] can grow [category/audience/outcome]
 in [city/context] by funding [Host type] to create [IRL activation].
 ```
+
+## 0. Start With Session Intent
+
+Begin every Sponsor session by naming the job.
+
+Common jobs:
+
+- create a campaign
+- test whether a market has demand
+- find or compare Host supply
+- review applicants
+- inspect proof
+- adjust budget or spend rules
+- handle vendor/admin requirements
+- decide renewal
+
+The UI should start simple: one question, one choice, one button, or one focused form. Then it can render the next useful action.
+
+If the Sponsor keeps digging, the product should keep going:
+
+```text
+simple action
+-> recommended next step
+-> deeper setting, proof, data, file, or workflow
+-> human approval when the action becomes sensitive
+```
+
+Use progressive disclosure. Do not show every advanced feature up front. Reveal Venue rewards, visibility modes, Agent MCP/API sourcing, vendor records, high-ticket controls, public/nonprofit controls, political controls, and proof benchmarks only when the Sponsor's campaign context needs them.
 
 ## 1. Create The Campaign
 
@@ -120,7 +150,9 @@ the best IRL surface is [Host/community/Venue/event type]
 because [receptiveness signal] and [benchmark reason].
 ```
 
-Use [Marketplace Logic](/platform/marketplace) for social receptiveness, category benchmarks, and campaign visibility rules.
+Use [Marketplace Logic](/platform/marketplace) for social receptiveness, category benchmarks, and campaign visibility rules. Use [AI Memory And Context](/platform/ai-memory-and-context) when the campaign needs recursive city docs, Market Agent context, or agentic sourcing boundaries.
+
+For agentic sourcing, keep the same boundary. The Sponsor or operator can ask Analog to search public-safe opportunity data through the catalog, partner APIs, or Agent MCP when those rails exist. The agent can prepare target lists, match reasons, and outreach drafts, but human approval still controls publishing, private data sharing, outreach, spend, and final funding decisions.
 
 ### Add Mention Coverage When The Venue Matters
 
@@ -186,6 +218,7 @@ Choose the path:
 | Event set prospecting | The right supply probably exists off-platform. |
 | City lead | The supply is relationship-driven. |
 | Catalog search | Sponsor needs more options from known supply. |
+| Agent MCP/API workflow | A Sponsor, operator, or partner wants to search public-safe opportunity records or generate a custom sourcing packet with approval controls. |
 
 The shared ask should say who qualifies, what budget range exists, what spend is allowed, what proof is required, and where Hosts should apply. The targeted ask should explain why the Host or Venue is a strong match for the Sponsor's category and benchmark.
 
