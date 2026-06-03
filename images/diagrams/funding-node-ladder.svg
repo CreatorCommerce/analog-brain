@@ -1,0 +1,70 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Funding support by market node count</title>
+  <desc id="desc">A five-stage ladder showing how Analog support progresses from free tools to photo and video, grant pools, raffle grants, and print or larger Sponsor funds as a market grows from early nodes to more than five thousand nodes.</desc>
+  <rect width="1280" height="720" fill="#FFFDF8"/>
+  <rect x="40" y="40" width="1200" height="640" rx="28" fill="#FFFFFF" stroke="#E6DDD0" stroke-width="2"/>
+  <text x="80" y="104" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="800">Spend progression as market nodes increase</text>
+  <text x="80" y="142" fill="#6F665C" font-family="Inter, Arial, sans-serif" font-size="20">Use heavier support only while it creates proof, referrals, Sponsor demand, and lower company effort per useful node.</text>
+
+  <line x1="110" y1="560" x2="1160" y2="560" stroke="#22201F" stroke-width="3"/>
+  <polygon points="1160,560 1144,551 1144,569" fill="#22201F"/>
+  <text x="930" y="602" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">qualified market nodes</text>
+
+  <path d="M143 498 C278 440 365 392 474 322 C596 244 748 190 1115 132" stroke="#008A83" stroke-width="7" stroke-linecap="round"/>
+  <text x="902" y="126" fill="#008A83" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800">external capital + network benefits rise</text>
+
+  <path d="M140 212 C276 250 401 304 542 365 C715 440 884 486 1105 520" stroke="#FF4438" stroke-width="7" stroke-linecap="round"/>
+  <text x="128" y="202" fill="#FF4438" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800">company-funded MAC per node falls</text>
+
+  <g>
+    <rect x="84" y="265" width="188" height="178" rx="18" fill="#FFF4E5" stroke="#E2B35C" stroke-width="2"/>
+    <text x="108" y="304" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">0-100</text>
+    <text x="108" y="333" fill="#6F665C" font-family="Inter, Arial, sans-serif" font-size="16">seed nodes</text>
+    <text x="108" y="370" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Free tools</text>
+    <text x="108" y="396" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="17">QR packs</text>
+    <text x="108" y="421" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="17">pitch pages</text>
+  </g>
+
+  <g>
+    <rect x="304" y="230" width="188" height="208" rx="18" fill="#FFECEA" stroke="#FF4438" stroke-width="2"/>
+    <text x="328" y="269" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">100-500</text>
+    <text x="328" y="298" fill="#6F665C" font-family="Inter, Arial, sans-serif" font-size="16">visible proof</text>
+    <text x="328" y="335" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">High-touch</text>
+    <text x="328" y="361" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="17">photo/video</text>
+    <text x="328" y="386" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="17">packaging</text>
+    <text x="328" y="411" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="17">first grants</text>
+  </g>
+
+  <g>
+    <rect x="524" y="196" width="188" height="232" rx="18" fill="#EAF8F7" stroke="#008A83" stroke-width="2"/>
+    <text x="548" y="235" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">500-1k</text>
+    <text x="548" y="264" fill="#6F665C" font-family="Inter, Arial, sans-serif" font-size="16">fundable density</text>
+    <text x="548" y="301" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Grant pools</text>
+    <text x="548" y="327" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="17">services/tools</text>
+    <text x="548" y="352" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="17">office hours</text>
+    <text x="548" y="377" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="17">templates</text>
+  </g>
+
+  <g>
+    <rect x="744" y="162" width="188" height="218" rx="18" fill="#F3F0FF" stroke="#7B61FF" stroke-width="2"/>
+    <text x="768" y="201" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">1k-5k</text>
+    <text x="768" y="230" fill="#6F665C" font-family="Inter, Arial, sans-serif" font-size="16">market pull</text>
+    <text x="768" y="267" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Raffles</text>
+    <text x="768" y="293" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="17">fund drops</text>
+    <text x="768" y="318" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="17">city guides</text>
+    <text x="768" y="343" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="17">rate learning</text>
+  </g>
+
+  <g>
+    <rect x="964" y="122" width="188" height="226" rx="18" fill="#F8F7F4" stroke="#22201F" stroke-width="2"/>
+    <text x="988" y="161" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">5k+</text>
+    <text x="988" y="190" fill="#6F665C" font-family="Inter, Arial, sans-serif" font-size="16">acquired graph</text>
+    <text x="988" y="227" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Print + funds</text>
+    <text x="988" y="253" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="17">Sponsor pools</text>
+    <text x="988" y="278" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="17">city intel</text>
+    <text x="988" y="303" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="17">market access</text>
+  </g>
+
+  <rect x="80" y="620" width="1060" height="38" rx="19" fill="#22201F"/>
+  <text x="106" y="645" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Rule: every new support band must make the next qualified node cheaper, more fundable, or easier to prove.</text>
+</svg>

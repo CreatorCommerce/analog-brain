@@ -1,0 +1,79 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Market acquisition cost by node count</title>
+  <desc id="desc">A line chart showing company-funded market acquisition cost falling as a market grows from mapped nodes to an acquired graph, while outside support rises from zero to more than one million dollars.</desc>
+  <rect width="1280" height="720" fill="#FFFCF5"/>
+  <rect x="46" y="44" width="1188" height="632" rx="30" fill="#FFFFFF" stroke="#E4D9C8" stroke-width="2"/>
+
+  <text x="86" y="105" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="35" font-weight="800">MAC curve: spend should shore up nodes, then get replaced</text>
+  <text x="86" y="143" fill="#6E665F" font-family="Inter, Arial, sans-serif" font-size="20">The first nodes are expensive because Analog is buying trust, proof, and map clarity. A market is working when outside capital and referrals carry more of the load.</text>
+
+  <line x1="142" y1="545" x2="1120" y2="545" stroke="#22201F" stroke-width="3"/>
+  <line x1="142" y1="545" x2="142" y2="190" stroke="#22201F" stroke-width="3"/>
+  <polygon points="1120,545 1104,536 1104,554" fill="#22201F"/>
+  <polygon points="142,190 133,206 151,206" fill="#22201F"/>
+  <text x="86" y="184" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700">relative intensity</text>
+  <text x="884" y="589" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">qualified supply nodes</text>
+
+  <g stroke="#E8E0D4" stroke-width="1">
+    <line x1="142" y1="474" x2="1120" y2="474"/>
+    <line x1="142" y1="403" x2="1120" y2="403"/>
+    <line x1="142" y1="332" x2="1120" y2="332"/>
+    <line x1="142" y1="261" x2="1120" y2="261"/>
+  </g>
+
+  <path d="M170 230 C292 268 386 320 498 378 C665 463 858 507 1085 522" stroke="#FF4438" stroke-width="8" stroke-linecap="round"/>
+  <path d="M170 515 C298 474 407 432 530 360 C690 266 868 202 1088 176" stroke="#008A83" stroke-width="8" stroke-linecap="round"/>
+
+  <circle cx="170" cy="230" r="8" fill="#FF4438"/>
+  <circle cx="498" cy="378" r="8" fill="#FF4438"/>
+  <circle cx="1085" cy="522" r="8" fill="#FF4438"/>
+  <circle cx="170" cy="515" r="8" fill="#008A83"/>
+  <circle cx="530" cy="360" r="8" fill="#008A83"/>
+  <circle cx="1088" cy="176" r="8" fill="#008A83"/>
+
+  <rect x="184" y="198" width="268" height="54" rx="15" fill="#FFECEA" stroke="#FFB7AF"/>
+  <text x="204" y="232" fill="#FF4438" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="800">company-funded MAC</text>
+
+  <rect x="797" y="154" width="292" height="54" rx="15" fill="#EAF8F7" stroke="#A7DCD8"/>
+  <text x="817" y="188" fill="#008A83" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="800">Sponsor/public/media support</text>
+
+  <g>
+    <line x1="222" y1="545" x2="222" y2="565" stroke="#22201F" stroke-width="2"/>
+    <text x="178" y="612" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800">50-150</text>
+    <text x="172" y="637" fill="#6E665F" font-family="Inter, Arial, sans-serif" font-size="15">mapped nodes</text>
+  </g>
+  <g>
+    <line x1="422" y1="545" x2="422" y2="565" stroke="#22201F" stroke-width="2"/>
+    <text x="374" y="612" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800">30-100</text>
+    <text x="360" y="637" fill="#6E665F" font-family="Inter, Arial, sans-serif" font-size="15">champions</text>
+  </g>
+  <g>
+    <line x1="632" y1="545" x2="632" y2="565" stroke="#22201F" stroke-width="2"/>
+    <text x="590" y="612" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800">100-1k</text>
+    <text x="570" y="637" fill="#6E665F" font-family="Inter, Arial, sans-serif" font-size="15">fundable density</text>
+  </g>
+  <g>
+    <line x1="842" y1="545" x2="842" y2="565" stroke="#22201F" stroke-width="2"/>
+    <text x="804" y="612" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800">1k-5k</text>
+    <text x="778" y="637" fill="#6E665F" font-family="Inter, Arial, sans-serif" font-size="15">market pull</text>
+  </g>
+  <g>
+    <line x1="1052" y1="545" x2="1052" y2="565" stroke="#22201F" stroke-width="2"/>
+    <text x="1024" y="612" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800">5k+</text>
+    <text x="990" y="637" fill="#6E665F" font-family="Inter, Arial, sans-serif" font-size="15">acquired graph</text>
+  </g>
+
+  <g>
+    <rect x="194" y="378" width="208" height="92" rx="17" fill="#FFF7EA" stroke="#E2B35C"/>
+    <text x="214" y="407" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800">Early spend buys</text>
+    <text x="214" y="433" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="15">trust, proof, map clarity,</text>
+    <text x="214" y="455" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="15">first Sponsor stories.</text>
+  </g>
+
+  <g>
+    <rect x="842" y="268" width="232" height="102" rx="17" fill="#F2FAF9" stroke="#008A83"/>
+    <text x="862" y="297" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="800">Later support comes from</text>
+    <text x="862" y="323" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="15">Sponsor funds, public grants,</text>
+    <text x="862" y="345" fill="#22201F" font-family="Inter, Arial, sans-serif" font-size="15">media, venues, referrals.</text>
+  </g>
+</svg>
