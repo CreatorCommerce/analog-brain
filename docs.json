@@ -136,12 +136,7 @@
               "platform/sponsor-workflow",
               "platform/host-workflow"
             ]
-          }
-        ]
-      },
-      {
-        "tab": "How-To",
-        "groups": [
+          },
           {
             "group": "RUN THE MOTION",
             "pages": [
