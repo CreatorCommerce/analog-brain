@@ -11,9 +11,10 @@ Read this after [Public And Nonprofit Funding Infrastructure](/strategy/public-n
 Analog should treat this as supply capture and government conversion.
 
 ```text
-Host loads proof
+Host completes one Analog application
 -> Analog finds relevant free money
--> Analog packages and stewards the application
+-> Host one-clicks apply intent from the geo-dashboard
+-> Analog agents and operators package the application
 -> Host wins or learns
 -> Analog proves application quality, spend stewardship, and outcomes
 -> governments adopt Analog to reduce workflow pain, fraud/waste/abuse risk, and attribution gaps
@@ -57,7 +58,7 @@ Analog should run the NYC/SF grant desk like a productized market-acquisition sy
 | Layer | What Analog does | Required output |
 |---|---|---|
 | Source map | Monitor city agencies, arts councils, BIDs, foundations, small-business portals, nonprofit newsletters, and public/private funds. | grant opportunity catalog with amount, deadline, geography, eligible entities, allowed uses, docs, and source URL. |
-| Host intake | Ask Hosts for event history, dates, venue, photos, attendance, community need, budget needs, entity status, fiscal sponsor, and proof. | Host grant readiness file. |
+| Host intake | Use one Analog application to capture event history, dates, venue, photos, attendance, community need, budget needs, entity status, fiscal sponsor, and proof. | Host grant readiness file that can be reused across public grants, private grants, and Sponsor funds. |
 | Eligibility match | Compare Host facts against geography, legal status, category, budget size, prior programming, deadlines, and restricted uses. | eligibility notes and no-go reasons. |
 | Packet creation | Draft narratives, budgets, work samples, impact language, proof summaries, and reporting plans. | Analog Doc, files/docs packet, application checklist. |
 | Authorized submission | Submit, co-submit, or prepare for Host submission only with permission. | submission log, date, owner, status, next step. |
@@ -65,6 +66,30 @@ Analog should run the NYC/SF grant desk like a productized market-acquisition sy
 | Agency learning | Aggregate where applicants struggle and where Analog reduces confusion. | government workflow pitch and fraud/waste/abuse control memo. |
 
 The desk should be lightweight at first. The first win is not perfect automation. The first win is proving that Hosts will maintain better Analog records when those records help them find outside money.
+
+## One Application To Rule Them All
+
+The Host-facing free product should make the grant desk feel simple:
+
+```text
+Fill out one Analog application.
+See the grants and funds that fit your geography.
+Click apply.
+Analog prepares the packet in the background.
+Approve before anything is submitted.
+```
+
+The same application should route to public grants, private foundation grants, BID or neighborhood funds, community collective funds, Sponsor-backed public funds, selective brand funds, and the Host's own pitch packet.
+
+| Product layer | Host experience | Analog work in the background | Boundary |
+|---|---|---|---|
+| Universal Analog application | Host answers once and keeps the record current. | Normalize organization, community, geography, event history, budget, proof, entity status, fiscal sponsor, insurance, and files. | Do not ask the Host to rewrite the same story for every fund. |
+| Geo-dashboard grant shelf | Host sees available grants and funds for `AnalogNYC`, `AnalogSF`, or another active market. | Match opportunities by location, Host type, category, amount, allowed use, deadline, and missing fields. | Show fit and gaps; do not imply guaranteed eligibility. |
+| One-click apply intent | Host clicks to apply or request help for a specific opportunity. | Create application intent, missing-field prompts, owner, deadline, and status. | One-click apply is authorization to prepare or route, not an award promise. |
+| Background Agent MCP preparation | Host does not start from a blank page. | Draft answers, build budgets, assemble files, reuse proof, track source links, and prepare submission materials. | Human/Host review is required before submission. Sensitive programs may need specialist review. |
+| Application status log | Host can see where each opportunity stands. | Track draft, needs Host info, ready for approval, submitted, follow-up, rejected, awarded, report due. | Keep the status honest and source-backed. |
+
+This is the MAC wedge. A Host who joins Analog to find free money becomes easier to fund with public grants, private grants, Sponsor funds, and future brand campaigns because the same record keeps getting stronger.
 
 ## MAC Effect
 
@@ -184,6 +209,8 @@ reporting quality, and market-level attribution.
 
 | Capability | What it does | Why governments eventually care |
 |---|---|---|
+| Universal Analog application | Captures one reusable Host funding record that can power public grants, private grants, Sponsor funds, and pitch packets. | Reduces duplicate applicant work and gives funders cleaner, more complete records. |
+| Geo-dashboard grant shelf | Shows market-specific opportunities that a Host can one-click apply to or request help with. | Turns grant discovery into a structured front door instead of scattered links and inboxes. |
 | Grant opportunity catalog | Tracks amount, deadline, geography, eligible entity, allowed uses, fiscal sponsor rules, required docs, reporting, and source URL. | Reduces applicant confusion and cuts incomplete applications before they reach agencies. |
 | Host grant readiness file | Stores event history, attendance, photos, venue, community need, budget, fiscal sponsor, insurance, business docs, tax/compliance status, and proof. | Makes applications cleaner, faster to review, and easier to audit. |
 | Eligibility matcher | Checks Host type, location, project category, dates, nonprofit/business status, fiscal sponsor, and budget against grant criteria. | Reduces obviously ineligible submissions and gives agencies cleaner applicant pools. |
@@ -196,7 +223,8 @@ reporting quality, and market-level attribution.
 | Step | Analog action | Human control | Product memory |
 |---|---|---|---|
 | Find | Monitor official city pages, grant portals, arts councils, foundations, BIDs, and public/private funds. | Operator verifies source, deadline, and status. | Grant opportunity catalog. |
-| Match | Score Hosts against eligibility and strategic fit. | Host confirms facts; fiscal sponsor confirms role where needed. | Host opportunity list. |
+| Match | Score Hosts against eligibility and strategic fit, then surface good fits in the geo-dashboard grant shelf. | Host confirms facts; fiscal sponsor confirms role where needed. | Host opportunity list and fit/no-go notes. |
+| One-click intent | Capture the Host's request to apply through the Analog application. | Host authorizes preparation and confirms missing fields. | application intent, deadline, owner, status. |
 | Prepare | Build application packet: narrative, budget, dates, proof, photos, audience, work samples, compliance docs. | Host approves final application materials. | Host grant readiness file. |
 | Submit | Submit, co-submit, or prepare for Host submission only with explicit permission. | Host authorization required; sensitive grants reviewed by specialist. | Submission log and status. |
 | Execute | If funded, structure allowed uses, tasks, vendors, receipts, proof, and reporting calendar. | Funder rules and Host approval govern spend. | Funded activation record. |
