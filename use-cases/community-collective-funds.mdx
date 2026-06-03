@@ -1,0 +1,172 @@
+---
+title: "Community Collective Funds"
+description: "How local businesses, civic-minded funders, and neighborhood leaders can pool capital through Analog to fund more gatherings and community activity near them."
+pageType: "Use-case page"
+---
+
+Community collective funds let a neighborhood or scene fund itself.
+
+Read this after [Cash Funding Playbooks](/strategy/cash-funding-playbooks). Cash Funding explains what money does for Hosts. This page explains how local capital can be pooled when the buyer is not one large corporate Sponsor.
+
+The idea:
+
+```text
+local leader creates a Sponsor account
+-> raises a pooled campaign budget from local businesses and aligned funders
+-> Hosts apply for small grants, services, or recurring support
+-> Analog governs spend and proof
+-> the neighborhood learns which gatherings deserve the next dollar
+```
+
+This is a way to reduce dependence on large corporate Sponsors. Small businesses, altruistic funders, local investors, landlords, civic operators, and savvy business owners can invest in more IRL around them because more gatherings can create more local trust, foot traffic, belonging, and business.
+
+The collective should not feel like a loose donation bucket. It should feel like a governed local fund.
+
+## Example: Greenpoint Collective
+
+Greenpoint Collective is a Sponsor-led neighborhood fund backed by 10 to 12 local businesses and aligned local funders.
+
+| Layer | Example |
+|---|---|
+| Fund leader | A respected local operator, business owner, BID-adjacent leader, community builder, or civic-minded founder creates the Sponsor account. |
+| Contributors | Cafes, bars, boutiques, gyms, studios, real estate owners, local service businesses, family offices, angel investors, and residents who want more IRL nearby. |
+| Campaign | `Greenpoint Collective Fund`: a pooled campaign for more gatherings, communities, local commerce, arts, wellness, and third-place activity in Greenpoint. |
+| Hosts | run clubs, supper clubs, artist collectives, chess nights, market operators, venue programmers, workshop Hosts, parent groups, cleanup crews, and dot connectors. |
+| Support | micro grants, starter series, venue support, photo/video, print, insurance help, QR assets, artist/vendor support, and proof kits. |
+| Proof | spend, receipts, attendance, Host notes, Venue mentions, local business participation, public-safe recap, and next-allocation recommendation. |
+
+The fund promise:
+
+```text
+Back more good things happening near you.
+Analog will route the money to trusted Hosts,
+govern how it is spent,
+and show what created real local value.
+```
+
+## Why It Matters
+
+| Problem | Collective fund answer |
+|---|---|
+| Local businesses benefit from more foot traffic and local culture but rarely have a clean way to fund it. | Pool small checks into one governed local campaign. |
+| Community Hosts need small amounts of money before they are credible to larger Sponsors. | Use micro grants and starter series to build proof and repeatability. |
+| Corporate Sponsors may not understand a neighborhood's trust graph. | Let local people fund local operators first, then use proof to attract larger Sponsors later. |
+| Altruistic funders want more community life but do not want to become grant administrators. | Analog handles campaign structure, applications, spend rules, proof, and reporting. |
+| Savvy operators know more IRL can create more commerce, retention, and local brand equity. | Analog makes the investment trackable enough to repeat. |
+
+Community collective funds are strongest when the fund has a clear place, trusted leader, simple eligibility, visible money, and a proof standard that local contributors can understand.
+
+## Product Shape
+
+The fund leader uses a Sponsor account because the collective is deploying capital.
+
+| Product object | Setup |
+|---|---|
+| Sponsor account | The fund leader or collective entity owns the Sponsor account. |
+| Contributor records | Local businesses or funders can be tracked as co-Sponsors, contributors, or source records. |
+| Payment link | Future production direction: the leader can send a payment link to funders. Current MVP should record external contribution context in files/docs until production payment rails exist. |
+| Campaign | One collective fund with budget, geography, eligibility, allowed spend, proof standard, and renewal rule. |
+| Event sets | Neighborhood lanes such as wellness, arts/culture, food, kids/family, public space, founder rooms, markets, or venue programming. |
+| Application portal | Hosts apply with event history, requested amount, use of funds, venue, proof plan, and local fit. |
+| Collab | Approved Host gets an allocation, spend rules, tasks, files/docs, and proof requirements. |
+| Spend rail | Spend card, vendor payment, invoice, or managed support depending on current product capability and risk. |
+| Proof packet | Funders receive a clear recap of what was funded, what happened, what proof cleared, and who deserves more. |
+
+Do not imply Analog currently has production pooled-wallet, donation, escrow, charitable receipting, or payment-link infrastructure unless those rails exist. The strategy direction is clear; the MVP approximation should stay honest.
+
+## Contribution Paths
+
+| Path | Use when | Analog posture |
+|---|---|---|
+| Co-Sponsor account | A local business wants its own Sponsor identity, contribution record, and possible campaign visibility. | Link the business as a contributor or co-Sponsor and show what its capital helped fund. |
+| Payment link | A funder wants a simple way to contribute without operating a full Sponsor account. | Future payment rail; until live, record external payment evidence and contribution terms in files/docs. |
+| Invoice or pledge | A larger local business, landlord, foundation, or family office needs formal payment docs. | Keep activation capital separate from Analog revenue and track contribution source, restrictions, and reporting needs. |
+| In-kind support | A business contributes space, food, printing, photography, insurance help, or services. | Track as in-kind support with value estimate, owner, proof, and allowed use. |
+| Matching commitment | A lead funder matches local contributions up to a cap. | Track cap, deadline, matching rule, and proof requirement before the campaign is marketed. |
+
+Every contribution should have a source, amount or value, restriction if any, and proof obligation. Otherwise the collective becomes hard to govern.
+
+## Fund Design
+
+| Design choice | Default |
+|---|---|
+| Geography | One neighborhood, corridor, district, or local scene. |
+| Fund goal | More trusted gatherings, stronger local commerce, safer third places, better culture, more community programming. |
+| Eligible Hosts | Local Hosts, community organizers, small businesses, venues, artists, clubs, markets, and operators with proof or trusted referrals. |
+| Allowed spend | Hospitality, supplies, space, print, accessibility, insurance, artist/vendor fees, photo/video, proof capture, local programming. |
+| Restricted spend | Anything outside the fund geography, unsafe activity, undisclosed political activity, unsupported cash withdrawals, unclear personal use, or spend with no proof path. |
+| Governance | Fund leader plus Analog review; optional local advisory group for larger funds. |
+| Proof | Receipts, attendance, photos where appropriate, Host note, Venue or local business mentions, community sentiment, next-dollar recommendation. |
+
+Keep the first collective simple. A fund with 10 contributors, 20 Host applications, and 5 funded activations is enough to learn.
+
+## First Campaign Shapes
+
+| Campaign shape | What it funds | Strong first proof |
+|---|---|---|
+| Neighborhood Micro Grant Pool | USD 100 to USD 500 grants for small blockers: coffee, supplies, print, space, accessibility, or proof capture. | Did small checks create more gatherings and better Host records? |
+| Starter Series Fund | USD 500 to USD 1.5k per month for repeat local rituals. | Did the Host repeat, grow trust, and produce sponsor-safe proof? |
+| Local Commerce Fund | Farmers markets, vendor nights, retail walks, neighborhood demos, maker markets. | Did local businesses and vendors benefit from the funded activity? |
+| Arts And Culture Fund | Open studios, performances, workshops, zine nights, gallery walks, public art support. | Did the fund create cultural participation without turning art into ad inventory? |
+| Third-Place Fund | Cafes, bookstores, gyms, studios, bars, coworking spaces, and community rooms that host recurring programming. | Did venue support create useful IRL capacity and mention assets? |
+
+## Proof For Contributors
+
+Contributors do not need a complicated dashboard at first. They need confidence that their money created visible local value.
+
+| Proof question | Evidence |
+|---|---|
+| What did the fund support? | funded Hosts, events, venues, vendors, and approved spend categories. |
+| Did money move cleanly? | allocations, receipts, invoices, vendor records, spend-card transactions, or managed-support records. |
+| Did the community show up? | attendance, RSVPs, QR claims, Host notes, repeat participation, photos where appropriate. |
+| Did local businesses benefit? | contributor mentions, Venue mentions, merchant participation, local commerce notes, foot-traffic proxies where available. |
+| Who deserves the next dollar? | renewal recommendation by Host, event type, venue, and fund lane. |
+
+The strongest recap sounds like:
+
+```text
+Greenpoint Collective funded 8 Hosts,
+supported 11 gatherings,
+helped 6 local venues or vendors,
+and identified 3 repeatable rituals worth a second allocation.
+```
+
+Do not overclaim direct sales lift unless the data exists. Early proof can be clean spend, participation, local legitimacy, sentiment, repeatability, and next-dollar confidence.
+
+## Why Analog Wins Here
+
+| Off Analog | On Analog |
+|---|---|
+| Local funders give money through Venmo, checks, DMs, favors, or one-off sponsorships. | Contributions route into a campaign with eligibility, allocations, proof, and renewal logic. |
+| Hosts get paid once but do not build a funding record. | Hosts earn Analog proof, credit, and future Sponsor eligibility. |
+| Businesses support local culture but cannot tell what worked. | Contributors see funded Hosts, spend proof, local signal, and next-dollar recommendations. |
+| The leader becomes a manual grant administrator. | Analog supplies the application, spend, proof, and reporting workflow. |
+| Corporate Sponsors are the only obvious source of funds. | Local capital proves the market first, then larger Sponsors can enter with better context. |
+
+This is also a MAC strategy. A collective fund can replace company-funded market activation with local capital while pulling Hosts, venues, small businesses, and proof into Analog.
+
+## Operating Rules
+
+- Do not market the fund as charity unless the legal and tax structure supports that.
+- Do not promise tax deductibility, donation receipts, escrow, payout timing, or charitable compliance without production rails and counsel review.
+- Do not let one contributor control Host selection if the fund is marketed as a community collective.
+- Do not hide contributor restrictions from Hosts.
+- Do not make Hosts perform like influencers for local businesses.
+- Do keep the fund geographically clear.
+- Do keep activation capital separate from Analog revenue.
+- Do use every application and funded event to improve the local Host graph.
+- Do turn the best proof into a larger Sponsor, public, or collective renewal path.
+
+## Use When / Avoid
+
+Use community collective funds when a neighborhood, corridor, campus, business district, or local scene has businesses and funders who benefit from more IRL but lacks a clean operating layer.
+
+Avoid this when the leader has no trust, contributors want hidden influence, the legal/tax posture is unclear, the fund has no proof plan, or the community would read the fund as a disguised ad network.
+
+The clean version:
+
+```text
+Local capital funds local gathering.
+Analog governs spend and proof.
+The neighborhood learns what deserves more support.
+```
