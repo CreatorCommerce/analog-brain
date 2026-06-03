@@ -1,6 +1,6 @@
 ---
 title: "Campaign Grassroots Activation Funds"
-description: "How political campaigns, advocacy organizations, and donor coalitions could use Analog to fund, govern, and measure grassroots events from state strategy down to local Hosts."
+description: "How political campaigns, advocacy organizations, and donor coalitions could use Analog to fund, govern, and measure grassroots events from national strategy down to ward, precinct, and Host-level activation."
 pageType: "Use-case page"
 ---
 
@@ -17,25 +17,39 @@ Own trusted local supply and regional intelligence
 -> learn which Hosts, cities, and communities deserve the next dollar
 ```
 
-Political action is a useful stress test because the operating map is explicit: state, county, city, event, organizer, spend, proof, and next allocation.
+Political action is a useful stress test because the operating map is explicit: national, state, district, county, city, ward, Host, spend, proof, and next allocation.
 
-## Use Case: State-To-Event Grassroots Fund
+## Market Use Case
 
 A political campaign, PAC, advocacy organization, ballot initiative, party committee, or donor coalition funds trusted local Hosts to run grassroots gatherings as part of a broader campaign.
 
 ```text
 Political Action Sponsor
--> state/county/city event sets
+-> national/state/district/county/city/ward event sets
 -> local Hosts and volunteer leaders
 -> governed field spend
 -> attendance, action, sentiment, and proof
 -> next allocation or reallocation
 ```
 
+The key use case is the political funding cascade:
+
+```text
+national
+-> state
+-> district
+-> county
+-> city
+-> ward/precinct/neighborhood
+-> Host event
+```
+
+Analog's role is not to make money move loosely through that chain. The role is to turn each layer into a controlled budget envelope with the right Sponsor authorization, allowed uses, local recipients, proof requirements, and reallocation logic.
+
 | Layer | What happens |
 |---|---|
 | Sponsor | Campaign, PAC, advocacy organization, party committee, ballot initiative, or donor coalition funds a grassroots activation program. |
-| Event sets | State, county, city, issue, language/community, audience, or field-office lane. |
+| Event sets | National, state, district, county, city, ward, precinct, issue, language/community, audience, or field-office lane. |
 | Hosts | County captains, volunteer leaders, community Hosts, campus organizers, local operators, advocacy partners, venue owners, and trusted dot connectors. |
 | Spend | Room minimums, food, coffee, printing, tabling supplies, accessibility, translation, local media, basic production, event supplies, and approved field costs. |
 | Community value | Supporters and reachable communities get useful rooms, local belonging, practical information, and easier participation. |
@@ -43,26 +57,89 @@ Political Action Sponsor
 
 All spend categories, data use, and Sponsor/Host relationships need counsel-reviewed campaign-finance, election-law, privacy, and platform-policy controls before production use.
 
+## Funding Cascade
+
+Political campaigns already think in nested geographies. Analog should turn that structure into product objects.
+
+| Political layer | Analog object | What it decides | What proof rolls up |
+|---|---|---|---|
+| National campaign, national committee, donor coalition, or major advocacy fund | Sponsor and top-level campaign | Which states, issues, populations, or races deserve field activation budget. | State and district performance, risk, spend pace, and allocation recommendation. |
+| State campaign, state party, statewide ballot program, or state advocacy team | Campaign segment or event set family | Which districts, counties, cities, coalitions, and field offices need local activation. | County/city traction, local Host quality, volunteer or action proof where permitted. |
+| District | Event set | Which congressional, state legislative, school board, judicial, or issue district needs targeted rooms. | District-level participation, field learning, and whether a district should receive more budget. |
+| County | Event set or collab cohort | Which county captains, operators, venue partners, or coalition groups can deploy budget responsibly. | County spend stewardship, attendance ranges, organizer reliability, local blockers. |
+| City | Event set, Host cohort, or city fund | Which city communities, venues, campuses, faith/civic groups, neighborhood leaders, and issue rooms matter. | City-level participation, sentiment, media or mention signal where appropriate, supply gaps. |
+| Ward, precinct, or neighborhood | Collab and Host event | Which trusted local Host should run the actual gathering or field-support moment. | Event completion, receipts, attendance/action proof where permitted, Host note, risk notes. |
+
+This is where Analog can be materially different from political consulting, ad buying, and spreadsheets. The product can show which local layer actually absorbed the dollar and which layer only looked good on a plan.
+
+## How Money Should Move
+
+Treat the cascade as governed allocation, not casual pass-through.
+
+| Step | Product rule |
+|---|---|
+| 1. Define legal Sponsor boundary | The campaign, committee, PAC, ballot entity, advocacy organization, party committee, or donor coalition is recorded with funding source, authorized users, compliance owner, and reporting boundary. |
+| 2. Create geography envelopes | Budget is split into state, district, county, city, ward, precinct, issue, or audience envelopes. |
+| 3. Define approved uses | Each envelope has allowed spend, restricted spend, timing, geography, recipient type, receipt rules, and proof expectations. |
+| 4. Approve local recipients | Hosts, vendors, venues, captains, or operators are approved into collabs before money is accessible. |
+| 5. Release scoped budget | Funds are deployed through event-scoped or lane-scoped controls, such as spend cards, invoices, reimbursements, or future treasury rails where appropriate. |
+| 6. Capture proof | Receipts, event completion, attendance range, action proof where permitted, Host notes, risk notes, and field learnings attach to the local event. |
+| 7. Roll up learning | Proof rolls up from event to ward, city, county, district, state, and national view. |
+| 8. Reallocate | Strong Hosts, cities, wards, and event types get more budget; weak or risky lanes pause. |
+
+The product question after every tranche:
+
+```text
+Which geography, Host, event type, and local operator deserves the next field dollar?
+```
+
+## Example Campaign Motions
+
+| Motion | Funding path | Best Host side | What Analog proves |
+|---|---|---|---|
+| Presidential or national field activation | National Sponsor -> state envelope -> district/county/city event sets -> ward Hosts | County captains, campus organizers, cultural Hosts, volunteer leaders, venue partners | Which states, districts, counties, cities, wards, and Hosts turn small field dollars into real participation. |
+| Statewide ballot initiative | Statewide ballot entity -> district/county lanes -> city and neighborhood explainers | Issue advocates, local nonprofits when allowed, neighborhood leaders, educators, community Hosts | Which local communities understand the issue, show up, and generate permissioned action. |
+| Congressional or legislative district program | District campaign -> county/city/precinct envelopes -> local field events | Precinct captains, local small business rooms, civic groups, house-party Hosts | Which precincts, cities, and event types deserve more organizer time and hospitality budget. |
+| County party or county coalition activation | State or county Sponsor -> county program -> city/ward Hosts | County committees, ward captains, venue owners, volunteer trainers | Which captains can responsibly activate volunteers and community rooms. |
+| Municipal or ward election | Local campaign -> ward/precinct envelopes -> block-level gatherings | Ward leaders, tenant associations, parent groups, neighborhood connectors, local venues | Which micro-geographies have trust, turnout energy, and clean spend stewardship. |
+| Advocacy or issue campaign | Advocacy Sponsor -> state/district/city issue lanes -> community events | Issue organizers, faith/civic leaders, cultural communities, campus groups | Which communities are receptive to the issue and which proof can stay useful without exposing sensitive affiliations. |
+
+## Marketplace Logic
+
+Political action should use the same marketplace doctrine as other Sponsor lanes, but with stricter controls.
+
+| Marketplace question | Political version |
+|---|---|
+| Right dollar | Is this micro budget, macro Host support, venue spend, print, hospitality, translation, accessibility, or field-supply money? |
+| Right Host | Which local operator has trust, execution ability, and permission to gather people around this objective? |
+| Right event type | House party, volunteer training, ballot explainer, town hall, campus gathering, coalition dinner, canvass launch, phone bank, or issue night. |
+| Right geography | State, district, county, city, ward, precinct, campus, neighborhood, or coalition. |
+| Right visibility | Private link-only for sensitive or controlled programs; ICP-targeted for specific Hosts, communities, or geographies; broadly marketed only when counsel, platform rules, and campaign strategy support it. |
+| Right benchmark | Compare against political action proof: compliant spend, local participation, permitted action proof, privacy-safe sentiment, and allocation learning. |
+
+AI can help rank event types, local Hosts, and geography envelopes by receptiveness, comparable proof, and risk. Human operators and campaign compliance owners still approve sensitive fit, messaging, spend, and data use.
+
 ## Product Setup
 
 | Product object | Setup |
 |---|---|
 | Sponsor | Political Action Sponsor with clear legal entity, authorized users, funding source, compliance owner, and reporting boundary. |
-| Campaign | Grassroots Activation Fund tied to geography, objective, approved uses, restricted uses, proof standard, and renewal rule. |
-| Event sets | State, county, city, field lane, issue lane, community lane, or event type. |
+| Campaign | Grassroots Activation Fund tied to geography, objective, approved uses, restricted uses, proof standard, visibility mode, and renewal rule. |
+| Event sets | National, state, district, county, city, ward, precinct, field lane, issue lane, community lane, or event type. |
 | Application portal | Local Hosts apply with activation idea, requested amount, expected attendees, compliance acknowledgements, proof surfaces, and support needs. |
 | Collabs | Approved Sponsor-Host relationships with scoped allocations and proof requirements. |
 | Spend card | Event-scoped or lane-scoped card with approved categories, expiration, receipts, and anomaly review. |
 | Files/docs | Legal/compliance notes, run-of-show, approved language, field checklist, venue docs, media consent, and proof packet. |
 | Proof packet | Receipts, attendance range, volunteer or action outputs where permitted, Host note, field photos when appropriate, risk notes, and local learning. |
-| Unlock | Fund the next event, increase a trusted Host's allocation, move budget to a stronger county/city lane, add services/tools, or stop the motion. |
+| Unlock | Fund the next event, increase a trusted Host's allocation, move budget to a stronger ward/city/county/district/state lane, add services/tools, or stop the motion. |
 
 ## What It Proves
 
 | Proof question | Why it matters |
 |---|---|
 | Can local Hosts run compliant grassroots events with small controlled budgets? | Campaigns usually struggle to know which distributed organizers can use money responsibly before the work happens. |
-| Can spend be optimized from state to county to city to event? | Analog can show where grassroots budget is creating participation instead of only tracking top-down media or staff spend. |
+| Can spend be optimized from national to state to district to county to city to ward to event? | Analog can show where grassroots budget is creating participation instead of only tracking top-down media or staff spend. |
+| Can upstream funders see the local use of dollars without overexposing people? | Political Sponsors need accountability, but raw voter, donor, volunteer, attendee, and affiliation data should remain protected. |
 | Which communities and leaders overlap with other lanes? | The same trusted organizers may matter to civic, SaaS/tech, eComm, and nonprofit Sponsors under different proof rules. |
 | Can proof stay useful without becoming invasive? | Political action requires especially careful privacy, consent, and sensitive-affiliation boundaries. |
 | Does a city department become easier to fund? | If a campaign needs deeper local infrastructure, it may justify a stronger Analog city layer, local operator bench, or grant pool. |
@@ -77,13 +154,41 @@ Political proof should be compliance-safe and purpose-limited. Early proof can i
 - attendance range or check-in count where permitted
 - volunteer shifts, signups, calls, doors, or issue actions only when lawfully captured and permissioned
 - Host note on local sentiment and blockers
-- county/city rollup for what should repeat
+- ward/city/county/district/state rollup for what should repeat
 - risk notes for privacy, safety, community fit, and Sponsor presence
 
 Do not sell or expose raw political-affiliation data as market intelligence. Do not make sensitive voter, donor, volunteer, or attendee data visible to Sponsors beyond the authorized campaign/program context.
+
+## Data Boundary
+
+Political data is sensitive even when the activation is public.
+
+| Data type | Default handling |
+|---|---|
+| Voter file, donor list, volunteer list, or political affiliation | Do not expose as general marketplace intelligence. Use only inside authorized campaign/program context. |
+| Attendance and check-in data | Capture only with clear permission, purpose, and retention rules. Share rollups by default. |
+| Action proof | Capture only when legally allowed and campaign-approved. Prefer counts, tiers, and completion status before raw person-level detail. |
+| Host and Venue mentions | Use only when authorized and campaign-relevant. Do not pressure Hosts or Venues into political speech. |
+| Field notes | Separate useful allocation learning from sensitive community context. Redact or summarize before Sponsor-wide sharing. |
 
 ## Use When / Avoid
 
 Use this motion when the Sponsor has a lawful field budget, a clear geography, trusted local Hosts, approved spending rules, and a proof standard that can inform the next allocation without exposing sensitive people or communities.
 
 Avoid it when the goal is opaque influence, off-platform money movement, evasion of campaign-finance rules, raw voter-data extraction, aggressive persuasion metrics inside sensitive communities, or political activity that would damage Analog's trust in a city market.
+
+## Operating Standard
+
+Analog should only pursue this lane if the program can be structured as:
+
+```text
+authorized Sponsor
+-> scoped geography envelope
+-> approved Host or vendor
+-> controlled spend
+-> permissioned proof
+-> privacy-safe rollup
+-> next-dollar decision
+```
+
+If any layer cannot be made legible, do not fund it through Analog.
