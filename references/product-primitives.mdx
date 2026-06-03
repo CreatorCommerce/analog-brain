@@ -29,7 +29,7 @@ Political action programs are another high-stakes version: campaign or advocacy 
 | Focus | Current product surface | What it helps Analog learn |
 |---|---|---|
 | Spend infrastructure <Tooltip headline="Spend infrastructure" tip="Budgets, allocations, funding state, spend cards, merchant/category controls, transactions, receipts, and proof that let Analog deploy approved capital responsibly."><span className="analog-help">?</span></Tooltip> | Campaign budgets, collab allocations, spend cards, card limits, allowed categories, transactions, available budget, funding state | Which budget, approval, control, receipt, and reporting conventions Sponsors trust enough to repeat. |
-| Marketplace enablement <Tooltip headline="Marketplace enablement" tip="The objects that make Sponsor demand and Host supply legible before a fully liquid marketplace exists."><span className="analog-help">?</span></Tooltip> | Event sets, application portals, campaign applications, Host opportunities, hosted event pages, Sponsor data, proof surfaces | Which Sponsor briefs, Host profiles, pricing models, proof standards, and renewal signals should become durable marketplace conventions. |
+| Marketplace enablement <Tooltip headline="Marketplace enablement" tip="The objects that make Sponsor demand, Host supply, campaign visibility, AI-assisted matching, and proof benchmarks legible before a fully liquid marketplace exists."><span className="analog-help">?</span></Tooltip> | Event sets, application portals, campaign applications, Host opportunities, hosted event pages, Sponsor data, proof surfaces, prospecting, catalog records | Which Sponsor briefs, Host profiles, campaign visibility modes, match reasons, pricing models, proof standards, and renewal signals should become durable marketplace conventions. |
 | Supply creation <Tooltip headline="Supply creation" tip="Using managed outreach, city leads, media, partner lists, and brand funds to create enough qualified Host-side options for the platform to observe."><span className="analog-help">?</span></Tooltip> | Managed outreach, event-set prospecting, files/docs, city lead workflows, applications, activation packages | How brand funds and programs pull new Hosts, spaces, connectors, and communities into a market the product can measure. |
 | Pitch tooling <Tooltip headline="Pitch tooling" tip="A free or low-friction Host and connector packaging surface that turns history, proof, reach, asks, and grant readiness into fundable supply."><span className="analog-help">?</span></Tooltip> | Host story, pitch page, Analog Doc, files, application portal, deep research doc, grant match notes | Which single-player tools help supply package itself before the marketplace is liquid. |
 | Community champion tools <Tooltip headline="Community champion tools" tip="Host-side tools and support that make Analog the best place to build sponsorship credit."><span className="analog-help">?</span></Tooltip> | Host story, hosted event page, files/docs, pitch page, application portal, asset requests, campaign content, proof templates | Which event history, QR, first-party data, mention assets, media, and support surfaces make Hosts better off inside Analog. |
@@ -72,6 +72,30 @@ Brand fund -> supply response -> governed spend -> proof -> selection rule
 | Selection rule improves <Tooltip headline="Selection rule" tip="The practical logic for deciding who receives the next dollar, who needs more support, and which motions should stop."><span className="analog-help">?</span></Tooltip> | Unlock decision, renewal packet, no-go note, product blocker, playbook | Which conventions should become defaults in the platform. |
 
 This is what "free market" should mean in the MVP: not an ungoverned open marketplace, but a constrained learning market where sponsors declare demand, supply has room to emerge or compete, and the product watches what deserves the next allocation.
+
+## Marketplace Matching Primitive
+
+The marketplace primitive is not a public directory. It is the AI-assisted, human-reviewed logic that pairs Sponsor dollars with receptive Hosts, communities, Venues, event types, and proof standards.
+
+Use [Marketplace Logic](/platform/marketplace) for the canonical Platform page.
+
+```text
+Sponsor category + goal + budget
+-> campaign visibility mode
+-> receptive Host/community/Venue/event-type match
+-> governed spend
+-> benchmarked proof
+-> next-dollar decision
+```
+
+| Primitive | Current approximation | Rule |
+|---|---|---|
+| Campaign visibility mode | Campaign copy, application portal setting, outreach plan, event set prospecting, media launch | Every campaign should know whether it is private link-only, broadly marketed, or ICP-targeted. |
+| Social receptiveness | Host notes, prior proof, content/mention history, Venue context, category fit, community exclusions, application answers | Match on whether the Sponsor is likely to be welcomed, not only whether the audience exists. |
+| Category benchmark | Sponsor perspective, event type, proof packet, spend and mention history, assisted summaries | Compare success to organizations of the same category before recommending renewal. |
+| Match reason | Deep research doc, Sponsor brief, event set note, catalog record, assisted summary | Explain why this Host, Venue, community, market, or event type fits the Sponsor's goal. |
+
+This is future product direction until explicit visibility modes, receptiveness labels, automated benchmark libraries, and recommendation reason codes exist in production. Current MVP work can approximate the loop with campaigns, event sets, application portals, prospecting, catalog records, files/docs, proof packets, and Sponsor data summaries.
 
 ## Cash Funding Ladder Primitive
 
@@ -145,6 +169,7 @@ Do not describe these as current MVP objects unless they map back to existing su
 | Risk register | Files/docs, tasks, proof QA notes, public reporting constraints, insurance docs, and anomaly notes |
 | Tranche gate | Unlock decision, renewal packet, proof standard, budget state, and Sponsor summary |
 | Public/nonprofit fund administration cockpit | Sponsor data snapshot, files/docs, applications, collabs, spend cards, proof packets, report drafts, anomaly notes, and tranche decisions |
+| Marketplace visibility and matching | Campaign visibility mode, event sets, application portal, Event Prospecting Catalog, prospecting, proof packet, and Sponsor data summary |
 
 Until production money movement exists, fund access means governed sponsor allocations, grants, event-scoped budgets, spend cards, or approved program budgets. It does not mean unrestricted wallet balances.
 

@@ -1,0 +1,203 @@
+---
+title: "Marketplace Logic"
+description: "How Analog should match Sponsor dollars to receptive Hosts, communities, Venues, event types, and campaign visibility modes."
+pageType: "Reference"
+---
+
+Marketplace does not mean a generic event directory.
+
+Analog's marketplace is the product layer that helps a Sponsor decide where its dollars should go, how visible the campaign should be, and what proof will show whether that spend worked for an organization of its category.
+
+Read this after [Platform Logic](/references/platform-logic). Platform Logic explains the current surfaces. This page explains the marketplace intelligence those surfaces should build toward.
+
+```text
+Sponsor goal + category + budget
+-> campaign visibility mode
+-> AI-assisted match to receptive Hosts, communities, Venues, and event types
+-> governed spend
+-> benchmarked proof
+-> next-dollar recommendation
+```
+
+The marketplace should pair the right dollar with the right local receptiveness.
+
+That means the product should not only ask, "Who can host this?"
+
+It should ask:
+
+```text
+Which community, Host, Venue, event type, market, and budget shape
+is most likely to receive this Sponsor well,
+based on comparable proof for organizations like this one?
+```
+
+## Marketplace Job
+
+| Marketplace job | What the platform should learn |
+|---|---|
+| Match dollars | Which budget size, spend category, and Sponsor role fits a Host, Venue, community, or event type. |
+| Read receptiveness | Whether the community is likely to welcome, ignore, reject, or amplify the Sponsor. |
+| Benchmark fit | How similar activations performed for Sponsors in the same lane, category, market, or proof need. |
+| Choose visibility | Whether the campaign should stay private, be broadly marketed, or be targeted to ideal ICP supply. |
+| Govern spend | Whether the selected Hosts can use money cleanly inside approved rules. |
+| Recommend next dollar | Which Host, Venue, city, event type, or campaign shape deserves renewal, expansion, or stop. |
+
+This is AI-assisted and human-reviewed. AI can rank, compare, explain, and flag. Operators and Sponsors still decide sensitive fit, budget, compliance, and community-trust calls.
+
+## Matching Inputs
+
+| Input | Examples | Why it matters |
+|---|---|---|
+| Sponsor category | eComm/CPG, SaaS/tech, civic/nonprofit, political action, local retail, hospitality, climate, wellness | Sets proof language, risk level, and category benchmarks. |
+| Sponsor goal | brand growth, mission growth, trial, account access, local legitimacy, vendor support, public-good participation | Determines what "worked" means. |
+| Budget shape | micro grant, macro grant, services/tools, Venue reward, market fund, public program, high-ticket allocation | Determines which Hosts can use the dollar well. |
+| Market and ICP | city, neighborhood, audience, account type, shopper type, community family, buyer persona | Narrows the supply layer to the Sponsor's best-fit surface. |
+| Host and community history | cadence, attendance, proof, prior Sponsors, social response, field notes, community norms | Shows whether the Host has trust and repeatability. |
+| Venue and location context | Venue mentions, space type, neighborhood, audience, accessibility, operational constraints | Shows whether the space is part of the value chain. |
+| Event type | dinner, run, workshop, farmers market, salon, class, cultural event, public-space activation | Helps benchmark against comparable moments. |
+| Receptiveness signals | sentiment, prior Sponsor fit, Host note, category adjacency, opt-ins, claims, organic mentions, exclusions | Predicts whether Sponsor participation will feel additive. |
+| Proof requirement | attendance, mentions, claims, sales-adjacent signal, qualified accounts, public-safe outcomes, compliance-safe field proof | Determines what must be captured before renewal. |
+
+The match is only as useful as the reason behind it. The platform should explain why a Host, Venue, event type, or market is recommended.
+
+## Social Receptiveness
+
+Social receptiveness is the product's read on whether a community is likely to welcome a Sponsor's presence.
+
+It should be derived from permissioned and provenance-aware signals, not from raw private surveillance.
+
+| Signal | What it can indicate |
+|---|---|
+| Host note | Whether the Sponsor would improve or weaken the room. |
+| Community cadence | Whether the gathering is real enough to support Sponsor dollars. |
+| Prior proof | Whether similar activations created attendance, claims, mentions, or sentiment. |
+| Host mentions | Whether the Host can create visible signal around the moment. |
+| Venue mentions | Whether the space amplifies the event or matters to the proof chain. |
+| Category adjacency | Whether the Sponsor's product, mission, or audience belongs near the ritual. |
+| Audience fit | Whether the community resembles the Sponsor's target customer, account, citizen, donor, volunteer, shopper, or partner. |
+| Exclusion rules | Which Sponsors, categories, or tactics the Host or community should not accept. |
+
+The platform should produce practical labels, not magic scores:
+
+| Label | Meaning |
+|---|---|
+| Strong native fit | Sponsor role is obvious and likely additive. |
+| Needs careful framing | Sponsor may fit if the offer is generous and the Host controls norms. |
+| Proof gap | The Host may be real, but Analog needs more attendance, mention, or field proof before funding. |
+| Venue-dependent | The space is central enough that Venue authorization or Venue reward may be needed. |
+| Risky fit | Sponsor category, ask, audience, or proof burden may harm trust. |
+
+## Category Benchmarks
+
+Sponsors should understand performance relative to organizations like them.
+
+The benchmark should be category-aware:
+
+| Sponsor category | Benchmark examples |
+|---|---|
+| eComm/CPG | product trial per attendee, claims, shopper sentiment, category mentions, repeat participation, content quality, sales-adjacent lift where available |
+| SaaS/Tech | qualified attendees, account fit, follow-up meetings, partner/customer learning, adoption moments, strategic room quality |
+| Civic/Public-Non-profit | access created, eligible participation, local legitimacy, public-safe reporting, fraud/waste/abuse cleanliness, mission fit |
+| Political Action | compliant spend, field participation where permitted, volunteer/action proof, geography learning, privacy-safe local sentiment |
+| Local retail/hospitality | neighborhood foot traffic proxies, repeat local engagement, merchant fit, Venue mentions, local sentiment |
+
+A strong marketplace proof sentence should sound like:
+
+```text
+For CPG Sponsors in neighborhood food markets,
+this activation performed above benchmark on vendor participation,
+shopper claims, and positive Host/Venue mentions.
+```
+
+or:
+
+```text
+For SaaS Sponsors targeting founder operators,
+this dinner produced stronger-than-benchmark account fit
+and lower Sponsor labor than a self-run event.
+```
+
+Do not overclaim direct revenue when the proof is not there. The first benchmark can be confidence, fit, spend stewardship, social receptiveness, and renewal readiness.
+
+## Campaign Visibility Modes
+
+Every Sponsor campaign should choose a visibility mode before the ask enters the market.
+
+| Mode | Use when | Product behavior | Risk to control |
+|---|---|---|---|
+| Private link-only | Sponsor has known Hosts, sensitive budget, private audience, compliance concern, or early test. | Application or campaign link works only for invited recipients or anyone with the link. Supply comes from direct invite, warm referrals, or one-to-one prospecting. | Do not imply public availability. Track source and invitation context. |
+| Broadly marketed | Sponsor wants a public fund, raffle, grant, or city/category signal that pulls supply forward. | Campaign can be promoted through media, newsletters, regional dashboards, partners, owned IRL, and shareable fund pages. | Keep eligibility, budget range, allowed spend, and proof rules clear. Avoid "free money" without constraints. |
+| ICP-targeted | Sponsor wants the ideal Host, community, Venue, or audience profile, not the whole market. | AI and operators route the campaign to matching catalog records, event sets, city lead lists, lookalike Hosts, partner audiences, and prospecting lanes. | Do not over-narrow too early. Explain why each target matches the Sponsor's category benchmark. |
+
+Visibility can change over time.
+
+```text
+private pilot
+-> targeted ICP expansion
+-> broadly marketed fund
+-> renewal against benchmarked proof
+```
+
+or:
+
+```text
+broad fund drop
+-> identify strongest supply pockets
+-> target the next allocation to best-fit Hosts and Venues
+```
+
+## Marketplace Surfaces
+
+| Surface | Marketplace role |
+|---|---|
+| Campaign | Holds Sponsor goal, category, budget, visibility mode, market persona, proof standard, and renewal rule. |
+| Event set | Splits demand by market, ICP, event type, proof need, or supply lane. |
+| Application portal | Lets invited or public supply apply with structured fields. |
+| Event Prospecting Catalog | Feeds candidate Hosts, communities, Venues, and event types into marketplace matching. |
+| Sponsor Outreach | Runs targeted prospecting when the right supply exists off-platform. |
+| Regional Host dashboard | Shows local Hosts the funds, grants, opportunities, and proof prompts relevant to their market. |
+| Proof And Spend | Measures whether the match worked and what deserves the next dollar. |
+| Mention assets | Turn Host and Venue social signal into benchmarkable marketplace proof. |
+
+## Matching Loop
+
+| Step | What happens | Output |
+|---|---|---|
+| 1. Define Sponsor thesis | Sponsor category, goal, budget, market, audience, acceptable presence, and proof need are captured. | Campaign and visibility mode. |
+| 2. Build demand lanes | Event sets translate the thesis into markets, ICPs, event types, or Host categories. | Searchable/prospectable lanes. |
+| 3. Score receptiveness | AI and operators compare Host, community, Venue, event type, and category signals. | Ranked candidates with reasons and risks. |
+| 4. Route the ask | Campaign is private link-only, broadly marketed, or ICP-targeted based on strategy. | Applications, invites, prospecting replies, referrals. |
+| 5. Fund and govern | Approved Hosts receive controlled allocations, spend rules, tasks, and proof requirements. | Collabs, spend cards, files, tasks. |
+| 6. Benchmark proof | Spend, attendance, mentions, claims, Host/Venue ratios, sentiment, and outcomes are compared to category expectations. | Sponsor-ready proof summary. |
+| 7. Recommend next dollar | Analog recommends renew, increase, reallocate, target more supply, broaden visibility, or stop. | Renewal or unlock decision. |
+
+## Product Boundary
+
+This is the direction of the marketplace layer. It should not be described as fully automated current behavior.
+
+Current MVP approximations:
+
+- campaign mission, market persona, event sets, and application portals
+- managed outreach and event set prospecting
+- Event Prospecting Catalog records
+- Host opportunities, hosted event pages, files/docs, and proof packets
+- Sponsor data summaries, campaign content, story mentions, and spend transactions
+
+Future product work should add:
+
+- explicit campaign visibility mode
+- AI-assisted Host, Venue, community, and event-type recommendations with reason codes
+- category-specific benchmark libraries
+- social receptiveness labels
+- audience-fit and lookalike event recommendations
+- clearer Sponsor controls for private, broadly marketed, and ICP-targeted campaigns
+- renewal recommendations that compare each activation to the Sponsor's category and market
+
+The standard:
+
+```text
+Do not sell generic inventory.
+Route Sponsor dollars toward receptive communities,
+prove the match,
+and make the next allocation smarter.
+```

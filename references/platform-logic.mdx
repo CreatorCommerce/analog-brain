@@ -6,7 +6,7 @@ pageType: "Reference"
 
 Use this page when writing how-to docs that tell operators where work happens in the current platform.
 
-Read this after [Product Primitives](/references/product-primitives). Product Primitives defines the objects. This page explains where they show up in the MVP.
+Read this after [Product Primitives](/references/product-primitives). Product Primitives defines the objects. This page explains where they show up in the MVP. Use [Marketplace Logic](/platform/marketplace) for campaign visibility, AI-assisted matching, and category benchmark doctrine.
 
 ## MVP Platform Thesis
 
@@ -31,6 +31,7 @@ For political action funding, the platform direction is compliance-safe field fu
 | Spend infra <Tooltip headline="Spend infra" tip="The campaign, allocation, card, category, transaction, and funding-state layer that makes sponsor capital controllable and auditable."><span className="analog-help">?</span></Tooltip> | Campaign budgets, collabs, host cards, spend limits, transactions, funding state | What controls sponsors need before they trust field spend. |
 | Demand lanes <Tooltip headline="Demand lanes" tip="Sponsor briefs expressed as event sets, market personas, funds, programs, or prospecting lanes."><span className="analog-help">?</span></Tooltip> | Campaign mission, market persona, event sets, required todos, assets, application links | Which asks are specific enough to pull quality supply. |
 | Supply markets <Tooltip headline="Supply markets" tip="Host-side options created by applications, prospecting, city leads, media, partner lists, and managed GTM."><span className="analog-help">?</span></Tooltip> | Application inbox, host opportunities, hosted event pages, prospecting, pitch pages | Which hosts, spaces, and connectors become sponsor-ready fastest. |
+| Marketplace matching <Tooltip headline="Marketplace matching" tip="AI-assisted and human-reviewed pairing of Sponsor dollars to receptive Hosts, communities, Venues, event types, and proof benchmarks."><span className="analog-help">?</span></Tooltip> | Campaign visibility mode, event sets, Event Prospecting Catalog, application portal, prospecting, Sponsor data, proof summaries | Which dollars should be private, broadly marketed, or ICP-targeted, and which matches deserve renewal. |
 | Pitch/package tools <Tooltip headline="Pitch/package tools" tip="Host and connector surfaces that turn event history, proof, reach, and funding asks into Sponsor-ready supply."><span className="analog-help">?</span></Tooltip> | Host story, pitch pages, Analog Docs, files, application answers | Which free or single-player tools create qualified supply before campaigns are liquid. |
 | Services/tools <Tooltip headline="Services/tools" tip="Insurance, documents, print, vendors, local designers, rentals, and proof kits that make cash funding easier to use."><span className="analog-help">?</span></Tooltip> | Files, docs, required todos, asset requests, shipment logs, vendor notes, proof templates | Which blockers should become product workflows, partner workflows, or managed support. |
 | Sponsorship governance <Tooltip headline="Sponsorship governance" tip="High-ticket sponsorship controls beyond cards: investment memos, allocation plans, contracts, invoices, risk registers, proof gates, and renewal recommendations."><span className="analog-help">?</span></Tooltip> | Files/docs, Sponsor data, campaigns, event sets, tasks, proof, approval notes, assisted summaries | Which controls make six- or seven-figure sponsorships safe enough to deploy, renew, or reallocate. |
@@ -118,6 +119,27 @@ This does not mean making every sponsor budget public or promising funding to an
 | Repeat campaign sharing | Renewal packet, unlock recommendation, sponsor data, proof recap | The sponsor can share a sharper next campaign because the platform learned who responded and what worked. |
 
 The "windfall" is the sponsor budget that is already looking for trusted IRL channels but cannot move because the supply, governance, and proof layer is missing. Analog's job is to make that capital actionable without making it careless.
+
+## Campaign Visibility Modes
+
+A campaign should choose its marketplace visibility before it starts routing supply.
+
+Use [Marketplace Logic](/platform/marketplace) for the full doctrine.
+
+| Visibility mode | Use when | Current MVP approximation |
+|---|---|---|
+| Private link-only | The Sponsor has known Hosts, a sensitive brief, a private audience, or an early test. | Application portal link, direct invite, files/docs, warm outreach, invited applications. |
+| Broadly marketed | The Sponsor wants a public fund, grant, raffle, or city/category signal that pulls supply forward. | Campaign copy, public application portal, media CTA, regional dashboard placement, newsletter/social/owned IRL distribution. |
+| ICP-targeted | The Sponsor wants the ideal Host, Venue, community, or audience profile rather than the whole market. | Event set prospecting, managed outreach, Event Prospecting Catalog, city lead lists, partner lists, lookalike event recommendations. |
+
+The product should make the visibility choice practical:
+
+```text
+Who can see this campaign?
+Who should be invited?
+What kind of supply is ideal?
+What proof benchmark will decide renewal?
+```
 
 ## Mention Coverage Upsell
 
