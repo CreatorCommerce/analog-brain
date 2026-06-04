@@ -1,0 +1,122 @@
+---
+title: "City Pack Standard"
+description: "The standard format for Market Agent city packs so Analog can maintain NYC, SF, Miami, and future market context without creating one agent per city."
+pageType: "Reference"
+---
+
+Analog should use one Market Agent with city packs.
+
+Do not create one agent per city by default. A city pack gives the Market Agent scoped local context without multiplying repos, memories, or operating rules.
+
+## What A City Pack Is
+
+A city pack is a reviewed market artifact for one city or metro.
+
+It should help agents answer:
+
+- what is happening here?
+- which communities, venues, connectors, and operators matter?
+- what Sponsor categories fit the market?
+- what grants, funds, or public programs may matter?
+- what local risks, exclusions, or trust constraints matter?
+- what should Analog test first?
+
+## Standard Shape
+
+```yaml
+city:
+metro:
+status: proposed | active | stale | retired
+owner:
+last_reviewed:
+confidence: low | medium | high
+source_summary:
+primary_sponsor_lanes:
+host_supply_pockets:
+connector_map:
+venue_and_space_patterns:
+funding_and_grant_context:
+market_risks:
+no_go_rules:
+first_tests:
+open_questions:
+stale_claims:
+linked_sources:
+linked_product_records:
+```
+
+## Sections
+
+| Section | What it should contain |
+|---|---|
+| Market snapshot | Current read on the local IRL, community, sponsorship, and funding environment. |
+| Sponsor lanes | eComm, SaaS/tech, civic/nonprofit, political action, or other Sponsor demand that fits the city. |
+| Host supply pockets | Communities, operators, spaces, event types, and recurring rituals that could become fundable. |
+| Connector map | People or organizations that create access, intros, field judgment, or cultural translation. |
+| Venue and space patterns | Places that shape what is possible, expensive, restricted, or culturally native. |
+| Grants and funds | Public, nonprofit, foundation, BID, university, hospital, or private funding signals. |
+| Proof standards | What proof a Sponsor, public funder, or internal operator would need to renew. |
+| Risks and no-go rules | Brand-safety, community trust, compliance, public sensitivity, or operational blockers. |
+| First tests | Three to five practical pilots or research motions. |
+| Sources | Links, source notes, product records, field notes, and confidence labels. |
+
+## City Pack Lifecycle
+
+| Status | Meaning |
+|---|---|
+| Proposed | Useful hypothesis, not enough reviewed evidence yet. |
+| Active | Reviewed enough to guide operators and agents. |
+| Stale | Important claims need refresh before use. |
+| Retired | Replaced by a new pack or no longer relevant. |
+
+Mark claims stale when:
+
+- a source is older than the market's review rhythm
+- a grant or program deadline passed
+- the local operator says the context changed
+- a product pilot contradicts the pack
+- a Sponsor or Host trust concern appears
+
+## Market Agent Use
+
+The Market Agent should:
+
+- retrieve the relevant city pack before generic market advice
+- label confidence and stale claims
+- separate public-safe context from partner-private context
+- suggest updates when new field notes or product usage contradict the pack
+- produce short snapshots for GTM, product, finance, and people planning
+
+It should not:
+
+- pretend public signals are verified truth
+- treat one field note as city doctrine
+- expose raw private product data to broad market context
+- create city agents without operational volume
+
+## When A City Becomes More Than A Pack
+
+Consider a dedicated market repo or service only when the city has:
+
+- a named owner or city lead
+- recurring data ingestion
+- active Sponsor or fund demand
+- repeated field notes and product records
+- city-specific operational playbooks
+- scheduled refresh or API needs
+- enough volume that one city pack is no longer readable
+
+Until then, use one Market Agent and one city pack.
+
+## First Packs
+
+Start with:
+
+| City | Why |
+|---|---|
+| NYC | First operating proof and dense supply/media market. |
+| SF | Transfer market with tech, founder, SaaS, and operator-room relevance. |
+| Miami | Add when Sponsor demand, public funding, or field access creates a concrete test. |
+
+The pack is not the market. It is the working folder the Market Agent gets before it helps Analog make a local judgment.
+
