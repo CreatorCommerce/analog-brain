@@ -152,6 +152,22 @@
             ]
           }
         ]
+      },
+      {
+        "tab": "APIs",
+        "icon": "square-terminal",
+        "menu": [
+          {
+            "item": "Blog API",
+            "icon": "newspaper",
+            "groups": [
+              {
+                "group": "Blog API",
+                "openapi": "api-reference/blog-content.openapi.yaml"
+              }
+            ]
+          }
+        ]
       }
     ]
   }
