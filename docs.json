@@ -59,6 +59,29 @@
         ]
       },
       {
+        "tab": "AI OS",
+        "groups": [
+          {
+            "group": "OPERATING SYSTEM",
+            "pages": [
+              "agents/ai-operating-system",
+              "agents/operational-agent-judgment",
+              "agents/agent-registry",
+              "agents/context-packets-and-memory",
+              "agents/repo-boundary-and-github-rules"
+            ]
+          },
+          {
+            "group": "SKILLS & MARKETS",
+            "pages": [
+              "skills/skill-registry",
+              "skills/operator-skill-library",
+              "market/city-pack-standard"
+            ]
+          }
+        ]
+      },
+      {
         "tab": "Market Education",
         "groups": [
           {

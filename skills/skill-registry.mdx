@@ -1,0 +1,134 @@
+---
+title: "Skill Registry"
+description: "How Analog Brain stores shared skills so agents can reuse playbooks without duplicating memory or inventing new workflows."
+pageType: "Reference"
+---
+
+Skills are reusable operating playbooks.
+
+They teach an agent how to do a repeated job. They do not own business memory.
+
+## What Belongs In A Skill
+
+A skill should include:
+
+- when to use it
+- what inputs it needs
+- what output it should produce
+- what source docs or artifacts it should read
+- what tools it may use
+- what approval gates apply
+- what tests or example prompts prove it works
+
+A skill should not include:
+
+- private customer data
+- full product records
+- raw finance data
+- sensitive people data
+- stale one-off project context
+- hidden instructions that would surprise the user
+
+## Skill Manifest
+
+Use this shape for shared skills:
+
+```yaml
+id:
+name:
+status: proposed | active | retired
+owner:
+version:
+description:
+use_when:
+inputs:
+outputs:
+source_docs:
+allowed_tools:
+risk_level: low | medium | high
+approval_gates:
+agent_refs:
+eval_prompts:
+last_reviewed:
+```
+
+## Storage
+
+Use two forms:
+
+| Form | Purpose |
+|---|---|
+| Mintlify pages | Explain the skill library and how skills should be used by operators. |
+| Skill packages | Machine-readable agent instructions, usually `skills/<skill-id>/SKILL.md`. |
+
+The first packaged skill is:
+
+```text
+skills/operational-agent-judgment/SKILL.md
+```
+
+## Skill Lifecycle
+
+| Stage | Meaning |
+|---|---|
+| Proposed | Useful idea, not yet proven by repeated use. |
+| Active | Used by one or more agents and has clear outputs. |
+| Retired | Replaced, merged, or no longer safe. |
+
+Promote a skill from proposed to active when it has:
+
+- a clear trigger
+- a repeatable output
+- an owner
+- at least two realistic test prompts
+- no obvious overlap with an existing skill
+
+## When To Create A Skill
+
+Create a skill when:
+
+- the same workflow repeats
+- operators keep asking the same kind of question
+- an agent needs a consistent output
+- a doc is too passive and the work needs a procedure
+- a workflow spans agents but does not need its own memory or service
+
+Improve an existing skill when:
+
+- the new workflow is a variant of an old workflow
+- the output is similar
+- the same owner would maintain it
+- the same tests would catch quality problems
+
+## When Not To Create A Skill
+
+Do not create a skill when:
+
+- a one-off doc update is enough
+- the workflow requires private runtime data and permissions
+- it needs scheduled execution
+- it needs secrets or API credentials
+- it should be a product feature
+- it belongs inside a repo's `AGENTS.md`
+
+## Evaluation
+
+Every active skill should eventually have test prompts.
+
+Use simple tests first:
+
+| Test type | What it checks |
+|---|---|
+| Trigger test | Does the agent recognize when to use the skill? |
+| Output test | Does the response use the expected format? |
+| Boundary test | Does it avoid creating repos, services, or memories too early? |
+| Safety test | Does it preserve approval gates and sensitive data rules? |
+
+For subjective skills, keep human review. Do not overcomplicate early evals.
+
+## Shared Skill Rule
+
+Agents import skills. They do not copy them.
+
+If an agent needs a local variation, update the shared skill or create a clearly named variant with a reason.
+

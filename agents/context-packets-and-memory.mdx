@@ -1,0 +1,146 @@
+---
+title: "Context Packets And Memory"
+description: "How Analog agents should assemble scoped context, use memory, protect sensitive data, and keep canonical records as the source of truth."
+pageType: "Reference"
+---
+
+Analog agents should not read the whole company.
+
+Each request gets the smallest useful folder for the job.
+
+```text
+Product records are truth.
+Memory is a small sourced note.
+Context is the folder an agent gets for one task.
+```
+
+## Context Packet
+
+A context packet is the bounded set of facts an agent receives for one task.
+
+Use this shape as the standard:
+
+```ts
+type AiContextPacket = {
+  actor: {
+    userId?: string;
+    organizationId?: string;
+    activeRole?: "sponsor" | "host" | "operator" | "admin";
+    permissions: string[];
+  };
+  task: {
+    goal: string;
+    surface: "product" | "operator" | "market" | "gtm" | "finance" | "people" | "brain";
+    currentEntityIds: string[];
+  };
+  canonicalRecords: Array<{
+    type: string;
+    id: string;
+    summary: string;
+    source: string;
+  }>;
+  memories: Array<{
+    scope: "user" | "organization" | "agent" | "market" | "repo";
+    text: string;
+    sourceId?: string;
+    sensitivity: "public" | "internal" | "partner_private" | "sensitive";
+  }>;
+  artifacts: Array<{
+    id: string;
+    title: string;
+    type: string;
+    visibility: string;
+    summary?: string;
+  }>;
+  marketContext?: {
+    city?: string;
+    snapshotId?: string;
+    confidence?: "low" | "medium" | "high";
+    staleClaims?: string[];
+  };
+  allowedActions: string[];
+  approvalGates: string[];
+};
+```
+
+The exact product implementation may differ. The rule should not.
+
+## Memory Scopes
+
+| Scope | Stores | Can be used by |
+|---|---|---|
+| User memory | Individual preferences, working style, repeated personal goals. | Assistants acting for that user. |
+| Organization memory | Durable org preferences, brand voice, workflow defaults, explicit exclusions. | Assistants acting inside that org. |
+| Agent memory | Agent-specific operating notes, repeated decisions, eval lessons. | That agent and Brain Agent when routing. |
+| Market memory | Sourced city, category, venue, community, and public-fund lessons. | Market Agent and agents with a market need. |
+| Repo memory | Repo purpose, hard rules, architecture, known gotchas. | Agents working in that repo. |
+
+## Canonical Sources
+
+Memory never replaces source systems.
+
+| Domain | Canonical source |
+|---|---|
+| Product behavior | Product repo, product database, product docs, and product UI. |
+| Sponsor/Host records | Product records and permissioned product APIs. |
+| Market facts | Sourceable public records, partner-approved data, reviewed city packs. |
+| GTM claims | Approved docs, public-safe product learning, reviewed case studies. |
+| Finance | Finance system, approved pricing docs, burn summaries, revenue model artifacts. |
+| People and capacity | Approved people planning docs and explicit operator input. |
+| Skills | Skill registry and version history. |
+
+## Sensitivity Labels
+
+Every memory and retrieved artifact should carry a sensitivity label.
+
+| Label | Meaning | Rule |
+|---|---|---|
+| `public` | Safe for public docs, pages, and broad outputs. | Can be used broadly. |
+| `internal` | Analog internal context. | Do not publish externally without review. |
+| `partner_private` | Context shared within a Sponsor, Host, partner, or collab relationship. | Keep scoped to that relationship. |
+| `sensitive` | Financial, legal, health, political, tax, identity, people, or high-risk context. | Use only when necessary and approval-gated. |
+
+## Retrieval Order
+
+For most agent work, retrieve in this order:
+
+1. Source order and repo instructions.
+2. Current user request.
+3. Canonical records for the task.
+4. Relevant docs or artifacts.
+5. Relevant memory, filtered by scope and sensitivity.
+6. Relevant skills.
+7. Allowed actions and approval gates.
+
+Do not retrieve memory first. Memory helps after the source-of-truth context is clear.
+
+## Human Approval
+
+Agents can recommend, draft, rank, summarize, and prepare.
+
+Require human approval before:
+
+- moving money
+- publishing public content
+- sending external outreach
+- changing pricing
+- making legal, tax, insurance, or compliance claims
+- changing production permissions
+- sharing private product data
+- creating a new GitHub repo
+- turning AI output into canonical product or finance data
+
+## Anti-Patterns
+
+Avoid:
+
+- one giant company memory
+- dumping entire product snapshots into prompts
+- treating chat history as long-term memory
+- creating separate memories for every tiny workflow
+- copying private product facts into GTM context
+- letting recursive docs overwrite pinned user sections
+- storing full campaign records as memory
+
+The smallest useful context packet is the system's default trust move.
+
