@@ -1,0 +1,711 @@
+openapi: 3.1.0
+info:
+  title: Analog Blog Content API
+  version: 0.1.0
+  summary: CRUD endpoints for Analog Blueprint posts and product releases.
+  description: |
+    The Blog Content API manages Markdown-backed content for The Blueprint and Analog product release pages.
+
+    Blog posts are available through the general `/blog/posts` resource. Product releases are available as
+    first-class release resources through `/blog/releases`; release routes always create and mutate records with
+    `type: release`.
+
+    Every `/blog/*` API route is machine-authenticated. Send either `x-analog-blog-token` with the backend
+    `ANALOG_BLOG_API_TOKEN`, or `x-analog-admin-token` with the backend `ANALOG_ADMIN_API_TOKEN`. WorkOS
+    bearer credentials and local dev-user headers do not authorize these routes.
+  license:
+    name: Proprietary
+    identifier: LicenseRef-Proprietary
+servers:
+  - url: https://api.analog.host
+    description: Production API
+  - url: http://127.0.0.1:8080
+    description: Local development API
+tags:
+  - name: Blog Posts
+    description: General Markdown content for The Blueprint, pages, newsletters, and release records.
+  - name: Product Releases
+    description: "Release-specific CRUD routes that constrain content records to `type: release`."
+security:
+  - BlogTokenAuth: []
+  - AdminTokenAuth: []
+paths:
+  /blog/posts:
+    get:
+      tags:
+        - Blog Posts
+      operationId: listBlogPosts
+      summary: List blog content records
+      description: |
+        Returns published records by default for authenticated blog editors. Use `status=draft`,
+        `status=archived`, or `status=all` with the same token to inspect non-public records.
+      parameters:
+        - $ref: "#/components/parameters/StatusQuery"
+        - $ref: "#/components/parameters/TagQuery"
+        - $ref: "#/components/parameters/TypeQuery"
+      responses:
+        "200":
+          description: Blog content records.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BlogContentListResponse"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    post:
+      tags:
+        - Blog Posts
+      operationId: createBlogPost
+      summary: Create a blog content record
+      description: Creates a Markdown-backed content record. Editors must provide a `type`.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateBlogPostRequest"
+      responses:
+        "200":
+          description: Created content record.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BlogContentDataResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "409":
+          $ref: "#/components/responses/Conflict"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+  /blog/posts/{postSlug}:
+    get:
+      tags:
+        - Blog Posts
+      operationId: getBlogPost
+      summary: Get a blog content record
+      description: |
+        Returns a single published record by default for authenticated blog editors. Use `status=draft`,
+        `status=archived`, or `status=all` with the same token to read non-public records.
+      parameters:
+        - $ref: "#/components/parameters/PostSlugPath"
+        - $ref: "#/components/parameters/StatusQuery"
+      responses:
+        "200":
+          description: Blog content record.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BlogContentDataResponse"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    patch:
+      tags:
+        - Blog Posts
+      operationId: updateBlogPost
+      summary: Update a blog content record
+      description: Updates mutable fields on an existing content record. Use the release-specific route for release-only editing.
+      parameters:
+        - $ref: "#/components/parameters/PostSlugPath"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UpdateBlogPostRequest"
+      responses:
+        "200":
+          description: Updated content record.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BlogContentDataResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "409":
+          $ref: "#/components/responses/Conflict"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    delete:
+      tags:
+        - Blog Posts
+      operationId: deleteBlogPost
+      summary: Delete a blog content record
+      description: Permanently deletes the content record and returns the deleted record.
+      parameters:
+        - $ref: "#/components/parameters/PostSlugPath"
+      responses:
+        "200":
+          description: Deleted content record.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BlogContentDataResponse"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+  /blog/releases:
+    get:
+      tags:
+        - Product Releases
+      operationId: listProductReleases
+      summary: List product releases
+      description: |
+        Returns published release records by default for authenticated blog editors. Use `status=draft`,
+        `status=archived`, or `status=all` with the same token to inspect non-public releases.
+      parameters:
+        - $ref: "#/components/parameters/StatusQuery"
+        - $ref: "#/components/parameters/TagQuery"
+      responses:
+        "200":
+          description: Product release records.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProductReleaseListResponse"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    post:
+      tags:
+        - Product Releases
+      operationId: createProductRelease
+      summary: Create a product release
+      description: "Creates a Markdown-backed release record. The API stores the record with `type: release`."
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateProductReleaseRequest"
+      responses:
+        "200":
+          description: Created product release.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProductReleaseDataResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "409":
+          $ref: "#/components/responses/Conflict"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+  /blog/releases/{releaseSlug}:
+    get:
+      tags:
+        - Product Releases
+      operationId: getProductRelease
+      summary: Get a product release
+      description: |
+        Returns a release record by slug for authenticated blog editors. Non-release records at the same slug
+        return `404`.
+      parameters:
+        - $ref: "#/components/parameters/ReleaseSlugPath"
+        - $ref: "#/components/parameters/StatusQuery"
+      responses:
+        "200":
+          description: Product release record.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProductReleaseDataResponse"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    patch:
+      tags:
+        - Product Releases
+      operationId: updateProductRelease
+      summary: Update a product release
+      description: Updates mutable fields on an existing release. The route will not mutate non-release records.
+      parameters:
+        - $ref: "#/components/parameters/ReleaseSlugPath"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UpdateProductReleaseRequest"
+      responses:
+        "200":
+          description: Updated product release.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProductReleaseDataResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "409":
+          $ref: "#/components/responses/Conflict"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+    delete:
+      tags:
+        - Product Releases
+      operationId: deleteProductRelease
+      summary: Delete a product release
+      description: Permanently deletes a release and returns the deleted record. Non-release records are not deleted.
+      parameters:
+        - $ref: "#/components/parameters/ReleaseSlugPath"
+      responses:
+        "200":
+          description: Deleted product release.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProductReleaseDataResponse"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+components:
+  securitySchemes:
+    BlogTokenAuth:
+      type: apiKey
+      in: header
+      name: x-analog-blog-token
+      description: Blog-scoped machine token matching backend `ANALOG_BLOG_API_TOKEN`.
+    AdminTokenAuth:
+      type: apiKey
+      in: header
+      name: x-analog-admin-token
+      description: Admin machine token matching backend `ANALOG_ADMIN_API_TOKEN`; accepted on blog routes as an override.
+  parameters:
+    PostSlugPath:
+      name: postSlug
+      in: path
+      required: true
+      description: Stable slug for the blog content record.
+      schema:
+        type: string
+        minLength: 1
+    ReleaseSlugPath:
+      name: releaseSlug
+      in: path
+      required: true
+      description: Stable slug for the product release record.
+      schema:
+        type: string
+        minLength: 1
+    StatusQuery:
+      name: status
+      in: query
+      required: false
+      description: Defaults to published. Use draft, archived, or all to select non-public records with the same blog/admin token.
+      schema:
+        $ref: "#/components/schemas/BlogContentListStatus"
+    TagQuery:
+      name: tag
+      in: query
+      required: false
+      description: Filter records that include this tag.
+      schema:
+        type: string
+    TypeQuery:
+      name: type
+      in: query
+      required: false
+      description: Filter the general blog content list by content type.
+      schema:
+        $ref: "#/components/schemas/BlogContentType"
+  responses:
+    BadRequest:
+      description: The request body or query string is invalid.
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+    Unauthorized:
+      description: A valid blog or admin token header is required.
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+    Forbidden:
+      description: The request was authenticated but rejected by route policy.
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+    NotFound:
+      description: The requested content record does not exist or is hidden by the requested status/type filter.
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+    Conflict:
+      description: The slug or route path already exists.
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+    InternalServerError:
+      description: The API is missing required blog/admin token configuration or hit an unexpected server error.
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+  schemas:
+    BlogContentStatus:
+      type: string
+      enum:
+        - draft
+        - published
+        - archived
+    BlogContentListStatus:
+      type: string
+      enum:
+        - draft
+        - published
+        - archived
+        - all
+    BlogContentType:
+      type: string
+      enum:
+        - article
+        - page
+        - release
+        - newsletter
+    BlogContentSource:
+      type: object
+      required:
+        - app
+        - checksum
+        - importedAt
+        - path
+        - sourceType
+      additionalProperties: false
+      properties:
+        app:
+          type: string
+          description: API-authored records use `analog-api`; imported/seeded records can use `analog-discovery-blog`.
+          enum:
+            - analog-api
+            - analog-discovery-blog
+        checksum:
+          type: string
+          description: SHA-256 checksum of API-authored Markdown or imported source content.
+        importedAt:
+          type: string
+          format: date-time
+        path:
+          type: string
+          description: API-authored records use `api://blog/posts/{slug}`.
+        sourceType:
+          type: string
+          enum:
+            - api
+            - mdx
+            - tsx-page
+            - seed
+    BlogContent:
+      type: object
+      required:
+        - _id
+        - createdAt
+        - description
+        - markdown
+        - routePath
+        - slug
+        - source
+        - status
+        - tags
+        - title
+        - type
+        - updatedAt
+      additionalProperties: false
+      properties:
+        _id:
+          type: string
+        author:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+        description:
+          type: string
+        image:
+          type: string
+        markdown:
+          type: string
+          description: Markdown source rendered by the public blog/release frontend.
+        publishedAt:
+          type: string
+          format: date-time
+        routePath:
+          type: string
+          description: Public frontend route for this content.
+        slug:
+          type: string
+          description: Stable content slug. Create requests trim and lowercase this value.
+        source:
+          $ref: "#/components/schemas/BlogContentSource"
+        status:
+          $ref: "#/components/schemas/BlogContentStatus"
+        tags:
+          type: array
+          items:
+            type: string
+        title:
+          type: string
+        type:
+          $ref: "#/components/schemas/BlogContentType"
+        updatedAt:
+          type: string
+          format: date-time
+    ProductRelease:
+      allOf:
+        - $ref: "#/components/schemas/BlogContent"
+        - type: object
+          properties:
+            type:
+              const: release
+    CreateBlogPostRequest:
+      type: object
+      required:
+        - description
+        - markdown
+        - slug
+        - title
+        - type
+      additionalProperties: false
+      properties:
+        author:
+          type: string
+        description:
+          type: string
+          minLength: 1
+        image:
+          type: string
+        markdown:
+          type: string
+          minLength: 1
+        publishedAt:
+          type: string
+          format: date-time
+          description: Defaults to the current server time when `status` is `published`.
+        routePath:
+          type: string
+          description: |
+            Optional public route override. If omitted or blank, defaults by type: `article` uses
+            `/blog/posts/{slug}`, `newsletter` uses `/newsletter/{slug}` except slug `newsletter` maps to
+            `/newsletter`, `release` uses `/releases/{slug}` except slug `releases` maps to `/releases`,
+            and `page` uses `/{slug}`.
+        slug:
+          type: string
+          minLength: 1
+          description: Trimmed and lowercased before storage.
+        status:
+          $ref: "#/components/schemas/BlogContentStatus"
+        tags:
+          type: array
+          description: Tags are trimmed and blank values are removed.
+          items:
+            type: string
+        title:
+          type: string
+          minLength: 1
+        type:
+          $ref: "#/components/schemas/BlogContentType"
+    UpdateBlogPostRequest:
+      type: object
+      additionalProperties: false
+      properties:
+        author:
+          type: string
+        description:
+          type: string
+          minLength: 1
+        image:
+          type: string
+        markdown:
+          type: string
+          minLength: 1
+        publishedAt:
+          type: string
+          format: date-time
+        routePath:
+          type: string
+          description: If supplied as a blank string, resets to the default route for the current slug and type.
+        status:
+          $ref: "#/components/schemas/BlogContentStatus"
+        tags:
+          type: array
+          description: Tags are trimmed and blank values are removed.
+          items:
+            type: string
+        title:
+          type: string
+          minLength: 1
+        type:
+          $ref: "#/components/schemas/BlogContentType"
+    CreateProductReleaseRequest:
+      type: object
+      required:
+        - description
+        - markdown
+        - slug
+        - title
+      additionalProperties: false
+      properties:
+        author:
+          type: string
+        description:
+          type: string
+          minLength: 1
+        image:
+          type: string
+        markdown:
+          type: string
+          minLength: 1
+        publishedAt:
+          type: string
+          format: date-time
+          description: Defaults to the current server time when `status` is `published`.
+        routePath:
+          type: string
+          description: Defaults to `/releases/{slug}`, except slug `releases` maps to `/releases`.
+        slug:
+          type: string
+          minLength: 1
+          description: Trimmed and lowercased before storage.
+        status:
+          $ref: "#/components/schemas/BlogContentStatus"
+        tags:
+          type: array
+          description: Tags are trimmed and blank values are removed.
+          items:
+            type: string
+        title:
+          type: string
+          minLength: 1
+    UpdateProductReleaseRequest:
+      type: object
+      additionalProperties: false
+      properties:
+        author:
+          type: string
+        description:
+          type: string
+          minLength: 1
+        image:
+          type: string
+        markdown:
+          type: string
+          minLength: 1
+        publishedAt:
+          type: string
+          format: date-time
+        routePath:
+          type: string
+          description: If supplied as a blank string, resets to `/releases/{slug}` or `/releases` for slug `releases`.
+        status:
+          $ref: "#/components/schemas/BlogContentStatus"
+        tags:
+          type: array
+          description: Tags are trimmed and blank values are removed.
+          items:
+            type: string
+        title:
+          type: string
+          minLength: 1
+    BlogContentDataResponse:
+      type: object
+      required:
+        - data
+      additionalProperties: false
+      properties:
+        data:
+          $ref: "#/components/schemas/BlogContent"
+    BlogContentListResponse:
+      type: object
+      required:
+        - data
+      additionalProperties: false
+      properties:
+        data:
+          type: array
+          items:
+            $ref: "#/components/schemas/BlogContent"
+    ProductReleaseDataResponse:
+      type: object
+      required:
+        - data
+      additionalProperties: false
+      properties:
+        data:
+          $ref: "#/components/schemas/ProductRelease"
+    ProductReleaseListResponse:
+      type: object
+      required:
+        - data
+      additionalProperties: false
+      properties:
+        data:
+          type: array
+          items:
+            $ref: "#/components/schemas/ProductRelease"
+    ErrorResponse:
+      type: object
+      required:
+        - error
+      additionalProperties: false
+      properties:
+        error:
+          type: object
+          required:
+            - message
+          additionalProperties: true
+          properties:
+            message:
+              type: string
+            code:
+              type: string
+            details: {}
