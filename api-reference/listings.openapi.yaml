@@ -1,0 +1,582 @@
+openapi: 3.1.0
+info:
+  title: Analog Directory Listings API
+  version: 0.1.0
+  summary: Public read endpoints for published Analog directory listings.
+  description: |
+    The Directory Listings API returns public-safe, published listing records from the active Analog
+    directory. Use it to pull a listing catalog or fetch one listing by slug.
+
+    These routes are read-only and public. They do not use the Blog API machine-token headers, WorkOS bearer
+    auth, or local dev-user headers. Draft and archived listings are hidden from these responses.
+  license:
+    name: Proprietary
+    identifier: LicenseRef-Proprietary
+servers:
+  - url: https://api.analog.host
+    description: Production API
+  - url: http://127.0.0.1:8080
+    description: Local development API
+tags:
+  - name: Directory Listings
+    description: Published public directory listings and detail records.
+paths:
+  /directory/listings:
+    get:
+      tags:
+        - Directory Listings
+      operationId: listDirectoryListings
+      summary: List published directory listings
+      description: |
+        Returns published public directory listings. The endpoint currently has no pagination; it returns all
+        listings that match the supplied filters.
+
+        Use `categorySlug` or the alias `category` to filter by a category slug and its child categories. Use
+        `city`, `state`, and `country` for location filters. Radius filtering is applied only when `latitude`,
+        `longitude`, and a positive `radiusMiles` value are all present and parse as finite numbers.
+      parameters:
+        - $ref: "#/components/parameters/CategorySlugQuery"
+        - $ref: "#/components/parameters/CategoryAliasQuery"
+        - $ref: "#/components/parameters/CityQuery"
+        - $ref: "#/components/parameters/StateQuery"
+        - $ref: "#/components/parameters/CountryQuery"
+        - $ref: "#/components/parameters/LatitudeQuery"
+        - $ref: "#/components/parameters/LongitudeQuery"
+        - $ref: "#/components/parameters/RadiusMilesQuery"
+      responses:
+        "200":
+          description: Published directory listings.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DirectoryListingListResponse"
+              examples:
+                listings:
+                  summary: Example list response
+                  value:
+                    data:
+                      - _id: "listing_123"
+                        name: "Warehouse Sketch Night"
+                        slug: "warehouse-sketch-night"
+                        description: "A recurring creative meetup for artists and friends."
+                        line: "Bring a sketchbook and meet local artists."
+                        website: "https://example.com/sketch-night"
+                        location:
+                          city: "New York City"
+                          state: "NY"
+                          country: "US"
+                          borough: "Brooklyn"
+                          address: "Brooklyn, NY"
+                          latitude: 40.6782
+                          longitude: -73.9442
+                        status: "published"
+                        categoryIds:
+                          - "category_creativity"
+                        categories:
+                          - _id: "category_creativity"
+                            name: "Creativity"
+                            slug: "creativity"
+                            parentId: null
+                            createdAt: "2026-06-01T00:00:00.000Z"
+                            updatedAt: "2026-06-01T00:00:00.000Z"
+                        claimed: false
+                        links:
+                          - type: "website"
+                            label: "Website"
+                            url: "https://example.com/sketch-night"
+                        createdAt: "2026-06-01T00:00:00.000Z"
+                        updatedAt: "2026-06-15T00:00:00.000Z"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+  /directory/listings/{listingSlug}:
+    get:
+      tags:
+        - Directory Listings
+      operationId: getDirectoryListing
+      summary: Get a published directory listing
+      description: |
+        Returns one published public directory listing by slug. Draft, archived, missing, or location-filtered
+        listings return `404`.
+
+        Detail responses include the same public listing shape as the list endpoint. When available, the service
+        can add Instagram gallery media to the listing detail response.
+      parameters:
+        - $ref: "#/components/parameters/ListingSlugPath"
+        - $ref: "#/components/parameters/CityQuery"
+        - $ref: "#/components/parameters/StateQuery"
+        - $ref: "#/components/parameters/CountryQuery"
+      responses:
+        "200":
+          description: Published directory listing.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DirectoryListingDataResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/InternalServerError"
+components:
+  parameters:
+    ListingSlugPath:
+      name: listingSlug
+      in: path
+      required: true
+      description: Stable slug for the directory listing.
+      schema:
+        type: string
+        minLength: 1
+    CategorySlugQuery:
+      name: categorySlug
+      in: query
+      required: false
+      description: Category slug filter. Matches the category and its child categories.
+      schema:
+        type: string
+    CategoryAliasQuery:
+      name: category
+      in: query
+      required: false
+      description: Alias for `categorySlug`.
+      schema:
+        type: string
+    CityQuery:
+      name: city
+      in: query
+      required: false
+      description: City filter, such as `New York City`.
+      schema:
+        type: string
+    StateQuery:
+      name: state
+      in: query
+      required: false
+      description: State or region filter, such as `NY`.
+      schema:
+        type: string
+    CountryQuery:
+      name: country
+      in: query
+      required: false
+      description: Country filter, such as `US`.
+      schema:
+        type: string
+    LatitudeQuery:
+      name: latitude
+      in: query
+      required: false
+      description: Latitude used with `longitude` and `radiusMiles` for radius filtering.
+      schema:
+        type: number
+    LongitudeQuery:
+      name: longitude
+      in: query
+      required: false
+      description: Longitude used with `latitude` and `radiusMiles` for radius filtering.
+      schema:
+        type: number
+    RadiusMilesQuery:
+      name: radiusMiles
+      in: query
+      required: false
+      description: Positive radius in miles. Ignored unless latitude and longitude are also valid.
+      schema:
+        type: number
+        exclusiveMinimum: 0
+  responses:
+    BadRequest:
+      description: The request query string is invalid.
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+    NotFound:
+      description: The requested listing does not exist or is not published.
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+    InternalServerError:
+      description: The API hit an unexpected server error.
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ErrorResponse"
+  schemas:
+    DirectoryListingStatus:
+      type: string
+      enum:
+        - draft
+        - published
+        - archived
+    DirectoryCategory:
+      type: object
+      required:
+        - _id
+        - name
+        - slug
+        - parentId
+        - createdAt
+        - updatedAt
+      properties:
+        _id:
+          type: string
+        name:
+          type: string
+        slug:
+          type: string
+        parentId:
+          anyOf:
+            - type: string
+            - type: "null"
+        createdAt:
+          type: string
+        updatedAt:
+          type: string
+    ListingLocation:
+      type: object
+      required:
+        - city
+        - state
+        - country
+      properties:
+        city:
+          type: string
+        state:
+          type: string
+        country:
+          type: string
+        borough:
+          type: string
+        boroughs:
+          type: array
+          items:
+            type: string
+        neighborhood:
+          type: string
+        address:
+          type: string
+        latitude:
+          type: number
+        longitude:
+          type: number
+    DirectoryMedia:
+      type: object
+      required:
+        - id
+        - sourceType
+        - mediaContentType
+        - url
+      properties:
+        id:
+          type: string
+        sourceType:
+          type: string
+          enum:
+            - managed
+            - external
+        mediaContentType:
+          type: string
+          enum:
+            - IMAGE
+            - VIDEO
+            - GENERIC
+        url:
+          type: string
+        alt:
+          type: string
+        thumbnailUrl:
+          type: string
+        sourceUrl:
+          type: string
+        width:
+          type: number
+        height:
+          type: number
+    DirectoryListingLink:
+      type: object
+      required:
+        - type
+        - label
+        - url
+      properties:
+        type:
+          type: string
+          enum:
+            - website
+            - instagram
+            - tiktok
+            - facebook
+            - linkedin
+            - whatsapp
+            - event
+            - source
+            - other
+        label:
+          type: string
+        url:
+          type: string
+    DirectoryListingTestimonial:
+      type: object
+      required:
+        - quote
+        - name
+      properties:
+        quote:
+          type: string
+        name:
+          type: string
+        media:
+          type: array
+          items:
+            $ref: "#/components/schemas/DirectoryMedia"
+    DirectoryReviewMedia:
+      type: object
+      required:
+        - kind
+        - name
+        - mimeType
+        - size
+      properties:
+        kind:
+          type: string
+          enum:
+            - image
+            - video
+        name:
+          type: string
+        mimeType:
+          type: string
+        size:
+          type: number
+    DirectoryReview:
+      type: object
+      required:
+        - _id
+        - listingId
+        - communityId
+        - listingSlug
+        - listingName
+        - review
+        - media
+        - status
+        - createdAt
+        - updatedAt
+      properties:
+        _id:
+          type: string
+        listingId:
+          type: string
+        communityId:
+          type: string
+        listingSlug:
+          type: string
+        listingName:
+          type: string
+        review:
+          type: string
+        media:
+          type: array
+          items:
+            $ref: "#/components/schemas/DirectoryReviewMedia"
+        status:
+          type: string
+          enum:
+            - pending
+            - published
+            - hidden
+        createdAt:
+          type: string
+        updatedAt:
+          type: string
+    ListingEventRecurrence:
+      type: object
+      properties:
+        frequency:
+          type: string
+          enum:
+            - weekly
+            - biweekly
+            - monthly
+            - custom
+        interval:
+          type: number
+        dayOfWeek:
+          type: string
+          enum:
+            - monday
+            - tuesday
+            - wednesday
+            - thursday
+            - friday
+            - saturday
+            - sunday
+        time:
+          type: string
+        monthlyPattern:
+          type: string
+          enum:
+            - day_of_month
+            - week_of_month
+            - custom
+        dayOfMonth:
+          type: number
+        weekOfMonth:
+          type: string
+          enum:
+            - first
+            - second
+            - third
+            - fourth
+            - last
+        ends:
+          type: string
+          enum:
+            - never
+            - on_date
+            - after_occurrences
+            - custom
+        endDate:
+          type: string
+        occurrenceCount:
+          type: number
+        details:
+          type: string
+    ListingUpcomingEvent:
+      type: object
+      required:
+        - title
+        - date
+        - time
+        - location
+        - note
+      properties:
+        title:
+          type: string
+        date:
+          type: string
+        time:
+          type: string
+        location:
+          type: string
+        note:
+          type: string
+        bookingUrl:
+          type: string
+        recurrence:
+          $ref: "#/components/schemas/ListingEventRecurrence"
+    DirectoryListing:
+      type: object
+      required:
+        - _id
+        - name
+        - slug
+        - description
+        - website
+        - location
+        - status
+        - categoryIds
+        - categories
+        - claimed
+        - createdAt
+        - updatedAt
+      properties:
+        _id:
+          type: string
+        name:
+          type: string
+        slug:
+          type: string
+        description:
+          type: string
+        line:
+          type: string
+        website:
+          type: string
+        location:
+          $ref: "#/components/schemas/ListingLocation"
+        status:
+          $ref: "#/components/schemas/DirectoryListingStatus"
+        categoryIds:
+          type: array
+          items:
+            type: string
+        categories:
+          type: array
+          items:
+            $ref: "#/components/schemas/DirectoryCategory"
+        claimed:
+          type: boolean
+        heroMedia:
+          $ref: "#/components/schemas/DirectoryMedia"
+        logoMedia:
+          $ref: "#/components/schemas/DirectoryMedia"
+        profileMedia:
+          $ref: "#/components/schemas/DirectoryMedia"
+        galleryMedia:
+          type: array
+          items:
+            $ref: "#/components/schemas/DirectoryMedia"
+        instagramHandle:
+          type: string
+        volunteerRecruitmentEnabled:
+          type: boolean
+        links:
+          type: array
+          items:
+            $ref: "#/components/schemas/DirectoryListingLink"
+        testimonials:
+          type: array
+          items:
+            $ref: "#/components/schemas/DirectoryListingTestimonial"
+        reviews:
+          type: array
+          description: Published reviews only; currently capped to the newest public reviews by the service.
+          items:
+            $ref: "#/components/schemas/DirectoryReview"
+        upcomingEvents:
+          type: array
+          items:
+            $ref: "#/components/schemas/ListingUpcomingEvent"
+        createdAt:
+          type: string
+        updatedAt:
+          type: string
+        score:
+          type: number
+    DirectoryListingDataResponse:
+      type: object
+      required:
+        - data
+      properties:
+        data:
+          $ref: "#/components/schemas/DirectoryListing"
+    DirectoryListingListResponse:
+      type: object
+      required:
+        - data
+      properties:
+        data:
+          type: array
+          items:
+            $ref: "#/components/schemas/DirectoryListing"
+    ErrorResponse:
+      type: object
+      required:
+        - error
+      properties:
+        error:
+          type: object
+          required:
+            - message
+          additionalProperties: true
+          properties:
+            message:
+              type: string
+            code:
+              type: string
+            details: {}
