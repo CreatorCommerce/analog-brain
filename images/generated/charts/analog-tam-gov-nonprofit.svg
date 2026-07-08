@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="430" viewBox="0 0 760 430" role="img" aria-labelledby="title desc">
+  <title id="title">Gov/Nonprofit x Constituent Community</title>
+  <desc id="desc">Base-case routeable cash flow: $15.56B</desc>
+  <style>
+    .bg { fill: #fffaf5; }
+    .title { font: 700 24px Arial, sans-serif; fill: #22201f; }
+    .subtitle { font: 15px Arial, sans-serif; fill: #5f5955; }
+    .center-big { font: 700 30px Arial, sans-serif; fill: #22201f; text-anchor: middle; }
+    .center-small { font: 13px Arial, sans-serif; fill: #6f6863; text-anchor: middle; }
+    .legend-label { font: 700 14px Arial, sans-serif; fill: #22201f; }
+    .legend-value { font: 13px Arial, sans-serif; fill: #6f6863; }
+    .footer { font: 12px Arial, sans-serif; fill: #7a736d; }
+  </style>
+  <rect class="bg" x="0" y="0" width="760" height="430" rx="0" />
+  <text x="40" y="48" class="title">Gov/Nonprofit x Constituent Community</text>
+  <text x="40" y="74" class="subtitle">Base-case routeable cash flow: $15.56B</text>
+  <path d="M 170.000 72.000 A 118 118 0 0 1 231.594 290.649 L 205.495 248.001 A 68 68 0 0 0 170.000 122.000 Z" fill="#16A34A" /><path d="M 231.594 290.649 A 118 118 0 0 1 77.237 262.931 L 116.543 232.028 A 68 68 0 0 0 205.495 248.001 Z" fill="#84CC16" /><path d="M 77.237 262.931 A 118 118 0 0 1 53.858 169.145 L 103.070 177.982 A 68 68 0 0 0 116.543 232.028 Z" fill="#14B8A6" /><path d="M 53.858 169.145 A 118 118 0 0 1 82.139 111.232 L 119.368 144.608 A 68 68 0 0 0 103.070 177.982 Z" fill="#F97316" /><path d="M 82.139 111.232 A 118 118 0 0 1 130.289 78.883 L 147.116 125.966 A 68 68 0 0 0 119.368 144.608 Z" fill="#22C55E" /><path d="M 130.289 78.883 A 118 118 0 0 1 170.000 72.000 L 170.000 122.000 A 68 68 0 0 0 147.116 125.966 Z" fill="#0EA5E9" />
+  <circle cx="170" cy="190" r="65" fill="#fffaf5" />
+  <text x="170" y="184" class="center-big">$15.56B</text>
+  <text x="170" y="208" class="center-small">annual cash flow</text>
+  <rect x="340" y="96" width="12" height="12" rx="2" fill="#16A34A" /><text x="360" y="106" class="legend-label">10% parks and recreation</text><text x="360" y="124" class="legend-value">$6.42B · 41.3%</text><rect x="340" y="142" width="12" height="12" rx="2" fill="#84CC16" /><text x="360" y="152" class="legend-label">5% public-society benefit philanthropy</text><text x="360" y="170" class="legend-value">$3.6B · 23.1%</text><rect x="340" y="188" width="12" height="12" rx="2" fill="#14B8A6" /><text x="360" y="198" class="legend-label">2.5% housing/community development</text><text x="360" y="216" class="legend-value">$2.09B · 13.4%</text><rect x="340" y="234" width="12" height="12" rx="2" fill="#F97316" /><text x="360" y="244" class="legend-label">5% arts/culture/humanities</text><text x="360" y="262" class="legend-value">$1.37B · 8.8%</text><rect x="340" y="280" width="12" height="12" rx="2" fill="#22C55E" /><text x="360" y="290" class="legend-label">5% environment/animals</text><text x="360" y="308" class="legend-value">$1.23B · 7.9%</text><rect x="340" y="326" width="12" height="12" rx="2" fill="#0EA5E9" /><text x="360" y="336" class="legend-label">5% libraries</text><text x="360" y="354" class="legend-value">$0.85B · 5.5%</text>
+  <text x="40" y="392" class="footer">Anchors: Census 2024 state/local finance first look and Giving USA 2026.</text>
+</svg>

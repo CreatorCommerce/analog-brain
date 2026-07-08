@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="430" viewBox="0 0 760 430" role="img" aria-labelledby="title desc">
+  <title id="title">Brands x Consumer Community</title>
+  <desc id="desc">Base-case routeable cash flow: $28.16B</desc>
+  <style>
+    .bg { fill: #fffaf5; }
+    .title { font: 700 24px Arial, sans-serif; fill: #22201f; }
+    .subtitle { font: 15px Arial, sans-serif; fill: #5f5955; }
+    .center-big { font: 700 30px Arial, sans-serif; fill: #22201f; text-anchor: middle; }
+    .center-small { font: 13px Arial, sans-serif; fill: #6f6863; text-anchor: middle; }
+    .legend-label { font: 700 14px Arial, sans-serif; fill: #22201f; }
+    .legend-value { font: 13px Arial, sans-serif; fill: #6f6863; }
+    .footer { font: 12px Arial, sans-serif; fill: #7a736d; }
+  </style>
+  <rect class="bg" x="0" y="0" width="760" height="430" rx="0" />
+  <text x="40" y="48" class="title">Brands x Consumer Community</text>
+  <text x="40" y="74" class="subtitle">Base-case routeable cash flow: $28.16B</text>
+  <path d="M 170.000 72.000 A 118 118 0 1 1 74.289 120.983 L 114.845 150.227 A 68 68 0 1 0 170.000 122.000 Z" fill="#FF4438" /><path d="M 74.289 120.983 A 118 118 0 0 1 122.663 81.911 L 142.721 127.711 A 68 68 0 0 0 114.845 150.227 Z" fill="#F59E0B" /><path d="M 122.663 81.911 A 118 118 0 0 1 170.000 72.000 L 170.000 122.000 A 68 68 0 0 0 142.721 127.711 Z" fill="#8B5CF6" />
+  <circle cx="170" cy="190" r="65" fill="#fffaf5" />
+  <text x="170" y="184" class="center-big">$28.16B</text>
+  <text x="170" y="208" class="center-small">annual cash flow</text>
+  <rect x="340" y="106" width="12" height="12" rx="2" fill="#FF4438" /><text x="360" y="116" class="legend-label">B2C event sponsorships</text><text x="360" y="134" class="legend-value">$23.92B · 84.9%</text><rect x="340" y="164" width="12" height="12" rx="2" fill="#F59E0B" /><text x="360" y="174" class="legend-label">10% of live consumer event marketing</text><text x="360" y="192" class="legend-value">$2.39B · 8.5%</text><rect x="340" y="222" width="12" height="12" rx="2" fill="#8B5CF6" /><text x="360" y="232" class="legend-label">5% creator-to-IRL shift</text><text x="360" y="250" class="legend-value">$1.85B · 6.6%</text>
+  <text x="40" y="392" class="footer">Anchors: U.S. B2C experiential/event sponsorship and IAB creator ad spend.</text>
+</svg>

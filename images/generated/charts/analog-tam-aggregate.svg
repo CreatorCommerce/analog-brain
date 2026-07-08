@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="430" viewBox="0 0 760 430" role="img" aria-labelledby="title desc">
+  <title id="title">Analog Sponsorship Cash-Flow TAM</title>
+  <desc id="desc">Base-case U.S. routeable annual cash flow: $60.35B</desc>
+  <style>
+    .bg { fill: #fffaf5; }
+    .title { font: 700 24px Arial, sans-serif; fill: #22201f; }
+    .subtitle { font: 15px Arial, sans-serif; fill: #5f5955; }
+    .center-big { font: 700 30px Arial, sans-serif; fill: #22201f; text-anchor: middle; }
+    .center-small { font: 13px Arial, sans-serif; fill: #6f6863; text-anchor: middle; }
+    .legend-label { font: 700 14px Arial, sans-serif; fill: #22201f; }
+    .legend-value { font: 13px Arial, sans-serif; fill: #6f6863; }
+    .footer { font: 12px Arial, sans-serif; fill: #7a736d; }
+  </style>
+  <rect class="bg" x="0" y="0" width="760" height="430" rx="0" />
+  <text x="40" y="48" class="title">Analog Sponsorship Cash-Flow TAM</text>
+  <text x="40" y="74" class="subtitle">Base-case U.S. routeable annual cash flow: $60.35B</text>
+  <path d="M 170.000 72.000 A 118 118 0 0 1 194.574 305.413 L 184.161 256.509 A 68 68 0 0 0 170.000 122.000 Z" fill="#FF4438" /><path d="M 194.574 305.413 A 118 118 0 0 1 52.143 195.802 L 102.082 193.344 A 68 68 0 0 0 184.161 256.509 Z" fill="#2563EB" /><path d="M 52.143 195.802 A 118 118 0 0 1 170.000 72.000 L 170.000 122.000 A 68 68 0 0 0 102.082 193.344 Z" fill="#16A34A" />
+  <circle cx="170" cy="190" r="65" fill="#fffaf5" />
+  <text x="170" y="184" class="center-big">$60.35B</text>
+  <text x="170" y="208" class="center-small">annual cash flow</text>
+  <rect x="340" y="106" width="12" height="12" rx="2" fill="#FF4438" /><text x="360" y="116" class="legend-label">Brands x consumer community</text><text x="360" y="134" class="legend-value">$28.16B · 46.7%</text><rect x="340" y="164" width="12" height="12" rx="2" fill="#2563EB" /><text x="360" y="174" class="legend-label">SaaS x B2B community</text><text x="360" y="192" class="legend-value">$16.63B · 27.6%</text><rect x="340" y="222" width="12" height="12" rx="2" fill="#16A34A" /><text x="360" y="232" class="legend-label">Gov/nonprofit x constituent community</text><text x="360" y="250" class="legend-value">$15.56B · 25.8%</text>
+  <text x="40" y="392" class="footer">Source model: PQ Media, IAB, Cvent, U.S. Census, Giving USA; dollars in billions.</text>
+</svg>

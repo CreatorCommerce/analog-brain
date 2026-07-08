@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="430" viewBox="0 0 760 430" role="img" aria-labelledby="title desc">
+  <title id="title">SaaS x B2B Community</title>
+  <desc id="desc">Base-case routeable cash flow: $16.63B</desc>
+  <style>
+    .bg { fill: #fffaf5; }
+    .title { font: 700 24px Arial, sans-serif; fill: #22201f; }
+    .subtitle { font: 15px Arial, sans-serif; fill: #5f5955; }
+    .center-big { font: 700 30px Arial, sans-serif; fill: #22201f; text-anchor: middle; }
+    .center-small { font: 13px Arial, sans-serif; fill: #6f6863; text-anchor: middle; }
+    .legend-label { font: 700 14px Arial, sans-serif; fill: #22201f; }
+    .legend-value { font: 13px Arial, sans-serif; fill: #6f6863; }
+    .footer { font: 12px Arial, sans-serif; fill: #7a736d; }
+  </style>
+  <rect class="bg" x="0" y="0" width="760" height="430" rx="0" />
+  <text x="40" y="48" class="title">SaaS x B2B Community</text>
+  <text x="40" y="74" class="subtitle">Base-case routeable cash flow: $16.63B</text>
+  <path d="M 170.000 72.000 A 118 118 0 1 1 95.969 281.888 L 127.338 242.952 A 68 68 0 1 0 170.000 122.000 Z" fill="#2563EB" /><path d="M 95.969 281.888 A 118 118 0 0 1 170.000 72.000 L 170.000 122.000 A 68 68 0 0 0 127.338 242.952 Z" fill="#38BDF8" />
+  <circle cx="170" cy="190" r="65" fill="#fffaf5" />
+  <text x="170" y="184" class="center-big">$16.63B</text>
+  <text x="170" y="208" class="center-small">annual cash flow</text>
+  <rect x="340" y="106" width="12" height="12" rx="2" fill="#2563EB" /><text x="360" y="116" class="legend-label">Exhibit space rentals</text><text x="360" y="134" class="legend-value">$10.11B · 60.8%</text><rect x="340" y="164" width="12" height="12" rx="2" fill="#38BDF8" /><text x="360" y="174" class="legend-label">Conferences, seminars, promotions, attendance</text><text x="360" y="192" class="legend-value">$6.52B · 39.2%</text>
+  <text x="40" y="392" class="footer">Anchor: PQ Media U.S. B2B experiential marketing, with Cvent validating event-led GTM shift.</text>
+</svg>
