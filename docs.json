@@ -166,6 +166,16 @@
                 "openapi": "api-reference/blog-content.openapi.yaml"
               }
             ]
+          },
+          {
+            "item": "Listings API",
+            "icon": "list",
+            "groups": [
+              {
+                "group": "Listings API",
+                "openapi": "api-reference/listings.openapi.yaml"
+              }
+            ]
           }
         ]
       }
