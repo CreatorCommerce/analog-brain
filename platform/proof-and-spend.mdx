@@ -14,11 +14,15 @@ The question is not only "what happened?" It is:
 Should this Sponsor deploy more capital through this Host, city, category, or playbook?
 ```
 
+In active `cc-analog`, proof starts with public directory and Host-readiness signals: listing content, reviews, bookmarks, volunteer interest, organization-owned listing events, media, founding grant answers, and search/category fit. Spend cards, Stripe Issuing, Sponsor data, campaign UGC, story mentions, and transaction records are preserved full-platform logic until those archived surfaces are restored.
+
 Cash funding raises the standard for proof. If Analog funds coffee, libations, space, supplies, print, operator time, public-good access, or grassroots field work, proof should show both spend stewardship and whether the Host's community goal became easier to accomplish.
 
 High-ticket, public/nonprofit, and political action funding raise the standard again. Cards govern distributed Host and vendor spend; larger programs also need contracts, invoices, vendor/payee records, tax-document status, milestones, risk reviews, eligibility, restricted-use checks, public-safe summaries, compliance-safe field rollups, and AI-assisted tranche recommendations.
 
 Social mentions should not depreciate into feed noise. For IRL, authorized Host and Venue mentions are proof assets: they show who moved the room, which space amplified the moment, and whether the Sponsor presence traveled naturally. Use [Turn Mentions Into Assets](/platform/mentions-to-assets) for the product rule.
+
+Two-way reviews should sit on top of AI review and social listening. They capture what the partners lived: responsiveness, respect, clarity, spend stewardship, proof quality, admin burden, and whether the relationship should repeat. Their trust job is to keep good actors on Analog, constrain or remove bad actors, and create social reinforcement through proof. Use [Two-Way Reviews](/platform/two-way-reviews) for the review flow and guardrails.
 
 ## Spend Infrastructure Focus
 
@@ -29,6 +33,8 @@ Spend infrastructure is the MVP's fintech enablement wedge. The point is to make
 | Budget shape | campaign budget, collab allocation, event set, Host allocation, dinner balance, fund, program lane |
 | Spend permission | amount, category, merchant, expiration, event context, proof expectation |
 | Proof standard | transactions, receipts, content, files, attendance, tasks, shipments, Sponsor data |
+| Funding history signal | prior checks written, prior checks received, amount ranges where permitted, funding reliability, proof completion, renewal or increase history |
+| Review rule | Sponsor review, Host review, 90-day checkpoint, closeout review, visibility setting |
 | Reallocation rule | proof packet, Sponsor summary, unused funds, anomalies, unlock decision |
 | Vendor and tax record rule | vendor/payee record, W-9 status where needed, payment context, duplicate detection, 1099 support flag |
 | Public trust rule | eligibility notes, receipts, anomalies, public summaries, access or participation report |
@@ -121,6 +127,7 @@ For round-one market formation, AnalogNYC spend and any active AnalogSF spend sh
 | Social growth | Attach spend to the owned IRL, media, or field moment that produced audience growth. |
 | Category growth | Connect spend to the category, Host, ritual, or city supply it strengthened. |
 | Community perspective | Capture Host notes, field notes, sentiment, referrals, and trust risks. |
+| Partnership review | Capture Sponsor and Host review notes after closeout or every 90 days for active collabs. |
 | Direct response | Tie invitations to RSVPs, claims, replies, check-ins, attendance, or applications. |
 | Spend transparency | Categorize city spend by campaign, event set, Host event, merchant, use case, and proof expectation. |
 
@@ -131,6 +138,7 @@ If Analog cannot explain its own city spend, it should not ask Sponsors to belie
 | Lane | What it proves |
 |---|---|
 | Spend transactions | Money was used through approved workflows. |
+| Funding history | Sponsors have written checks before; Hosts have received and stewarded checks before. |
 | Contracts and invoices | Large or non-card spend has scope, milestone, approval, and deliverable evidence. |
 | Attendance or RSVP | People showed up or claimed interest. |
 | Host mentions | The Host created public signal around the activation. |
@@ -141,10 +149,54 @@ If Analog cannot explain its own city spend, it should not ask Sponsors to belie
 | Files and docs | The operator captured context, brief, proof, or research. |
 | Tasks and shipments | Required logistics, product, print, or asset flows were completed. |
 | Audience graph | Hosted pages, imports, check-ins, or claims support privacy-safe audience learning. |
+| Two-way reviews | Sponsors and Hosts recorded whether the partnership was responsive, respectful, clear, clean, and worth repeating. |
+| Public-space activation readiness | The Host prepared the permit path, event risk tier, insurance or COI needs, site plan, weather plan, vendor/revenue notes, and official status before funding or renewal. |
+| Public-space social impact | Participants reported belonging, connection, trust, agency, respect, meaningfulness, or cross-group contact where safe to measure. |
+| Play and sport access | The program made play, youth sport, school and community sport, rec leagues, or active public-space participation easier to access, with safeguards and public-safe reporting. |
 
 Do not show comments as Sponsor UGC, raw private attendee data, or analytics-heavy Host surfaces that expose too much context.
 
+Funding history should create comfort without exposing sensitive data. A Sponsor can see that a Host has received USD-range or count-based funding before and completed proof. A Host can see that a Sponsor has funded prior collabs and behaved reliably. Exact amounts, source documents, private contracts, and raw financial data should stay permissioned.
+
 Authorized Venue mention capture is especially useful when the space is part of the value chain: dinners, retail activations, fitness studios, recovery spaces, galleries, hotels, coworking rooms, restaurants, bars, public-space programs, and venue-anchored series.
+
+## Two-Way Review Lane
+
+Two-way reviews answer questions that receipts and social listening cannot.
+
+The default trigger:
+
+```text
+90-day checkpoint for active long-running collabs
+or closeout when funds are spent, the campaign ends, or the collab closes
+```
+
+| Reviewer | What to ask | What it informs |
+|---|---|---|
+| Sponsor reviewing Host | Was the Host responsive, easy to work with, clean with funds, useful with proof, additive to the room, and worth funding again? | Future Sponsor approval, allocation size, renewal memo, risk note. |
+| Host reviewing Sponsor | Was the Sponsor clear, respectful, responsive, reliable with budget/assets, low-friction, and worth working with again? | Sponsor quality, Host trust, matching guardrails, admin-burden product work. |
+| Analog/operator review | Did the proof, spend, files, field notes, and review text point to a repeatable pattern? | Product conventions, no-go rules, support needs, marketplace learning. |
+
+Reviews should become structured signals, not raw gossip. Store dimension ratings, written context, recommendation, visibility, and dispute status. Summaries can feed future matching, but private comments should stay permissioned.
+
+The best review output is practical:
+
+```text
+Strong renewal candidate.
+Clean spend, fast communication, complete proof packet.
+Sponsor asked for more asset lead time next round.
+```
+
+Do not turn reviews into a public star-score board. Use them to explain future approvals, protect Hosts from bad-fit Sponsors, and make the next allocation smarter.
+
+The lane should produce action, not only sentiment:
+
+| Review pattern | Proof/spend response |
+|---|---|
+| Strong proof plus strong reviews | Increase confidence, recommend renewal, raise allocation, and make the actor easier to match. |
+| Strong proof but poor partner review | Investigate whether the result was extractive, high-burden, or not worth repeating. |
+| Weak proof plus poor reviews | Pause renewal, require remediation, tighten spend/proof controls, or route away from the actor. |
+| Disputed or sensitive review | Keep matching constrained until a human resolves the review, evidence, and visibility state. |
 
 ## Mention Asset Ratios
 
@@ -177,7 +229,7 @@ Audience proof should help Sponsors decide what to fund next without turning com
 | Capture path | Use it for | Rule |
 |---|---|---|
 | Hosted page | RSVP, ticketing, check-in, benefit claim, consent, event-story context, and future recap proof. | Prefer when Analog controls or co-hosts the invite. Treat the page as a community brand asset for fundable moments, not just a generic invite. |
-| Attendance import | Luma, Eventbrite, Partiful, CSV, member list, venue guest list. | Import only with scoped permission and consent source. |
+| Attendance import | Luma, Eventbrite, Partiful, LineLeap, CSV, member list, venue guest list. | Import only with scoped permission and consent source. |
 | QR or claim flow | Discounts, samples, class credits, venue benefits, retail or hospitality offers. | Capture claim and redemption state, not unnecessary PII. |
 | Authorized Venue social connection | Venue mention coverage, Venue benchmark, space-intensive activation proof. | Reward authorization only; do not buy fake posting or positive sentiment. |
 | Sponsor outcome match | Shopify, CRM, POS, booking, loyalty, lead, app install, reservation, or CSV/webhook. | Match privately and report tiers, counts, or confidence before row-level detail. |
@@ -190,11 +242,14 @@ Audience proof should help Sponsors decide what to fund next without turning com
 | Host goal progress | Did funded cash remove the blocker the Host named? |
 | Investment safety | Is the sponsorship still safe to fund based on allocation, contracts, invoices, proof gates, brand safety, public risk, and tranche performance? |
 | Public/nonprofit grant safety | Did the program preserve eligibility, restricted uses, public trust, privacy, mission fit, fraud/waste/abuse controls, and defensible reporting? |
+| Public-space activation safety | Did the activation preserve permit readiness, insurance/COI status, site-plan clarity, weather contingency, vending/revenue boundaries, accessibility, and public-safe impact proof? |
+| Youth and community sport safety | Did the program preserve school and nonprofit eligibility, youth safeguards, partner records, approved uses, safe participation, and access proof? |
 | Political action safety | Did the program preserve campaign/advocacy controls, approved uses, privacy boundaries, Sponsor authorization, local trust, and compliant field proof? |
 | Social/category growth | Did content, repeat participation, category mentions, habit formation, or market activation improve? |
 | Mention coverage | Did authorized Host and Venue mentions make the event more attributable, benchmarkable, and renewable? |
 | Operator upside | Is the Host dependable, happy with the partnership, and earning enough for the work to continue? |
 | Community sentiment | Was the Sponsor presence additive, brand-safe, and welcomed? |
+| Partnership quality | Did the Sponsor and Host review each other as clear, responsive, respectful, and worth repeating? |
 
 ## Unlock Logic
 
@@ -204,10 +259,14 @@ A Host should earn a bigger or next allocation when:
 - spend stewardship is clean
 - the community welcomed the Sponsor presence
 - the Host earned enough operator upside to keep caring
+- two-way reviews show the partnership was healthy enough to repeat
+- review history shows the Host is a good actor who should stay on-platform
 - the Sponsor can explain the value internally
 - the activation can repeat with less custom work
 
 Direct attribution can help, but it is not the only reason to unlock more budget. A credible underwriting signal can be enough when spend, sentiment, category growth, and repeatability are strong.
+
+Analog should pause, constrain, or stop future allocation when repeated proof and review patterns show misuse of funds, disrespect for community norms, retaliation, missing proof, unresolved disputes, or Sponsor behavior that makes good Hosts less likely to stay on-platform.
 
 ## Category Benchmark Rule
 
@@ -235,12 +294,28 @@ For public, foundation, NGO, or nonprofit funds, proof should answer:
 
 1. Did money reach eligible downstream Hosts or partners under clear rules?
 2. Did spend match approved uses, receipts, timing, and program scope?
-3. Did the activation create privacy-safe evidence of access, participation, local legitimacy, recurrence, or mission fit?
+3. Did the activation create privacy-safe evidence of access, participation, local legitimacy, recurrence, mission fit, or participant-reported social impact?
 4. Can the funder explain the result without exposing sensitive data or overclaiming outcomes?
 
 Keep public-safe summaries separate from internal risk notes. Public reports should tell the truth clearly; internal notes can carry anomalies, conflicts, exceptions, missing documentation, or sensitive community context.
 
 Use raw PII only inside scoped matching workflows where legally and commercially allowed.
+
+For public-space, park, library, corridor, wellness access, arts, youth, sports, cleanup, stewardship, and social connection programs, use [Public Space Social Impact Measurement](/references/public-space-social-impact-measurement) to decide whether a one-time survey, pre/post design, or public-space entry/exit survey belongs in the proof packet.
+
+For public-space activations with permitting, insurance, weather, site-plan, vending, or revenue complexity, use [Public Space Activation Infrastructure](/references/public-space-activation-infrastructure) before funding or renewal. The proof packet should show not only that the event happened, but that the Host understood the official path, named the support gaps, and kept public-risk boundaries visible.
+
+The safe public readout should be specific:
+
+```text
+spend was clean
+participation happened
+respondents reported belonging, connection, trust, or meaningful contact
+known groups or response gaps are named
+the next allocation has a clear improvement hypothesis
+```
+
+Do not turn a small participant survey into a claim that the program solved loneliness, improved public health, reduced crime, or changed civic behavior unless that claim is backed by an appropriate evaluation design.
 
 ## Political Action Proof Rule
 

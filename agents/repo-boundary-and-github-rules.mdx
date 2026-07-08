@@ -1,0 +1,141 @@
+---
+title: "Repo Boundary And GitHub Rules"
+description: "How Analog Brain decides whether work belongs in docs, an existing repo, a hosted service, or a new GitHub repository."
+pageType: "Reference"
+---
+
+New repos are expensive.
+
+They add setup, ownership, permissions, secrets, issue tracking, docs, CI, deployment, and cognitive load. Create them when they buy real boundaries.
+
+## Default Path
+
+Use this path unless a hard reason says otherwise:
+
+```text
+analog-brain doc
+-> shared skill
+-> existing agent manifest update
+-> AGENTS.md in an existing repo
+-> hosted runtime service inside existing product system
+-> new GitHub repo
+```
+
+## Keep In Analog Brain
+
+Keep work in `analog-brain` when it is:
+
+- doctrine
+- operating model
+- market thesis
+- agent and skill operating rules
+- agent registry
+- shared skill
+- city pack
+- strategy
+- playbook
+- routing rule
+- repo or agent proposal
+- reviewed learning that should guide future agents
+
+`analog-brain` is the right home when the output helps people and agents decide what to do next.
+
+## Add AGENTS.md To An Existing Repo
+
+Add or improve a repo-level `AGENTS.md` when:
+
+- a repo has its own purpose and hard rules
+- future agents need safety constraints before editing
+- the codebase has source-of-truth docs, architecture, or tests
+- product behavior needs local terminology
+- the repo should not inherit broad company rules blindly
+
+Examples:
+
+| Repo | AGENTS.md should explain |
+|---|---|
+| `cc-analog` | Current product runtime behavior, active directory/host/API boundaries, archived full-platform restoration map, validation commands, product terminology, and AI context packet rules. |
+| Future market service | Source policy, city-pack ingestion, public/private data boundaries, staleness checks. |
+| Future finance service | Revenue model boundaries, pricing approvals, financial data sensitivity, export rules. |
+
+## Create A Runtime Service
+
+Create a hosted service or API when the work must:
+
+- run for users
+- run on a schedule
+- call external APIs
+- enforce permissions
+- hold secrets
+- mutate product records
+- expose Agent MCP or partner API endpoints
+- produce audit logs
+- survive beyond a single operator session
+
+Prefer adding runtime behavior to an existing product repo before creating a new repo.
+
+## Create A New GitHub Repo
+
+Create a new repo only when at least two of these are true:
+
+- separate deployment
+- separate secrets
+- separate production permissions
+- separate owner or team
+- separate release cadence
+- separate data boundary
+- recurring autonomous execution
+- external API surface
+- dependency stack that does not belong in an existing repo
+- clear need for its own CI, tests, and issue history
+
+One strong reason can be enough when it involves security, permissions, or production isolation.
+
+## New Repo Checklist
+
+Before creating a repo, write a short routing memo with:
+
+- outcome
+- owner
+- why an existing repo is not enough
+- data and memory boundary
+- secrets required
+- APIs or scheduled jobs required
+- deployment model
+- approval gates
+- first tests
+- whether the repo needs a matching `AGENTS.md`
+
+Do not create the repo until the memo names a real boundary.
+
+## Likely Future Repos
+
+| Repo | Create when |
+|---|---|
+| `analog-market-agent` | Market ingestion, scheduled refresh, source confidence, and city snapshots need a service with APIs or jobs. |
+| `analog-finance-agent` | Pricing, burn, revenue, and margin models need private data connectors or recurring analysis. |
+| `analog-people-capacity-agent` | Capacity planning needs private people data, training telemetry, or repeated planning jobs. |
+
+These are not v1 requirements. They are graduation paths.
+
+## GitHub Hygiene
+
+When a repo is created:
+
+- add `AGENTS.md` immediately
+- add a short `README.md`
+- define source-of-truth docs
+- define validation commands
+- define secrets and env rules
+- keep private data out of git
+- create the first issue or project note from the routing memo
+
+## Decision Test
+
+Ask:
+
+```text
+Would the company become safer, faster, or clearer if this lived separately?
+```
+
+If the answer is "not yet," keep it in `analog-brain` or an existing repo.

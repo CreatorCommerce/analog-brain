@@ -6,7 +6,9 @@ pageType: "How-to"
 
 Use this workflow when the Sponsor already has a goal, budget, or campaign idea.
 
-Read the Product Truth pages first if the objects are unfamiliar: [Product Primitives](/references/product-primitives), [Platform Logic](/references/platform-logic), [Marketplace Logic](/platform/marketplace), and [Proof And Spend](/platform/proof-and-spend).
+Read the Product Truth pages first if the objects are unfamiliar: [Product Primitives](/references/product-primitives), [Platform Logic](/references/platform-logic), [Marketplace Logic](/platform/marketplace), [Proof And Spend](/platform/proof-and-spend), and [Two-Way Reviews](/platform/two-way-reviews).
+
+This workflow describes the preserved full-platform Sponsor motion from `cc-analog` product docs and archived code. The active `cc-analog` checkout currently supplies the directory, claim, Host readiness, grant, volunteer, review, search, and listing-management side. Live Sponsor campaign dashboards, collabs, spend cards, Sponsor AI, and Sponsor application portals should be treated as staged surfaces until restored.
 
 The MVP workflow should answer one commercial question: can Analog earn the right to deploy this Sponsor's community activation budget again?
 
@@ -35,6 +37,7 @@ Common jobs:
 - adjust budget or spend rules
 - handle vendor/admin requirements
 - decide renewal
+- complete a two-way review
 
 The UI should start simple: one question, one choice, one button, or one focused form. Then it can render the next useful action.
 
@@ -48,6 +51,27 @@ simple action
 ```
 
 Use progressive disclosure. Do not show every advanced feature up front. Reveal Venue rewards, visibility modes, Agent MCP/API sourcing, vendor records, high-ticket controls, public/nonprofit controls, political controls, and proof benchmarks only when the Sponsor's campaign context needs them.
+
+## 0A. NYC Pre-Seed Sponsor Cohort Exception
+
+For the immediate closed-door NYC cohort, do not force the normal product-led Sponsor plan flow.
+
+Use [NYC Pre-Seed Sponsor Cohort](/strategy/nyc-preseed-sponsor-cohort) for the operating rule:
+
+```text
+Sponsor sees public-safe NYC directory signal
+-> Sponsor aligns on target category and NYC deployment thesis
+-> Sponsor signs LOI for intended budget
+-> Sponsor places refundable USD 500 deposit
+-> Analog builds high-context match set and Event sets
+-> Sponsor deploys budget into selected communities with proof
+```
+
+This cohort should be tracked in a spreadsheet, not a new CRM. Keep CreatorCommerce records and Analog cohort tracking separate.
+
+Minimum fields: Sponsor name, lane, category, target market, budget intent, LOI status, deposit status, fit reason, matchmaking status, proof need, and next action.
+
+Do not curate lists, share raw contacts, or spend community social capital before LOI, budget intent, and deposit are committed.
 
 ## 1. Create The Campaign
 
@@ -79,7 +103,9 @@ Define the budget as a learning contract:
 | Mention coverage | Whether the campaign needs Host-only proof or Host plus Venue proof. |
 | Venue reward | Whether to reserve a flat amount for a Venue that authorizes campaign-window social listening. |
 | Spend guardrails | Approved categories, timing, proof, assets, and operating boundaries. |
+| Public-space readiness | Whether the campaign needs permit-path notes, event risk tiers, insurance/COI support, site-plan support, weather rules, or vending/revenue boundaries. |
 | Vendor and tax records | Whether Analog should collect or maintain vendor/payee records, W-9 status, or 1099 support context for Hosts, Venues, contractors, or service providers. |
+| Review cadence | Whether the campaign needs only closeout reviews or 90-day checkpoints for long-running collabs. |
 | Renewal rule | What evidence justifies another allocation, larger balance, or broader program. |
 
 ### Use Start Dates To Set Expectations
@@ -104,11 +130,13 @@ Choose the funding shape before writing the ask.
 | Micro Grant | Small costs like coffee, libations, supplies, rentals, print, accessibility, or light space support would improve the gathering. |
 | Macro Grant | A proven Host can run recurring activations, strategic rooms, or stronger community infrastructure. |
 | Grant or raffle hook | The Sponsor wants a visible money-on-the-table CTA that recruits qualified Hosts, clubs, spaces, or connectors. |
+| Corporate community impact fund | The Sponsor frames the work as local support, employee community impact, youth play and sport access, school and nonprofit support, wellbeing, or public-good grantmaking. |
 | Community collective fund | A trusted local fundraiser or leader wants to pool capital from local businesses, funders, or contributors to fund more gatherings in one neighborhood or scene. |
 | Services/tools support | The blocker is insurance, docs, contracts, print, local designers, vendors, rentals, proof kits, or space support. |
 | Venue reward | The activation depends on a specific space and the Sponsor wants broader social listening coverage. |
 | Embedded Host treasury | A trusted recurring Host or community business needs a larger operating balance and banking-quality tools instead of one-off spend cards. |
-| Public fund | The budget needs eligibility, fraud/waste/abuse controls, public reporting, and defensible participation proof. |
+| Public fund | The budget needs eligibility, fraud/waste/abuse controls, public reporting, defensible participation proof, and sometimes participant-reported social impact. |
+| Public-space activation support fund | The budget helps Hosts activate parks, plazas, sidewalks, streets, corridors, or other public-facing space through permit readiness, insurance help, site plans, weather contingency, vendors, artists, and public-safe proof. |
 | Political grassroots fund | The budget needs campaign/advocacy controls, compliant approved uses, field proof, privacy boundaries, and national/state/district/county/city/ward/event rollups. |
 | High-ticket underwriting | The Sponsor is considering six- or seven-figure IRL/community investment. |
 
@@ -156,6 +184,21 @@ Use [Marketplace Logic](/platform/marketplace) for social receptiveness, categor
 
 For agentic sourcing, keep the same boundary. The Sponsor or operator can ask Analog to search public-safe opportunity data through the catalog, partner APIs, or Agent MCP when those rails exist. The agent can prepare target lists, match reasons, and outreach drafts, but human approval still controls publishing, private data sharing, outreach, spend, and final funding decisions.
 
+### Public-Space Campaigns
+
+When the Sponsor funds public-space activations, add the public-space readiness layer before accepting Hosts. Use [Public Space Activation Infrastructure](/references/public-space-activation-infrastructure) for the reference model.
+
+The Sponsor should define:
+
+- eligible spaces, such as parks, plazas, sidewalks, streets, Open Streets, corridors, public housing grounds, or schoolyards
+- which official permits or permissions the Host must pursue
+- whether Analog will fund insurance, site-plan help, permits where allowed, deposits, artists, vendors, equipment, accessibility, or weather contingency
+- whether vending, concessions, ticketing, food sales, alcohol, or merch are allowed
+- what happens if weather cancels or moves the activation
+- whether proof should include public-space social impact measurement
+
+The Sponsor should understand the boundary: Analog can prepare readiness files, support Hosts, and collect proof, but official permit authority remains outside the product unless a specific agency or authorized partner integration exists.
+
 ### Add Mention Coverage When The Venue Matters
 
 If the campaign depends on a restaurant, studio, gym, gallery, hotel, coworking space, retail shop, or other meaningful Venue, the save flow should ask:
@@ -199,11 +242,15 @@ The benchmark is [category proof standard].
 
 ## 3. Publish The Application Portal
 
-Use the application portal when the Sponsor wants inbound Host pitches, grant applications, raffle entries, or fund responses.
+Use the application portal when the Sponsor wants inbound Host pitches, grant applications, community-impact fund responses, raffle entries, or fund responses.
 
-Collect Host identity, activation idea, requested amount, expected attendees, relevant socials, proof surfaces, Sponsor fit, support needs, and whether the activation depends on paid Venues, vendors, contractors, or service providers that may need records.
+Collect Host identity, activation idea, requested amount, expected attendees, relevant socials, proof surfaces, Sponsor fit, support needs, and whether the activation depends on paid Venues, vendors, contractors, schools, nonprofits, fiscal sponsors, grant administrators, or service providers that may need records.
+
+For public-space campaigns, also collect likely location, public-space type, permit status, event risk tier inputs, insurance/COI needs, site-plan needs, weather plan, vending/revenue activity, and any official source links the Host already has.
 
 The CTA should be plain: who qualifies, how much money is available, what spend is allowed, what proof is required, and what earns the next allocation.
+
+For employee-led or place-based community impact funds, add reviewer context fields: why this applicant fits the local community, whether a Sponsor teammate or local advisor knows the area, and which safeguards or partner records are required before funding.
 
 ## 4. Share, Prospect, Or Invite Hosts
 
@@ -242,7 +289,7 @@ Frame proof by Sponsor perspective.
 |---|---|
 | eComm Brand | product trial, content, category mentions, repeat participation, sales-adjacent signals |
 | SaaS/Tech Company | strategic accounts, qualified attendees, community credibility, adoption moments, partner/customer conversations |
-| Civic/Public-Non-profit Fund | access, participation, public benefit, community formation, local legitimacy, civic proof |
+| Civic/Public-Non-profit Fund | access, participation, public benefit, community formation, local legitimacy, civic proof, public-space activation readiness, and public-space social impact where safe to measure |
 | Political Action Sponsor | compliant spend, local turnout or participation where permitted, volunteer/action proof, Host reliability, national/state/district/county/city/ward/event allocation learning |
 
 ### Sponsor PLG Gating
@@ -250,6 +297,8 @@ Frame proof by Sponsor perspective.
 Do not paywall Sponsors before value is visible. The clean conversion moment is the first accepted applicant because that is when the Sponsor has found a real Host and is about to create a collab, budget responsibility, and proof workflow.
 
 At that moment, route the Sponsor into the right revenue shape: a paid Sponsor plan with credits, a campaign commitment, or a program fee for heavier work. Use [Revenue Model And Pricing Experiments](/strategy/pricing-models) for the credit rules.
+
+Exception: the NYC pre-seed Sponsor cohort uses LOI budget intent plus a refundable deposit before high-context matchmaking. Do not sell that cohort as a paid Sponsor plan, and do not treat the deposit or intended activation budget as Analog revenue.
 
 Free Sponsor behavior should work like this:
 
@@ -268,6 +317,8 @@ Accepting an application creates or links a Host and creates a collab. The colla
 
 During the activation, review sponsored Hosts, Host events, spend activity, proof, asset requests, shipments, shared files/docs, tasks, and special requests.
 
+For long-running collabs, run a lightweight review every 90 days. The checkpoint should ask whether the Host is responsive, using funds as intended, delivering useful proof, and still a fit for the Sponsor's goals.
+
 After the activation, decide:
 
 - renew
@@ -278,4 +329,25 @@ After the activation, decide:
 
 Use [Proof And Spend](/platform/proof-and-spend) to judge spend stewardship, social growth, operator upside, category growth, brand growth, and community sentiment.
 
+Use [Two-Way Reviews](/platform/two-way-reviews) to capture the human partnership judgment that proof cannot fully show.
+
 If the Sponsor would deploy more budget with the same rules, the convention is getting stronger. If belief requires custom service work, decide whether to productize the repeated step, price it as managed support, or narrow the use case.
+
+## 7. Complete Sponsor Review
+
+When funds are spent, the campaign ends, or the collab closes, prompt the Sponsor to review the Host.
+
+Ask step-by-step:
+
+- Was the Host responsive and easy to work with?
+- Did the Host use funds appropriately and in the way intended?
+- Did the Host deliver the activation or community work they committed to?
+- Did the Host provide useful proof?
+- Did the Sponsor presence feel additive to the room?
+- Would the Sponsor renew, increase budget, repeat with changes, pause, or stop?
+
+The review should feed future Sponsor approval context, but it should not become a raw public star score. Show concise summaries, reason codes, and confidence notes with visibility controls.
+
+When the Sponsor is evaluating a Host, show permissioned funding history where available: prior checks received, number of funded collabs, proof completion, renewal or increase history, and clean-spend pattern.
+
+The practical goal is to reinforce the Hosts who make Analog better and stop routing budget toward Hosts who repeatedly misuse funds, miss proof, ignore scope, or damage community trust.

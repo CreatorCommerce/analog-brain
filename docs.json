@@ -51,9 +51,33 @@
             ]
           },
           {
-            "group": "AI MAINTENANCE",
+            "group": "DOC MAINTENANCE",
             "pages": [
               "guides/documentation-contract"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Agents",
+        "groups": [
+          {
+            "group": "AGENT ROUTING",
+            "pages": [
+              "agents/agent-operating-rules",
+              "agents/operational-agent-judgment",
+              "agents/agent-registry",
+              "agents/context-packets-and-memory",
+              "agents/repo-boundary-and-github-rules"
+            ]
+          },
+          {
+            "group": "SKILLS & MARKETS",
+            "pages": [
+              "skills/skill-registry",
+              "skills/operator-skill-library",
+              "skills/email-content-skills",
+              "market/city-pack-standard"
             ]
           }
         ]
@@ -70,6 +94,8 @@
               "references/tech-company-landscape",
               "references/ecomm-brand-landscape",
               "references/public-nonprofit-fund-landscape",
+              "references/public-space-activation-infrastructure",
+              "references/public-space-social-impact-measurement",
               "strategy/social-proof-ai-to-irl"
             ]
           }
@@ -93,6 +119,7 @@
               "strategy/supply-side-mac-community-champion",
               "strategy/cash-funding-playbooks",
               "strategy/sponsor-personas",
+              "strategy/nyc-preseed-sponsor-cohort",
               "strategy/host-models-personas",
               "strategy/public-nonprofit-funding-infrastructure",
               "strategy/nyc-sf-grant-money-map",
@@ -135,6 +162,7 @@
               "platform/ai-memory-and-context",
               "platform/marketplace",
               "platform/proof-and-spend",
+              "platform/two-way-reviews",
               "platform/mentions-to-assets",
               "market/event-prospecting-catalog"
             ]

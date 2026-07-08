@@ -1,0 +1,164 @@
+---
+title: "Email Content Skills"
+description: "How Analog separates newsletter emails from customer success emails, and how agents should generate copy-pasteable HTML from the current cc-analog design system."
+pageType: "Reference"
+---
+
+Analog email skills turn repeatable writing jobs into send-ready HTML.
+
+They are for specific output types, not broad memory. Use them when the job is "write the email like we would write it" and the result should be ready for an email tool.
+
+Help articles are intentionally excluded from this set.
+
+## Routing
+
+| Need | Use | Output |
+|---|---|---|
+| Newsletter, digest, field note, product/market update, The Blueprint issue | `skills/newsletter-email/SKILL.md` | Subject, preheader, asset hosting checklist, newsletter HTML, plain-text fallback |
+| Customer success reply, Host follow-up, Sponsor follow-up, onboarding nudge, activation next step, proof request | `skills/customer-success-email/SKILL.md` | Subject, preheader, asset hosting checklist, concise HTML email, plain-text fallback |
+
+## Shared Design Source
+
+Both skills should reference the current Analog product UI before generating HTML:
+
+```text
+/Users/kenyonbrown/Documents/Analog/cc-analog/design.md
+/Users/kenyonbrown/Documents/Analog/cc-analog/apps/analog-directory/src/styles/globals.css
+```
+
+Current email styling should borrow these product signals:
+
+- warm black `#22201F`
+- white page surfaces
+- soft gray panels `#F2F2F2`
+- Analog yellow `#FFF385` for the primary CTA or highlight
+- Poppins-like sans-serif body type
+- Lora-like serif editorial headlines when the message calls for warmth
+- underlined tertiary links
+- restrained rounded panels
+- practical copy with short paragraphs
+
+Email HTML has tighter rules than the app. Final email HTML should use tables, inline critical styles, hosted images, and simple mobile styles.
+
+## Shared Brand Defaults
+
+Use these defaults for Klaviyo-ready Analog emails unless a campaign brief overrides them.
+
+### Logos
+
+The current source logo files live in this repo:
+
+```text
+skills/email-assets/analogblack.png
+skills/email-assets/analogyellow.png
+skills/email-assets/analogwhite.png
+```
+
+Each source file is `1183px` by `351px`. Host the chosen file before sending in Klaviyo, then replace the email image `src` with the public `https://` URL.
+
+Use the black wordmark on white or soft gray sections, the white wordmark on warm black sections, and the yellow wordmark only when the background needs the high-contrast Analog brand mark.
+
+### Footer Links
+
+Default footer links:
+
+| Label | URL |
+|---|---|
+| Dashboard | `https://analog.host` |
+| Directory | `https://analog.directory` |
+| Dashboard Instagram | `https://www.instagram.com/analog.host/` |
+| Directory Instagram | `https://www.instagram.com/analog.directory/` |
+| Dashboard X | `https://x.com/analog_host` |
+| Directory X | `https://x.com/analog_directory` |
+
+Default address line:
+
+```text
+565 Broadway St. Venice, CA 902921
+```
+
+## What Gets Hosted
+
+When an email includes images, the generator must say exactly what needs hosting.
+
+Always host:
+
+- custom hero images
+- product screenshots
+- community photos
+- proof images
+- sponsor or partner logos
+- maps or event visuals
+
+Usually already hosted or ready to host:
+
+- Analog wordmark from `skills/email-assets/`, after it has a public `https://` URL
+
+Do not send HTML with local image paths such as:
+
+```text
+/images/example.png
+file:///...
+localhost:3000/...
+```
+
+Use Cloudflare Images or the CreatorCommerce asset host, then replace the email image `src` with a public `https://` URL.
+
+## Newsletter Pattern
+
+Use newsletters for a one-to-many editorial send.
+
+Default structure:
+
+1. Subject and preheader
+2. Analog header
+3. Editorial thesis
+4. Short opening note
+5. Two or three useful sections
+6. Product or field signal panel
+7. One primary CTA
+8. Footer and unsubscribe placeholder
+
+The newsletter should feel like The Blueprint: product notes, field learning, and practical IRL market context.
+
+Preview template:
+
+```text
+skills/newsletter-email/assets/practice-newsletter.html
+```
+
+## Customer Success Pattern
+
+Use customer success emails for one recipient or one account segment.
+
+Default structure:
+
+1. Subject and preheader
+2. Greeting
+3. Why the recipient is getting the email
+4. Short context
+5. Next step or checklist
+6. One CTA or reply request
+7. Human sign-off
+8. Quiet footer
+
+The email should feel like a capable person wrote it for the account. It should not read like a newsletter or help article.
+
+Preview template:
+
+```text
+skills/customer-success-email/assets/practice-customer-success.html
+```
+
+## Approval Boundary
+
+Agents can draft and generate HTML.
+
+Human approval is required before:
+
+- sending external email
+- publishing a campaign
+- making claims about a Sponsor, Host, customer, or partner
+- using private customer data
+- uploading or replacing production assets
+- changing a live email automation

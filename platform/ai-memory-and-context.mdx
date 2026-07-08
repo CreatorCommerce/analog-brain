@@ -20,7 +20,7 @@ AI memory is not magic. It is not one giant brain reading everything. It is a se
 
 Product records are the truth.
 
-AI memory helps the assistant remember useful patterns, but it does not replace real records. Campaigns, applications, events, collabs, spend, proof, files, settings, and reports are still the source of truth.
+AI memory helps the assistant remember useful patterns, but it does not replace real records. Campaigns, applications, events, collabs, spend, proof, two-way reviews, files, settings, and reports are still the source of truth.
 
 Plain-language version:
 
@@ -37,7 +37,7 @@ Every agent should use the smallest useful folder for the task. Do not send the 
 Analog should build recursive memory from product usage. Recursive means the lesson can improve after the product sees more real activity.
 
 ```text
-Host applies, runs events, spends money, and uploads proof
+Host applies, runs events, spends money, uploads proof, and completes reviews
 -> Analog records the facts
 -> AI drafts a lesson about the Host, campaign, city, or market
 -> a user or trusted workflow reviews the lesson
@@ -52,6 +52,7 @@ Examples:
 |---|---|
 | Three NYC run clubs apply to the same recovery fund. | Recovery brands may fit NYC running supply better than generic wellness Sponsors. |
 | A Host keeps clean receipts and strong photo proof. | This Host may deserve a larger next allocation. |
+| A Sponsor and Host both review a collab as clear, respectful, and easy to repeat. | This pair may deserve renewal or a larger next allocation. |
 | Sponsors keep asking about SF founder dinners. | SF may need a stronger city tactics guide for AI, SaaS, and founder rooms. |
 | A public grant keeps asking for the same proof fields. | The universal Analog application should collect those fields once. |
 
@@ -99,7 +100,7 @@ Core product agents should use both live Analog data and the Market Agent.
 | Sponsor AI | Understand Sponsor session intent, build campaigns, source Hosts, explain fit, draft briefs, recommend next steps, and support dynamic UI decisions. | Sponsor goals, campaign data, applications, event sets, proof, files/docs, settings/features, recursive docs, Market Agent context. |
 | Host AI | Improve pitch pages, find funds, prepare grant packets, source Sponsors, and explain proof gaps. | Host profile, events, proof, applications, opportunities, public-safe market context. |
 | City/operator AI | Help city leads turn field work into catalog records, supply packets, fund ideas, and no-go rules. | Field notes, Event Prospecting Catalog, public market data, proof, city tactics guides. |
-| Proof and spend AI | Summarize spend, receipts, proof, anomalies, and renewal arguments. | Transactions, files, proof packets, campaign data, risk notes, approval rules. |
+| Proof and spend AI | Summarize spend, receipts, proof, two-way reviews, anomalies, and renewal arguments. | Transactions, files, proof packets, review summaries, campaign data, risk notes, approval rules. |
 | Funding and grant AI | Match Hosts to public, private, Sponsor, foundation, or community funds. | Universal Analog application, grant catalog, files/docs, eligibility, deadlines, Host approval. |
 | Marketplace matching AI | Pair Sponsor dollars with receptive Hosts, Venues, communities, event types, and proof standards. | Campaign demand, public opportunity graph, catalog records, proof history, Market Agent context. |
 
@@ -177,16 +178,22 @@ If the AI does not need a fact for the current job, do not include it.
 - Recursive docs need sources, confidence, review, version history, and pinned user sections.
 - Partner-private context stays inside that partner relationship.
 - Raw attendee identity is not public opportunity data.
+- Two-way review data stays permissioned; private comments should not become broad Growth AI input or public reputation data by default.
 - Public/nonprofit, political, financial, tax, health, and sensitive community context need stricter visibility.
 - Growth AI should use public or abstracted product learning unless a specific approved workflow needs more.
 - External Agent MCP can operate Analog objects only inside permissions and approval gates.
 
 ## Current MVP Boundary
 
-Current product work already points this way through the Sponsor AI assistant, bounded memory packets, Analog Docs, deep research docs, city tactics guide categories, files, and sponsor-visible context.
+Current `cc-analog` product work points this way in two layers.
+
+Active product work already has a small version of bounded context through directory search conversations: user-entered messages, an intent summary, semantic query, filters, intent history, listing embeddings, and public-safe listing DTOs. Treat this as search context, not long-term memory.
+
+The preserved full-platform docs point this way through the Sponsor AI assistant, bounded memory packets, Analog Docs, deep research docs, city tactics guide categories, files, and sponsor-visible context. Those are staged product surfaces until restored into the active workspace.
 
 Do not imply the current MVP already has:
 
+- live production Sponsor AI in the active checkout
 - a production central Market Agent
 - production external Agent MCP access
 - autonomous outreach

@@ -1,0 +1,132 @@
+---
+title: "Agent Operating Rules"
+description: "How Analog Brain routes agents, skills, memory, repos, product runtime AI, and operational decisions without overbuilding the company."
+pageType: "Reference"
+---
+
+Analog Brain is the home for Analog's agent and skill rules.
+
+Do not split these rules into a separate repo unless the work has a real runtime, data, owner, permission, or deployment boundary.
+
+It should answer a simple operator question:
+
+```text
+What are we trying to accomplish, and should we use something existing or create something new?
+```
+
+The answer should usually be boring. Use the existing doc, skill, agent, repo, or product surface. Create a new thing only when the work has a durable boundary.
+
+## Core Rule
+
+Do not create an agent because a topic feels important.
+
+Create or extend an agent only when the work has at least one hard boundary:
+
+- separate memory
+- separate permissions
+- separate tools or APIs
+- separate deployment
+- separate owner
+- recurring execution
+- approval gates
+- private or sensitive data
+- a workflow that needs tests and versioning
+
+Everything else starts as context, a skill, a doc, or an addition to an existing agent.
+
+## Operating Layers
+
+| Layer | What it is | Default home |
+|---|---|---|
+| Company doctrine | Durable Analog strategy, source order, terminology, and operating rules. | `analog-brain` |
+| Operational judgment | The router that decides whether to use, extend, or create agents, skills, repos, services, or automations. | `analog-brain` |
+| Shared skills | Reusable playbooks for repeated work. They do not hold business memory. | `analog-brain/skills` |
+| Repo agents | `AGENTS.md` files that teach a repo its purpose, boundaries, and hard rules. | Each repo |
+| Product runtime AI | User-facing Sponsor, Host, operator, and Agent MCP behavior. | `cc-analog` and production services |
+| Market intelligence | Public and sourceable market snapshots plus city packs. | `analog-brain` first, service later |
+| Memory | Small, sourced, scoped notes that help future work. | Scoped to user, org, agent, or repo |
+| Canonical records | Product, finance, people, and operational data that remain the source of truth. | Source systems |
+
+## First Durable Agents
+
+| Agent | Job | Why it exists |
+|---|---|---|
+| Brain Agent | Route operational questions, preserve doctrine, maintain agent and skill registry. | It owns cross-company context and avoids duplicated agent work. |
+| Product Runtime Agent | Power Sponsor, Host, operator, and Agent MCP experiences through bounded context packets. | It touches product data and user permissions. |
+| Market Agent | Watch public and sourceable market signals and maintain city packs. | It needs sourcing, confidence, and staleness rules. |
+| GTM/Brand Agent | Turn market, product, and proof learning into stories, content, sales assets, and case studies. | It needs brand voice and public-safe product learning. |
+| Finance/Pricing Agent | Track burn, pricing tests, credits, program fees, margin, and revenue learning. | It needs financial context and pricing judgment. |
+| People/Capacity Agent | Plan human capacity, roles, contractors, operator benches, and agent training needs. | It ties human assets to AI leverage and operating load. |
+
+These are durable domains, not every possible workflow. A new workflow should usually attach to one of them.
+
+## System Map
+
+```text
+operator asks Analog Brain
+-> operational judgment flow
+-> use existing doc, skill, agent, repo, service, or automation
+-> create only when a durable boundary appears
+-> record the decision in the relevant registry or page
+```
+
+For product runtime:
+
+```text
+user acts in product
+-> product service builds bounded context packet
+-> product runtime AI recommends or drafts
+-> allowed actions and approval gates control mutation
+-> product records stay canonical
+-> reviewed learning can update memory or recursive docs
+```
+
+For internal company work:
+
+```text
+operator asks a question
+-> Brain Agent routes to existing agent or skill
+-> agent uses scoped memory and source docs
+-> output becomes a memo, artifact, product issue, repo update, or proposed skill
+```
+
+## Agent Versus Skill Versus Repo
+
+| If the work is | Use |
+|---|---|
+| A one-time explanation or reference | Existing docs/context |
+| A repeated method or checklist | Shared skill |
+| A domain with memory and decisions | Existing agent |
+| A codebase with hard operating rules | `AGENTS.md` in that repo |
+| A product feature or user-facing AI surface | Product runtime service |
+| A recurring job or monitor | Automation |
+| A domain with secrets, APIs, deployment, or ownership boundary | New repo or service |
+
+## Graduation Rule
+
+Start inside `analog-brain` unless there is a strong reason not to.
+
+The graduation path is:
+
+```text
+doc
+-> shared skill
+-> existing agent manifest update
+-> repo AGENTS.md update
+-> hosted runtime service
+-> new GitHub repo
+```
+
+Skipping steps is allowed only when the work already needs secrets, deployment, production permissions, scheduled execution, or a clearly separate owner.
+
+## How To Use This System
+
+When planning any new operational capability, start with [Operational Agent Judgment](/agents/operational-agent-judgment).
+
+When deciding which agent owns a domain, use [Agent Registry](/agents/agent-registry).
+
+When deciding what context an AI may see, use [Context Packets And Memory](/agents/context-packets-and-memory).
+
+When deciding whether to create a repo or service, use [Repo Boundary And GitHub Rules](/agents/repo-boundary-and-github-rules).
+
+When creating or improving a reusable playbook, use [Skill Registry](/skills/skill-registry).

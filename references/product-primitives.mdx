@@ -4,15 +4,49 @@ description: "Canonical MVP product objects, rules, terminology, and boundaries 
 pageType: "Reference"
 ---
 
-This page reflects the current MVP product logic in `analog-discovery`. Use it as the source of truth when strategy or how-to pages mention current product behavior.
+This page reflects active `cc-analog` product logic plus preserved full-platform doctrine from its archived docs. Use it as the source of truth when strategy or how-to pages mention current, staged, or future product behavior.
 
-Read this first in the Platform tab. Strategy pages describe the full company direction; this page names what the current product can and cannot represent.
+Read this first in the Platform tab. Strategy pages describe the full company direction; this page names what the current active product can represent, what the preserved total platform logic says, and what should stay future-facing.
+
+## Current Platform Split
+
+`cc-analog` currently has two product layers:
+
+| Layer | Source in `cc-analog` | How docs should treat it |
+|---|---|---|
+| Active platform | `apps/analog-directory`, `apps/analog-host`, `apps/analog-api`, `packages/database`, `packages/services`, `apps/analog-scrapers`, `apps/analog-admin` | Current implementation truth for public directory, claim, Host dashboard, listing ownership, grant, volunteer, review, bookmark, search, media, notification, and Instagram connection flows. |
+| Preserved full platform | `archived-nondirectory-code/docs/product-docs`, plus archived sponsor/host/API/webhook/Stripe/dashboard code | Staged product logic for Sponsor campaigns, application portals, collabs, spend cards, Sponsor AI, files/docs, messages, Gmail-style notifications, Stripe Issuing, Instagram webhooks, and recursive AI memory. Reintroduce deliberately, feature by feature. |
+
+The active product spine is:
+
+```text
+public directory record
+-> claim or create listing
+-> Host organization owns listing
+-> Host improves discovery, volunteers, funding readiness, and grant applications
+-> product learns which communities, categories, and proof fields are sponsor-ready
+```
+
+The preserved full-platform spine is:
+
+```text
+Sponsor demand
+-> campaign or application portal
+-> Host application
+-> invited or active collab
+-> governed spend through a spend card
+-> proof, review, and renewal
+```
+
+When a page says "current," check which layer it means. Do not describe archived sponsor dashboards, live Stripe Issuing flows, Sponsor AI, Gmail OAuth, public Agent MCP, or full marketplace APIs as active until they are restored into the active workspace.
 
 ## MVP Boundary
 
-Analog is currently an MVP for Sponsors and Hosts to fund, operate, and prove community-led IRL activations through structured campaigns, host events, application portals, files/docs, managed outreach, hosted event pages, and temporary operational spend cards.
+Analog's full platform logic is an MVP for Sponsors and Hosts to fund, operate, and prove community-led IRL activations through structured campaigns, host events, application portals, files/docs, managed outreach, hosted event pages, and temporary operational spend cards.
 
-The wedge is governed IRL spend: Sponsor budget becomes campaign structure, Host-side execution, shared spend, proof, reporting, sentiment, and renewal logic. The current product is still an MVP and is not yet running production-grade auth, billing, payout, or payment infrastructure.
+The active `cc-analog` checkout is narrower today: it runs the public Analog directory, the Host claim/create flow, Host dashboard surfaces, organization-owned listings, public reviews, bookmarks, volunteer recruitment, founding-grant applications, natural-language directory search, media/storage, notifications, and Instagram connection intent. The sponsor-host-card platform is preserved in the archive and should be treated as staged product logic.
+
+The wedge is governed IRL spend: Sponsor budget becomes campaign structure, Host-side execution, shared spend, proof, reporting, sentiment, and renewal logic. The product is still an MVP and is not yet running production-grade billing, payout, payment, or full sponsor-side infrastructure. Active Host auth exists through WorkOS AuthKit when configured.
 
 The platform focus is fintech enablement plus marketplace enablement. Analog is not trying to become a bank in the MVP. It is shoring up the spend infrastructure, campaign conventions, Host approval flow, proof loop, and supply-creation motion needed to earn the right to deploy community activation investments on behalf of brands and businesses.
 
@@ -20,38 +54,50 @@ The strategic funding model is cash-based Host enablement. Product, samples, and
 
 The strategic proof model is mention-aware. Public Host and Venue mentions should become proof assets when they are authorized and campaign-relevant. Analog should help Sponsors understand which rooms, spaces, Hosts, and categories created visible IRL signal instead of letting mentions disappear into recap screenshots.
 
+The strategic review model is two-sided. Sponsors should review Hosts, and Hosts should review Sponsors, at closeout and at 90-day checkpoints for long-running collabs. Human review fills the gap between AI proof, spend records, and social listening: whether the partner was responsive, respectful, clear, trustworthy, and worth repeating. The product job is to keep good actors on-platform, constrain or remove bad actors, and reinforce strong behavior through proof. Prior checks written by Sponsors and checks received by Hosts are part of that trust signal when shown as permissioned funding history.
+
 The hosted event page posture is not "win because we have event pages." Basic event pages are becoming commodity front doors. Analog should use hosted pages as community brand assets: high-context surfaces that make the gathering feel worth attending, express the Host and Venue, explain the Sponsor's additive role, capture permissioned RSVPs or claims, and preserve proof for renewal.
 
-The aspirational event-page standard is closer to a small Coachella or Outside Lands-style web experience for a trusted community than a carbon-copy calendar card. The current MVP has the primitives for this through hosted event pages, themes, backgrounds, RSVP fields, ticket types, custom CSS, custom HTML, QR assets, and proof capture. Future ad and retargeting constructs should build from that permissioned event asset, not from raw attendee data or generic invite traffic.
+The aspirational event-page standard is closer to a small Coachella or Outside Lands-style web experience for a trusted community than a carbon-copy calendar card. The preserved full-platform docs include primitives for this through hosted event pages, themes, backgrounds, RSVP fields, ticket types, custom CSS, custom HTML, QR assets, and proof capture. Active `cc-analog` currently emphasizes directory community pages, listing events, reviews, bookmarks, grant readiness, and claim flows. Future ad and retargeting constructs should build from permissioned event or community assets, not from raw attendee data or generic invite traffic.
 
 The Host-side product direction is professionalization, not event execution alone. A Host's Analog surface should become a professional record: community story, event history, proof, media inclusion, funding asks, Sponsor fit, public-safe discoverability, and unlock history. Event tools help the Host execute one gathering; Analog should help the Host build a career path around gathering people.
 
 Public and nonprofit programs are a high-stakes version of the same model: mission capital stays accountable upstream while governed budgets, services, and proof move downstream to Hosts, community groups, small businesses, spaces, and local operators.
 
+The NYC pre-seed Sponsor cohort is a current operating motion, not a finished product surface. Analog should track it with LOIs, refundable deposits, spreadsheets, files/docs, Event sets, Sponsor briefs, and proof packets while the product learns the workflow. Do not imply the MVP already has native LOI, deposit, billing, or cohort CRM rails.
+
+Public-space and social connection programs add a measurement layer. When a Sponsor funds parks, plazas, libraries, corridors, cleanups, stewardship, wellness access, arts, youth, sports, or civic programs, Analog should be able to store public-safe proof of belonging, connection, trust, agency, respect, meaningfulness, and cross-group contact without overclaiming long-term outcomes. Use [Public Space Social Impact Measurement](/references/public-space-social-impact-measurement) for the reference pattern.
+
+Public-space activations add a readiness layer before measurement. When a Host wants to activate a park, plaza, sidewalk, street, Open Street, public housing ground, schoolyard, or other public-facing space, Analog should capture permit path, event risk tier, insurance or COI needs, site-plan needs, weather plan, vending/revenue activity, and official source links before funding or renewal. Use [Public Space Activation Infrastructure](/references/public-space-activation-infrastructure) for the reference pattern.
+
 Political action programs are another high-stakes version: campaign or advocacy capital stays accountable upstream while governed budgets, approved uses, privacy boundaries, and compliance-safe proof move downstream to trusted local Hosts. Treat this as a strategic use case layered onto the same MVP objects, not as a claim that Analog currently provides production campaign-finance infrastructure.
 
-## MVP Focus
+## Platform Focus
 
-| Focus | Current product surface | What it helps Analog learn |
+| Focus | Active or staged product surface | What it helps Analog learn |
 |---|---|---|
-| Spend infrastructure <Tooltip headline="Spend infrastructure" tip="Budgets, allocations, funding state, spend cards, merchant/category controls, transactions, receipts, and proof that let Analog deploy approved capital responsibly."><span className="analog-help">?</span></Tooltip> | Campaign budgets, collab allocations, spend cards, card limits, allowed categories, transactions, available budget, funding state | Which budget, approval, control, receipt, and reporting conventions Sponsors trust enough to repeat. |
-| Agentic Sponsor experience <Tooltip headline="Agentic Sponsor experience" tip="Sponsor-side sessions where chat, forms, dashboards, and dynamic UI all work like an assistant trying to complete the Sponsor's current job."><span className="analog-help">?</span></Tooltip> | Sponsor AI assistant, onboarding preferences, campaign forms, event sets, application inbox, Sponsor data, files/docs, settings/features | Which intents, next actions, hidden settings, drill-down paths, and approval gates make Sponsor work faster without making the product feel shallow. |
-| Marketplace enablement <Tooltip headline="Marketplace enablement" tip="The objects that make Sponsor demand, Host supply, campaign visibility, AI-assisted matching, and proof benchmarks legible before a fully liquid marketplace exists."><span className="analog-help">?</span></Tooltip> | Event sets, application portals, campaign applications, Host opportunities, hosted event pages, Sponsor data, proof surfaces, prospecting, catalog records | Which Sponsor briefs, Host profiles, campaign visibility modes, match reasons, pricing models, proof standards, and renewal signals should become durable marketplace conventions. |
-| Supply creation <Tooltip headline="Supply creation" tip="Using managed outreach, city leads, media, partner lists, brand funds, public funds, RFEs, and Asset Need Intelligence to create enough qualified Host-side options for the platform to observe."><span className="analog-help">?</span></Tooltip> | Managed outreach, event-set prospecting, files/docs, city lead workflows, applications, activation packages, Asset Need Intelligence | How brand funds and programs pull existing, latent, missing, and newly generated Hosts, spaces, connectors, and communities into a market the product can measure. |
-| Pitch tooling <Tooltip headline="Pitch tooling" tip="A free or low-friction Host and connector packaging surface that turns history, proof, reach, asks, and grant readiness into fundable supply."><span className="analog-help">?</span></Tooltip> | Host story, pitch page, Analog Doc, files, application portal, deep research doc, grant match notes | Which single-player tools help supply package itself before the marketplace is liquid. |
-| Community champion tools <Tooltip headline="Community champion tools" tip="Host-side tools and support that make Analog the best place to build sponsorship credit."><span className="analog-help">?</span></Tooltip> | Host story, branded hosted event page, files/docs, pitch page, application portal, asset requests, campaign content, proof templates | Which event history, QR, first-party data, mention assets, media, and support surfaces make Hosts better off inside Analog. |
-| Professional Host record <Tooltip headline="Professional Host record" tip="The Host-side record that helps a community builder look fundable, trusted, and ready for larger opportunities."><span className="analog-help">?</span></Tooltip> | Host story, pitch page, application answers, hosted event pages, files/docs, proof packets, media notes, catalog records | Which record fields, artifacts, and proof make a Host feel like they have gone pro instead of merely listed another event. |
-| Regional intelligence <Tooltip headline="Regional intelligence" tip="City-specific supply, media, advisory context, grant learning, and proof history that make a market ownable."><span className="analog-help">?</span></Tooltip> | Campaigns, event sets, applications, files/docs, city lead notes, catalog records, proof packets | Whether Host proof, Venue proof, AnalogNYC, AnalogSF, or a future city layer is becoming a repeatable supply market across Sponsor lanes. |
-| Regional Host dashboard <Tooltip headline="Regional Host dashboard" tip="Local Host experience for market-specific funds, perks, media asks, and proof tasks."><span className="analog-help">?</span></Tooltip> | Host dashboard, operating locations, Host opportunities, application portals, files/docs, tasks, notifications | Which city-specific MAC levers create Host response and reduce custom operator work. |
+| Spend infrastructure <Tooltip headline="Spend infrastructure" tip="Budgets, allocations, funding state, spend cards, merchant/category controls, transactions, receipts, and proof that let Analog deploy approved capital responsibly."><span className="analog-help">?</span></Tooltip> | Preserved full-platform campaign budgets, collab allocations, spend cards, card limits, allowed categories, transactions, available budget, and funding state | Which budget, approval, control, receipt, and reporting conventions Sponsors trust enough to repeat. |
+| Agentic Sponsor experience <Tooltip headline="Agentic Sponsor experience" tip="Sponsor-side sessions where chat, forms, dashboards, and dynamic UI all work like an assistant trying to complete the Sponsor's current job."><span className="analog-help">?</span></Tooltip> | Preserved full-platform surfaces: Sponsor AI assistant, onboarding preferences, campaign forms, event sets, application inbox, Sponsor data, files/docs, settings/features | Which intents, next actions, hidden settings, drill-down paths, and approval gates make Sponsor work faster without making the product feel shallow. |
+| Marketplace enablement <Tooltip headline="Marketplace enablement" tip="The objects that make Sponsor demand, Host supply, campaign visibility, AI-assisted matching, and proof benchmarks legible before a fully liquid marketplace exists."><span className="analog-help">?</span></Tooltip> | Active directory listings, categories, lists, search, claim state, reviews, bookmarks, volunteer and grant signals; preserved event sets, application portals, campaign applications, Host opportunities, hosted event pages, Sponsor data, proof surfaces, prospecting, and catalog records | Which Sponsor briefs, Host profiles, campaign visibility modes, match reasons, pricing models, proof standards, and renewal signals should become durable marketplace conventions. |
+| Two-way reviews <Tooltip headline="Two-way reviews" tip="Sponsor and Host closeout or 90-day checkpoint reviews that turn partnership quality into structured trust signals."><span className="analog-help">?</span></Tooltip> | Active listing reviews, bookmarks, and Host-readiness signals; preserved closeout notes, files/docs, proof packets, tasks, Sponsor data summaries, renewal decisions, and operator notes | Which good actors deserve future budget or better matches, which bad actors need remediation or removal, and which partnership patterns should affect matching. |
+| Supply creation <Tooltip headline="Supply creation" tip="Using managed outreach, city leads, media, partner lists, brand funds, public funds, RFEs, and Asset Need Intelligence to create enough qualified Host-side options for the platform to observe."><span className="analog-help">?</span></Tooltip> | Active directory records, claim/create listing flows, volunteer roles, founding grant applications, city lead imports, and scraper/admin cleanup; preserved managed outreach, event-set prospecting, files/docs, applications, activation packages, and Asset Need Intelligence | How brand funds and programs pull existing, latent, missing, and newly generated Hosts, spaces, connectors, and communities into a market the product can measure. |
+| Pitch tooling <Tooltip headline="Pitch tooling" tip="A free or low-friction Host and connector packaging surface that turns history, proof, reach, asks, and grant readiness into fundable supply."><span className="analog-help">?</span></Tooltip> | Active listing story, links, media, categories, editorial sponsor-fit fields, grant answers, and Host dashboard readiness prompts; preserved pitch pages, Analog Docs, files, application portals, deep research docs, and grant match notes | Which single-player tools help supply package itself before the marketplace is liquid. |
+| Community champion tools <Tooltip headline="Community champion tools" tip="Host-side tools and support that make Analog the best place to build sponsorship credit."><span className="analog-help">?</span></Tooltip> | Active Host dashboard, public listing record, media, reviews, volunteer interest, founding grant, and sponsorship-readiness prompts; preserved branded hosted event pages, files/docs, pitch pages, application portals, asset requests, campaign content, and proof templates | Which event history, QR, first-party data, mention assets, media, and support surfaces make Hosts better off inside Analog. |
+| Professional Host record <Tooltip headline="Professional Host record" tip="The Host-side record that helps a community builder look fundable, trusted, and ready for larger opportunities."><span className="analog-help">?</span></Tooltip> | Active public listing, organization-owned listing edit flow, story, links, categories, images, reviews, bookmarks, volunteer, and grant signals; preserved pitch pages, application answers, hosted event pages, files/docs, proof packets, media notes, and catalog records | Which record fields, artifacts, and proof make a Host feel like they have gone pro instead of merely listed another event. |
+| Regional intelligence <Tooltip headline="Regional intelligence" tip="City-specific supply, media, advisory context, grant learning, and proof history that make a market ownable."><span className="analog-help">?</span></Tooltip> | Active city and category directory views, community pages, lists, search, source metadata, scraper/admin inputs, and city lead notes; preserved campaigns, event sets, applications, files/docs, catalog records, and proof packets | Whether Host proof, Venue proof, AnalogNYC, AnalogSF, or a future city layer is becoming a repeatable supply market across Sponsor lanes. |
+| Regional Host dashboard <Tooltip headline="Regional Host dashboard" tip="Local Host experience for market-specific funds, perks, media asks, and proof tasks."><span className="analog-help">?</span></Tooltip> | Active Host dashboard, claimed listings, listing edit, volunteer recruitment, founding grant, sponsorship readiness, and notifications; preserved operating locations, Host opportunities, application portals, files/docs, and tasks | Which city-specific MAC levers create Host response and reduce custom operator work. |
+| NYC pre-seed Sponsor cohort <Tooltip headline="NYC pre-seed Sponsor cohort" tip="Closed-door Sponsor presell for NYC using LOI budget intent, refundable deposit, and high-context matchmaking before normal product pricing."><span className="analog-help">?</span></Tooltip> | Current approximation: spreadsheet, Sponsor brief, files/docs, Event sets, application portal, proof packets, operator notes | Whether a captured NYC community directory can convert into serious Sponsor budget intent before broader product launch. |
 | Services/tools enablement <Tooltip headline="Services/tools enablement" tip="Operational support such as insurance, print, documents, vendors, local designers, rentals, and proof kits that makes funded IRL easier to execute."><span className="analog-help">?</span></Tooltip> | Files/docs, task templates, asset requests, shipment logs, vendor notes, campaign required todos, proof templates | Which repeated blockers should become product workflows, partner workflows, or priced managed-support packages. |
 | Vendor and tax record simplification <Tooltip headline="Vendor and tax records" tip="Reusable payee, vendor, tax-document, and 1099 support workflows that keep distributed IRL spend from becoming back-office chaos."><span className="analog-help">?</span></Tooltip> | Vendor notes, files/docs, tasks, proof packets, future vendor/payee records, future W-9 status, future 1099 support workflows | Which Hosts, Venues, contractors, vendors, and operators create recurring records that Analog should simplify for Sponsors. |
+| Public-space activation readiness <Tooltip headline="Public-space activation readiness" tip="Host-side readiness for public-space activations: permit path, event risk tier, insurance, site plan, weather, vending or revenue activity, and public-safe proof plan."><span className="analog-help">?</span></Tooltip> | Universal application, Host grant readiness file, application answers, files/docs, tasks, Event Prospecting Catalog, proof packet, operator notes | Which permit, insurance, site-plan, weather, vendor, funding, and proof blockers should become repeatable support workflows. |
+| Public-space social impact proof <Tooltip headline="Public-space social impact proof" tip="Public-safe proof that a funded space, event, or program created belonging, connection, trust, agency, respect, or meaningful cross-group contact."><span className="analog-help">?</span></Tooltip> | Files/docs, hosted event pages, QR assets, application answers, proof packets, Sponsor data summaries, operator notes | Which public-good programs create real-time evidence of social connection and which proof claims need stronger evaluation partners. |
 | Agency services as scaffolding <Tooltip headline="Services as scaffolding" tip="Manual GTM, marketing, sourcing, and program design used to create supply and learn product conventions, not the terminal business model."><span className="analog-help">?</span></Tooltip> | Sponsor briefs, prospecting, Host packaging, launch checklists, proof QA, renewal packets, media/GTM support | Which manual steps should become product, templates, contractor playbooks, partner workflows, or no-go rules. |
 
 Use services to create the market, then turn the repeated parts into product. The test is not whether Analog can manually run one good program. The test is whether brand funds, spend controls, Host supply, proof, and renewal can repeat with less custom work each time.
 
 ## IRL Culture Graph Primitive
 
-Analog's product memory should be more than event records. The larger primitive is an IRL culture graph: a privacy-safe, provenance-aware map of events, recurring rituals, cultural operators, venues, audience hypotheses, sponsor fit, spend behavior, authorized mentions, proof quality, and renewal logic.
+Analog's product memory should be more than event records. The larger primitive is an IRL culture graph: a privacy-safe, provenance-aware map of events, recurring rituals, cultural operators, venues, audience hypotheses, sponsor fit, spend behavior, authorized mentions, two-way reviews, proof quality, and renewal logic.
 
 The strategic analogy is simple:
 
@@ -61,7 +107,7 @@ The strategic analogy is simple:
 | Digital creator data | Creator reach, digital audiences, content performance, and social distribution. |
 | Analog IRL culture data | Which real-world communities gather, who can move them, what sponsors they fit, and which funded moments create audience or category potential. |
 
-In the MVP, this graph is assembled from product objects rather than a standalone data product: campaigns, event sets, applications, host profiles, hosted pages, spend cards, transactions, files/docs, proof packets, city lead notes, media capture, and renewal decisions.
+In the MVP, this graph is assembled from product objects rather than a standalone data product: campaigns, event sets, applications, host profiles, hosted pages, spend cards, transactions, files/docs, proof packets, review notes, city lead notes, media capture, and renewal decisions.
 
 ## AI Memory And Context Primitive
 
@@ -75,7 +121,7 @@ AI memory is a small, sourced note about what helps the assistant work.
 Context is the compact packet an agent gets for one task.
 ```
 
-The current MVP can approximate this through Sponsor AI context packets, files/docs, Analog Docs, deep research docs, city tactics guide categories, campaign summaries, and sponsor-visible workspace data. Future product work should add scoped AI memory, recursive knowledge metadata, Market Agent snapshots, source ids, confidence labels, review flows, and version history before treating market or culture learning as durable assistant context.
+The preserved full-platform docs approximate this through Sponsor AI context packets, files/docs, Analog Docs, deep research docs, city tactics guide categories, campaign summaries, and sponsor-visible workspace data. The active product already has a smaller search-context pattern through directory `SearchConversation`, intent summaries, embeddings, and public-safe listing DTOs. Future product work should add scoped AI memory, recursive knowledge metadata, Market Agent snapshots, source ids, confidence labels, review flows, and version history before treating market or culture learning as durable assistant context.
 
 Growth AI may use internal Analog doctrine, public sources, Market Agent research, public-safe opportunity data, and approved aggregate product trends. It should not use raw private product data by default.
 
@@ -97,7 +143,7 @@ This is not only a chat assistant. Chat, dynamic UI, forms, dashboards, settings
 
 | Session job | Current approximation | Rule |
 |---|---|---|
-| Understand intent | Onboarding role/preferences, Sponsor AI assistant prompt, campaign dashboard state, selected campaign, application inbox, Sponsor data view | Ask or infer whether the Sponsor is here to create a campaign, find supply, review applicants, inspect proof, adjust budget, fix admin work, or decide renewal. |
+| Understand intent | Preserved full-platform surfaces: onboarding role/preferences, Sponsor AI assistant prompt, campaign dashboard state, selected campaign, application inbox, Sponsor data view | Ask or infer whether the Sponsor is here to create a campaign, find supply, review applicants, inspect proof, adjust budget, fix admin work, or decide renewal. |
 | Render the next useful step | Campaign creation fields, event set setup, application cards, proof summaries, files/docs, settings/features | Keep first actions simple. Then show the next field, recommendation, setting, or workflow based on context. |
 | Reveal advanced controls progressively | Feature setup, campaign settings, Venue reward notes, visibility mode, vendor/payee context, public/nonprofit controls, political controls, high-ticket files/docs | Hide features until they matter. Do not make every Sponsor configure every possible rail up front. |
 | Support deep drill-down | Sponsor data summaries, proof packets, application detail, Event Prospecting Catalog, files/docs, deep research docs, future Market Agent snapshots | If the Sponsor keeps asking why, who else, what if, or show more, keep routing them to deeper evidence, options, or settings. |
@@ -119,12 +165,17 @@ unless the user, record, campaign, or compliance context opts out.
 | Data class | Default posture | Guardrail |
 |---|---|---|
 | Public opportunity data | Discoverable through Analog search, Sponsor workflows, partner APIs, and Agent MCP. | Keep fields sponsor-safe: name, category, geography, cadence, audience hypothesis, funding needs, proof/readiness, offer preferences, and claim status. |
+| Partner-supplied community data | Discoverable and usable when a partner platform has authority to list or route its downstream communities. | Preserve source, partner, consent, canonical-owner, and routing fields so Analog can send opportunity back to the app instead of pretending it owns the whole relationship. |
 | Private operating data | Scoped to the relevant workspace, collab, partner, or campaign. | Do not expose partner-private notes, private messages, attachments, or sensitive strategy by default. |
 | Attendee identity | Permissioned and purpose-limited. | Do not expose raw attendee emails, phone numbers, political affiliation, volunteer lists, donor data, or customer files as public opportunity data. |
 | Sensitive funding, tax, or financial data | Restricted and approval-gated. | Use explicit authorization, purpose disclosure, and approved payment/tax/compliance workflows. |
 | Public/nonprofit or political records | Visibility depends on program rules and legal/compliance posture. | Keep public reporting, political privacy, sensitive affiliation, and safety controls explicit. |
 
-API and Agent MCP access should make the opportunity graph usable from custom workflows: a Sponsor plan inside Analog, a partner platform dashboard, an external agent asked to source Sponsors for a Host, or a city/operator workflow that routes a fund to matching supply. Agents can read/query and prepare recommendations; they cannot publish, share private data, move money, send external outreach, or make final approval claims without human approval.
+API, attribution, pixel, and Agent MCP access should make the opportunity graph usable from custom workflows: a Sponsor plan inside Analog, a partner platform dashboard, an external agent asked to source Sponsors for a Host, an event-page app reporting proof, or a city/operator workflow that routes a fund to matching supply. Agents and partner systems can read/query, report approved events, and prepare recommendations; they cannot publish, share private data, move money, send external outreach, or make final approval claims without human approval.
+
+This is where a later platform-as-a-service motion belongs. Analog can sit behind event-page, ticketing, club, venue, nightlife, movement, creator, and community platforms as the Sponsor funding, proof, attribution, and opportunity-routing layer. Potential platform users include Partiful, Posh, Luma, Flite, LineLeap, MobiusFit, Eventbrite, and similar products that may prefer to keep their own attendee, organizer, venue, nightlife, fitness, or community experience while embedding Analog's sponsorship workflows.
+
+Treat this as future product direction until partner API access, attribution ingestion, consent flows, billing, partner dashboards, approval controls, and support operations exist in production. Do not imply any named platform is currently integrated, committed, or a customer.
 
 The user-facing bargain should be visible during onboarding, claiming, application, and profile settings: Analog is trying to expose qualified supply to relevant opportunities. Users should have opt-out, field-level visibility, private campaign modes, and correction paths where needed.
 
@@ -192,9 +243,43 @@ Sponsor category + goal + budget
 | Campaign visibility mode | Campaign copy, application portal setting, outreach plan, event set prospecting, media launch | Every campaign should know whether it is private link-only, broadly marketed, or ICP-targeted. |
 | Social receptiveness | Host notes, prior proof, content/mention history, Venue context, category fit, community exclusions, application answers | Match on whether the Sponsor is likely to be welcomed, not only whether the audience exists. |
 | Category benchmark | Sponsor perspective, event type, proof packet, spend and mention history, assisted summaries | Compare success to organizations of the same category before recommending renewal. |
+| Two-way review signal | Sponsor closeout reviews, Host closeout reviews, 90-day checkpoint notes, operator review notes | Use reviewed partnership quality to explain whether a partner is dependable, respectful, clear, and worth repeating. |
 | Match reason | Deep research doc, Sponsor brief, event set note, catalog record, assisted summary | Explain why this Host, Venue, community, market, or event type fits the Sponsor's goal. |
 
-This is future product direction until explicit visibility modes, receptiveness labels, automated benchmark libraries, and recommendation reason codes exist in production. Current MVP work can approximate the loop with campaigns, event sets, application portals, prospecting, catalog records, files/docs, proof packets, and Sponsor data summaries.
+This is future product direction until explicit visibility modes, receptiveness labels, review objects, automated benchmark libraries, and recommendation reason codes exist in production. Active `cc-analog` contributes directory, search, listing, claim, review, bookmark, volunteer, and grant-readiness signals. Preserved full-platform work can approximate the full loop with campaigns, event sets, application portals, prospecting, catalog records, files/docs, proof packets, closeout notes, and Sponsor data summaries.
+
+## Two-Way Review Primitive
+
+Two-way reviews are the structured human layer on top of AI proof and social listening.
+
+Use [Two-Way Reviews](/platform/two-way-reviews) for the Platform rule. The default cadence is:
+
+```text
+every 90 days for active long-running collabs
+or at closeout when funds are spent, the campaign ends, or the collab closes
+```
+
+| Primitive | Current approximation | Rule |
+|---|---|---|
+| Sponsor review of Host | Renewal note, proof QA note, Sponsor data summary, operator closeout file | Ask whether the Host was responsive, used funds as intended, delivered the activation, supplied useful proof, protected Sponsor fit, and deserves more budget. |
+| Host review of Sponsor | Host note, task feedback, support ticket, operator closeout file | Ask whether the Sponsor was clear, responsive, respectful of the room, reliable with assets or funding, and worth working with again. |
+| Funding history | Spend records, collab allocations, proof packets, closeout notes, verified external records where allowed | Show checks written by Sponsors and checks received by Hosts as counts, ranges, badges, or exact amounts only when permitted. |
+| 90-day checkpoint | Task, reminder, file/doc, manual operator follow-up | Use for recurring collabs so issues surface before a long program quietly drifts. |
+| Closeout review | Renewal packet, no-go note, proof packet, collab status note | Trigger when funds are spent, the campaign ends, or the collab closes. |
+| Review visibility | File/doc permissions, internal note, Sponsor summary, Host summary | Separate private comments, reviewed-party feedback, internal Analog notes, future approval context, and public-safe aggregate summaries. |
+
+The product should not become a public star board. It should turn review answers into review summaries, badges, reason codes, and confidence notes that support future Sponsor approval and Host opportunity decisions.
+
+The trust loop is:
+
+```text
+proof + mutual review
+-> reinforce good actors
+-> constrain or remove bad actors
+-> make future matching safer
+```
+
+Future product work should add review triggers, guided review screens, dimension ratings, visibility controls, summary generation, dispute handling, review-history cards, and matching reason codes.
 
 ## Cash Funding Ladder Primitive
 
@@ -207,6 +292,7 @@ Strategy pages may refer to a funding ladder. In the MVP, these are campaign/eve
 | Macro Grant | Larger recurring campaign allocation with clearer proof and renewal conditions | Use for the best Hosts, strategic rooms, operationally excellent organizers, or deeper recurring activations. |
 | Operator Retainer | Managed support, city lead work, agency engagement, or contracted operator outside the core MVP object model | Keep separate from unrestricted Host wallet language; route product learning back into campaigns, event sets, catalog, and proof. |
 | Public Fund | Campaign or event set with public-good eligibility, controlled spend, reporting, and review requirements | Use transparent admin/support framing and avoid promising public-sector outcomes the product cannot measure. See [Public And Nonprofit Funding Infrastructure](/strategy/public-nonprofit-funding-infrastructure). |
+| Public Space Activation Support | Campaign or event set for parks, plazas, sidewalks, streets, corridors, or other shared civic space | Capture public-space activation readiness before funding: permit path, risk tier, insurance, site plan, weather, vending/revenue, official links, and proof plan. |
 | Community Collective Fund | Sponsor-owned campaign backed by many local contributors, co-Sponsors, checks, bank transfers, pledges, invoices, in-kind support, or future payment-link contributions | Use for neighborhood or scene funds such as Greenpoint Neighborhood Collective. Track contributor source, restrictions, allowed uses, proof, application route, and renewal rules. Do not imply production pooled-wallet or donation infrastructure before it exists. |
 
 Until compliant payout and tax rails exist, cash funding means controlled allocations, grants, event-scoped budgets, spend cards, approved program budgets, or managed support. It does not mean withdrawable balances.
@@ -223,6 +309,7 @@ A sponsor-shared campaign is the bridge between spend infrastructure and marketp
 | Service/tool request | Application answer, file/doc, asset request, task, vendor note, or managed support item | Let Hosts surface insurance, print, contract, local design, vendor, rental, proof, or space needs alongside cash requests. |
 | Supply response | Campaign applications, invited hosts, pitch docs, city lead referrals, prospecting replies | Track where each response came from so the platform learns which channels create quality supply. |
 | Raffle or grant hook | Campaign copy, application portal, event set, hosted form, or media CTA | Use simple money-on-the-table language to recruit qualified supply while keeping eligibility, spend rules, and proof clear. |
+| Corporate community impact fund | Campaign, event set, application portal, local reviewer notes, partner or fiscal sponsor records, collabs, spend rules, proof packet | Use when a Sponsor frames support around employee communities, schools, nonprofits, youth sport, play, wellbeing, or local public-good access. |
 | Owned IRL conversion | Analog happy hour, dinner, walk, salon, live recording, field meetup | Route real-world attendees into applications, profiles, sponsor leads, catalog records, or fund ideas. |
 
 ## Campaign Timing And Sponsor PLG Primitive
@@ -250,7 +337,7 @@ The start date is not only logistics. It is expectation-setting for Hosts and a 
 | First accepted applicant gate | Campaign application acceptance, collab creation, budget setup, proof workflow | Do not paywall before value is visible. The conversion moment is first accepted applicant, before full collab operations and full applicant unlock. Route into a Sponsor plan with credits, a campaign commitment, or a program fee based on complexity. |
 | Blurred applicant state | Limited card, aggregate count, high-level fit tags, source/channel summary | Do not expose sensitive Host details, full pitch language, contact info, attachments, or private social data before the Sponsor has committed. |
 
-This is product direction until explicit start-date fields, free-tier applicant limits, blurred-card states, billing, and entitlement controls exist in production. Current MVP docs can approximate the behavior through campaign copy, application portal language, application inbox handling, and operator rules.
+This is product direction until explicit start-date fields, free-tier applicant limits, blurred-card states, billing, and entitlement controls exist in production. Preserved full-platform docs can approximate the behavior through campaign copy, application portal language, application inbox handling, and operator rules.
 
 ## Universal Funding Application Primitive
 
@@ -275,7 +362,7 @@ The product direction is not another static profile. It is a reusable funding re
 | Guided grant application UX <Tooltip headline="Guided grant application UX" tip="A TurboTax-style follow-up flow that collects only the grant-specific fields, documents, and confirmations missing from the reusable Analog record."><span className="analog-help">?</span></Tooltip> | Conditional application questions, missing-field prompts, files/docs requests, task checklist, generated Analog Doc, operator queue | Ask only for the deltas a specific grant requires. Preserve answers, keep official requirements visible, and require Host approval before submission. |
 | Agent MCP application support <Tooltip headline="Agent MCP application support" tip="Agent-assisted preparation of answers, budgets, files, proof summaries, and status tracking for Host-approved applications."><span className="analog-help">?</span></Tooltip> | Deep research doc, generated Analog Doc, task checklist, files/docs packet, operator review | Agents can draft and assemble. Hosts and operators approve facts, sensitive claims, and submissions. |
 
-This is current strategy and product direction. Current MVP docs should describe approximations through existing objects unless production one-click grant filing, automated submission, payment collection, or agency integrations actually exist.
+This is current strategy and product direction. Active `cc-analog` already includes a founding grant application surface and Host readiness records; docs should still avoid implying one-click grant filing, automated submission, payment collection, or agency integrations unless those production rails exist.
 
 ## Operating Layer Shape
 
@@ -285,10 +372,10 @@ The product direction is an operating layer, not a directory, generic fintech ap
 |---|---|
 | Discover | Proven hosts, clubs, gatherings, venues, and operators are vetted, ranked, matched, and routed into campaigns or event sets. |
 | Collaborate | Sponsor budget becomes governed spend, controls, guardrails, tasks, assets, docs, and execution support. |
-| Measure | Receipts, content, attendance, sentiment, category lift, and outcomes become proof for renewal or unlock decisions. |
-| Learn | Repeated budget, supply, proof, and services patterns become marketplace and fintech conventions that the platform can standardize. |
+| Measure | Receipts, content, attendance, sentiment, category lift, participant-reported social impact, two-way reviews, and outcomes become proof for renewal or unlock decisions. |
+| Learn | Repeated budget, supply, proof, review, and services patterns become marketplace and fintech conventions that the platform can standardize. |
 
-The current MVP implements pieces of this loop. Strategy pages should describe the full loop, while how-to and reference pages should stay honest about current product boundaries.
+The active product implements the directory, claim, Host readiness, grant, volunteer, review, bookmark, and search pieces of this loop. The archived full platform implements the sponsor-campaign, collab, spend-card, files/docs, proof, and messaging pieces as preserved product logic. Strategy pages should describe the full loop, while how-to and reference pages should stay honest about current product boundaries.
 
 ## Future Media And Funding Direction
 
@@ -299,10 +386,11 @@ Do not describe these as current MVP objects unless they map back to existing su
 | Future direction | Current MVP approximation |
 |---|---|
 | Builder or connector profile | Host story, pitch page, files, docs, and catalog context |
-| Agentic Sponsor session layer | Sponsor AI assistant, onboarding preferences, campaign forms, event sets, application inbox, Sponsor data summaries, files/docs, settings/features, and guided next actions |
+| Agentic Sponsor session layer | Preserved full-platform Sponsor AI assistant, onboarding preferences, campaign forms, event sets, application inbox, Sponsor data summaries, files/docs, settings/features, and guided next actions |
 | Public opportunity profile | Host story, pitch page, public-safe catalog record, claim status, opportunity preferences, and visibility settings |
-| AI memory and context packet | Sponsor AI assistant context, files/docs, Analog Docs, deep research docs, city tactics guide categories, bounded chat context, and future scoped memory |
-| Agent MCP/API opportunity search | Event set prospecting, managed outreach, Event Prospecting Catalog, deep research docs, Sponsor AI assistant context, and future partner API endpoints |
+| AI memory and context packet | Active directory search conversations and intent summaries; preserved full-platform Sponsor AI assistant context, files/docs, Analog Docs, deep research docs, city tactics guide categories, bounded chat context, and future scoped memory |
+| Agent MCP/API opportunity search | Active directory/search API for public-safe listings; preserved full-platform event set prospecting, managed outreach, Event Prospecting Catalog, deep research docs, Sponsor AI assistant context, and future partner API endpoints |
+| Partner platform-as-a-service lane | Partner API, attribution ingestion, canonical community matching, embedded Sponsor opportunity routing, partner dashboard, consent/visibility controls, proof packets, billing, and support workflows |
 | QR asset pack | Hosted event page, invite builder, files/docs, custom HTML/CSS, printed event assets, and claim/application links |
 | Event history log | Host events, hosted pages, files/docs, campaign content, applications, and proof packets |
 | High-production event page | Hosted event page, design kit, theme, background, custom HTML/CSS, media, QR assets, RSVP/claim flow, proof prompts, and later recap context |
@@ -317,14 +405,17 @@ Do not describe these as current MVP objects unless they map back to existing su
 | Geo-dashboard grant shelf | Regional Host dashboard, Host opportunities, grant opportunity catalog, campaign/application links, files/docs, and market flags |
 | One-click grant apply | Application intent, missing-field prompts, Agent MCP task, operator review queue, status log, and Host approval |
 | Guided grant application UX | Conditional grant questions, files/docs prompts, budget worksheet, portal field mapping, operator queue, and Host approval |
+| Public-space social impact survey | Hosted event page, QR asset, paper survey upload, file/doc, proof packet, Sponsor data summary, operator note, and future survey template or response import |
 | In-kind grant | Asset request, files/docs, service/tool request, managed support, shipment log, or controlled vendor spend |
 | Selective brand fund | Campaign, event set, application portal, regional dashboard placement, media launch, and proof packet |
+| Corporate community impact fund | Campaign, event set, application portal, local reviewer notes, partner or fiscal sponsor records, grant administrator files/docs, collabs, spend rules, proof packet, and reporting tasks |
 | Community collective fund | Sponsor account, campaign, contributor records, checks/invoices/pledges in files/docs, application portal, collabs, spend rules, proof packet, and future payment-link contribution rail |
 | Regional Host dashboard | Host dashboard, operating location, Host opportunities, application portal links, tasks, files/docs, notifications, and city market flags |
 | Mention asset | Campaign content, story mention, Host event location, Sponsor data summary, and proof packet context |
 | Venue reward | Campaign budget note, controlled vendor/venue spend, task, file/doc, or future authorized Venue payout rail |
 | Venue mention authorization | Host event location, Venue note, file/doc, social connection workflow, and campaign-window proof scope |
 | Mention coverage upsell | Sponsor campaign setting, budget line, proof requirement, and Host coordination task |
+| Two-way review | Closeout note, 90-day task, renewal packet, proof packet, Sponsor data summary, Host feedback note, and future review object |
 | Vendor/payee record | Vendor note, Host or Venue profile, file/doc, task, proof packet, payment context, and future payee profile |
 | 1099 support workflow | Files/docs, tax-document request task, vendor/payee record, payment context, approved tax/payment partner workflow, and reporting export |
 | Funding tab | Host sponsor budgets, collabs, spend cards, and available campaign allocations |
@@ -362,40 +453,65 @@ Brand funds and programs are the cleanest market-making primitive: they give spo
 
 Selective brand funds are the pre-marketplace version of this primitive. Analog should design a few Sponsor-funded public funds around specific markets before the open marketplace is liquid. The Sponsor supplies activation capital. Analog supplies fund-market fit, local distribution, application flow, regional dashboard placement, spend governance, and proof.
 
+Two-way reviews are part of the same proof system. Future product specs should ask Sponsors and Hosts for structured reviews every 90 days in long-running collabs and at closeout when funds are spent, the campaign ends, or the collab closes. Review data should support future approval and matching, but it should use visibility controls, correction paths, and summary language instead of exposing every raw score or private comment.
+
 High-ticket sponsorships should not be described as card-only flows. For large programs, Analog's product direction is sponsorship governance: cards for distributed spend, plus files/docs, invoices, contracts, deliverables, risk reviews, proof gates, and AI-assisted renewal or tranche recommendations.
 
-Public and nonprofit programs should be described as governed downstream funding, not unrestricted grant wallets. The current MVP can approximate them with campaigns, event sets, application portals, collabs, spend cards, files/docs, proof, and Sponsor data summaries; future product work should add eligibility, conflict checks, restricted uses, public-safe reporting, grant-report drafts, and funder-facing allocation logic.
+Public and nonprofit programs should be described as governed downstream funding, not unrestricted grant wallets. The active product can approximate the Host acquisition side through the founding grant application, Host grant readiness fields, directory listings, reviews, volunteer roles, media, and organization-owned listing events. The preserved full platform can approximate the Sponsor/funder side with campaigns, event sets, application portals, collabs, spend cards, files/docs, proof, and Sponsor data summaries. Future product work should add eligibility, conflict checks, restricted uses, public-safe reporting, grant-report drafts, and funder-facing allocation logic.
 
 ## Account And Org Posture
 
-The strategy target is one organization model with roles and permissions. The current MVP still exposes `Sponsor` and `Host` as product actors, but both can carry `organizationId` and `organizationRoles`.
+The strategy target is one organization model with features and membership permissions. The active `cc-analog` code currently uses `Organization.kind` as `host` or `sponsor`, plus organization memberships, to support the live Host dashboard and future Sponsor surfaces. The preserved full-platform docs go further: `Organization` owns identity and enabled features, while `Sponsor` and `Host` are compatibility views over the same organization.
 
 | Object | Current meaning | Practical rule |
 |---|---|---|
-| Organization role | Host, sponsor, or both on one org | Treat dual-role orgs as the direction of travel; do not create strategy that assumes rigid account types forever. |
+| Organization | Canonical workspace record in active code, currently typed by `kind` and joined to users through memberships | Treat `kind` as the live bridge, not the final strategy. The direction of travel is enabled feature modules and per-user permissions. |
+| Organization membership | Join between a user and an organization | Use membership role and permissions to decide what a person can operate. Do not infer permission only from route names. |
 | Sponsor | Product actor that funds campaigns; in the market this means any capital deployer that wants structure, oversight, and proof | Owns campaign budget, application pages, event sets, outreach, data, files, proof, and host allocations. |
-| Host | Product actor that creates events and operates against sponsor budgets | Owns host story, events, tasks, files, sponsor budgets, social connections, and pitch surfaces. |
+| Host | Product actor that creates events, claims or creates listings, and operates against sponsor budgets when funding is active | In the active app, owns claimed listings, listing content, volunteer roles, grant applications, Instagram connection intent, reviews, and funding readiness. In the preserved full platform, also owns events, tasks, sponsor budgets, social connections, and pitch surfaces. |
 | Brand kit or design kit | Reusable identity assets | Stores logo/mark, colors, accent media, and other media for sponsor pages, host pages, and event surfaces. |
 | Host story | Sponsor-facing host narrative | Stores short/long description, organization name, and website for pitch and trust surfaces. |
 
-## Funding And Campaign Objects
+## Active Directory And Host Objects
+
+These are current active objects in `cc-analog`.
+
+| Object | Meaning | Key rules |
+|---|---|---|
+| Listing | Public directory record for a community, club, venue, organizer, event series, or recurring ritual | Public endpoints return only `published` listings through a whitelisted DTO. Internal fields such as owner organization, claim state, embeddings, and social connection data stay private. |
+| Public directory listing | Sponsor-safe and public-safe listing DTO | Includes identity, geography, categories, images, links, story, editorial sponsor-fit notes, reviews, events, and claim state. Excludes internal ownership, tokens, embeddings, and private workflow fields. |
+| Search conversation | Anonymous natural-language directory search session | Stores user-entered messages, current intent, semantic query, filters, and intent history. Search merges lexical scoring and Mongo Atlas vector search against listing embeddings. |
+| Directory list | Curated public collection of listings | Powers homepage/list pages and should stay public-safe. |
+| Claim intent | Host request to claim an existing listing or start from a missing-community flow | Bridges public directory records into the Host app and can carry sponsorship/grant-category opportunity opt-in. |
+| Organization-owned listing | Claimed or created listing managed by a Host organization | The Host can edit listing content, log listing events, hide listing reviews, and connect Instagram intent. |
+| Listing review | Public community review with optional media | Helps the Host turn community proof into a public-safe trust surface. Host owners can hide reviews through organization routes. |
+| Listing bookmark | Public save/interest signal | Helps Analog see which communities are attracting attention before full Sponsor demand is active. |
+| Volunteer role | Host-created role attached to a listing | Supports inbound supporter recruitment from the public directory. |
+| Volunteer application | Public application to a listing volunteer role | Host organizations approve or reject applications from the dashboard. |
+| Grant application | Reusable Host grant record for a named grant slug | The active founding grant captures origin story, budget, cadence, attendance, sponsor experience, support needs, and goals. |
+| Media | Uploaded image/video/generic file metadata | Belongs to a user/organization/listing field and supports richer listing and proof surfaces. |
+| User notification | Host dashboard notification | Current kinds include bookmark, views, trend, season, and system signals. |
+
+## Staged Funding And Campaign Objects
+
+These objects come from the preserved full-platform docs and archived code. Keep them as current product doctrine for the total platform, but do not imply their routes are active unless restored into the active workspace.
 
 | Object | Meaning | Key rules |
 |---|---|---|
 | Campaign | Sponsor-owned funding and strategy container | Stores mission, market persona, main value-add, budget, funding state, required todos, host visibility, gift/address requirement, auto-renew preference, and outreach settings. |
 | Event set | Campaign subgroup for a market/persona or activation lane | Stores market persona, special requests, assets, file attachments, status, host count, tracked event count, and prospecting settings. |
-| Campaign outreach | Campaign-level managed email/direct mail settings | Current MVP exposes managed outreach first and a future self-serve view; outreach requires campaign market persona. |
+| Campaign outreach | Campaign-level managed email/direct mail settings | Preserved full-platform doctrine exposes managed outreach first and a future self-serve view; outreach requires campaign market persona. |
 | Event set prospecting | External prospecting run tied to one event set | Uses standard or heavy plan, dedicated inboxes, warm-up period, daily send limits, application-link CTA, and a three-month auto-disable concept. |
 | Application portal | Sponsor-owned pitch intake page | Can be sponsor-wide or campaign-scoped, themed, translated, customized with questions/CSS, and tied to GA4 measurement. |
 | Campaign application | Host sponsorship pitch | Structured pitch fields plus custom answers and attachments; accepting can create/link a host and create a collab. |
 | Collab | Sponsor-host relationship inside a campaign | Grants allocation, allowed categories, status, optional event set, and the host's access to sponsor budget. |
 | Campaign event | Sponsor/campaign-side tracking event | Tied to a collab and optionally an event set; used for sponsor-side event analytics. |
 
-## Host Execution Objects
+## Staged Host Execution Objects
 
 | Object | Meaning | Key rules |
 |---|---|---|
-| Host event | Host-created event or activation | Can exist without sponsor backing, and can attach sponsor support. The creation wizard currently selects at most one sponsor budget, while the data model has sponsor summary arrays for future multi-sponsor shape. |
+| Host event | Host-created event or activation in the preserved full platform | Can exist without sponsor backing, and can attach sponsor support. The archived full-platform wizard selected at most one sponsor budget, while the data model was future-shaped for richer sponsor summaries. Active `cc-analog` currently exposes lighter organization listing events, not the full sponsor-backed Host event workflow. |
 | Hosted event page | Public `/e/:eventId` page configuration | Stores draft/published state, theme, background, RSVP fields, ticket types, custom CSS, and custom HTML. Treat it as a branded community asset and proof surface when the event is fundable; do not frame generic event-page creation as the moat. |
 | Host task | Event prep or sponsor-required task | Can be custom or sourced from event set required todos; supports priority, due date, and completion. |
 | Spend card | Temporary operational card | Tied to host/collab/event context and limited by amount, status, categories, and expiration. |
@@ -423,6 +539,7 @@ The strategy target is one organization model with roles and permissions. The cu
 | Mention asset | Authorized Host, Venue, or Sponsor mention used for proof | Should store source, actor, event window, confidence, visibility, and permission context before it affects underwriting. |
 | Venue mention authorization | Future Venue-side permission object | Lets a Venue authorize campaign-window social listening or eligible account connection, often in exchange for a flat Venue reward. Not current production payout behavior. |
 | Mention performance benchmark | Future proof summary | Compares Host mentions, Venue mentions, Sponsor mentions, attendance, and historical percentile for underwriting. |
+| Social impact summary | Future or file/doc proof summary | Stores response count, survey design, measure tags, item summaries, open-ended themes, demographic-safety notes, sample gaps, and proof boundaries for public-space or social connection programs. |
 | Campaign event analytics | Event-level proof summary | Combines spend, transaction count, content count, social proof, uploaded proof, approval state, and story mention analytics. |
 | Sponsor data snapshot | Sponsor-side reporting surface | Combines campaigns, applications, collabs, events, files, content, spend, social proof, and assisted outcome summaries. |
 
@@ -441,7 +558,9 @@ Use:
 
 ## Current Product Boundaries
 
-The MVP intentionally does not include:
+The active `cc-analog` checkout intentionally does not include live Sponsor campaign dashboards, collab routes, spend-card creation, Stripe webhooks, Gmail OAuth, Sponsor AI, public opportunity APIs, or Agent MCP. Those surfaces are preserved in archived code/docs and should be restored deliberately when the product is ready.
+
+The full MVP doctrine also intentionally does not include:
 
 - payouts or creator withdrawals
 - reimbursements
@@ -459,6 +578,7 @@ The MVP intentionally does not include:
 - production Venue reward payout rails
 - fully automated Venue social authorization
 - automated mention benchmark scoring
+- production social impact survey templates, response imports, or impact dashboards
 - fully automated legal contracting, insurance, or payout gates
 - fully automated high-ticket sponsorship underwriting
 - native invoice, purchase order, escrow, or procurement rails
@@ -483,10 +603,14 @@ Do not show comments as sponsor UGC. Do not put sponsor analytics-heavy UGC grid
 
 Current product facts to preserve in docs:
 
-- Web app: Vite React routes under `apps/web/src/routes`.
-- API: Fastify routes under `apps/api/src/routes`.
-- Store: JSON-backed model in `packages/database/src/jsonStore.ts`.
-- Services and handlers enforce most product rules.
-- Money is integer minor units.
-- Local dashboard points to `http://127.0.0.1:8080`.
-- The MVP is intentionally scaffolded for future database, auth, billing, payments, partner API, and production attribution workflows.
+- Public directory app: TanStack Start routes under `apps/analog-directory/src/routes`.
+- Host app: TanStack Router routes under `apps/analog-host/src/routes`.
+- API: Fastify routes under `apps/analog-api/src/routes`, registered by domain at `/directory`, `/listings`, `/organizations`, `/storage`, `/notifications`, `/users`, `/blog`, and `/instagram`.
+- Store: Mongo-backed listing repository and models in `packages/database`, with Local Atlas vector search for listing embeddings.
+- Services: `packages/services` owns public DTO shaping, directory search, organization-owned listing workflows, grant applications, volunteer workflows, notifications, media/storage, and repository initialization.
+- Active public DTOs must exclude owner organization ids, claim internals, Instagram token state, embeddings, internal notes, and future permissions/billing fields.
+- Directory search stores lightweight `SearchConversation` records and uses bounded intent summaries, lexical search, and vector search; do not treat it as long-term AI memory.
+- WorkOS AuthKit powers the active Host auth flow when configured.
+- Shared GA4 tracking should keep event params low-cardinality and avoid emails, names, raw ids, tokens, or free-form form content.
+- Archived total-platform code/docs preserve Sponsor campaigns, collabs, spend cards, Stripe Issuing, webhooks, Sponsor AI, files/docs, DMs, Gmail-shaped notifications, and full dashboard routes. They are not active production truth until restored.
+- The MVP remains scaffolded for future auth depth, billing, payments, partner API, production attribution workflows, scoped AI memory, and full marketplace access.

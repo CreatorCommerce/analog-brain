@@ -16,7 +16,7 @@ The `Supply, Sponsors & Funding` group should not repeat the same argument in di
 
 | Page | Owns | Does not own |
 |---|---|---|
-| [MAC Versus CAC Contract](/strategy/supply-side-mac-community-champion) | Market acquisition cost, replacement ratio, NY/SF MAC stages, free-money as supply capture. | The full menu of funding playbooks. |
+| [MAC Versus CAC Contract](/strategy/supply-side-mac-community-champion) | Market acquisition cost, replacement ratio, NYC-first MAC stages, SF transfer logic, free-money as supply capture. | The full menu of funding playbooks. |
 | Cash Funding Playbooks | What cash, in-kind grants, services/tools, print, and support do for Hosts. | MAC modeling, Sponsor pipeline, public-fund compliance, or price cards. |
 | [Sponsor Personas And Pipeline](/strategy/sponsor-personas) | Which buyers fund the playbooks and how names become briefs. | Host enablement mechanics. |
 | [Host Models And Personas](/strategy/host-models-personas) | Which Host assets, roles, and needs Analog can make fundable. | Sponsor targeting or public-fund controls. |
@@ -71,6 +71,101 @@ The foundational free tool is one Analog application that can route into many fu
 
 Do not make this page the grant desk. Use [Public And Nonprofit Funding Infrastructure](/strategy/public-nonprofit-funding-infrastructure) for public-fund doctrine and [NYC And SF Grant Money Map](/strategy/nyc-sf-grant-money-map) for tactical grant research.
 
+## Corporate Grant And Support Patterns
+
+The [Lululemon Gives Community Wellbeing Grant](https://grants.lululemon.com/s/?language=en_US#time), its [Goodstack registration flow](https://nomination.goodstack.org/grantprogram_000000DKZzCtSKvDhLm0PibsLJIhM), and the [Nike Community Impact Fund](https://about.nike.com/en/mission/initiatives/nike-community-impact-fund) are useful market signals for how corporate Sponsors think about support.
+
+Lululemon shows the registration-first corporate grant pattern:
+
+```text
+public fund story
+-> registration form
+-> eligibility and verification
+-> invitation to apply
+-> application review
+-> grant award
+-> reporting and renewal story
+```
+
+Lululemon frames the program around community-led charitable organizations advancing wellbeing through movement. The 2027 cycle opens applications from July 6 to July 31, 2026, with registration due July 24, 2026 at 5:00pm PT. After registration, organizations are told to expect an eligibility status email and, if eligible, an invitation to apply, typically within 72 hours.
+
+Goodstack powers the registration layer. Its form pattern is practical:
+
+| Corporate grant field | What it tells Analog |
+|---|---|
+| Organization search by country, name, or registry ID | Corporate Sponsors want verified entities before deeper review. Analog should keep a reusable Host funding record instead of making each fund start from zero. |
+| Fallback for organizations not found in the registry | Strong local supply may be real before it is cleanly indexed. Analog needs an add-and-verify path for Hosts, fiscal sponsors, community businesses, and informal operators. |
+| Organization type and fiscal sponsor fields | Fund eligibility is often entity-dependent. Analog should capture nonprofit, fiscally sponsored, business, government, and social-impact status without assuming every good Host is a charity. |
+| Operating budget and geography | Sponsors use size, country, and market rules to screen applicants. Analog should turn this into market-fit and allocation logic, not generic form admin. |
+| Contact, consent, language, deadline, and email guidance | Grants are operational programs, not just landing pages. Analog should track applicant communication, status, missing docs, reminders, and approval gates. |
+| Registration before full application | The best corporate flow reduces wasted applicant time and review load. Analog should support a light eligibility gate before asking for the full pitch, budget, files, and proof plan. |
+
+Analog should not copy generic corporate grant software. It should learn the corporate mental model, then add the IRL layer that Goodstack-style intake does not own:
+
+| Generic corporate grant need | Analog IRL spin |
+|---|---|
+| Verify eligible organizations. | Verify fundable Hosts, venues, fiscal sponsors, operators, and local trust surfaces. |
+| Collect registration and application fields. | Reuse one Host funding record, then ask only fund-specific deltas. |
+| Screen for mission fit. | Match Event sets, rituals, audiences, cities, and proof standards to the Sponsor thesis. |
+| Award money. | Govern spend through approved categories, cards, invoices, vendors, or tranches. |
+| Receive reports. | Produce proof packets: receipts, attendance, Host notes, sentiment, authorized mentions, photos where appropriate, and next-dollar recommendations. |
+| Tell a corporate impact story. | Show which IRL communities, markets, Hosts, and rituals became stronger because the Sponsor funded them. |
+
+For Analog, a Lululemon-style fund should become:
+
+```text
+Sponsor fund page
+-> Host registration gate
+-> eligibility and verification
+-> Event set fit
+-> approved budget and spend rules
+-> funded IRL activation or series
+-> proof packet
+-> renewal, larger grant, or market playbook
+```
+
+This is especially relevant for movement, wellness, public health, access, arts, youth, sports, and local commerce funds. The Sponsor may call it a grant program. Analog should treat it as structured IRL market deployment.
+
+Nike adds a second corporate support pattern: a global brand mission becomes local grantmaking through employee proximity, nonprofit and school eligibility, trained teammate review, regional grant partners, and a recurring application-to-disbursement cycle.
+
+The Nike-style pattern:
+
+```text
+global support mission
+-> priority employee communities and regions
+-> nonprofit and school applicants
+-> partner-administered application window
+-> trained employee review and recommendation
+-> grant disbursement
+-> play, sport, and access story
+```
+
+Analog should not pretend to replace grant administrators, foundations, or fiscal sponsors. It should make the downstream support legible, governed, and renewable.
+
+| Nike-style support move | Analog version |
+|---|---|
+| Global mission around kids, play, and sport. | Sponsor fund page with a clear support thesis, eligible Host types, market focus, allowed spend, and proof standard. |
+| Funding limited to places where employees live and work. | Event sets by city, employee market, local circuit, school and community partner type, or play and sport access need. |
+| Nonprofit and school applicants. | Verified Hosts, schools, nonprofits, fiscal sponsors, youth-sport operators, rec leagues, park stewards, community coaches, and trusted local partners. |
+| Trained employee review and recommendations. | Local reviewer, city lead, advisory, or Sponsor teammate notes that explain community fit without exposing private applicant data. |
+| Regional grant administrators and philanthropic partners. | Partner, fiscal sponsor, fund administrator, or nonprofit records attached in files/docs and reporting workflows. |
+| Annual application and disbursement rhythm. | Campaign start dates, application windows, review queues, award dates, spend windows, and closeout/reporting deadlines. |
+| Grant payments. | Controlled activation budget, spend card, invoice, vendor, tranche, or partner-administered payment rail depending on the program. |
+| Access to play and sport as the impact story. | Proof packet showing access created, participation, recurring play and sport, trusted local operator, spend stewardship, photos or quotes where permitted, and next-dollar recommendation. |
+
+What Nike adds that Lululemon does not:
+
+| Concept | Why it matters for Analog |
+|---|---|
+| Employee-led local judgment | Large organizations may want their own people close to the community to help review, recommend, or contextualize support. Analog should preserve that judgment as structured notes and approval context. |
+| Place-based employee communities | Corporate support may follow where teammates live and work, not only where a brand has retail, customers, or media goals. Event sets should handle employee-dense markets and regional windows. |
+| Nonprofit and school channels | Youth, school, sport, and play programs need stronger eligibility, safeguarding, and partner records than a normal brand activation. |
+| Intermediary fund administration | Some Sponsors will operate through foundations or grant administrators. Analog should complement that layer with Host records, spend proof, and local activation proof. |
+| Application window plus disbursement date | Operators need clear timing. Start dates, review windows, and payment/disbursement expectations are part of the product, not just copy. |
+| Support language before campaign language | The Sponsor may be trying to make play, sport, wellbeing, or local access possible. Analog should translate that into governed support, not force it into ad inventory. |
+
+The [NYC Pre-Seed Sponsor Cohort](/strategy/nyc-preseed-sponsor-cohort) is the immediate selective-fund bridge. Treat it as a closed-door budget-intent motion, not a normal paid plan: Sponsors name at least USD 50k of intended NYC partnership budget, USD 100k+ is best, the commitment runs through an LOI and refundable USD 500 deposit, and Analog does not take a fee or rake from those first engagements. High-context matchmaking starts after commitment so Analog protects the social capital behind the directory.
+
 ## Funding Ladder
 
 | Layer | Typical budget | Best for | Renewal question |
@@ -101,8 +196,10 @@ Analog should build around shared funding mechanics, not a single vertical.
 | Local Ritual Funds | run clubs, walk clubs, book clubs, game nights, maker circles, cleanup groups | cadence, retention, claims, content, category mentions, sentiment |
 | Local Commerce And Market Funds | farmers markets, vendor cohorts, market demos, food rituals, neighborhood retail walks | vendor support, shopper participation, local commerce proof, access, category trial |
 | Community Collective Funds | neighborhood funds backed by local businesses, civic-minded funders, landlords, BIDs, family offices, or aligned operators | contribution source, governed allocations, local participation, Host proof, business/community value |
+| Public Space Activation Support | parks, plazas, sidewalks, streets, Open Streets, corridors, public housing grounds, public-facing markets | permit readiness, event risk tier, insurance/COI support, site-plan files, weather plan, vending/revenue notes, public-safe proof |
 | Access And Public-Good Funds | free classes, youth arts, park stewardship, wellness access, commercial corridors | access created, eligible participation, spend integrity, public reporting |
 | Political Action Field Funds | campaign house events, issue gatherings, volunteer trainings, ballot-action rooms | approved spend, field participation, privacy-safe action proof, local allocation learning |
+| Corporate Grant And Support | Lululemon-style wellbeing grants, Nike-style play and sport access funds, employee-led local community funds | verified entity, eligibility gate, local review context, Event set fit, approved spend, proof packet, renewal story |
 | Operator Bench | producers, designers, photographers, print vendors, insurance navigators, scouts | time saved, blocker removed, quality lift, repeat vendor reliability |
 | Media And Print Drops | Connector profiles, city issues, event calendars, fund drops, printed guides | subscriptions, inbound Hosts, sponsor leads, print distribution, profile-to-fund conversion |
 
@@ -125,7 +222,7 @@ Services should unblock playbooks, then become product, templates, partner workf
 
 Print is not a side project. It can become the supply moat.
 
-AnalogNYC, AnalogSF, and later city brands should publish profitable consumer and retail print products that make the local gathering economy desirable, navigable, and status-rich.
+AnalogNYC should publish the first profitable consumer and retail print product that makes the local gathering economy desirable, navigable, and status-rich. AnalogSF and later city brands should follow only when transfer-market demand or Sponsor-funded city work justifies the added operating surface.
 
 The magazine should include upcoming events, Host profiles, dot connector profiles, city scene reports, fund drops, Sponsor perspectives when clearly labeled, local retail/eComm placements, and QR flows into event pages, applications, claims, and subscriptions.
 
@@ -154,6 +251,10 @@ Lead with concrete fundable problems:
 
 Use [Public And Nonprofit Funding Infrastructure](/strategy/public-nonprofit-funding-infrastructure) for the canonical public/nonprofit model.
 
+When the public-money program funds parks, public spaces, libraries, corridors, cleanups, stewardship, wellness access, youth, arts, sports, or social connection work, use [Public Space Social Impact Measurement](/references/public-space-social-impact-measurement) to decide whether the proof packet should include participant-reported belonging, connection, trust, agency, respect, meaningfulness, and cross-group contact.
+
+When the blocker is permit readiness, insurance, site plans, weather, vending, concessions, ticketing, or public-space stewardship funding, use [Public Space Activation Infrastructure](/references/public-space-activation-infrastructure) before designing the fund.
+
 ## Political Action Lane
 
 Political campaigns, advocacy organizations, ballot initiatives, PACs, party committees, and donor coalitions can use the same cash-funding mechanics only with tighter controls. Treat political action as a separate commercial lane because field spend, privacy, data use, and compliance rules are different from civic/public-good funding.
@@ -164,14 +265,16 @@ Use [Campaign Grassroots Activation Funds](/use-cases/campaign-grassroots-activa
 
 ## First Race To Market
 
-1. Launch Sponsor-backed grants and raffles in AnalogNYC and AnalogSF.
-2. Use one reusable Analog application and pitch tools to help Hosts and connectors package proof, reach, grant readiness, and funding asks.
-3. Use AnalogNYC and AnalogSF media to identify, elevate, and route Hosts into those playbooks.
-4. Research public and nonprofit grant money in priority markets and support Host-authorized applications where the fit is real.
-5. Test one community collective fund in a dense neighborhood where 10 to 12 local contributors can back more IRL through one governed campaign.
-6. Build the services/tooling layer that makes funded gatherings easier: insurance, print, docs, vendors, proof.
-7. Package the best operators into larger recurring budgets and strategic rooms.
-8. Build a credible public-money lane with transparent spend, eligibility, and proof.
+1. Close the NYC pre-seed Sponsor cohort: LOI budget intent, refundable deposit, category fit, no fee/rake, and no curated list access before commitment.
+2. Use one reusable Analog application and pitch tools to help Hosts and connectors package proof, reach, grant readiness, eligibility status, and funding asks.
+3. Launch Sponsor-backed grants and raffles in AnalogNYC.
+4. Use AnalogNYC media to identify, elevate, and route Hosts into those playbooks; use AnalogSF as transfer-market research or execution only when justified.
+5. Research public and nonprofit grant money in priority markets and support Host-authorized applications where the fit is real.
+6. Test one corporate grant-style or community-impact support flow with an enterprise Sponsor: light eligibility gate first, local review context second, full application third, funded IRL activation fourth.
+7. Test one community collective fund in a dense neighborhood where 10 to 12 local contributors can back more IRL through one governed campaign.
+8. Build the services/tooling layer that makes funded gatherings easier: insurance, print, docs, vendors, proof.
+9. Package the best operators into larger recurring budgets and strategic rooms.
+10. Build a credible public-money lane with transparent spend, eligibility, and proof.
 
 Movement communities can be part of the first test because they are visible and repeat often. They are not the moat by themselves. The moat is the funding, proof, services, media, and selection system that can travel across every community where trusted Hosts are underfunded.
 

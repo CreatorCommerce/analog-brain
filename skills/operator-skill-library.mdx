@@ -1,0 +1,93 @@
+---
+title: "Operator Skill Library"
+description: "The first shared Analog operator skills seeded from the agentic MVP playbooks for intake, matching, pricing, attribution, operations, reporting, and judgment."
+pageType: "Reference"
+---
+
+This is the first shared Analog skill library.
+
+It is seeded from the operator skills in `playground-agentic-mvp/skills`. Those files remain useful source context, but `analog-brain` is now the operating registry for which skills should be reused, improved, or promoted.
+
+## Active Seed Skills
+
+| Skill | Use when | Primary output | Primary agents |
+|---|---|---|---|
+| `operational-agent-judgment` | Deciding whether to use existing context, create a skill, extend an agent, build a runtime service, or create a repo. | Routing memo. | Brain Agent, People/Capacity Agent |
+| `brand_intake` | Turning a Sponsor or brand conversation into a structured campaign brief. | Brand R&D brief and readiness score. | GTM/Brand Agent, Product Runtime Agent |
+| `event_matchmaking` | Matching Sponsor goals to Host, event, venue, community, creator, or operator supply. | Fit score, match rationale, gaps, pivots. | Market Agent, Product Runtime Agent |
+| `campaign_pricing_and_roi` | Modeling Sponsor price, activation budget, platform fee, margin, credits, and ROI. | Pricing and P&L recommendation. | Finance/Pricing Agent |
+| `attribution_and_capture` | Designing privacy-safe capture and proof flows. | Attribution plan and confidence caveats. | Product Runtime Agent, Finance/Pricing Agent |
+| `outcome_modeling_and_data_connections` | Mapping outcome data across commerce, app, CRM, booking, POS, webhook, or CSV sources. | Outcome data plan. | Product Runtime Agent |
+| `activation_operations_and_integrations` | Turning an approved sponsorship into a launch-ready runbook. | Activation runbook and integration ladder. | Product Runtime Agent, People/Capacity Agent |
+| `activation_rubric_and_payout_gates` | Defining proof, deliverables, payout states, and launch blockers. | Rubric and payout gate checklist. | Product Runtime Agent, Finance/Pricing Agent |
+| `brand_kits_and_fulfillment` | Planning physical and digital campaign assets without accidental bespoke agency sprawl. | Asset and fulfillment plan. | GTM/Brand Agent, Product Runtime Agent |
+| `market_entry_and_negotiation` | Resolving multi-party constraints, market entry paths, and negotiation pivots. | Negotiation turn and activation packet. | Market Agent, GTM/Brand Agent |
+| `reporting_and_renewal` | Turning campaign results into Sponsor, Host, internal, and renewal reports. | Report and renewal recommendation. | Finance/Pricing Agent, GTM/Brand Agent |
+| `analog-newsletter-email` | Writing The Blueprint, field note, product update, market update, or roundup emails. | Subject, preheader, asset checklist, send-ready newsletter HTML, plain-text fallback. | GTM/Brand Agent, Brain Agent |
+| `analog-customer-success-email` | Writing Host, Sponsor, partner, onboarding, activation, proof, or follow-up emails. | Subject, preheader, asset checklist, concise send-ready HTML, plain-text fallback. | GTM/Brand Agent, Product Runtime Agent |
+
+## Skill To Agent Map
+
+| Agent | Default skills |
+|---|---|
+| Brain Agent | `operational-agent-judgment` |
+| Product Runtime Agent | `brand_intake`, `event_matchmaking`, `attribution_and_capture`, `outcome_modeling_and_data_connections`, `activation_operations_and_integrations`, `activation_rubric_and_payout_gates`, `brand_kits_and_fulfillment` |
+| Market Agent | `event_matchmaking`, `market_entry_and_negotiation` |
+| GTM/Brand Agent | `brand_intake`, `brand_kits_and_fulfillment`, `market_entry_and_negotiation`, `reporting_and_renewal` |
+| Finance/Pricing Agent | `campaign_pricing_and_roi`, `activation_rubric_and_payout_gates`, `reporting_and_renewal` |
+| People/Capacity Agent | `operational-agent-judgment`, `activation_operations_and_integrations` |
+
+Email content skills:
+
+| Skill | Default agent |
+|---|---|
+| `analog-newsletter-email` | GTM/Brand Agent |
+| `analog-customer-success-email` | GTM/Brand Agent, Product Runtime Agent |
+
+## Promotion Priority
+
+Promote these first:
+
+1. `operational-agent-judgment`, because it prevents overbuilding.
+2. `brand_intake`, because Sponsor demand must become structured briefs.
+3. `campaign_pricing_and_roi`, because pricing and burn need disciplined language.
+4. `event_matchmaking`, because market supply decisions recur constantly.
+5. `activation_operations_and_integrations`, because manual excellence should become product primitives.
+
+## Skill Improvement Rule
+
+When a new operational use case appears, do not create a skill immediately.
+
+First ask:
+
+```text
+Can one of these skills handle the job with a better input section, output format, or example?
+```
+
+If yes, improve the existing skill.
+
+If no, use [Operational Agent Judgment](/agents/operational-agent-judgment) to decide whether the new work is a skill, agent, repo, service, or automation.
+
+## Source Context
+
+The original seed skills live in:
+
+```text
+/Users/kenyonbrown/Documents/CreatorCommerce/Repos/playground-agentic-mvp/skills
+```
+
+When importing or rewriting them, preserve their core operating intent:
+
+- separate market-growth proof from direct attribution
+- keep human approval for external action, money, pricing, legal, insurance, and publishing
+- treat operations as reusable product learning
+- avoid turning Analog into unbounded bespoke agency work
+- protect Host, Sponsor, attendee, and partner trust
+
+For email HTML, use current frontend behavior and styling from:
+
+```text
+/Users/kenyonbrown/Documents/Analog/cc-analog
+```
+
+The shared routing page is [Email Content Skills](/skills/email-content-skills).

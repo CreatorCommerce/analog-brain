@@ -1,0 +1,114 @@
+---
+title: "Operational Agent Judgment"
+description: "The routing framework Analog Brain uses to decide whether to use existing context, create a skill, extend an agent, build a service, or create a new repo."
+pageType: "Reference"
+---
+
+Operational Agent Judgment is the first check before Analog creates new AI infrastructure.
+
+The job is not to say yes to every new agent. The job is to preserve focus while still letting the operating company scale into sharper use cases.
+
+## Start With The Outcome
+
+Always ask:
+
+```text
+What are we trying to accomplish?
+```
+
+Then classify the work.
+
+| Work type | Meaning | Likely answer |
+|---|---|---|
+| Knowledge | We need a durable explanation, doctrine, or source-of-truth summary. | Add or update docs in `analog-brain`. |
+| Repeatable workflow | We need a method that agents can reuse. | Use or create a shared skill. |
+| Repo-specific code work | We need to modify a codebase safely. | Add or improve that repo's `AGENTS.md`. |
+| Product runtime feature | Users need AI inside the product. | Build in product services with context packets. |
+| API or integration | External systems need to call or operate Analog. | Build a hosted service or Agent MCP surface. |
+| Recurring work | The system should run on a schedule or watch for changes. | Create an automation or service job. |
+| New operating function | A durable domain needs memory, owner, workflows, and metrics. | Extend an existing agent or create a new agent manifest. |
+
+## Required Questions
+
+Before recommending a new repo, new agent, or new skill, answer these:
+
+1. What outcome are we trying to accomplish?
+2. Is this knowledge, a repeatable workflow, code, a runtime product feature, an API, a recurring automation, or a new operating function?
+3. Does an existing agent already own the domain?
+4. Does an existing skill cover the workflow?
+5. Does this need private memory, product data, external APIs, secrets, scheduled work, or human approval?
+6. Who owns the result after the first pass?
+7. What output should exist when the work is done?
+
+## Default Recommendation Order
+
+Use the lightest thing that can do the job:
+
+1. Use existing docs or context.
+2. Use an existing skill.
+3. Create or improve a shared skill.
+4. Add a page or manifest to `analog-brain`.
+5. Add `AGENTS.md` to an existing repo.
+6. Create a hosted service or API.
+7. Create a new GitHub repo only when ownership, secrets, deployment, data boundaries, or recurring execution justify it.
+
+## Routing Decisions
+
+| Recommendation | Use when | Do not use when |
+|---|---|---|
+| `Use Existing` | A current doc, skill, agent, repo, or product surface covers the job. | The current asset would need private data or new execution powers. |
+| `Create Skill` | The workflow is repeatable and mostly procedural. | It needs its own memory, secrets, or production runtime. |
+| `Extend Agent` | A durable agent already owns the domain. | The work has a separate owner, data boundary, or deployment path. |
+| `Create Runtime Service` | Users, APIs, schedules, or production tools need executable behavior. | A doc or skill is enough for internal operation. |
+| `Create Repo` | The work has separate deployment, secrets, APIs, permissions, owner, or release cadence. | The work is still doctrine, research, or a reusable playbook. |
+
+## Routing Memo
+
+Every judgment should return this short memo:
+
+```text
+Recommendation: Use Existing | Create Skill | Extend Agent | Create Runtime Service | Create Repo
+
+Outcome:
+[What we are trying to accomplish.]
+
+Why:
+[One to three concrete reasons.]
+
+Use:
+[Existing doc, skill, agent, repo, service, or proposed new asset.]
+
+Memory and data:
+[What context is allowed, what stays canonical, what is sensitive.]
+
+Human approval:
+[What requires approval before external action, spend, publishing, repo creation, or product mutation.]
+
+Next steps:
+[Three or fewer actions.]
+```
+
+## Examples
+
+| Request | Recommendation | Reason |
+|---|---|---|
+| "We need a Miami market playbook." | `Use Existing` or `Create Skill` | Use the Market Agent plus a Miami city pack. Create a market-research skill only if the process repeats. |
+| "We need AI to adjust pricing based on burn." | `Extend Agent` | Finance/Pricing Agent owns this. It may need a pricing model artifact before a service. |
+| "We need a product chat action that creates campaigns." | `Create Runtime Service` | This touches product records and needs permissions, allowed actions, and approval gates. |
+| "We need an agent for every city." | `Use Existing` | One Market Agent plus city packs is lighter until cities have owners, recurring data, and operational volume. |
+| "We need an API for partner platforms to submit applications." | `Create Runtime Service` | This is external runtime behavior and belongs near product APIs. |
+| "We need a repeatable way to judge whether to make a repo." | `Create Skill` | That is exactly this operational judgment skill. |
+
+## Hard Stops
+
+Do not recommend a new repo or runtime service just because:
+
+- the topic is important
+- the workflow has a name
+- a person wants ownership
+- a city has a market page
+- a skill could be useful later
+- a one-off project feels large
+
+Do recommend a new repo or service when the work must protect secrets, schedule jobs, expose APIs, run product code, enforce permissions, or ship independently.
+

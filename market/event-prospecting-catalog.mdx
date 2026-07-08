@@ -8,11 +8,28 @@ The Event Prospecting Catalog is Analog's Apollo-like market map for IRL supply.
 
 The catalog should also carry Analog's default network bargain: public-safe opportunity data exists to be discovered. Hosts, Venues, operators, connectors, and organizers should understand that joining or claiming on Analog can make their fundability, proof, preferences, and availability visible to relevant Sponsors, partners, APIs, Agent MCP workflows, media, and funding paths unless they opt out or the record requires private/compliance-sensitive visibility.
 
+In active `cc-analog`, the first version of this catalog is the public directory `Listing` system:
+
+- public directory listings for communities, clubs, venues, organizers, event series, and recurring rituals
+- categories, curated directory lists, public community pages, and natural-language search
+- source metadata, images, story fields, editorial `sponsorFit`, reviews, bookmarks, upcoming events, and claim state
+- claim and create flows that let a Host turn a public record into an organization-owned listing
+- volunteer roles, founding grant applications, listing events, and Instagram connection intent as Host-readiness signals
+
+The richer Sponsor-side catalog behavior below remains product direction unless the archived campaign, event set, prospecting, and Sponsor dashboard surfaces have been restored.
+
 Read this after the product and marketplace pages. The earlier pages define the platform objects, campaign visibility modes, matching logic, and proof system. This page explains how off-platform supply becomes structured enough to fund.
 
 Use [Marketplace Logic](/platform/marketplace) when the Sponsor needs to decide which catalog records should receive private invites, broad campaign visibility, or ICP-targeted prospecting.
 
 The seed deck frames fit as how cleanly Analog's proof loop applies: spend, social proof, sentiment, and category lift.
+
+For the NYC pre-seed Sponsor cohort, the catalog may become publicly browsable, but it should not become free high-context access. Use [NYC Pre-Seed Sponsor Cohort](/strategy/nyc-preseed-sponsor-cohort) and [Marketplace Logic](/platform/marketplace) for the commitment boundary.
+
+```text
+show enough public-safe signal to create confidence
+protect the high-context map until LOI, budget intent, and deposit are committed
+```
 
 ## What Belongs In The Catalog
 
@@ -68,6 +85,7 @@ Every useful catalog record should eventually capture:
 |---|---|
 | Identity | name, type, owner/operator, claim status, provenance |
 | Geography | city, neighborhood, operating radius, seasonality |
+| Public-space context | public-space type, managing entity if known, permit path, official source links, seasonal window, prior activation status |
 | Audience | category, audience hypothesis, cadence, participation range |
 | Sponsor fit | sponsor surfaces, exclusions, price/budget range, acceptable presence |
 | Social receptiveness | Host notes, prior Sponsor fit, category adjacency, likely community response, risk flags, and reason codes |
@@ -76,7 +94,8 @@ Every useful catalog record should eventually capture:
 | Visibility | public-safe opportunity, private/link-only, partner-scoped, compliance-sensitive, opted out |
 | Funding path | micro grant, starter series, macro grant, operator retainer, public fund, services/tools support |
 | Pitch package | event history, photos, social proof, reach, prior Sponsor context, funding ask, and proof links |
-| Support needs | insurance, print, contracts, designer support, vendors, rentals, proof kit, space access |
+| Support needs | insurance, permits, site plans, weather contingency, print, contracts, designer support, vendors, rentals, proof kit, space access |
+| Revenue activity | vending, concessions, ticketing, merch, donations, alcohol, food sales, vendor list, revenue-permission notes |
 | Media path | interview, feature, field note, owned IRL follow-up, permission state |
 | Supply state | existing, latent, missing, generated, expanded; source of demand; blocker removed; pull effect on nearby supply |
 
@@ -89,6 +108,9 @@ The catalog should record not only what exists, but what almost happened and why
 | Host gap | Sponsor, space, or consumer demand exists, but trusted Host supply is thin. |
 | Space gap | Communities and Sponsors exist, but usable spaces are scarce or expensive. |
 | Insurance or permit gap | Risk, COI, waiver, permit, or coverage friction blocks execution. |
+| Site-plan gap | A public-space activation needs maps, diagrams, accessibility, egress, hydrant, vendor-zone, or emergency-route planning that the Host cannot produce alone. |
+| Weather gap | Rain, heat, wind, or seasonal volatility could cancel the activation, create unrecoverable costs, or require a rain-date rule before funding. |
+| Vending or revenue gap | Food, merch, concessions, alcohol, ticketing, donations, or vendor activity changes the permit, tax, insurance, or proof path. |
 | Operator gap | The idea and demand exist, but no one can reliably run it. |
 | Vendor or service gap | Food, photo, staffing, rentals, print, design, proof, or production cannot clear. |
 | Proof gap | The activation can happen, but Sponsor-trusted proof is weak. |
@@ -149,6 +171,7 @@ Use these provenance labels:
 Catalog profiles can be data-rich and intentionally discoverable without exposing private data.
 
 - Make public-safe opportunity fields discoverable by default when the Host, Venue, operator, or record is on the Analog network.
+- For pre-commitment Sponsors, show directory confidence signals without giving curated lists, raw contacts, private Host notes, or bespoke recommendations.
 - Show a clear disclaimer in claim, application, onboarding, and settings flows: Analog uses public-safe profile and activity data to route funding, partnership, sponsorship, grant, media, and custom workflow opportunities.
 - Let users opt out, correct facts, restrict fields, and choose private/link-only/compliance-sensitive visibility where needed.
 - Keep raw attendee emails and phone numbers out of sponsor search and public APIs.

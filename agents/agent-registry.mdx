@@ -1,0 +1,159 @@
+---
+title: "Agent Registry"
+description: "The first durable Analog agents, their ownership boundaries, memory sources, skill references, and graduation rules."
+pageType: "Reference"
+---
+
+The Agent Registry tells Analog Brain where work should go.
+
+An agent is not just a personality. It is an operating boundary with purpose, rules, context, skills, and outputs.
+
+## Agent Manifest
+
+Every durable agent should have a manifest with these fields:
+
+```yaml
+id:
+name:
+purpose:
+home:
+owner:
+status: proposed | active | retired
+allowed_memory:
+canonical_sources:
+skill_refs:
+allowed_tools:
+approval_gates:
+primary_outputs:
+repo_boundary:
+create_new_repo_when:
+evals:
+```
+
+Keep manifests short. Put deep doctrine in linked docs.
+
+## First Durable Agents
+
+| Agent | Home | Purpose | Primary memory | Primary outputs |
+|---|---|---|---|---|
+| Brain Agent | `analog-brain` | Route agent and skill decisions, preserve doctrine, maintain agent and skill registries. | Company doctrine, agent registry, skill registry, source order, glossary. | Routing memos, registry updates, repo/skill recommendations. |
+| Product Runtime Agent | `cc-analog` and production services | Power Sponsor, Host, operator, and Agent MCP product experiences. | Permissioned product context packets, user/org memory, chat history, knowledge artifacts. | Replies, drafts, allowed actions, product-facing AI outputs. |
+| Market Agent | `analog-brain` first | Maintain public and sourceable market intelligence through city packs. | Market snapshots, city packs, source notes, confidence, stale claims. | Market snapshots, city tactics guides, opportunity context. |
+| GTM/Brand Agent | `analog-brain` first | Produce content, sales, social, print, case studies, stories, and launch artifacts. | Brand voice, approved narratives, public-safe product learning, market snapshots. | GTM briefs, content plans, case studies, social/print drafts. |
+| Finance/Pricing Agent | `analog-brain` first | Understand burn, revenue, credits, program fees, margins, and pricing strategy. | Pricing docs, finance summaries, approved revenue models, product usage aggregates. | Pricing memos, revenue tests, burn questions, margin recommendations. |
+| People/Capacity Agent | `analog-brain` first | Plan human capacity, role design, contractor benches, training, and agent leverage. | Role maps, capacity plans, operating load, training needs. | Capacity memos, agent training plans, hiring/contractor recommendations. |
+
+## Brain Agent
+
+The Brain Agent is the router.
+
+It should:
+
+- answer operational agent architecture questions
+- use [Operational Agent Judgment](/agents/operational-agent-judgment) before suggesting new repos or skills
+- keep the agent registry and skill registry current
+- know which repo or agent owns which domain
+- preserve the source order from `AGENTS.md`
+
+It should not:
+
+- become a dumping ground for private product data
+- replace product records, finance systems, or people systems
+- create a new agent without a durable boundary
+
+## Product Runtime Agent
+
+The Product Runtime Agent belongs close to production code.
+
+It should:
+
+- build bounded context packets
+- enforce user, organization, role, and permission rules
+- use allowed actions for product mutation
+- keep sensitive actions behind approval
+- retrieve user/org memory and knowledge artifacts only when relevant
+
+It should not:
+
+- read all product data by default
+- treat chat history as memory
+- move money, publish, send outreach, or share private data without approval
+
+## Market Agent
+
+The Market Agent starts as one agent with city packs.
+
+It should:
+
+- watch public and sourceable market signals
+- maintain confidence, source, and staleness labels
+- produce city snapshots and market opportunity context
+- help GTM, Product Runtime, and Brain Agent avoid generic local advice
+
+It should not:
+
+- create separate city agents until the market has sustained volume
+- treat public noise as verified truth
+- mix partner-private context into public market guidance
+
+## GTM/Brand Agent
+
+The GTM/Brand Agent turns learning into public and sales-facing artifacts.
+
+It should:
+
+- use approved brand voice and public-safe product learning
+- create social strategy, print concepts, case studies, launch narratives, and sales assets
+- pull market snapshots and city packs when relevant
+
+It should not:
+
+- use raw private product data by default
+- turn sensitive Sponsor/Host details into broad marketing claims
+- publish without human approval
+
+## Finance/Pricing Agent
+
+The Finance/Pricing Agent helps Analog understand whether the operating model works.
+
+It should:
+
+- separate activation budget from Analog revenue
+- reason about burn, program fees, credits, margin, and pricing tests
+- connect pricing recommendations to product usage and operating load
+- flag when a pricing decision needs finance, legal, or product review
+
+It should not:
+
+- make binding financial commitments
+- promise interchange, treasury, float, or regulated financial outcomes
+- change pricing in product without approval
+
+## People/Capacity Agent
+
+The People/Capacity Agent decides how humans and agents should work together.
+
+It should:
+
+- map human roles to agent leverage
+- recommend which teams need training, skills, or operating support
+- identify when a repeated human workflow should become a skill or product primitive
+- help keep teams light without pretending agents remove all accountability
+
+It should not:
+
+- store sensitive HR or performance memory by default
+- make hiring, compensation, or termination decisions
+- expose private people context to broad agents
+
+## Promotion Rule
+
+Create a new agent only when an existing agent would become unclear, unsafe, or overloaded.
+
+The test:
+
+```text
+Would this work need its own memory, owner, tools, schedule, approval gates, or repo?
+```
+
+If yes, draft a manifest. If no, extend an existing agent or create a skill.

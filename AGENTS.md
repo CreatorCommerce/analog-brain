@@ -9,11 +9,23 @@ This repo is the internal Mintlify brain for practical Analog usage: strategy, m
 Use this order when facts conflict:
 
 1. The user in this repo. New use cases, feedback, and corrections are law of the land.
-2. Current Analog product logic and frontend behavior from `analog-discovery`.
+2. Current Analog product logic and frontend behavior from `cc-analog` in `/Users/kenyonbrown/Documents/Analog/cc-analog`; older `analog-discovery` references are legacy unless the user explicitly points back to that repo.
 3. Market, strategy, and operator doctrine from `playground-agentic-mvp`.
 4. Existing pages in this repo.
 
 When the user gives a new use case or correction, update the page it belongs to and any conflicting downstream summaries in the same pass.
+
+## Agent And Skill Routing
+
+- Treat this repo as the first place to ask operational AI architecture questions.
+- Use [Operational Agent Judgment](/agents/operational-agent-judgment) before recommending a new agent, skill, repo, hosted API, automation, product AI surface, or memory layer.
+- Default to using existing context, an existing skill, or an existing agent before creating something new.
+- New GitHub repos are exceptional. Recommend one only when ownership, secrets, deployment, data boundaries, production permissions, external APIs, or recurring execution justify it.
+- Do not split agent, skill, or memory doctrine into a separate repo unless it has a real runtime or data boundary.
+- Shared skills live under `skills/`. They are reusable playbooks, not memory stores.
+- Agent manifests and repo-boundary decisions live under `agents/`.
+- City-specific market context should start as a city pack under one Market Agent, not as one agent per city.
+- Product/runtime AI stays permissioned and source-of-truth driven. Product records remain canonical; AI memory is only scoped, sourced context.
 
 ## Documentation Contract
 

@@ -1,0 +1,231 @@
+---
+title: "Two-Way Reviews"
+description: "How Analog should collect Sponsor and Host partnership reviews as a trust layer on top of AI proof and social listening."
+pageType: "Reference"
+---
+
+Two-way reviews turn the human partnership into product memory and trust enforcement.
+
+AI proof, spend records, and social listening can show what happened. They cannot fully answer whether the partnership was easy, respectful, responsive, and worth repeating.
+
+Use this page after [Proof And Spend](/platform/proof-and-spend). Proof And Spend owns the evidence. This page owns the reviewed human judgment that helps future Sponsors approve Hosts and helps Hosts decide which Sponsors are worth taking.
+
+## Product Rule
+
+Every funded collab should create a review opportunity.
+
+The default cadence:
+
+```text
+active collab
+-> lightweight checkpoint every 90 days
+-> full closeout review when funds are spent, the campaign ends, or the collab closes
+-> review summary feeds proof, marketplace matching, and future approval context
+```
+
+For short activations, skip the interim checkpoint and ask for the closeout review only. For recurring programs, use a 90-day review because it is frequent enough to catch partnership issues and close enough to the three-month operating rhythm most Sponsors understand.
+
+Do not use 120 days as the standard cadence unless a specific Sponsor contract requires it.
+
+## Trust Loop
+
+Two-way reviews have three platform jobs:
+
+1. Keep good actors on Analog.
+2. Get bad actors off Analog, or constrain them until they remediate.
+3. Create social reinforcement through proof.
+
+Good actors are Sponsors and Hosts who use money cleanly, communicate clearly, respect the room, finish proof, resolve issues, and make the next activation easier. They should earn more trust: better matching, larger allocations, higher priority for funds, clearer badges or summaries, media visibility, and stronger renewal recommendations.
+
+Bad actors are Sponsors or Hosts who repeatedly misuse funds, ignore scope, create avoidable admin burden, disrespect community norms, withhold proof, retaliate, misrepresent outcomes, or make the marketplace less trustworthy. They should not keep receiving the same access. Analog should pause, restrict, require remediation, lower visibility, add human approval, or remove them from future campaigns depending on severity.
+
+Social reinforcement should come from proof, not public shaming. The product should make strong behavior visible through public-safe summaries, review badges, renewal history, proof quality, and Analog credit. Weak or harmful behavior should route to private risk flags, dispute paths, moderation, and constrained matching before it becomes a public claim.
+
+The social proof can be concrete. Sponsors should be able to see that a Host has received and stewarded checks before. Hosts should be able to see that a Sponsor has written checks before and treated partners well. Prior capital history creates comfort because both sides know the other party has already done the thing, not only claimed interest.
+
+| Review outcome | Platform response |
+|---|---|
+| Strong Host proof and strong Sponsor review | Prioritize for future funds, larger allocations, Sponsor recommendations, media inclusion, and public-safe reputation. |
+| Strong Sponsor review from Hosts | Route better Hosts toward the Sponsor and show Sponsor quality in Host opportunity context. |
+| Mixed review with fixable issues | Require clearer scope, more lead time, tighter proof prompts, or operator support before renewal. |
+| Repeated low trust or unresolved dispute | Pause matching, restrict visibility, require human approval, or remove the party from eligible campaigns. |
+
+## Funding History Signals
+
+Funding history is one of the strongest review-adjacent trust signals.
+
+For Sponsors, the useful signal is:
+
+```text
+Has this Host received Sponsor or public money before,
+used it cleanly,
+completed proof,
+and earned the right to receive more?
+```
+
+For Hosts, the useful signal is:
+
+```text
+Has this Sponsor written checks before,
+funded on time,
+respected Host norms,
+and renewed or expanded good partnerships?
+```
+
+Show the signal as proof-backed context, not as raw finance data.
+
+| Signal | Useful display |
+|---|---|
+| Sponsor checks written | Number of funded collabs, total or range of capital deployed where permitted, repeat funding rate, average funding reliability, and Host review summary. |
+| Host checks received | Number of funded collabs, total or range of capital received where permitted, clean-spend pattern, proof completion, renewal or increase history, and Sponsor review summary. |
+| Shared proof | Receipts, approved spend, completed proof packets, two-way reviews, repeat allocations, and dispute status. |
+
+Default to ranges, counts, badges, and public-safe summaries. Show exact dollar amounts only when the relevant parties and program rules allow it. Do not expose raw bank feeds, tax documents, private contracts, or sensitive Sponsor/Host notes as marketplace proof.
+
+## Review Experience
+
+The review should feel like a calm, step-by-step Airbnb-style flow, not a survey dump.
+
+<Steps>
+  <Step title="Start with the overall call">
+    Ask whether the reviewer would work with this partner again, renew, increase budget, repeat with changes, or stop.
+  </Step>
+
+  <Step title="Ask the key dimensions">
+    Collect a small number of ratings for responsiveness, fit, spend stewardship, proof quality, respect, and execution.
+  </Step>
+
+  <Step title="Ask for concrete context">
+    Let the reviewer explain what worked, what was hard, and what future partners should know.
+  </Step>
+
+  <Step title="Separate public-safe and private notes">
+    Let reviewers mark what can appear as a summary, what stays internal to Analog, and what is only visible to the reviewed party.
+  </Step>
+
+  <Step title="Turn the answer into product memory">
+    Summarize the review into tags, reason codes, confidence, and next-dollar recommendations with human review for sensitive uses.
+  </Step>
+</Steps>
+
+The UI should avoid making the reviewer write an essay. Use short prompts, clear scales, optional text, and one question per screen.
+
+## Sponsor Review Of Host
+
+Sponsor questions should answer whether this Host deserves future budget.
+
+| Dimension | Question |
+|---|---|
+| Responsiveness | Was the Host responsive and easy to work with? |
+| Spend stewardship | Did the Host use funds appropriately and in the way the Sponsor intended? |
+| Execution | Did the Host deliver the activation, event, or community work they committed to? |
+| Proof quality | Did the Host provide receipts, content, attendance, mention context, or files in a useful way? |
+| Sponsor fit | Did the Host make the Sponsor presence feel additive to the room? |
+| Trust | Would the Sponsor fund this Host again, increase allocation, or introduce them to another Sponsor? |
+
+The Sponsor can also choose a closeout action:
+
+- renew
+- increase budget
+- repeat with changes
+- pause and review
+- do not renew
+
+This should become a future-sponsor approval signal. A Sponsor evaluating a Host should see concise review context such as:
+
+```text
+Past Sponsors rated this Host strong on responsiveness and proof quality.
+Spend stewardship has been clean across three funded collabs.
+One Sponsor noted that asset shipping needed more lead time.
+```
+
+## Host Review Of Sponsor
+
+Host questions should answer whether the Sponsor was fair, clear, and additive.
+
+| Dimension | Question |
+|---|---|
+| Brief clarity | Did the Sponsor explain the goal, spend rules, assets, and proof expectations clearly? |
+| Respect for the room | Did the Sponsor's ask respect the Host's community and norms? |
+| Responsiveness | Was the Sponsor or operator responsive when the Host needed help? |
+| Admin burden | Did the Sponsor make the work easier, or did the partnership create avoidable overhead? |
+| Funding reliability | Were budget access, assets, shipment timing, and reimbursement-like edge cases handled cleanly? |
+| Future fit | Would the Host work with this Sponsor again? |
+
+Host reviews help Analog avoid routing good Hosts toward bad-fit Sponsors. They also protect the Host-side promise that Analog is where IRL communities go pro without losing control of the room.
+
+## Review Data Model Direction
+
+Two-way review data should sit beside proof, not replace it.
+
+| Data field | Product use |
+|---|---|
+| Reviewer role | Sponsor, Host, operator, or approved internal reviewer. |
+| Reviewed party | Host, Sponsor, collab, campaign, event set, or program. |
+| Trigger | 90-day checkpoint, funds spent, campaign end, collab close, manual closeout, or risk review. |
+| Dimension ratings | Structured scores for responsiveness, spend stewardship, proof quality, respect, fit, execution, and admin burden. |
+| Funding history | Checks written by the Sponsor, checks received by the Host, amount ranges or exact amounts where permitted, funding reliability, renewal/increase history, and proof completion. |
+| Written context | Short notes with visibility controls. |
+| Recommendation | Renew, increase, repeat with changes, pause, reallocate, or stop. |
+| Visibility | Private to reviewer, visible to reviewed party, internal Analog only, Sponsor approval context, Host opportunity context, or public-safe aggregate. |
+| Review status | Draft, submitted, locked, expired, disputed, corrected, or hidden for safety/compliance. |
+
+AI can draft a review summary from submitted answers, proof packets, spend behavior, and authorized mention data. A human should approve summaries before they affect sensitive funding, eligibility, public reporting, or partner reputation.
+
+## Marketplace Use
+
+Two-way reviews become an underwriting input for future matches.
+
+For Sponsors reviewing Hosts, the platform should surface:
+
+- prior checks received through Analog or verified records
+- responsiveness history
+- spend stewardship pattern
+- proof quality pattern
+- prior Sponsor fit notes
+- renewal and increase history
+- private risk flags only when the viewer has permission
+
+For Hosts reviewing Sponsors, the platform should surface:
+
+- prior checks written through Analog or verified records
+- brief clarity
+- respect for Host norms
+- admin burden
+- funding reliability
+- asset and timeline reliability
+- whether similar Hosts would work with the Sponsor again
+
+The marketplace should not become a raw public star board. Use review summaries, badges, reason codes, and confidence notes instead of exposing every score or private comment.
+
+The point is marketplace self-correction. Reviews should help Analog keep reliable partners close, steer the best opportunities toward them, and stop routing capital or community trust toward actors who repeatedly weaken the network.
+
+## Guardrails
+
+Use reviews to make the market safer, not crueler.
+
+- Do not publish raw private comments without explicit visibility choice.
+- Do not let one bad review erase otherwise clean proof.
+- Do not let Sponsors use review data as general financial reputation data.
+- Do not let Hosts or Sponsors retaliate during an active dispute.
+- Do not create a hidden blacklist without explainable reasons, human review, and a correction path.
+- Do not show one party the other's private review until both reviews are submitted or the review window closes.
+- Let reviewed parties see key reasons when a review affects future funding or visibility.
+- Provide correction, dispute, and moderation paths.
+- Treat public/nonprofit, political, health, youth, financial, and sensitive community reviews with stricter visibility.
+
+## MVP Boundary
+
+This is product direction unless explicit review objects exist in production.
+
+Active `cc-analog` has public listing reviews, bookmarks, volunteer interest, grant answers, and other Host-readiness signals, but not Sponsor-Host two-way review objects. The preserved full platform can approximate two-way reviews with files/docs, proof packets, Sponsor data summaries, tasks, closeout notes, operator review notes, and renewal decisions.
+
+Future product work should add review triggers, guided review screens, dimension ratings, visibility controls, summary generation, dispute handling, review-history cards, and matching reason codes.
+
+The standard is simple:
+
+```text
+AI reviews what the system can observe.
+Social listening reviews what the market made visible.
+Two-way reviews capture what the partners lived.
+```

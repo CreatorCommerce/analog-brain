@@ -10,7 +10,7 @@ Analog's marketplace helps a Sponsor decide three things:
 
 - where its dollars should go
 - how visible the campaign should be
-- what proof will show whether the spend worked for that Sponsor category
+- what proof and review context will show whether the spend worked for that Sponsor category
 
 Read this after [Platform Logic](/references/platform-logic) and [AI Memory And Context](/platform/ai-memory-and-context).
 
@@ -18,12 +18,15 @@ Platform Logic explains the current surfaces. AI Memory And Context explains how
 
 This page explains the marketplace intelligence those surfaces should build toward.
 
+In active `cc-analog`, the public directory is the first marketplace input, not the whole marketplace. It makes public-safe supply legible through listings, categories, lists, search, reviews, bookmarks, claim state, volunteer signals, grant readiness, and Host-owned listing updates. The Sponsor-side matching, campaign visibility, collab, spend, benchmark, and review layers below are preserved full-platform logic until restored from archived code/docs.
+
 ```text
 Sponsor goal + category + budget
 -> campaign visibility mode
 -> AI-assisted match to receptive Hosts, communities, Venues, and event types
 -> governed spend and vendor record handling
 -> benchmarked proof
+-> two-way review signal
 -> next-dollar recommendation
 ```
 
@@ -39,6 +42,20 @@ is most likely to receive this Sponsor well,
 based on comparable proof for organizations like this one?
 ```
 
+The marketplace should also support partner-distributed supply. A consumer app, club platform, ticketing tool, event-page product, or community network may own the daily user relationship while Analog owns Sponsor funding logic, normalized proof, and attribution rails. In that case, Analog should let the partner list downstream communities into the public directory, route SEO/GEO demand back to the partner when appropriate, and report enough structured data to unlock Sponsor funds without forcing every community to operate inside Analog directly.
+
+This becomes a later platform-as-a-service lane. Analog should not race Partiful, Posh, Luma, Flite, LineLeap, MobiusFit, Eventbrite, or similar products for the generic event or community front door. Those platforms can keep invites, ticketing, RSVPs, organizer tools, calendars, discovery, venue workflows, social fitness groups, movement posts, and audience relationships. Analog can become the embedded layer that helps their Hosts, organizers, venues, clubs, and communities access Sponsor budgets, prove outcomes, and route future opportunity.
+
+| Partner platform type | Why they may use Analog later | Analog should provide |
+|---|---|---|
+| Invite and RSVP apps | Their users create social moments but may not have sponsor funding or proof infrastructure. | Public-safe community matching, Sponsor opportunity routing, funding applications, and proof packets. |
+| Ticketing and event management platforms | They own ticket sales and operations, but Sponsors still need trustworthy allocation, spend governance, and renewal proof. | Sponsor campaign rails, normalized attribution events, proof reporting, and partner API workflows. |
+| IRL discovery marketplaces | They know where people are gathering, but may not want to build a full Sponsor marketplace. | Directory ingestion, canonical community matching, Sponsor demand routing, and attribution rails. |
+| Movement and social fitness apps | They know which groups, rituals, and everyday movement communities are active, but may not want to build Sponsor funding rails. | Wellness fund routing, permissioned activity or group proof, Host funding applications, and Sponsor-safe recap packets. |
+| Club, venue, creator, and community platforms | They own niche supply and daily engagement, but need new revenue or funding paths for organizers. | Embedded sponsorship workflows, opportunity preferences, controlled funding paths, and proof standards. |
+
+Store the examples as a target platform category, not as confirmed partners: Partiful, Posh, Luma, Flite, LineLeap, MobiusFit, Eventbrite, and other event-page, ticketing, social experience, venue, nightlife, movement, club, creator, or community platforms.
+
 ## Marketplace Job
 
 | Marketplace job | What the platform should learn |
@@ -46,6 +63,9 @@ based on comparable proof for organizations like this one?
 | Match dollars | Which budget size, spend category, and Sponsor role fits a Host, Venue, community, or event type. |
 | Read receptiveness | Whether the community is likely to welcome, ignore, reject, or amplify the Sponsor. |
 | Benchmark fit | How similar activations performed for Sponsors in the same lane, category, market, or proof need. |
+| Learn partnership quality | Whether Hosts and Sponsors are clear, responsive, respectful, and worth repeating together. |
+| Reinforce good actors | Which Hosts and Sponsors should receive better matches, larger opportunities, and public-safe trust signals because proof and reviews show they improve the network. |
+| Constrain bad actors | Which Hosts or Sponsors should be paused, remediated, restricted, or removed because proof and reviews show repeated trust damage. |
 | Choose visibility | Whether the campaign should stay private, be broadly marketed, or be targeted to ideal ICP supply. |
 | Sense demand timing | Whether a future-dated campaign gets enough qualified response in the first 48 hours to justify accepting applicants, expanding the fund, narrowing the brief, or holding. |
 | Govern spend | Whether the selected Hosts can use money cleanly inside approved rules. |
@@ -53,6 +73,8 @@ based on comparable proof for organizations like this one?
 | Recommend next dollar | Which Host, Venue, city, event type, or campaign shape deserves renewal, expansion, or stop. |
 
 This is AI-assisted and human-reviewed. AI can rank, compare, explain, and flag. Operators and Sponsors still decide sensitive fit, budget, compliance, and community-trust calls.
+
+Marketplace standing should be dynamic. Good actors should become easier to fund or work with because proof and reviews reinforce them. Bad actors should become harder to route into campaigns, and severe or repeated issues should remove them from eligible matching after human review and dispute handling.
 
 ## Agentic Marketplace Experience
 
@@ -92,13 +114,26 @@ Advanced controls should appear when the workflow needs them. A basic campaign s
 | Market and ICP | city, neighborhood, audience, account type, shopper type, community family, buyer persona | Narrows the supply layer to the Sponsor's best-fit surface. |
 | Recursive memory and market context | city tactics guides, market culture notes, domain playbooks, Market Agent snapshots, public news, public grants, public-safe opportunity data | Keeps matching from feeling generic and helps AI explain local timing, category fit, and confidence. |
 | Host and community history | cadence, attendance, proof, prior Sponsors, social response, field notes, community norms | Shows whether the Host has trust and repeatability. |
+| Funding history | checks written by the Sponsor, checks received by the Host, funding reliability, renewal/increase history, permitted amount ranges | Creates trust and comfort by showing that both sides have completed funded relationships before. |
 | Venue and location context | Venue mentions, space type, neighborhood, audience, accessibility, operational constraints | Shows whether the space is part of the value chain. |
 | Vendor and payee context | Host, Venue, contractor, vendor, operator, payment rail, tax-document status, duplicate record risk | Shows whether Analog needs to simplify vendor records or support 1099 workflows for the campaign. |
+| Two-way review history | Sponsor reviews of Hosts, Host reviews of Sponsors, 90-day checkpoint notes, closeout recommendations, disputes | Shows whether a partner is dependable, clear, respectful, low-friction, and worth routing into another collab. |
 | Event type | dinner, run, workshop, farmers market, salon, class, cultural event, public-space activation | Helps benchmark against comparable moments. |
 | Receptiveness signals | sentiment, prior Sponsor fit, Host note, category adjacency, opt-ins, claims, organic mentions, exclusions | Predicts whether Sponsor participation will feel additive. |
 | Proof requirement | attendance, mentions, claims, sales-adjacent signal, qualified accounts, public-safe outcomes, compliance-safe field proof | Determines what must be captured before renewal. |
 
 The match is only as useful as the reason behind it. The platform should explain why a Host, Venue, event type, or market is recommended.
+
+A strong match reason can include capital history:
+
+```text
+This Sponsor has funded 12 Host collabs through Analog.
+This Host has received checks from three Sponsors,
+completed proof on time,
+and earned one increased allocation.
+```
+
+Use exact dollar amounts only when permissioned. Otherwise use ranges, counts, and verified summaries.
 
 ## Social Receptiveness
 
@@ -111,6 +146,7 @@ It should be derived from permissioned and provenance-aware signals, not from ra
 | Host note | Whether the Sponsor would improve or weaken the room. |
 | Community cadence | Whether the gathering is real enough to support Sponsor dollars. |
 | Prior proof | Whether similar activations created attendance, claims, mentions, or sentiment. |
+| Two-way reviews | Whether prior Sponsors and Hosts found the relationship clean, clear, responsive, and worth repeating. |
 | Host mentions | Whether the Host can create visible signal around the moment. |
 | Venue mentions | Whether the space amplifies the event or matters to the proof chain. |
 | Category adjacency | Whether the Sponsor's product, mission, or audience belongs near the ritual. |
@@ -137,7 +173,7 @@ The benchmark should be category-aware:
 |---|---|
 | eComm/CPG | product trial per attendee, claims, shopper sentiment, category mentions, repeat participation, content quality, sales-adjacent lift where available |
 | SaaS/Tech | qualified attendees, account fit, follow-up meetings, partner/customer learning, adoption moments, strategic room quality |
-| Civic/Public-Non-profit | access created, eligible participation, local legitimacy, public-safe reporting, fraud/waste/abuse cleanliness, mission fit |
+| Civic/Public-Non-profit | access created, eligible participation, local legitimacy, public-space social impact, public-safe reporting, fraud/waste/abuse cleanliness, mission fit |
 | Political Action | compliant spend, field participation where permitted, volunteer/action proof, national-to-ward geography learning, privacy-safe local sentiment |
 | Local retail/hospitality | neighborhood foot traffic proxies, repeat local engagement, merchant fit, Venue mentions, local sentiment |
 
@@ -157,7 +193,7 @@ this dinner produced stronger-than-benchmark account fit
 and lower Sponsor labor than a self-run event.
 ```
 
-Do not overclaim direct revenue when the proof is not there. The first benchmark can be confidence, fit, spend stewardship, social receptiveness, and renewal readiness.
+Do not overclaim direct revenue when the proof is not there. The first benchmark can be confidence, fit, spend stewardship, social receptiveness, partnership review quality, and renewal readiness.
 
 ## Campaign Visibility Modes
 
@@ -214,10 +250,12 @@ The campaign should never look abandoned. If review starts later, say that plain
 | Event Prospecting Catalog | Feeds candidate Hosts, communities, Venues, and event types into marketplace matching. |
 | Public opportunity graph | Makes public-safe supply data discoverable for Sponsors, partners, city workflows, APIs, and Agent MCP unless opted out or restricted. |
 | Agent MCP and partner API | Let approved external agents or partner platforms query, package, and route opportunities without bypassing privacy, approval, spend, or publishing controls. |
+| Attribution APIs and pixels | Let approved partner apps and event surfaces report attendance, claims, referrals, conversions, content, and proof events into Analog's normalized Sponsor reporting layer. |
 | Sponsor Outreach | Runs targeted prospecting when the right supply exists off-platform. |
 | Regional Host dashboard | Shows local Hosts the funds, grants, opportunities, and proof prompts relevant to their market. |
 | Hosted event pages | Turn selected events into branded, proof-capturing attendance surfaces instead of commodity invite pages. |
 | Proof And Spend | Measures whether the match worked and what deserves the next dollar. |
+| Two-Way Reviews | Captures Sponsor and Host judgment at 90-day checkpoints and closeout. |
 | Mention assets | Turn Host and Venue social signal into benchmarkable marketplace proof. |
 | Vendor and payee records | Keep Hosts, Venues, contractors, service providers, and repeat vendors from becoming a new administrative burden for Sponsors. |
 
@@ -228,8 +266,9 @@ The marketplace should be discoverable without becoming a careless directory. An
 Examples:
 
 - A Sponsor asks the in-platform Analog agent to find Hosts that fit a new fund.
-- A Host on an eligible plan asks Analog to source potential Sponsors using its public-safe record.
+- A Host on an eligible future premium plan asks Analog to source potential Sponsors, forecast likely budget, or package a controlled Sponsor placement auction using its public-safe record.
 - A partner platform queries Analog APIs for sponsorship opportunities that fit its communities.
+- A small event-page platform or a larger consumer app lists downstream communities into Analog's directory, sends attribution events through an approved pixel or API, and unlocks Sponsor funds while keeping its own app experience.
 - A city operator uses Agent MCP to build a prospecting packet for a fund or Request for Events.
 
 The rule is:
@@ -241,6 +280,23 @@ public-program, and political data by design.
 ```
 
 Users should see this expectation before relying on Analog as their funding record. They should also be able to opt out, correct facts, restrict fields, or move a campaign into private/link-only/compliance-sensitive visibility.
+
+## Pre-Commitment Directory Boundary
+
+For the NYC pre-seed Sponsor cohort, the directory is a confidence surface, not a free sourcing deliverable.
+
+Use [NYC Pre-Seed Sponsor Cohort](/strategy/nyc-preseed-sponsor-cohort) for the current operating rule:
+
+```text
+public-safe browse
+-> Sponsor believes the NYC market is real
+-> Sponsor signs LOI, names budget intent, and places refundable deposit
+-> Analog uses high-context matchmaking
+```
+
+Before commitment, Sponsors can see public-safe categories, sample records, aggregate density, readiness summaries, and proof tiers. They should not receive curated lists, private Host notes, raw contacts, attendee data, or bespoke recommendations.
+
+After commitment, Analog can build Sponsor-specific Event sets, match reasons, outreach paths, and proof plans. This protects community trust and makes clear that Sponsors are paying up through deployed budget, not extracting the map for free.
 
 ## Vendor Records And 1099 Burden
 
@@ -270,19 +326,29 @@ This is a product direction, not a claim that the current MVP automatically file
 | 4. Route the ask | Campaign is private link-only, broadly marketed, or ICP-targeted based on strategy. | Applications, invites, prospecting replies, referrals. |
 | 5. Fund and govern | Approved Hosts receive controlled allocations, spend rules, tasks, proof requirements, and vendor/payee record requirements where needed. | Collabs, spend cards, files, tasks, vendor/payee records. |
 | 6. Benchmark proof | Spend, attendance, mentions, claims, Host/Venue ratios, sentiment, and outcomes are compared to category expectations. | Sponsor-ready proof summary. |
-| 7. Recommend next dollar | Analog recommends renew, increase, reallocate, target more supply, broaden visibility, or stop. | Renewal or unlock decision. |
+| 7. Capture two-way review | Sponsor and Host review responsiveness, spend stewardship, clarity, respect, proof quality, admin burden, and future fit. | Review summary and partnership-quality signal. |
+| 8. Update standing | Proof and reviews reinforce good actors, flag bad actors, and update matching constraints. | Badges, reason codes, risk flags, approval gates, remediation, or removal. |
+| 9. Recommend next dollar | Analog recommends renew, increase, reallocate, target more supply, broaden visibility, or stop. | Renewal or unlock decision. |
 
 ## Product Boundary
 
 This is the direction of the marketplace layer. It should not be described as fully automated current behavior.
 
-Current MVP approximations:
+Active `cc-analog` approximations:
+
+- public directory listings, categories, lists, and search
+- claim and organization-owned listing workflows
+- reviews, bookmarks, media, links, story, upcoming events, and editorial sponsor-fit fields
+- volunteer roles, founding grant applications, and Host readiness signals
+- search conversation intent, filters, history, and public-safe listing DTOs
+
+Preserved full-platform approximations:
 
 - campaign mission, market persona, event sets, and application portals
 - managed outreach and event set prospecting
 - Event Prospecting Catalog records
 - Host opportunities, branded hosted event pages, files/docs, and proof packets
-- Sponsor AI assistant, Sponsor data summaries, campaign content, story mentions, and spend transactions
+- Sponsor AI assistant, Sponsor data summaries, campaign content, story mentions, spend transactions, and manual closeout notes
 
 Future product work should add:
 
@@ -295,6 +361,7 @@ Future product work should add:
 - social receptiveness labels
 - audience-fit and lookalike event recommendations
 - vendor/payee records with W-9 status, duplicate detection, payment context, and 1099 support workflow flags
+- two-way review objects with 90-day and closeout triggers, review summaries, visibility controls, dispute handling, and matching reason codes
 - clearer Sponsor controls for private, broadly marketed, and ICP-targeted campaigns
 - renewal recommendations that compare each activation to the Sponsor's category and market
 
